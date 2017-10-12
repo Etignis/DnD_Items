@@ -99,16 +99,29 @@ window.onload = function(){
 			});
 			sParams = aParams.join(" ");
 		}
-		src.forEach(function(item){
-			var key = item.name;
-			var text = item.title;
-			if(text.length > min_width)
-				min_width = text.length/2;
-			options += "<li class='option' data-key='"+key+"'>"+text+"</li>";
-			if(key == selected_key){
-				lableText = text
-			}
-		});
+		if(Array.isArray(src)) {
+			src.forEach(function(item){
+				var key = item.name;
+				var text = item.title;
+				if(text.length > min_width)
+					min_width = text.length/2;
+				options += "<li class='option' data-key='"+key+"'>"+text+"</li>";
+				if(key == selected_key){
+					lableText = text
+				}
+			});
+		} else {
+			for(item in src){
+				var key = item;
+				var text = src[item].ru.title;
+				if(text.length > min_width)
+					min_width = text.length/2;
+				options += "<li class='option' data-key='"+key+"'>"+text+"</li>";
+				if(key == selected_key){
+					lableText = text
+				}
+			};
+		}
 		min_width = min_width>20? 20: min_width;
 		min_width = min_width<5? 5: min_width;
 		min_width = ~~(min_width*0.75);
@@ -139,18 +152,33 @@ window.onload = function(){
 			display = " style='display:none' ";
 			content_open = false;
 		}
-		for (var i =0; i < src.length; i++) {
-			var type = src[i];
-			var max = Math.max(type.en.length, type.ru.length)/2;
-			if (max > min_width) {
-				min_width = max;
+		if(Array.isArray(src)) {
+			for (var i =0; i < src.length; i++) {
+				var type = src[i];
+				var max = Math.max(type.en.length, type.ru.length)/2;
+				if (max > min_width) {
+					min_width = max;
+				}
+
+				var sOptionValue = type.key? type.key : type.en;
+
+				ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
+
 			}
+		} else {
+			for(key in src) {
+				var type = src[key];
+				var max = Math.max(type.en.title.length, type.ru.title.length)/2;
+				if (max > min_width) {
+					min_width = max;
+				}
 
-			var sOptionValue = type.key? type.key : type.en;
+				var sOptionValue = key;
 
-			ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
-
+				ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.en.title+"<br>"+type.ru.title+"</label>";
+			}
 		}
+
 		min_width = min_width>20? 20: min_width;
 		min_width = min_width<5? 5: min_width;
 		min_width = ~~(min_width*0.9)+2;
@@ -207,10 +235,13 @@ window.onload = function(){
 		}
 		return "";
 	}
-	function getItemAttrFromDB(oDataSource, sAttr, sLang) {
+	function getItemAttrFromDB(oDataSource, oParam) {
+		var sAttr = oParam.attr;
+		var sLang = oParam.lang;
+		var sSubAttr = oParam.subattr || "title";
 		if(oDataSource[sAttr]){
 			if(oDataSource[sAttr][sLang]){
-				return oDataSource[sAttr][sLang].title;
+				return oDataSource[sAttr][sLang][sSubAttr] || oDataSource[sAttr][sLang].title;
 			}
 
 			var aLang = [];
@@ -219,7 +250,7 @@ window.onload = function(){
 			}
 			for(var i=0; i<aLang.length; i++){
 				if(oDataSource[sAttr][aLang[i]]) {
-					return oDataSource[sAttr][aLang[i]].title;
+					return oDataSource[sAttr][aLang[i]][sSubAttr] || oDataSource[sAttr][aLang[i]].title;
 				}
 			}
 		}
@@ -230,8 +261,9 @@ window.onload = function(){
 		if (oItem[lang] || (lang="en", oItem[lang])) {
 			var o = oItem[lang];
 			var s_name = getItemAttr(oItem, "name", lang);
-			var s_type = getItemAttrFromDB(oTypes, getItemAttr(oItem, "type", lang), lang);
-			var s_rariry = getItemAttrFromDB(oRarity, getItemAttr(oItem, "rarity", lang), lang);
+			var s_type = getItemAttrFromDB(oTypes, {attr: getItemAttr(oItem, "type", lang), lang: lang});
+			var s_gender = getItemAttrFromDB(oTypes, {attr: getItemAttr(oItem, "type", lang), subattr: "gender", lang: lang});
+			var s_rariry = getItemAttrFromDB(oRarity, {attr: getItemAttr(oItem, "rarity", lang), subattr: s_gender, lang: lang});
 			var s_attunement = getItemAttr(oItem, getItemAttr(oItem, "attunement", lang), lang);
 			var s_notes = getItemAttr(oItem, "notes", lang);
 			var s_text = getItemAttr(oItem, "text", lang);
@@ -259,7 +291,7 @@ window.onload = function(){
 						bLockItem +
 						bHideItem +
 						'<h1 title="'+s_name+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' +s_name+ '</h1>'+
-						'<span>' + s_type + " " + s_rariry +  " " + s_attunement + '</span>'+
+						'<span>' + s_rariry + " " + s_type+  " " + s_attunement + '</span>'+
 						'<div class="text">' + s_text + '</div>	'+
 						textSizeButtons +
 						"<span title=\"Источник: "+ s_source+"\"></span>"+'</b>'+
@@ -284,15 +316,12 @@ window.onload = function(){
 		$("#info_text").hide();
 	}
 	function showFiltered(oParams) {
-		// var sName = oParams.sName;
-		 var sClass = "";//oParams.sClass;
-		// var sSubClass = oParams.sSubClass;
-		// var sSubSubClass = oParams.sSubSubClass;
-		// var nLevelStart = oParams.nLevelStart;
-		// var nLevelEnd = oParams.nLevelEnd;
-		// var aSchools = oParams.aSchools;
-		// var aSources = oParams.aSources;
-		var sLang = "ru"; //oParams.sLang;
+		var sName = oParams.sName;
+		var sClass = "";//oParams.sClass;
+		var aSources = oParams.aSources;
+		var aRarity = oParams.aRarity;
+		var aTypes = oParams.aTypes;
+		var sLang = oParams.sLang;
 
 		// var fHiddenItems = (aHiddenItems.length>0)? true: false;
 		// var fLockedItems = (aLockedItems.length>0)? true: false;
@@ -304,81 +333,51 @@ window.onload = function(){
 		filteredItems = allItems; //[]; //arrDiff(filteredItems, aHiddenItems);
 
 
-		// //class
-		// var aItems = [];
-		// if(sClass) {
-		// 	if(classItems[sClass]) {
-		// 		aItems = aItems.concat(classItems[sClass].Items);
-		// 		if(classItems[sClass].subclasses && classItems[sClass].subclasses[sSubClass]) {
-		// 			if(classItems[sClass].subclasses[sSubClass].Items)
-		// 				aItems = aItems.concat(classItems[sClass].subclasses[sSubClass].Items);
-		// 			if(classItems[sClass].subclasses[sSubClass].subclasses && classItems[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
-		// 				aItems = aItems.concat(classItems[sClass].subclasses[sSubClass].subclasses[sSubSubClass].Items);
-		// 			}
-		// 		}
-		// 		aItems.forEach(function(ItemName){
-		// 			var fFind = false;
-		// 			for (var i = 0; i<allItems.length; i++){
 
-		// 				if(allItems[i].en.name == ItemName) {
-		// 					filteredItems.push(allItems[i]);
-		// 					fFind = true;
-		// 					break;
-		// 				}
-		// 			}
-		// 			if(!fFind){
-		// 				//console.log(ItemName);
-		// 			}
-		// 		})
-		// 	}	else {
-		// 		filteredItems = allItems;
-		// 	}
-		// } else {
-		// 	filteredItems = allItems;
-		// }
+		//types
+		if(aTypes && aTypes.length>0) {
+			filteredItems = filteredItems.filter(function(Item){
+				for(var i = 0; i < aTypes.length; i++) {
+					if(aTypes[i].toLowerCase().trim() == Item.en.type.toLowerCase().trim()) {
+						return true;
+					}
+				}
+				return false;
+			});
+		}
 
-		// // level
-		// /**/
-		// if(nLevelStart && nLevelEnd) {
-		// 	filteredItems = filteredItems.filter(function(Item){
-		// 		return !(Item.en.level < nLevelStart || Item.en.level > nLevelEnd);
-		// 	});
-		// }
-		// /**/
+		//rarity
+		if(aRarity && aRarity.length>0) {
+			filteredItems = filteredItems.filter(function(Item){
+				for(var i = 0; i < aRarity.length; i++) {
+					if(aRarity[i].toLowerCase().trim() == Item.en.rarity.toLowerCase().trim()) {
+						return true;
+					}
+				}
+				return false;
+			});
+		}
 
+		//source
+		if(aSources && aSources.length>0 && aSources.length<9) {
+			filteredItems = filteredItems.filter(function(Item){
+				for(var i = 0; i < aSources.length; i++) {
 
-		// //school
-		// if(aSchools && aSchools.length>0 && aSchools.length<99) {
-		// 	filteredItems = filteredItems.filter(function(Item){
-		// 		for(var i = 0; i < aSchools.length; i++) {
-		// 			if(aSchools[i].toLowerCase().trim() == Item.en.school.toLowerCase().trim()) {
-		// 				return true;
-		// 			}
-		// 		}
-		// 		return false;
-		// 	});
-		// }
+					if(aSources[i].toLowerCase().trim() == Item.en.source.toLowerCase().trim()) {
+						return true;
+					}
+				}
+				return false;
+			});
+		}
 
-		// //source
-		// if(aSources && aSources.length>0 && aSources.length<9) {
-		// 	filteredItems = filteredItems.filter(function(Item){
-		// 		for(var i = 0; i < aSources.length; i++) {
-
-		// 			if(aSources[i].toLowerCase().trim() == Item.en.source.toLowerCase().trim()) {
-		// 				return true;
-		// 			}
-		// 		}
-		// 		return false;
-		// 	});
-		// }
-
-		// // name
-		// if (sName) {
-		// 	sName = sName.toLowerCase().trim();
-		// 	filteredItems = filteredItems.filter(function(Item){
-		// 		return (Item.en.name.toLowerCase().trim().indexOf(sName)>=0 || (Item.ru && Item.ru.name.toLowerCase().trim().indexOf(sName)>=0));
-		// 	});
-		// }
+		// name
+		if (sName) {
+			sName = sName.toLowerCase().trim();
+			filteredItems = filteredItems.filter(function(Item){
+				return (Item.en.name.toLowerCase().trim().indexOf(sName)>=0 || (Item.ru && Item.ru.name.toLowerCase().trim().indexOf(sName)>=0));
+			});
+		}
 
 
 		// filteredItems = fHiddenItems? arrDiff(filteredItems, aHiddenItems) : filteredItems;
@@ -394,16 +393,16 @@ window.onload = function(){
 		// 	}
 		// }
 
-		// // sort
-		// filteredItems.sort(function(a, b) {
-		// 	if(a[sLang] && b[sLang]) {
-		// 		if (a[sLang].level+a[sLang].name.toLowerCase().trim() < b[sLang].level+b[sLang].name.toLowerCase().trim() )
-		// 			return -1;
-		// 		if (a[sLang].level+a[sLang].name.toLowerCase().trim() > b[sLang].level+b[sLang].name.toLowerCase().trim() )
-		// 			return 1;
-		// 	}
-		// 	return 0
-		// });
+		// sort
+		filteredItems.sort(function(a, b) {
+			if(a[sLang] && b[sLang]) {
+				if (a.en.rarity+a[sLang].name.toLowerCase().trim() < b.en.rarity+b[sLang].name.toLowerCase().trim() )
+					return -1;
+				if (a.en.rarity+a[sLang].name.toLowerCase().trim() > b.en.rarity+b[sLang].name.toLowerCase().trim() )
+					return 1;
+			}
+			return 0
+		});
 
 		for (var i in filteredItems) {
 			if(filteredItems[i]) {
@@ -420,7 +419,7 @@ window.onload = function(){
 	}
 
 	function filterItems(oParams){
-		// var sName = $("#NameInput input").val();
+		 var sName = $("#NameInput input").val();
 		// var sClass = $("#ClassSelect .label").attr("data-selected-key");
 		// var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
 		// var sSubSubClass = $("#SubSubClassSelect .label").attr("data-selected-key");
@@ -428,11 +427,13 @@ window.onload = function(){
 		// var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
 		// var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
 		// 	if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
-		// var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
+		 var aTypes = $("#TypeCombobox .combo_box_title").attr("data-val");
+		 var aRarity = $("#RarityCombobox .combo_box_title").attr("data-val");
+		 var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
 		// 	if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
-		// var sLang = $("#LangSelect .label").attr("data-selected-key");
+		 var sLang = $("#LangSelect .label").attr("data-selected-key");
 
-		// var fHidden = (aHiddenItems.length>0)? true: false;
+		 var fHidden = (aHiddenItems.length>0)? true: false;
 
 		// setConfig("language", sLang);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
@@ -452,7 +453,13 @@ window.onload = function(){
 		// 		});
 		// }, nTimerSeconds/4);
 		//oTimer = setTimeout(showFiltered, nTimerSeconds/4);
-		showFiltered();
+		showFiltered({
+			sName: sName,
+			aRarity: aRarity,
+			aTypes: aTypes,
+			aSources: aSources,
+			sLang: sLang
+		});
 	}
 
 	function createButtons() {
@@ -472,131 +479,143 @@ window.onload = function(){
 	function createLabel(text) {
 		return "<div class='filterLabel'>"+text+"</div>";
 	}
-	function createClassSelect() {
-		var src = [{
-			name: "[ALL]",
-			title: "[ВСЕ]"
-		}];
-		for (var i in classItems){
-			src.push(
-			{
-				name: classItems[i].title.en,
-				title: classItems[i].title.en+"<br>"+classItems[i].title.ru
-			}
-			);
-		}
-		var classSelect = createSelect(src, {id: "ClassSelect", selected_key: "[ALL]", width: "100%"});
-		var label = createLabel("Класс");
+	// function createClassSelect() {
+	// 	var src = [{
+	// 		name: "[ALL]",
+	// 		title: "[ВСЕ]"
+	// 	}];
+	// 	for (var i in classItems){
+	// 		src.push(
+	// 		{
+	// 			name: classItems[i].title.en,
+	// 			title: classItems[i].title.en+"<br>"+classItems[i].title.ru
+	// 		}
+	// 		);
+	// 	}
+	// 	var classSelect = createSelect(src, {id: "ClassSelect", selected_key: "[ALL]", width: "100%"});
+	// 	var label = createLabel("Класс");
 
-		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
-	}
-	function createSubClassSelect(sClass) {
-		$("#SubSubClassSelect").remove();
-		var src = [{
-			name: "[NONE]",
-		    title: "[ПОДКЛАСС]"
-		}];
-		if(classItems[sClass] && classItems[sClass].subclasses)
-		for (var i in classItems[sClass].subclasses){
-			src.push(
-			{
-				name: i,
-				title: classItems[sClass].subclasses[i].title.en+"<br>"+classItems[sClass].subclasses[i].title.ru
-			}
-			);
-		}
-		var classSelect = createSelect(src, {id: "SubClassSelect", selected_key: "[NONE]", width: "100%"});
-		var label = createLabel("Класс");
+	// 	$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
+	// }
+	// function createSubClassSelect(sClass) {
+	// 	$("#SubSubClassSelect").remove();
+	// 	var src = [{
+	// 		name: "[NONE]",
+	// 	    title: "[ПОДКЛАСС]"
+	// 	}];
+	// 	if(classItems[sClass] && classItems[sClass].subclasses)
+	// 	for (var i in classItems[sClass].subclasses){
+	// 		src.push(
+	// 		{
+	// 			name: i,
+	// 			title: classItems[sClass].subclasses[i].title.en+"<br>"+classItems[sClass].subclasses[i].title.ru
+	// 		}
+	// 		);
+	// 	}
+	// 	var classSelect = createSelect(src, {id: "SubClassSelect", selected_key: "[NONE]", width: "100%"});
+	// 	var label = createLabel("Класс");
 
-		var index = 1;
-		if($("#SubClassSelect").length>0) {
-			index = $("button").index($("#SubClassSelect"));
-			$("#SubClassSelect").remove();
-		}
+	// 	var index = 1;
+	// 	if($("#SubClassSelect").length>0) {
+	// 		index = $("button").index($("#SubClassSelect"));
+	// 		$("#SubClassSelect").remove();
+	// 	}
 
-		if(src.length>1) {
-			$("#ClassSelect").parent().find("button").eq(index-1).after(classSelect);
-			//$("#ClassSelect").parent().append(classSelect);
-		} else {
-			$("#SubClassSelect").remove();
-		}
+	// 	if(src.length>1) {
+	// 		$("#ClassSelect").parent().find("button").eq(index-1).after(classSelect);
+	// 		//$("#ClassSelect").parent().append(classSelect);
+	// 	} else {
+	// 		$("#SubClassSelect").remove();
+	// 	}
 
-		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");
-	}
-	function createSubSubClassSelect(sClass, sSubClass) {
-		var src = [{
-			name: "[NONE]",
-		    title: "[ПОДПОДКЛАСС]"
-		}];
-		if(classItems[sClass] &&
-			classItems[sClass].subclasses &&
-			classItems[sClass].subclasses[sSubClass] &&
-			classItems[sClass].subclasses[sSubClass].subclasses)
-		for (var i in classItems[sClass].subclasses[sSubClass].subclasses){
-			src.push(
-			{
-				name: i,
-				title: classItems[sClass].subclasses[sSubClass].subclasses[i].title.en+"<br>"+classItems[sClass].subclasses[sSubClass].subclasses[i].title.ru
-			}
-			);
-		}
-		var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%"});
-		var label = createLabel("Класс");
-		//src[0].title= "[Полкласс]";
+	// 	//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");
+	// }
+	// function createSubSubClassSelect(sClass, sSubClass) {
+	// 	var src = [{
+	// 		name: "[NONE]",
+	// 	    title: "[ПОДПОДКЛАСС]"
+	// 	}];
+	// 	if(classItems[sClass] &&
+	// 		classItems[sClass].subclasses &&
+	// 		classItems[sClass].subclasses[sSubClass] &&
+	// 		classItems[sClass].subclasses[sSubClass].subclasses)
+	// 	for (var i in classItems[sClass].subclasses[sSubClass].subclasses){
+	// 		src.push(
+	// 		{
+	// 			name: i,
+	// 			title: classItems[sClass].subclasses[sSubClass].subclasses[i].title.en+"<br>"+classItems[sClass].subclasses[sSubClass].subclasses[i].title.ru
+	// 		}
+	// 		);
+	// 	}
+	// 	var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%"});
+	// 	var label = createLabel("Класс");
+	// 	//src[0].title= "[Полкласс]";
 
-		var index = 1;
-		if($("#SubSubClassSelect").length>0) {
-			index = $("button").index($("#SubSubClassSelect"));
-			$("#SubSubClassSelect").remove();
-		} else {
-			index = $("button").index($("#SubClassSelect"));
-		}
+	// 	var index = 1;
+	// 	if($("#SubSubClassSelect").length>0) {
+	// 		index = $("button").index($("#SubSubClassSelect"));
+	// 		$("#SubSubClassSelect").remove();
+	// 	} else {
+	// 		index = $("button").index($("#SubClassSelect"));
+	// 	}
 
-		if(src.length>1) {
-			$("#SubClassSelect").after(classSelect);
-			//$("#ClassSelect").parent().append(classSelect);
-		} else {
-			$("#SubSubClassSelect").remove();
-		}
-		//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");
-	}
-	function createLevelSelect() {
-		var src = [];
-		for (var i=0; i<10; i++) {
-			src.push(
-				{
-					name: i,
-					title: i
-				}
-			);
-		}
-		var s1 = createSelect(src, {id: "LevelStart", selected_key: 0, width: "100%"});
-		var s2 = createSelect(src, {id: "LevelEnd", selected_key: 9, width: "100%"});
-		var str = "<div class='row'><div class='cell'>"+s1+"</div><div class='cell'>"+s2+"</div></div>";
-		var label = createLabel("Уровень с/по");
-		$(".p_side").append("<div class='mediaWidth'>" + label + str + "</div>");
-	}
-	function createSchoolCombobox(isOpen) {
+	// 	if(src.length>1) {
+	// 		$("#SubClassSelect").after(classSelect);
+	// 		//$("#ClassSelect").parent().append(classSelect);
+	// 	} else {
+	// 		$("#SubSubClassSelect").remove();
+	// 	}
+	// 	//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");
+	// }
+	// function createLevelSelect() {
+	// 	var src = [];
+	// 	for (var i=0; i<10; i++) {
+	// 		src.push(
+	// 			{
+	// 				name: i,
+	// 				title: i
+	// 			}
+	// 		);
+	// 	}
+	// 	var s1 = createSelect(src, {id: "LevelStart", selected_key: 0, width: "100%"});
+	// 	var s2 = createSelect(src, {id: "LevelEnd", selected_key: 9, width: "100%"});
+	// 	var str = "<div class='row'><div class='cell'>"+s1+"</div><div class='cell'>"+s2+"</div></div>";
+	// 	var label = createLabel("Уровень с/по");
+	// 	$(".p_side").append("<div class='mediaWidth'>" + label + str + "</div>");
+	// }
+	// function createSchoolCombobox(isOpen) {
+	// 	if(isOpen == undefined)
+	// 		isOpen = false;
+	// 	var s1=createComboBox(schoolList.sort(function(a, b){
+	// 		if(a.en < b.en)
+	// 			return -1;
+	// 		if(a.en > b.en)
+	// 			return 1;
+	// 		return 0;
+	// 	}), {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
+	// 	$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
+	// }
+	function createTypeCombobox(isOpen) {
 		if(isOpen == undefined)
 			isOpen = false;
-		var s1=createComboBox(schoolList.sort(function(a, b){
-			if(a.en < b.en)
-				return -1;
-			if(a.en > b.en)
-				return 1;
-			return 0;
-		}), {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
+		var s1=createComboBox(oTypes, {id: "TypeCombobox", title: "Тип", checkAll: true, isOpen: isOpen});
+		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
+	}
+	function createRarityCombobox(isOpen) {
+		if(isOpen == undefined)
+			isOpen = false;
+		var s1=createComboBox(oRarity, {id: "TypeCombobox", title: "Редкость", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 	}
 	function createSourceCombobox(isOpen) {
 		if(isOpen == undefined)
 			isOpen = false;
-		var s1=createComboBox(sourceList, {id: "SourceCombobox", title: "Источники", checkAll: true, isOpen: isOpen});
+		var s1=createComboBox(oSources, {id: "SourceCombobox", title: "Источники", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 
-		sourceList.forEach(function(el) {
-			oSource[el.key] = el.en;
-		});
+		// oSources.forEach(function(el) {
+		// 	oSource[el.key] = el.en;
+		// });
 	}
 	function createNameFilter() {
 		var ret=createInput({id: "NameInput"});
@@ -690,13 +709,12 @@ window.onload = function(){
 		var sourceOpen = getConfig("sourceOpen");
 		createButtons();
 		createNameFilter();
-		//createClassSelect();
-		//createLevelSelect();
-		//createSchoolCombobox(schoolOpen);
-		//createSourceCombobox(sourceOpen);
+		createTypeCombobox();
+		createRarityCombobox();
+		createSourceCombobox(sourceOpen);
 		createCardWidthButtons();
 		createAutoSizeTextButton();
-		//createLangSelect(lang);
+		createLangSelect(lang);
 
 		$(".p_side").fadeIn();
 	}
