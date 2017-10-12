@@ -420,13 +420,6 @@ window.onload = function(){
 
 	function filterItems(oParams){
 		 var sName = $("#NameInput input").val();
-		// var sClass = $("#ClassSelect .label").attr("data-selected-key");
-		// var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
-		// var sSubSubClass = $("#SubSubClassSelect .label").attr("data-selected-key");
-		// var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
-		// var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
-		// var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
-		// 	if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
 		 var aTypes = $("#TypeCombobox .combo_box_title").attr("data-val");
 		 var aRarity = $("#RarityCombobox .combo_box_title").attr("data-val");
 		 var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
@@ -435,7 +428,7 @@ window.onload = function(){
 
 		 var fHidden = (aHiddenItems.length>0)? true: false;
 
-		// setConfig("language", sLang);
+		setConfig("language", sLang);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
@@ -475,122 +468,7 @@ window.onload = function(){
 	function createLabel(text) {
 		return "<div class='filterLabel'>"+text+"</div>";
 	}
-	// function createClassSelect() {
-	// 	var src = [{
-	// 		name: "[ALL]",
-	// 		title: "[ВСЕ]"
-	// 	}];
-	// 	for (var i in classItems){
-	// 		src.push(
-	// 		{
-	// 			name: classItems[i].title.en,
-	// 			title: classItems[i].title.en+"<br>"+classItems[i].title.ru
-	// 		}
-	// 		);
-	// 	}
-	// 	var classSelect = createSelect(src, {id: "ClassSelect", selected_key: "[ALL]", width: "100%"});
-	// 	var label = createLabel("Класс");
 
-	// 	$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
-	// }
-	// function createSubClassSelect(sClass) {
-	// 	$("#SubSubClassSelect").remove();
-	// 	var src = [{
-	// 		name: "[NONE]",
-	// 	    title: "[ПОДКЛАСС]"
-	// 	}];
-	// 	if(classItems[sClass] && classItems[sClass].subclasses)
-	// 	for (var i in classItems[sClass].subclasses){
-	// 		src.push(
-	// 		{
-	// 			name: i,
-	// 			title: classItems[sClass].subclasses[i].title.en+"<br>"+classItems[sClass].subclasses[i].title.ru
-	// 		}
-	// 		);
-	// 	}
-	// 	var classSelect = createSelect(src, {id: "SubClassSelect", selected_key: "[NONE]", width: "100%"});
-	// 	var label = createLabel("Класс");
-
-	// 	var index = 1;
-	// 	if($("#SubClassSelect").length>0) {
-	// 		index = $("button").index($("#SubClassSelect"));
-	// 		$("#SubClassSelect").remove();
-	// 	}
-
-	// 	if(src.length>1) {
-	// 		$("#ClassSelect").parent().find("button").eq(index-1).after(classSelect);
-	// 		//$("#ClassSelect").parent().append(classSelect);
-	// 	} else {
-	// 		$("#SubClassSelect").remove();
-	// 	}
-
-	// 	//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");
-	// }
-	// function createSubSubClassSelect(sClass, sSubClass) {
-	// 	var src = [{
-	// 		name: "[NONE]",
-	// 	    title: "[ПОДПОДКЛАСС]"
-	// 	}];
-	// 	if(classItems[sClass] &&
-	// 		classItems[sClass].subclasses &&
-	// 		classItems[sClass].subclasses[sSubClass] &&
-	// 		classItems[sClass].subclasses[sSubClass].subclasses)
-	// 	for (var i in classItems[sClass].subclasses[sSubClass].subclasses){
-	// 		src.push(
-	// 		{
-	// 			name: i,
-	// 			title: classItems[sClass].subclasses[sSubClass].subclasses[i].title.en+"<br>"+classItems[sClass].subclasses[sSubClass].subclasses[i].title.ru
-	// 		}
-	// 		);
-	// 	}
-	// 	var classSelect = createSelect(src, {id: "SubSubClassSelect", selected_key: "[NONE]", width: "100%"});
-	// 	var label = createLabel("Класс");
-	// 	//src[0].title= "[Полкласс]";
-
-	// 	var index = 1;
-	// 	if($("#SubSubClassSelect").length>0) {
-	// 		index = $("button").index($("#SubSubClassSelect"));
-	// 		$("#SubSubClassSelect").remove();
-	// 	} else {
-	// 		index = $("button").index($("#SubClassSelect"));
-	// 	}
-
-	// 	if(src.length>1) {
-	// 		$("#SubClassSelect").after(classSelect);
-	// 		//$("#ClassSelect").parent().append(classSelect);
-	// 	} else {
-	// 		$("#SubSubClassSelect").remove();
-	// 	}
-	// 	//$(".p_side").append("<div class='mediaWidth'>" + classSelect + "</div>");
-	// }
-	// function createLevelSelect() {
-	// 	var src = [];
-	// 	for (var i=0; i<10; i++) {
-	// 		src.push(
-	// 			{
-	// 				name: i,
-	// 				title: i
-	// 			}
-	// 		);
-	// 	}
-	// 	var s1 = createSelect(src, {id: "LevelStart", selected_key: 0, width: "100%"});
-	// 	var s2 = createSelect(src, {id: "LevelEnd", selected_key: 9, width: "100%"});
-	// 	var str = "<div class='row'><div class='cell'>"+s1+"</div><div class='cell'>"+s2+"</div></div>";
-	// 	var label = createLabel("Уровень с/по");
-	// 	$(".p_side").append("<div class='mediaWidth'>" + label + str + "</div>");
-	// }
-	// function createSchoolCombobox(isOpen) {
-	// 	if(isOpen == undefined)
-	// 		isOpen = false;
-	// 	var s1=createComboBox(schoolList.sort(function(a, b){
-	// 		if(a.en < b.en)
-	// 			return -1;
-	// 		if(a.en > b.en)
-	// 			return 1;
-	// 		return 0;
-	// 	}), {id: "SchoolCombobox", title: "Школы", checkAll: true, isOpen: isOpen});
-	// 	$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
-	// }
 	function createTypeCombobox(isOpen) {
 		if(isOpen == undefined)
 			isOpen = false;
@@ -701,13 +579,11 @@ window.onload = function(){
 
 	function createSidebar() {
 		var lang = getConfig("language");
-		var schoolOpen = getConfig("schoolOpen");
-		var sourceOpen = getConfig("sourceOpen");
 		createButtons();
 		createNameFilter();
 		createTypeCombobox();
 		createRarityCombobox();
-		createSourceCombobox(sourceOpen);
+		createSourceCombobox();
 		createCardWidthButtons();
 		createAutoSizeTextButton();
 		createLangSelect(lang);
