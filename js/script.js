@@ -306,15 +306,15 @@ window.onload = function(){
 	}
 
 
-	function createItemsIndex() {
-		var Items = "";
-		allItems.forEach(function(item) {
-			Items += createCard(item);
-		});
-		$(".ItemContainer").html(Items);
-		$("#before_Items").hide();
-		$("#info_text").hide();
-	}
+	// function createItemsIndex() {
+	// 	var Items = "";
+	// 	allItems.forEach(function(item) {
+	// 		Items += createCard(item);
+	// 	});
+	// 	$(".ItemContainer").html(Items);
+	// 	$("#before_Items").hide();
+	// 	$("#info_text").hide();
+	// }
 	function showFiltered(oParams) {
 		var sName = oParams.sName;
 		var sClass = "";//oParams.sClass;
@@ -438,28 +438,24 @@ window.onload = function(){
 		// setConfig("language", sLang);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
 		clearTimeout(oTimer);
-		// oTimer = setTimeout(function(){
-		// 	showFiltered({
-		// 		sName: sName,
-		// 		sClass: sClass,
-		// 		sSubClass: sSubClass,
-		// 		sSubSubClass: sSubSubClass,
-		// 		nLevelStart: nLevelStart,
-		// 		nLevelEnd: nLevelEnd,
-		// 		aSchools: aSchools,
-		// 		aSources: aSources,
-		// 		sLang: sLang,
-		// 		fHidden: fHidden
-		// 		});
-		// }, nTimerSeconds/4);
-		//oTimer = setTimeout(showFiltered, nTimerSeconds/4);
-		showFiltered({
-			sName: sName,
-			aRarity: aRarity,
-			aTypes: aTypes,
-			aSources: aSources,
-			sLang: sLang
-		});
+		oTimer = setTimeout(function(){
+			showFiltered({
+				sName: sName,
+				aRarity: aRarity,
+				aTypes: aTypes,
+				aSources: aSources,
+				sLang: sLang,
+				fHidden: fHidden
+				});
+		}, nTimerSeconds/4);
+		oTimer = setTimeout(showFiltered, nTimerSeconds/4);
+		// showFiltered({
+		// 	sName: sName,
+		// 	aRarity: aRarity,
+		// 	aTypes: aTypes,
+		// 	aSources: aSources,
+		// 	sLang: sLang
+		// });
 	}
 
 	function createButtons() {

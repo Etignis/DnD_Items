@@ -142,6 +142,7 @@ var allItems = [
   {
     "en": {
       "name": "Adamantine Armor",
+      "img": "",
       "type": "armor",
       "rarity": 1,
       "attunement": "",
@@ -152,24 +153,6 @@ var allItems = [
     },
     "ru": {
       "name": "Адамантиновая броня",
-      "attunement": "",
-      "notes": "",
-      "text": "Красивое описание вещички.",
-    }
-  },
-  {
-    "en": {
-      "name": "potion",
-      "type": "potion",
-      "rarity": 4,
-      "attunement": "",
-      "notes": "",
-      "text": "Beautifull text about magnificant item.",
-      "source": "DMG",
-      "sourcePage": "-"
-    },
-    "ru": {
-      "name": "зелье",
       "attunement": "",
       "notes": "",
       "text": "Красивое описание вещички.",
