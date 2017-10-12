@@ -1,4 +1,4 @@
-var TENTACULUS_APP_VERSION = "2.2.4";
+var TENTACULUS_APP_VERSION = "0.0.0";
 
 var oConfig = {}; // global app config data
 function setConfig(prop, val) {
@@ -12,7 +12,7 @@ function getConfig(prop) {
 	if(prop!=undefined) {
 		return localStorage.getItem("config")? oConfig[prop] : null;
 	}
-	return oConfig;
+	return ""; //oConfig;
 }
 
 window.onload = function(){
@@ -21,9 +21,9 @@ window.onload = function(){
 	var oTimer; // for TimeOut (filtering)
 	var nTimerSeconds = 100;
 
-	var aHiddenSpells = [];
-	var aLockedSpells = {};
-	var filteredSpells = [];
+	var aHiddenItems = [];
+	var aLockedItems = {};
+	var filteredItems = [];
 
 	var oSource = {};
 
@@ -192,59 +192,58 @@ window.onload = function(){
 		return s.substr(0,1).toUpperCase() + s.substr(1);
 	}
 
-	function createCard(spell, lang, sClass, sLockedSpell) {
-		if (spell[lang] || (lang="en", spell[lang])) {
-			var o = spell[lang];
-			var s_name = o.name;
-			var s_ritual = o.ritual? " ("+o.ritual+")" : "";
-			var s_castingTime = o.castingTime;
-			var s_range = pretifyString(o.range);
-			var s_components = o.components;
-			var s_duration = pretifyString(o.duration.replace(/концентрация/ig, "конц-я"));
-			var s_materials = o.materials;
-			var s_text = o.text;
-			var s_level = o.level;
-			var s_source = o.source? o.source : spell.en.source? spell.en.source: "";
-			var st_castingTime, st_range, st_components, st_duration;
-			switch (lang){
-				case "ru":
-					s_level = s_level>0? s_level + " круг" : "Трюк";
-					st_castingTime = "Время накладывания";
-					st_range = "Дистанция";
-					st_components = "Компоненты";
-					st_duration = "Длительность";
-					break;
-				default:
-					s_level = s_level>0? s_level + " lvl" : "Cantrip";
-					st_castingTime = "CASTING TIME";
-					st_range = "RANGE";
-					st_components = "COMPONENTS";
-					st_duration = "DURATION";
+	function getItemAttr(oItem, sAttr, sLang) {
+		if(oItem[sLang] && oItem[sLang][sAttr] != undefined){
+			return oItem[sLang][sAttr];
+		}
+		var aLang = [];
+		for (lang in oItem){
+			aLang.push(lang);
+		}
+		for(var i=0; i<aLang.length; i++){
+			if(oItem[aLang[i]][sAttr] != undefined) {
+				return oItem[aLang[i]][sAttr];
 			}
-			var s_school = o.school;
-			var sNeedHelp = (spell.ru && spell.ru.needHelp)? "Как лучше перевести?" : "";
-
-			var sClassName = classSpells[sClass]? classSpells[sClass].title[lang] : false;
-			var bHideSpell = '<span class="bHideSpell" title="Скрыть заклинание (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';
-			var bLockSpell = sLockedSpell? '<span class="bUnlockSpell" title="Открепить обратно"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>' : '<span class="bLockSpell" title="Закорепить заклинане (не будут действовать фильтры)"><i class="fa fa-lock" aria-hidden="true"></i></span>';
-
-			sLockedSpell = sLockedSpell? " lockedSpell " : "";
-
-			var sNameRu;
-			try{
-				spell.ru.name.length;
-				sNameRu  = spell.ru.name;
-			} catch (err) {
-				console.log("!: "+spell.en.name);
-				sNameRu = spell.en.name;
+		}
+		return "";
+	}
+	function getItemAttrFromDB(oDataSource, sAttr, sLang) {
+		if(oDataSource[sAttr]){
+			if(oDataSource[sAttr][sLang]){
+				return oDataSource[sAttr][sLang].title;
 			}
 
-			var title = spell.en.name;
-			if (lang=='en') {
-				title = (spell.ru && spell.ru.name)?spell.ru.name: spell.en.name;
+			var aLang = [];
+			for (lang in oDataSource[sAttr]){
+				aLang.push(lang);
 			}
+			for(var i=0; i<aLang.length; i++){
+				if(oDataSource[sAttr][aLang[i]]) {
+					return oDataSource[sAttr][aLang[i]].title;
+				}
+			}
+		}
+		return "";
+	}
 
+	function createCard(oItem, lang, sClass, sLockedItem) {
+		if (oItem[lang] || (lang="en", oItem[lang])) {
+			var o = oItem[lang];
+			var s_name = getItemAttr(oItem, "name", lang);
+			var s_type = getItemAttrFromDB(oTypes, getItemAttr(oItem, "type", lang), lang);
+			var s_rariry = getItemAttrFromDB(oRarity, getItemAttr(oItem, "rarity", lang), lang);
+			var s_attunement = getItemAttr(oItem, getItemAttr(oItem, "attunement", lang), lang);
+			var s_notes = getItemAttr(oItem, "notes", lang);
+			var s_text = getItemAttr(oItem, "text", lang);
+			var s_source = getItemAttr(oItem, "source", "en");
+			var s_sourcePage = getItemAttr(oItem, "sourcePage", lang);
+
+
+			var bHideItem = '<span class="bHideItem" title="Скрыть предмет (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';
+			var bLockItem = sLockedItem? '<span class="bUnlockItem" title="Открепить обратно"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>' : '<span class="bLockItem" title="Закорепить предмет (не будут действовать фильтры)"><i class="fa fa-lock" aria-hidden="true"></i></span>';
 			var textSizeButtons = "<div class='sizeButtonsContainer noprint'><a href='#' class='textMin' title='Уменьшить размер текста'>–</a><a href='#' class='textMax' title='Увеличить размер текста'>+</a></div>";
+
+			sLockedItem = sLockedItem? " lockedItem " : "";
 
 			var cardWidth = getConfig("cardWidth");
 			var style = "";
@@ -252,226 +251,208 @@ window.onload = function(){
 				var style = " style='width: " + cardWidth + "' ";
 			}
 
-			ret = '<div class="cardContainer '+sClass+ sLockedSpell +'" '+ style +' data-level="' + spell.en.level + '" data-school="' + spell.en.school + '" data-name="' + spell.en.name + '" data-name-ru="' + sNameRu + '" data-lang="' + lang + '" data-class="' + sClass + '">'+
-				'<div class="spellCard">'+
+			var sNeedHelp = (lang == "ru")?  getItemAttr(oItem, "name", "en") : getItemAttr(oItem, "name", "ru");
+
+			ret = '<div class="cardContainer ' + sClass + sLockedItem +'" '+ style +' data-level="' + oItem.en.level + '" data-type="' + oItem.en.school + '" data-rarity="' + oItem.en.name + '"  data-lang="' + lang + '">'+
+				'<div class="ItemCard">'+
 					'<div class="content">'+
-						bLockSpell +
-						bHideSpell +
-						'<h1 title="'+title+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' + s_name + s_ritual + '</h1>'+
-						'<div class="row">'+
-							'<div class="cell castingTime">'+
-								'<b>'+st_castingTime+'</b>'+
-								'<span>' + s_castingTime + '</span>'+
-							'</div>'+
-							'<div class="cell range">'+
-								'<b>'+st_range+'</b>'+
-								'<span>' + s_range + '</span>'+
-							'</div>'+
-						'</div>'+
-						'<div class="row">'+
-							'<div class="cell components">'+
-								'<b>'+st_components+'</b>'+
-								'<span>' + s_components + '</span>'+
-							'</div>'+
-							'<div class="cell duration">'+
-								'<b>'+st_duration+'</b>'+
-								'<span>' + s_duration + '</span>'+
-							'</div>'+
-						'</div>'+
-						'<div class="materials">' + s_materials + '</div>'+
+						bLockItem +
+						bHideItem +
+						'<h1 title="'+s_name+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' +s_name+ '</h1>'+
+						'<span>' + s_type + " " + s_rariry +  " " + s_attunement + '</span>'+
 						'<div class="text">' + s_text + '</div>	'+
 						textSizeButtons +
-						(sClassName? '<b class="class">' + sClassName + '</b>' : "")+
-						'<b class="school">' + s_level + ", " + s_school + (s_source?" <span title=\"Источник: "+ oSource[o.source]+"\">("+s_source+")</span>":"")+'</b>'+
+						"<span title=\"Источник: "+ s_source+"\"></span>"+'</b>'+
 					'</div>'+
 				'</div>'+
 			'</div>';
 			return ret;
 		} else {
 			console.log("not found: ");
-			console.dir(spell);
+			console.dir(oItem);
 		}
 	}
 
 
-	function createSpellsIndex() {
-		var spells = "";
-		allSpells.forEach(function(item) {
-			spells += createCard(item);
+	function createItemsIndex() {
+		var Items = "";
+		allItems.forEach(function(item) {
+			Items += createCard(item);
 		});
-		$(".spellContainer").html(spells);
-		$("#before_spells").hide();
+		$(".ItemContainer").html(Items);
+		$("#before_Items").hide();
 		$("#info_text").hide();
 	}
 	function showFiltered(oParams) {
-		var sName = oParams.sName;
-		var sClass = oParams.sClass;
-		var sSubClass = oParams.sSubClass;
-		var sSubSubClass = oParams.sSubSubClass;
-		var nLevelStart = oParams.nLevelStart;
-		var nLevelEnd = oParams.nLevelEnd;
-		var aSchools = oParams.aSchools;
-		var aSources = oParams.aSources;
-		var sLang = oParams.sLang;
+		// var sName = oParams.sName;
+		 var sClass = "";//oParams.sClass;
+		// var sSubClass = oParams.sSubClass;
+		// var sSubSubClass = oParams.sSubSubClass;
+		// var nLevelStart = oParams.nLevelStart;
+		// var nLevelEnd = oParams.nLevelEnd;
+		// var aSchools = oParams.aSchools;
+		// var aSources = oParams.aSources;
+		var sLang = "ru"; //oParams.sLang;
 
-		var fHiddenSpells = (aHiddenSpells.length>0)? true: false;
-		var fLockedSpells = (aLockedSpells.length>0)? true: false;
+		// var fHiddenItems = (aHiddenItems.length>0)? true: false;
+		// var fLockedItems = (aLockedItems.length>0)? true: false;
 
-		$(".spellContainer").empty();
-		var spells = "";
-
-
-		filteredSpells = []; //arrDiff(filteredSpells, aHiddenSpells);
+		$(".ItemContainer").empty();
+		var Items = "";
 
 
-		//class
-		var aSpells = [];
-		if(sClass) {
-			if(classSpells[sClass]) {
-				aSpells = aSpells.concat(classSpells[sClass].spells);
-				if(classSpells[sClass].subclasses && classSpells[sClass].subclasses[sSubClass]) {
-					if(classSpells[sClass].subclasses[sSubClass].spells)
-						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].spells);
-					if(classSpells[sClass].subclasses[sSubClass].subclasses && classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
-						aSpells = aSpells.concat(classSpells[sClass].subclasses[sSubClass].subclasses[sSubSubClass].spells);
-					}
-				}
-				aSpells.forEach(function(spellName){
-					var fFind = false;
-					for (var i = 0; i<allSpells.length; i++){
-
-						if(allSpells[i].en.name == spellName) {
-							filteredSpells.push(allSpells[i]);
-							fFind = true;
-							break;
-						}
-					}
-					if(!fFind){
-						//console.log(spellName);
-					}
-				})
-			}	else {
-				filteredSpells = allSpells;
-			}
-		} else {
-			filteredSpells = allSpells;
-		}
-
-		// level
-		/**/
-		if(nLevelStart && nLevelEnd) {
-			filteredSpells = filteredSpells.filter(function(spell){
-				return !(spell.en.level < nLevelStart || spell.en.level > nLevelEnd);
-			});
-		}
-		/**/
+		filteredItems = allItems; //[]; //arrDiff(filteredItems, aHiddenItems);
 
 
-		//school
-		if(aSchools && aSchools.length>0 && aSchools.length<99) {
-			filteredSpells = filteredSpells.filter(function(spell){
-				for(var i = 0; i < aSchools.length; i++) {
-					if(aSchools[i].toLowerCase().trim() == spell.en.school.toLowerCase().trim()) {
-						return true;
-					}
-				}
-				return false;
-			});
-		}
+		// //class
+		// var aItems = [];
+		// if(sClass) {
+		// 	if(classItems[sClass]) {
+		// 		aItems = aItems.concat(classItems[sClass].Items);
+		// 		if(classItems[sClass].subclasses && classItems[sClass].subclasses[sSubClass]) {
+		// 			if(classItems[sClass].subclasses[sSubClass].Items)
+		// 				aItems = aItems.concat(classItems[sClass].subclasses[sSubClass].Items);
+		// 			if(classItems[sClass].subclasses[sSubClass].subclasses && classItems[sClass].subclasses[sSubClass].subclasses[sSubSubClass]) {
+		// 				aItems = aItems.concat(classItems[sClass].subclasses[sSubClass].subclasses[sSubSubClass].Items);
+		// 			}
+		// 		}
+		// 		aItems.forEach(function(ItemName){
+		// 			var fFind = false;
+		// 			for (var i = 0; i<allItems.length; i++){
 
-		//source
-		if(aSources && aSources.length>0 && aSources.length<9) {
-			filteredSpells = filteredSpells.filter(function(spell){
-				for(var i = 0; i < aSources.length; i++) {
+		// 				if(allItems[i].en.name == ItemName) {
+		// 					filteredItems.push(allItems[i]);
+		// 					fFind = true;
+		// 					break;
+		// 				}
+		// 			}
+		// 			if(!fFind){
+		// 				//console.log(ItemName);
+		// 			}
+		// 		})
+		// 	}	else {
+		// 		filteredItems = allItems;
+		// 	}
+		// } else {
+		// 	filteredItems = allItems;
+		// }
 
-					if(aSources[i].toLowerCase().trim() == spell.en.source.toLowerCase().trim()) {
-						return true;
-					}
-				}
-				return false;
-			});
-		}
-
-		// name
-		if (sName) {
-			sName = sName.toLowerCase().trim();
-			filteredSpells = filteredSpells.filter(function(spell){
-				return (spell.en.name.toLowerCase().trim().indexOf(sName)>=0 || (spell.ru && spell.ru.name.toLowerCase().trim().indexOf(sName)>=0));
-			});
-		}
+		// // level
+		// /**/
+		// if(nLevelStart && nLevelEnd) {
+		// 	filteredItems = filteredItems.filter(function(Item){
+		// 		return !(Item.en.level < nLevelStart || Item.en.level > nLevelEnd);
+		// 	});
+		// }
+		// /**/
 
 
-		filteredSpells = fHiddenSpells? arrDiff(filteredSpells, aHiddenSpells) : filteredSpells;
-		//filteredSpells = fLockedSpells? filteredSpells.concat(aLockedSpells) : filteredSpells;
-		if (fLockedSpells) {
-			for (var i = 0; i<allSpells.length; i++){
-				for (var j=0; j<aLockedSpells.length; j++){
-					if(allSpells[i].en.name == aLockedSpells[j].en) {
-						filteredSpells.push(allSpells[i]);
-						break;
-					}
-				}
-			}
-		}
+		// //school
+		// if(aSchools && aSchools.length>0 && aSchools.length<99) {
+		// 	filteredItems = filteredItems.filter(function(Item){
+		// 		for(var i = 0; i < aSchools.length; i++) {
+		// 			if(aSchools[i].toLowerCase().trim() == Item.en.school.toLowerCase().trim()) {
+		// 				return true;
+		// 			}
+		// 		}
+		// 		return false;
+		// 	});
+		// }
 
-		// sort
-		filteredSpells.sort(function(a, b) {
-			if(a[sLang] && b[sLang]) {
-				if (a[sLang].level+a[sLang].name.toLowerCase().trim() < b[sLang].level+b[sLang].name.toLowerCase().trim() )
-					return -1;
-				if (a[sLang].level+a[sLang].name.toLowerCase().trim() > b[sLang].level+b[sLang].name.toLowerCase().trim() )
-					return 1;
-			}
-			return 0
-		});
+		// //source
+		// if(aSources && aSources.length>0 && aSources.length<9) {
+		// 	filteredItems = filteredItems.filter(function(Item){
+		// 		for(var i = 0; i < aSources.length; i++) {
 
-		for (var i in filteredSpells) {
-			if(filteredSpells[i]) {
-				var fLocked = filteredSpells[i].locked? true: false;
-				var tmp = createCard(filteredSpells[i], sLang, sClass, fLocked)
+		// 			if(aSources[i].toLowerCase().trim() == Item.en.source.toLowerCase().trim()) {
+		// 				return true;
+		// 			}
+		// 		}
+		// 		return false;
+		// 	});
+		// }
+
+		// // name
+		// if (sName) {
+		// 	sName = sName.toLowerCase().trim();
+		// 	filteredItems = filteredItems.filter(function(Item){
+		// 		return (Item.en.name.toLowerCase().trim().indexOf(sName)>=0 || (Item.ru && Item.ru.name.toLowerCase().trim().indexOf(sName)>=0));
+		// 	});
+		// }
+
+
+		// filteredItems = fHiddenItems? arrDiff(filteredItems, aHiddenItems) : filteredItems;
+		// //filteredItems = fLockedItems? filteredItems.concat(aLockedItems) : filteredItems;
+		// if (fLockedItems) {
+		// 	for (var i = 0; i<allItems.length; i++){
+		// 		for (var j=0; j<aLockedItems.length; j++){
+		// 			if(allItems[i].en.name == aLockedItems[j].en) {
+		// 				filteredItems.push(allItems[i]);
+		// 				break;
+		// 			}
+		// 		}
+		// 	}
+		// }
+
+		// // sort
+		// filteredItems.sort(function(a, b) {
+		// 	if(a[sLang] && b[sLang]) {
+		// 		if (a[sLang].level+a[sLang].name.toLowerCase().trim() < b[sLang].level+b[sLang].name.toLowerCase().trim() )
+		// 			return -1;
+		// 		if (a[sLang].level+a[sLang].name.toLowerCase().trim() > b[sLang].level+b[sLang].name.toLowerCase().trim() )
+		// 			return 1;
+		// 	}
+		// 	return 0
+		// });
+
+		for (var i in filteredItems) {
+			if(filteredItems[i]) {
+				var fLocked = filteredItems[i].locked? true: false;
+				var tmp = createCard(filteredItems[i], sLang, sClass, fLocked)
 				if (tmp)
-					spells += tmp;
+					Items += tmp;
 			}
 		}
 
-		$(".spellContainer").html(spells);
-		$("#before_spells").hide();
+		$(".ItemContainer").html(Items);
+		$("#before_Items").hide();
 		$("#info_text").hide();
 	}
 
-	function filterSpells(oParams){
-		var sName = $("#NameInput input").val();
-		var sClass = $("#ClassSelect .label").attr("data-selected-key");
-		var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
-		var sSubSubClass = $("#SubSubClassSelect .label").attr("data-selected-key");
-		var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
-		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
-		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
-			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
-		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
-			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
-		var sLang = $("#LangSelect .label").attr("data-selected-key");
+	function filterItems(oParams){
+		// var sName = $("#NameInput input").val();
+		// var sClass = $("#ClassSelect .label").attr("data-selected-key");
+		// var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
+		// var sSubSubClass = $("#SubSubClassSelect .label").attr("data-selected-key");
+		// var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
+		// var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
+		// var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
+		// 	if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
+		// var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
+		// 	if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
+		// var sLang = $("#LangSelect .label").attr("data-selected-key");
 
-		var fHidden = (aHiddenSpells.length>0)? true: false;
+		// var fHidden = (aHiddenItems.length>0)? true: false;
 
-		setConfig("language", sLang);
+		// setConfig("language", sLang);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
 		clearTimeout(oTimer);
-		oTimer = setTimeout(function(){
-			showFiltered({
-				sName: sName,
-				sClass: sClass,
-				sSubClass: sSubClass,
-				sSubSubClass: sSubSubClass,
-				nLevelStart: nLevelStart,
-				nLevelEnd: nLevelEnd,
-				aSchools: aSchools,
-				aSources: aSources,
-				sLang: sLang,
-				fHidden: fHidden
-				});
-		}, nTimerSeconds/4);
-
+		// oTimer = setTimeout(function(){
+		// 	showFiltered({
+		// 		sName: sName,
+		// 		sClass: sClass,
+		// 		sSubClass: sSubClass,
+		// 		sSubSubClass: sSubSubClass,
+		// 		nLevelStart: nLevelStart,
+		// 		nLevelEnd: nLevelEnd,
+		// 		aSchools: aSchools,
+		// 		aSources: aSources,
+		// 		sLang: sLang,
+		// 		fHidden: fHidden
+		// 		});
+		// }, nTimerSeconds/4);
+		//oTimer = setTimeout(showFiltered, nTimerSeconds/4);
+		showFiltered();
 	}
 
 	function createButtons() {
@@ -496,11 +477,11 @@ window.onload = function(){
 			name: "[ALL]",
 			title: "[ВСЕ]"
 		}];
-		for (var i in classSpells){
+		for (var i in classItems){
 			src.push(
 			{
-				name: classSpells[i].title.en,
-				title: classSpells[i].title.en+"<br>"+classSpells[i].title.ru
+				name: classItems[i].title.en,
+				title: classItems[i].title.en+"<br>"+classItems[i].title.ru
 			}
 			);
 		}
@@ -515,12 +496,12 @@ window.onload = function(){
 			name: "[NONE]",
 		    title: "[ПОДКЛАСС]"
 		}];
-		if(classSpells[sClass] && classSpells[sClass].subclasses)
-		for (var i in classSpells[sClass].subclasses){
+		if(classItems[sClass] && classItems[sClass].subclasses)
+		for (var i in classItems[sClass].subclasses){
 			src.push(
 			{
 				name: i,
-				title: classSpells[sClass].subclasses[i].title.en+"<br>"+classSpells[sClass].subclasses[i].title.ru
+				title: classItems[sClass].subclasses[i].title.en+"<br>"+classItems[sClass].subclasses[i].title.ru
 			}
 			);
 		}
@@ -547,15 +528,15 @@ window.onload = function(){
 			name: "[NONE]",
 		    title: "[ПОДПОДКЛАСС]"
 		}];
-		if(classSpells[sClass] &&
-			classSpells[sClass].subclasses &&
-			classSpells[sClass].subclasses[sSubClass] &&
-			classSpells[sClass].subclasses[sSubClass].subclasses)
-		for (var i in classSpells[sClass].subclasses[sSubClass].subclasses){
+		if(classItems[sClass] &&
+			classItems[sClass].subclasses &&
+			classItems[sClass].subclasses[sSubClass] &&
+			classItems[sClass].subclasses[sSubClass].subclasses)
+		for (var i in classItems[sClass].subclasses[sSubClass].subclasses){
 			src.push(
 			{
 				name: i,
-				title: classSpells[sClass].subclasses[sSubClass].subclasses[i].title.en+"<br>"+classSpells[sClass].subclasses[sSubClass].subclasses[i].title.ru
+				title: classItems[sClass].subclasses[sSubClass].subclasses[i].title.en+"<br>"+classItems[sClass].subclasses[sSubClass].subclasses[i].title.ru
 			}
 			);
 		}
@@ -625,7 +606,7 @@ window.onload = function(){
   function createAutoSizeTextButton() {
 		var label = createLabel("Размер текста");
 		var bTextSize = "<a href='#' class='bt flexChild cardTestAutoSize' title='Автоподстройка размера текста заклинания'><i class='fa fa-text-height' aria-hidden='true'></i> Рассчитать </a>";
-		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bTextSize + "</div>");		
+		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bTextSize + "</div>");
 	}
 	function createLangSelect(lang) {
 		var src = [
@@ -645,46 +626,46 @@ window.onload = function(){
 		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
 	}
 
-	function createHiddenSpellsList(){
-		if(aHiddenSpells.length < 1){
-			$("#HiddenSpells").parent().remove();
+	function createHiddenItemsList(){
+		if(aHiddenItems.length < 1){
+			$("#HiddenItems").parent().remove();
 			return;
 		}
-		if(!$("#HiddenSpells").length>0){
+		if(!$("#HiddenItems").length>0){
 			var label = createLabel("Скрытые заклинания");
-			$("#LangSelect").parent().after("<div class='mediaWidth'>" + label + "<div id='HiddenSpells'></div></div>");
+			$("#LangSelect").parent().after("<div class='mediaWidth'>" + label + "<div id='HiddenItems'></div></div>");
 		}
-		var listHiddenSpells = aHiddenSpells.map(function(item){
-			return "<a href='#' title='Вернуть на место' class='bUnhideSpell' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
+		var listHiddenItems = aHiddenItems.map(function(item){
+			return "<a href='#' title='Вернуть на место' class='bUnhideItem' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
 			}).join(" ");
 
 		var bReturnAll = "<a href='#' class='bReturnUnvisible'>Вернуть все обратно</a>";
-		$("#HiddenSpells").html(bReturnAll + listHiddenSpells);
+		$("#HiddenItems").html(bReturnAll + listHiddenItems);
 	}
 
-	function createLockedSpellsArea(){
+	function createLockedItemsArea(){
 		var aLocked = [];
-		for (var i in aLockedSpells){
+		for (var i in aLockedItems){
 			aLocked.push(i);
 		}
 		var aResult = [];
 		var l = aLocked.length;
 		if(l>0){
-			for (var i=0; i<allSpells.length; i++) {
+			for (var i=0; i<allItems.length; i++) {
 				for (var j=0; j< l; j++) {
-					if(allSpells[i].en.name == aLocked[j]) {
-						aResult.push(allSpells[i]);
-						aResult[aResult.length-1].lang = aLockedSpells[aLocked[j]].lang;
-						aResult[aResult.length-1].class = aLockedSpells[aLocked[j]].class;
+					if(allItems[i].en.name == aLocked[j]) {
+						aResult.push(allItems[i]);
+						aResult[aResult.length-1].lang = aLockedItems[aLocked[j]].lang;
+						aResult[aResult.length-1].class = aLockedItems[aLocked[j]].class;
 					}
 				}
 			}
 
-			if($("#lockedSpellsArea").length<1){
-				$(".p_cont").prepend("<div id='lockedSpellsArea'><span class='bUnlockAll'>Открепить все</span><span class='topHeader'></span><div class='content row'></div><span class='bottomHeader'></span></div>");
+			if($("#lockedItemsArea").length<1){
+				$(".p_cont").prepend("<div id='lockedItemsArea'><span class='bUnlockAll'>Открепить все</span><span class='topHeader'></span><div class='content row'></div><span class='bottomHeader'></span></div>");
 
 			}
-			$("#lockedSpellsArea .content").html(aResult.sort(function(a, b) {
+			$("#lockedItemsArea .content").html(aResult.sort(function(a, b) {
 				if(a.lang && b.lang) {
 					if (a[a.lang].level+a[a.lang].name.toLowerCase().trim() < b[b.lang].level+b[b.lang].name.toLowerCase().trim() )
 						return -1;
@@ -695,11 +676,11 @@ window.onload = function(){
 			}).map(function(el){return createCard(el, el.lang, el.class, true)}));
 
 			//COUNTER
-			$("#lockedSpellsArea .topHeader").html("("+l+")");
-			$(".spellContainer").addClass("noprint");
+			$("#lockedItemsArea .topHeader").html("("+l+")");
+			$(".ItemContainer").addClass("noprint");
 		} else {
-			$("#lockedSpellsArea").remove();
-			$(".spellContainer").removeClass("noprint");
+			$("#lockedItemsArea").remove();
+			$(".ItemContainer").removeClass("noprint");
 		}
 	}
 
@@ -709,13 +690,13 @@ window.onload = function(){
 		var sourceOpen = getConfig("sourceOpen");
 		createButtons();
 		createNameFilter();
-		createClassSelect();
-		createLevelSelect();
-		createSchoolCombobox(schoolOpen);
-		createSourceCombobox(sourceOpen);
-		createCardWidthButtons();    
+		//createClassSelect();
+		//createLevelSelect();
+		//createSchoolCombobox(schoolOpen);
+		//createSourceCombobox(sourceOpen);
+		createCardWidthButtons();
 		createAutoSizeTextButton();
-		createLangSelect(lang);
+		//createLangSelect(lang);
 
 		$(".p_side").fadeIn();
 	}
@@ -898,7 +879,7 @@ window.onload = function(){
 	}
 
 	function deselectAllCards() {
-		$(".spellCard").removeClass("selected");
+		$(".ItemCard").removeClass("selected");
 	}
 	$("body").on('click', ".combo_box input", function(event){
 		return false;
@@ -922,21 +903,21 @@ window.onload = function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			updateHash();
-			filterSpells();
+			filterItems();
 		}, nTimerSeconds);
 	});
 	$("body").on('keyup', "#NameInput input", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			updateHash();
-			filterSpells();
+			filterItems();
 		}, nTimerSeconds*3);
 	});
 	// class select
 	$("body").on('focusout', "#ClassSelect", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
-			filterSpells();
+			filterItems();
 			var sClass = $("#ClassSelect .label").attr("data-selected-key");
 			createSubClassSelect(sClass);
 			updateHash();
@@ -947,7 +928,7 @@ window.onload = function(){
 		clearTimeout(oTimer);
 
 		oTimer = setTimeout(function(){
-			filterSpells();
+			filterItems();
 			var sClass = $("#ClassSelect .label").attr("data-selected-key");
 			var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
 			createSubSubClassSelect(sClass, sSubClass);
@@ -960,7 +941,7 @@ window.onload = function(){
 
 		oTimer = setTimeout(function(){
 			updateHash();
-			filterSpells();
+			filterItems();
 		}, nTimerSeconds);
 	});
 
@@ -969,14 +950,14 @@ window.onload = function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			updateHash();
-			filterSpells();
+			filterItems();
 		}, nTimerSeconds);
 	});
 	$("body").on('focusout', "#LevelEnd", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			updateHash();
-			filterSpells();
+			filterItems();
 		}, nTimerSeconds);
 	});
 	// school combobox
@@ -984,7 +965,7 @@ window.onload = function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			updateHash();
-			filterSpells();
+			filterItems();
 		}, nTimerSeconds);
 	});
 	$("body").on('click', "#SchoolCombobox .combo_box_title, #SchoolCombobox .combo_box_arrow", function(){
@@ -996,7 +977,7 @@ window.onload = function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			updateHash();
-			filterSpells();
+			filterItems();
 		}, nTimerSeconds);
 	});
 	$("body").on('click', "#SourceCombobox .combo_box_title, #SourceCombobox .combo_box_arrow", function(){
@@ -1008,14 +989,14 @@ window.onload = function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			updateHash();
-			filterSpells();
+			filterItems();
 		}, nTimerSeconds);
 	});
 
-	// show all spells
-	$("body").on('click', "#showAllSpells", function(){
+	// show all Items
+	$("body").on('click', "#showAllItems", function(){
 		setConfig("infoIsShown", true);
-		filterSpells();
+		filterItems();
 		hideInfoWin();
 		hideDBG();
 		return false;
@@ -1030,73 +1011,73 @@ window.onload = function(){
 	});
 
 
-	//hide spells
-	$("body").on('click', ".bHideSpell", function(){
+	//hide Items
+	$("body").on('click', ".bHideItem", function(){
 		var sName, sNameRu;
 
-		var nSelectedCards = $(".spellCard.selected").length;
+		var nSelectedCards = $(".ItemCard.selected").length;
 		if(nSelectedCards > 0) {
 			var oButtonLock = $(this);
-			$(".spellCard.selected").each(function() {
+			$(".ItemCard.selected").each(function() {
 				sName = $(this).closest(".cardContainer").attr("data-name");
 				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
 
 				oButtonLock.hide();
-				// update hidden spells array
-				aHiddenSpells.push({en: sName, ru: sNameRu});
+				// update hidden Items array
+				aHiddenItems.push({en: sName, ru: sNameRu});
 			});
 		} else {
 			sName = $(this).closest(".cardContainer").attr("data-name");
 			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
 
 			$(this).hide();
-			// update hidden spells array
-			aHiddenSpells.push({en: sName, ru: sNameRu});
+			// update hidden Items array
+			aHiddenItems.push({en: sName, ru: sNameRu});
 		}
 
-		// show list of hidden spells
-		createHiddenSpellsList();
+		// show list of hidden Items
+		createHiddenItemsList();
 
-		// show spells without hidden
-		filterSpells({fHidden: true});
+		// show Items without hidden
+		filterItems({fHidden: true});
 	})
-	// unhide spells
-	$("body").on('click', ".bUnhideSpell", function(){
+	// unhide Items
+	$("body").on('click', ".bUnhideItem", function(){
 		var sName = $(this).attr("data-name")
-		// update hidden spells array
-		aHiddenSpells.splice(aHiddenSpells.map(function(el){return el.en}).indexOf(sName), 1);
+		// update hidden Items array
+		aHiddenItems.splice(aHiddenItems.map(function(el){return el.en}).indexOf(sName), 1);
 
-		// show list of hidden spells
-		createHiddenSpellsList();
+		// show list of hidden Items
+		createHiddenItemsList();
 
-		// show spells without hidden
-		filterSpells({fHidden: true});
+		// show Items without hidden
+		filterItems({fHidden: true});
 
 		return false;
 	})
 	$("body").on("click", ".bReturnUnvisible", function() {
-		aHiddenSpells = [];// show list of hidden spells
-		createHiddenSpellsList();
+		aHiddenItems = [];// show list of hidden Items
+		createHiddenItemsList();
 
-		// show spells without hidden
-		filterSpells({fHidden: true});
+		// show Items without hidden
+		filterItems({fHidden: true});
 
 		return false;
 	});
 
-	// lock spells
-	$("body").on('click', ".bLockSpell", function(){
+	// lock Items
+	$("body").on('click', ".bLockItem", function(){
 		var sName, sNameRu, sLang, sClass;
 
-		var nSelectedCards = $(".spellCard.selected").length;
+		var nSelectedCards = $(".ItemCard.selected").length;
 		if(nSelectedCards > 0) {
-			$(".spellCard.selected").each(function() {
+			$(".ItemCard.selected").each(function() {
 				sName = $(this).closest(".cardContainer").attr("data-name");
 				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
 				sLang = $(this).closest(".cardContainer").attr("data-lang");
 				sClass= $(this).closest(".cardContainer").attr("data-class");
 
-				aLockedSpells[sName] = {
+				aLockedItems[sName] = {
 					ru: sNameRu,
 					lang: sLang,
 					class: sClass
@@ -1109,7 +1090,7 @@ window.onload = function(){
 			sClass= $(this).closest(".cardContainer").attr("data-class");
 
 
-			aLockedSpells[sName] = {
+			aLockedItems[sName] = {
 				ru: sNameRu,
 				lang: sLang,
 				class: sClass
@@ -1117,37 +1098,37 @@ window.onload = function(){
 		}
 
 		// show locked
-		createLockedSpellsArea();
+		createLockedItemsArea();
 		deselectAllCards();
 	})
 
-	// unlock spells
-	$("body").on('click', ".bUnlockSpell", function(){
+	// unlock Items
+	$("body").on('click', ".bUnlockItem", function(){
 		var sName;
 
-		var nSelectedCards = $(".spellCard.selected").length;
+		var nSelectedCards = $(".ItemCard.selected").length;
 		if(nSelectedCards > 0) {
-			$(".spellCard.selected").each(function() {
+			$(".ItemCard.selected").each(function() {
 				sName = $(this).closest(".cardContainer").attr("data-name");
-				delete aLockedSpells[sName];
+				delete aLockedItems[sName];
 			});
 		} else {
 			sName = $(this).closest(".cardContainer").attr("data-name");
-			delete aLockedSpells[sName];
+			delete aLockedItems[sName];
 		}
 
 		// show locked
-		createLockedSpellsArea();
+		createLockedItemsArea();
 		deselectAllCards();
 	})
-	$("body").on('click', "#lockedSpellsArea .topHeader", function(){
+	$("body").on('click', "#lockedItemsArea .topHeader", function(){
 		$(this).next(".content").slideToggle();
 		$(this).next(".content").next(".bottomHeader").fadeToggle();
 	});
 	$("body").on('click', ".bUnlockAll", function(){
-		aLockedSpells = [];
+		aLockedItems = [];
 		// show locked
-		createLockedSpellsArea();
+		createLockedItemsArea();
 	});
 
 	$("body").on('click', "#bPrint", function(){
@@ -1170,7 +1151,7 @@ window.onload = function(){
 		var sLineHeight = f_s-1+"px";
 	    $(this).parent().parent().find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 
-		$(".spellCard.selected").each(function() {
+		$(".ItemCard.selected").each(function() {
 			$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 		});
 
@@ -1187,7 +1168,7 @@ window.onload = function(){
 		var sLineHeight = f_s-1+"px";
 	    $(this).parent().parent().find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 
-		$(".spellCard.selected").each(function() {
+		$(".ItemCard.selected").each(function() {
 			$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 		});
 		return false;
@@ -1196,9 +1177,9 @@ window.onload = function(){
 	// card width
 	$("body").on("click", ".cardWidthMin", function() {
 		var width;
-		var nSelectedCards = $(".spellCard.selected").length;
+		var nSelectedCards = $(".ItemCard.selected").length;
 		if(nSelectedCards > 0) {
-			$(".spellCard.selected").each(function() {
+			$(".ItemCard.selected").each(function() {
 				width = $(this).parent().width();
 				width = width-20+"px";
 				$(this).parent().width(width);
@@ -1213,9 +1194,9 @@ window.onload = function(){
 	});
 	$("body").on("click", ".cardWidthMax", function() {
 		var width;
-		var nSelectedCards = $(".spellCard.selected").length;
+		var nSelectedCards = $(".ItemCard.selected").length;
 		if(nSelectedCards > 0) {
-			$(".spellCard.selected").each(function() {
+			$(".ItemCard.selected").each(function() {
 				width = $(this).parent().width();
 				width = (width+20)+"px";
 				$(this).parent().width(width);
@@ -1229,9 +1210,9 @@ window.onload = function(){
 	});
 	$("body").on("click", ".cardWidthNorm", function() {
 		var width = "2.5in";
-		var nSelectedCards = $(".spellCard.selected").length;
+		var nSelectedCards = $(".ItemCard.selected").length;
 		if(nSelectedCards > 0) {
-			$(".spellCard.selected").each(function() {
+			$(".ItemCard.selected").each(function() {
 				$(this).parent().width(width);
 			});
 		} else {
@@ -1239,31 +1220,31 @@ window.onload = function(){
 			setConfig("cardWidth", width);
 		}
 	});
-  
+
   // autoszie Text in the cards
 	$("body").on("click", ".cardTestAutoSize", function() {
-		var nSelectedCards = $(".spellCard.selected").length;
+		var nSelectedCards = $(".ItemCard.selected").length;
 		if(nSelectedCards > 0) {
-			$(".spellCard.selected").each(function() {
+			$(".ItemCard.selected").each(function() {
 				var f_s=$(this).find(".text").css("font-size");
 				f_s=f_s.substring(0, f_s.length - 2);
-				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {						
+				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {
 					f_s-=0.3;
-					
+
 					var sFontSize = f_s+"px";
-					var sLineHeight = f_s-1+"px";			
+					var sLineHeight = f_s-1+"px";
 					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 				}
 			});
 		} else {
-			$(".spellCard").each(function() {
+			$(".ItemCard").each(function() {
 				var f_s=$(this).find(".text").css("font-size");
 				f_s=f_s.substring(0, f_s.length - 2);
-				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {	
+				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {
 					 f_s-=0.3;
 					//console.log(f_s);
 					var sFontSize = f_s+"px";
-					var sLineHeight = f_s-1+"px";			
+					var sLineHeight = f_s-1+"px";
 					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
 				}
 			});
@@ -1278,12 +1259,12 @@ window.onload = function(){
 
 		// A pressed
 		if(event.which=="65" && fCtrlIsPressed) {
-			if($(".spellCard.selected").length == $(".spellCard").length) {
+			if($(".ItemCard.selected").length == $(".ItemCard").length) {
 				// deselect all
-				$(".spellCard").removeClass("selected");
+				$(".ItemCard").removeClass("selected");
 			} else {
 				// select all
-				$(".spellCard").addClass("selected");
+				$(".ItemCard").addClass("selected");
 			}
 			return false;
 		}
@@ -1294,16 +1275,16 @@ window.onload = function(){
 	});
 
 	// card select/deselect
-	$("body").on("click", ".spellCard", function() {
+	$("body").on("click", ".ItemCard", function() {
 		if(fCtrlIsPressed)
 			$(this).toggleClass("selected");
-	});	
-  $("body").on("dblclick", ".spellCard", function() {
+	});
+  $("body").on("dblclick", ".ItemCard", function() {
 		$(this).toggleClass("selected");
 		clearSelection();
 		return false;
 	});
-	$("body").on("taphold", ".spellCard", function() {
+	$("body").on("taphold", ".ItemCard", function() {
 		$(this).toggleClass("selected");
 	});
 
@@ -1322,7 +1303,7 @@ window.onload = function(){
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
 
-		//#q=spell_name&ls=0&le=9
+		//#q=Item_name&ls=0&le=9
 		var aFilters = [];
 		if(sName && sName.length>0) {
 			aFilters.push("q="+sName.replace(/\s+/g, "_"));
@@ -1363,7 +1344,7 @@ window.onload = function(){
   function getHash(){
     $('html, body').animate({scrollTop:0}, 'fast');
 
-    var sHash = window.location.hash.slice(1); // /archive#q=spell_name
+    var sHash = window.location.hash.slice(1); // /archive#q=Item_name
     if(sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|,_=-]/.test(sHash)) {
       var sName = sHash.match(/\bq=([А-Яа-яЁё\/\w\d_]+)/);
       var sClass = sHash.match(/\bclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
@@ -1431,7 +1412,7 @@ window.onload = function(){
       //hideClerFilter();
     }
     //$("body").css("border-top", "1px solid red");
-    filterSpells();
+    filterItems();
   }
 
   function removeHash() {
@@ -1446,11 +1427,11 @@ window.onload = function(){
 	$.when(createSidebar()).done(
 		function(){
       //$("body").css("border-top", "1px solid blue");
-			$("#showAllSpells").slideDown();
+			$("#showAllItems").slideDown();
 			if(getViewPortSize("width") > 600){
 				if(getConfig("infoIsShown")==true)
 					getHash();
-					//filterSpells();
+					//filterItems();
 			} else{
         //setTimeout(getHash, 1000);
         getHash();
