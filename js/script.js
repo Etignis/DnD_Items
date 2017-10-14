@@ -261,6 +261,7 @@ window.onload = function(){
 		if (oItem[lang] || (lang="en", oItem[lang])) {
 			var o = oItem[lang];
 			var s_name = getItemAttr(oItem, "name", lang);
+			var s_img = getItemAttr(oItem, "img", lang);
 			var s_type = getItemAttrFromDB(oTypes, {attr: getItemAttr(oItem, "type", lang), lang: lang});
 			var s_gender = getItemAttrFromDB(oTypes, {attr: getItemAttr(oItem, "type", lang), subattr: "gender", lang: lang});
 			var s_rariry = getItemAttrFromDB(oRarity, {attr: getItemAttr(oItem, "rarity", lang), subattr: s_gender, lang: lang});
@@ -284,17 +285,18 @@ window.onload = function(){
 			}
 
 			var sNeedHelp = (lang == "ru")?  getItemAttr(oItem, "name", "en") : getItemAttr(oItem, "name", "ru");
+      var sImg = 'style="background-image: url(img/items/'+s_img+');"';
 
 			ret = '<div class="cardContainer ' + sClass + sLockedItem +'" '+ style +' data-level="' + oItem.en.level + '" data-type="' + oItem.en.school + '" data-rarity="' + oItem.en.name + '"  data-lang="' + lang + '">'+
 				'<div class="ItemCard">'+
-					'<div class="content">'+
+					'<div class="content" '+sImg+'>'+
 						bLockItem +
 						bHideItem +
 						'<h1 title="'+s_name+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' +s_name+ '</h1>'+
-						'<span>' + s_rariry + " " + s_type+  " " + s_attunement + '</span>'+
+						'<span class="subtitle">' + s_rariry + " " + s_type+  " " + s_attunement + '</span>'+
 						'<div class="text">' + s_text + '</div>	'+
+						"<div class='source' title=\"Источник: "+ s_source+"\">"+ s_source+"</div>"+
 						textSizeButtons +
-						"<span title=\"Источник: "+ s_source+"\"></span>"+'</b>'+
 					'</div>'+
 				'</div>'+
 			'</div>';

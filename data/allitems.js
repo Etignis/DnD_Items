@@ -63,9 +63,9 @@ var oTypes = {
       "gender": "it"
     }
   },
-  "Wondrous Item": {
+  "wondrous item": {
     "en": {
-      "title": "Wondrous Item"
+      "title": "wondrous item"
     },
     "ru": {
       "title": "Чудо-вещь",
@@ -142,12 +142,13 @@ var allItems = [
   {
     "en": {
       "name": "Adamantine Armor",
-      "img": "",
+      "img": "adamantine_armor.jpeg",
       "type": "armor",
+      "typeAdditions": "medium or heavy, but not hide",
       "rarity": 1,
       "attunement": "",
       "notes": "",
-      "text": "Beautifull text about magnificant item.",
+      "text": "This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you’re wearing it, any critical hit against you becomes a normal hit.",
       "source": "DMG",
       "sourcePage": "150"
     },
@@ -155,7 +156,27 @@ var allItems = [
       "name": "Адамантиновая броня",
       "attunement": "",
       "notes": "",
-      "text": "Красивое описание вещички.",
+      "text": "This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you’re wearing it, any critical hit against you becomes a normal hit.",
+    }
+  },
+  {
+    "en": {
+      "name": "ALCHEMY jUG",
+      "img": "",
+      "type": "wondrous item",
+      "typeAdditions": "medium or heavy, but not hide",
+      "rarity": 1,
+      "attunement": "",
+      "notes": "",
+      "text": "<p>This ceramic jug appears to be able to hold a gallon of liquid and weighs 12 pounds whether full or empty. Sloshing sounds can be heard from within the jug when it is shaken, even if the jug is empty.</p><p>You can use an action and name one liquid from the table below to cause the jug to produce the chosen liquid. Afterward, you can uncork the jug as an action and pour that liquid out, up to 2 gallons per minute. The maximum amount of liquid the jug can produce depends on the liquid you named.</p><p>Once the jug starts producing a liquid, it can't produce a different one, or more of one that has reached its maximum, until the next dawn.",
+      "source": "DMG",
+      "sourcePage": "150"
+    },
+    "ru": {
+      "name": "",
+      "attunement": "",
+      "notes": "",
+      "text": "",
     }
   }
 ]
