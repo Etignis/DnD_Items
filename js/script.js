@@ -221,7 +221,7 @@ window.onload = function(){
 	}
 
 	function getItemAttr(oItem, sAttr, sLang) {
-		if(oItem[sLang] && oItem[sLang][sAttr] != undefined){
+		if(oItem[sLang] && oItem[sLang][sAttr] != undefined && oItem[sLang][sAttr] != ""){
 			return oItem[sLang][sAttr];
 		}
 		var aLang = [];
