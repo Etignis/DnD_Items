@@ -46,7 +46,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+
 node/node_modules/*
 node/DnD 5e Dungeon Masters Guide.pdf
 *.pdf
 node/npm-debug.log
+

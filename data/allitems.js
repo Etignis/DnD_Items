@@ -154,9 +154,10 @@ var allItems = [
     },
     "ru": {
       "name": "Адамантиновая броня",
+      "typeAdditions": "только средня или тяжелая",
       "attunement": "",
       "notes": "",
-      "text": "This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you’re wearing it, any critical hit against you becomes a normal hit.",
+      "text": "Это доспехи усилены адамантином, одним из самых прочных из существующих веществ. Пока вы носите эти доспехи, все критические попадания по вам считаются обычными попаданиями.",
     }
   },
   {
@@ -164,7 +165,6 @@ var allItems = [
       "name": "ALCHEMY jUG",
       "img": "",
       "type": "wondrous item",
-      "typeAdditions": "medium or heavy, but not hide",
       "rarity": 1,
       "attunement": "",
       "notes": "",
@@ -173,10 +173,63 @@ var allItems = [
       "sourcePage": "150"
     },
     "ru": {
-      "name": "",
+      "name": "Алхимический сосуд",
+      "notes": "",
+      "text": "<p>Этот керамический кувшин, кажется способным вместить 1 галлон жидкости и весит 12 фунтов вне зависимости от того, полный он или пустой. Если его потрясти, то можно услышать звуки плескающийся жидкости, даже если кувшин пуст.</p><p>Вы можете действием назвать одну жидкость из приведённой ниже таблицы, отчего кувшин начнёт её производить. После этого вы можете ещё одним действием откупорить кувшин и вылить эту жидкость из сосуда со скоростью до 2 галлонов в минуту. Максимальное количество жидкости, которое может произвести кувшин, зависит от вида жидкости, названной вами.</p><p>После того, как кувшин начинает производить выбранную жидкость, он не может производить другую, или произвести названную жидкость в объёме больше её максимума, пока не наступит следующий рассвет.</p><ul><li>Вино: 1 галлон </li><li>Вода, пресная: 8 галлонов </li><li>Вода, солёная: 12 галлонов </li><li>Кислота: 8 унций </li><li>Масло: 1 кварта</li><li>Майонез: 2 галлона </li><li>Мёд: 1 галлон</li><li>Пиво: 4 галлона</li><li>Уксус: 2 галлона</li><li>Яд 1/2: унции</li></ul>",
+    }
+  },
+  {
+    "en": {
+      "name": "AMMUNITION +1",
+      "img": "",
+      "type": "weapon",
+      "rarity": 1,
       "attunement": "",
       "notes": "",
-      "text": "",
+      "text": "You have a bonus to attack and damage rolls madewith this piece of magic ammunition. The bonus isdetermined by the rarity of the ammunition. Once it hita target, the ammunition is no longer magical.",
+      "source": "DMG",
+      "sourcePage": "150"
+    },
+    "ru": {
+      "name": "Боеприпас +1",
+      "notes": "",
+      "text": "Вы получаете бонус +1 к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим.",
+    }
+  },
+  {
+    "en": {
+      "name": "AMMUNITION +2",
+      "img": "",
+      "type": "weapon",
+      "rarity": 2,
+      "attunement": "",
+      "notes": "",
+      "text": "You have a bonus to attack and damage rolls madewith this piece of magic ammunition. The bonus isdetermined by the rarity of the ammunition. Once it hita target, the ammunition is no longer magical.",
+      "source": "DMG",
+      "sourcePage": "150"
+    },
+    "ru": {
+      "name": "Боеприпас +2",
+      "notes": "",
+      "text": "Вы получаете бонус +2 к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим.",
+    }
+  },
+  {
+    "en": {
+      "name": "AMMUNITION +3",
+      "img": "",
+      "type": "weapon",
+      "rarity": 3,
+      "attunement": "",
+      "notes": "",
+      "text": "You have a bonus to attack and damage rolls madewith this piece of magic ammunition. The bonus isdetermined by the rarity of the ammunition. Once it hita target, the ammunition is no longer magical.",
+      "source": "DMG",
+      "sourcePage": "150"
+    },
+    "ru": {
+      "name": "Боеприпас +3",
+      "notes": "",
+      "text": "Вы получаете бонус +3 к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим.",
     }
   }
 ]

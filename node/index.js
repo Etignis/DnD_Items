@@ -1,5 +1,6 @@
 'use strict';
 
+
 var oR = {
   "common": 0,
   "uncommon": 1,
@@ -7,6 +8,7 @@ var oR = {
   "very rare": 3,
   "legendary": 4
 }
+
 
 // const fs = require('fs');
 // const argv = require('yargs').argv;
@@ -21,10 +23,12 @@ const path = require('path');
 
 /// articles index page
 const sPathToSrc = 'source.txt';
+
 const sPathToSrcRu = 'source_ru.txt';
 const htmlExt = '.html';
 const sPathToOutput = 'db_en.js';
 const sPathToOutputRu = 'db_ru.js';
+
 
 function ensureDirectoryExistence(filePath) {
   var dirname = path.dirname(filePath);
@@ -36,9 +40,11 @@ function ensureDirectoryExistence(filePath) {
 }
 
 
+
 const rl = readline.createInterface({
   input: fs.createReadStream(sPathToSrc)
 });
+
 const lr = new lbl(sPathToSrc);
 
 let sTitle = "";
@@ -56,6 +62,7 @@ let oTmpTypeRare = "";
 let oItem = {};
 
 let aItems=[];
+
 let oItems={};
 
 /**/
@@ -73,6 +80,7 @@ lr.on('line', function (line) {
       
       //aItems.push({en: oItem});
       oItems[oItem.name.replace(/\s+/g,"").toLowerCase()] = {en: oItem};
+
       oItem = {};
     }
     sTmpTitle += line+" ";   
@@ -102,6 +110,7 @@ lr.on('line', function (line) {
         /*/
         // type
         var oTmpType = /([A-Za-z\s ]+)\(([A-Za-z\s, ]+)\)/.exec(aLine[0]);
+
         if(oTmpType && oTmpType[2]) {
           oItem.type = oTmpType[1].trim();
           oItem.typeInfo = oTmpType[2].trim();
@@ -110,102 +119,39 @@ lr.on('line', function (line) {
         }
         
         // rarity
-        var oTmpType = /([A-Za-z\s ]+)\(([A-Za-z\s, ]+)\)/.exec(aLine[1]);
-        if(oTmpType && oTmpType[2]) {
-          oItem.rarity = oTmpType[1].trim();
-          oItem.rarityInfo = oTmpType[2].trim();
-        } else{
-          oItem.rarity = aLine[0].trim();
-        }
+
         /**/
         oTmpTypeRare="";
         sTmpText += line.replace(/[\r\n]+/, " ").replace(/^([A-Z])/, "<br>$1")+ " ";
+
       }
     
       
     } else { // just text
+
       sTmpText += line.replace(/[\r\n]+/, " ").replace(/^([A-Z•])/, "<br>$1")+ " ";
+
     }
   }
 });
 lr.on('end', function () {
   oItem.text = sTmpText;
+
 	//aItems.push(oItem);
   oItems[oItem.name.replace(/\s+/g,"").toLowerCase()] = {en: oItem};
+
 
  // console.dir(aItems);
  console.log("db created");
  
   ensureDirectoryExistence(sPathToOutput);
   try{
+
     fs.writeFileSync(sPathToOutput, JSON.stringify(oItems, null, 2));
+
     console.log("The file was saved! \""+sPathToOutput+"\"");
   }catch (e){
       console.log("Cannot write file \""+sPathToOutput+"\": ", e);
   }
 });
-/**/
-
-
-/*/
-let fItem = false;
-// ru 
-lr.on('line', function (line) {
-  //console.log(line);
-  if(/^@@@/.test(line)){ // new item
-     console.log("-------");
-    if(sTmpText) {
-      oItem.text = sTmpText.replace(/^<br>/, "");
-      sTmpText="";
-      aItems.push({ru: oItem});
-    }
-  
-    oItem = {};
-  } else{
-    if(!oItem.name){ // name
-      sTmpTitle+=line;
-      if(/\$/.test(line)) { // end of Name
-        oItem.name = sTmpTitle.replace("$","").trim();
-        sTmpTitle="";
-      }
-    } else if(!oItem.rarity){ // type / rarity
-      sTmpTitle+=line+" ";
-      if(/\$/.test(line)) { // end of type/rarity
-        console.log(sTmpTitle);
-        oItem.rarity = "+";
-        sTmpTitle="";
-      }
-    } else{ // text
-      let tLine = line;
-      if(/-$/.test(tLine)) {
-        tLine = tLine.replace(/-$/, "");
-      } else {
-        tLine += " ";
-      }
-      if(/^\s*[А-ЯЁЙ]/.test(line)) {
-        tLine = "<br>"+tLine;
-      }
-        console.log("+");
-      
-      sTmpText += tLine;
-    }
-  }
-  
-});
-lr.on('end', function () {
-  //oItem.text = sTmpText;
-	//aItems.push(oItem);
-
- // console.dir(aItems);
- console.log("db created");
- 
-  ensureDirectoryExistence(sPathToOutputRu);
-  try{
-    fs.writeFileSync(sPathToOutputRu, JSON.stringify(aItems, null, 2));
-    console.log("The file was saved! \""+sPathToOutputRu+"\"");
-  }catch (e){
-      console.log("Cannot write file \""+sPathToOutputRu+"\": ", e);
-  }
-});
-/**/
 
