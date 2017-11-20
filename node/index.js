@@ -41,11 +41,6 @@ function ensureDirectoryExistence(filePath) {
 
 
 
-const rl = readline.createInterface({
-  input: fs.createReadStream(sPathToSrc)
-});
-
-const lr = new lbl(sPathToSrc);
 
 let sTitle = "";
 let sType = "";
@@ -66,9 +61,85 @@ let aItems=[];
 let oItems={};
 
 /**/
+
+const rl = readline.createInterface({
+  input: fs.createReadStream(sPathToSrcRu)
+});
+
+const lr = new lbl(sPathToSrcRu);
+
 lr.on('line', function (line) { 
-    //console.log(line);
-  //console.log('Line from file:', line);
+  if(line == "@@@") { // new item
+    if(sTmpText){ // ix exust text of previous item info
+      sTmpText = sTmpText.replace(/\$/g, "").replace(/[\r\n]+/, " ").replace(/^([А-ЯЁ])/, "<br>$1");
+      oItem.text = sTmpText.trim();      
+      sTmpText = "";
+      
+      //aItems.push({en: oItem});
+      oItems[oItem.name.replace(/\s+/g,"").toLowerCase()] = {ru: oItem};
+
+      oItem = {};
+    }
+    
+  } else{
+    if(!oItem.name) {
+      sTmpTitle += line + " ";
+      if(/\$/.test(line)){
+        oItem.name = sTmpTitle.replace(/\$/g, "").trim();
+        sTmpTitle = "";
+      }
+    } else if(!oItem.rarity){
+      
+      if(/\$/.test(line)){
+        oItem.rarity = true;
+      }
+    }else if(!oItem.text){
+      if(/-$/.test(line)) {
+        sTmpText += line.replace(/-$/, "").replace(/^([А-ЯЁ])/, "<br>$1");
+      } else{
+        sTmpText += (line+ " ").replace(/^([А-ЯЁ])/, "<br>$1");
+      }
+      
+      if(/\$/.test(line)){
+
+        oItem.text = sTmpText.replace(/\$/g, "").replace(/[\r\n]+/, " ").replace(/^<br>/, "").trim();
+        sTmpText = "";
+      }
+    }
+  }
+   
+});
+lr.on('end', function () {
+  //oItem.text = sTmpText;
+
+	//aItems.push(oItem);
+  oItems[oItem.name.replace(/\s+/g,"").toLowerCase()] = {ru: oItem};
+
+
+ // console.dir(aItems);
+ console.log("db created");
+ 
+  ensureDirectoryExistence(sPathToOutputRu);
+  try{
+
+    fs.writeFileSync(sPathToOutputRu, JSON.stringify(oItems, null, 2));
+
+    console.log("The file was saved! \""+sPathToOutputRu+"\"");
+  }catch (e){
+      console.log("Cannot write file \""+sPathToOutputRu+"\": ", e);
+  }
+});
+/**/
+
+
+/*/
+const rl = readline.createInterface({
+  input: fs.createReadStream(sPathToSrc)
+});
+
+const lr = new lbl(sPathToSrc);
+lr.on('line', function (line) { 
+   
   if(/^[A-Z\s '\(\)-]+$/.test(line)) { // item name
     if(sTmpText){ // ix exust text of previous item info
       sTmpText = sTmpText.replace(/^<br>/, "");
@@ -107,21 +178,7 @@ lr.on('line', function (line) {
           if(oTyRa[4])
             oItem.rarityInfo = oTyRa[4];
         }
-        /*/
-        // type
-        var oTmpType = /([A-Za-z\s ]+)\(([A-Za-z\s, ]+)\)/.exec(aLine[0]);
-
-        if(oTmpType && oTmpType[2]) {
-          oItem.type = oTmpType[1].trim();
-          oItem.typeInfo = oTmpType[2].trim();
-        } else{
-          oItem.type = aLine[0].trim();
-        }
-        
-        // rarity
-
-        /**/
-        oTmpTypeRare="";
+               oTmpTypeRare="";
         sTmpText += line.replace(/[\r\n]+/, " ").replace(/^([A-Z])/, "<br>$1")+ " ";
 
       }
@@ -154,4 +211,4 @@ lr.on('end', function () {
       console.log("Cannot write file \""+sPathToOutput+"\": ", e);
   }
 });
-
+/**/
