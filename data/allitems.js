@@ -1,4 +1,3 @@
-
 var oSources = {
   "PHB": {
     "en": {
@@ -138,6 +137,14 @@ var oRarity = {
     }
   }
 }
+
+var oItemsAddInfo = {
+  "requires attunement": {
+    "en": "requires attunement",
+    "ru": "требуется настройка"
+  }
+}
+
 var allItems = [
   {
     "en": {

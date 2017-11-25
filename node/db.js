@@ -1,564 +1,319 @@
 [
   {
     "en": {
-      "name": "AMULET OF HEALTH ",
+      "name": "AMMUNITION +1",
+      "type": "Weapon",
+      "typeInfo": "(any ammunition)",
+      "rarity": "1",
+      "text": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. Once it hit a target, the ammunition is no longer magical.",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Боеприпасы +1",
+      "text": "Вы получаете бонус к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим."
+    }
+  },
+  {
+    "en": {
+      "name": "AMMUNITION +2",
+      "type": "Weapon",
+      "typeInfo": "(any ammunition)",
+      "rarity": "2",
+      "text": "You have a bonus to attack and damage rolls made with this piece of magic ammunition.  Once it hit a target, the ammunition is no longer magical.",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Боеприпасы +2 ",
+      "text": "Вы получаете бонус к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим."
+    }
+  },
+  {
+    "en": {
+      "name": "AMMUNITION +3",
+      "type": "Weapon",
+      "typeInfo": "(any ammunition)",
+      "rarity": "3",
+      "text": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. Once it hit a target, the ammunition is no longer magical.",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Боеприпасы +3",
+      "text": "Вы получаете бонус к броскам атаки и урона, совершённым при использовании этих магических боеприпасов.  Попав в цель, боеприпас перестаёт быть магическим."
+    }
+  },
+  {
+    "en": {
+      "name": "ADAMANTINE ARMOR",
+      "type": "Armor",
+      "typeInfo": "(medium or heavy, but not hide)",
+      "rarity": 1,
+      "text": "This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you're wearing it, any critical hit against you becomes a normal hit.",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Адамантиновый доспех",
+      "text": "Это доспехи усилены адамантином, одним из самых прочных из существующих веществ. Пока вы носите эти доспехи, все критические попадания по вам считаются обычными попаданиями."
+    }
+  },
+  {
+    "en": {
+      "name": "ALCHEMY JUG",
       "type": "Wondrous item",
-      "rarity": "rare",
-      "rarityInfo": "requires attunement",
+      "rarity": 1,
+      "text": "This ceramic jug appears to be able to hold a gallon of liquid and weighs 12 pounds whether full or empty. <br>Sloshing sounds can be heard from within the jug when it is shaken, even if the jug is empty. <br>You can use an action and name one liquid from the table below to cause the jug to produce the chosen liquid. Afterward, you can uncork the jug as an action and pour that liquid out, up to 2 gallons per minute. The maximum amount of liquid the jug can produce depends on the liquid you named. <br>Once the jug starts producing a liquid, it can't produce a different one, or more of one that has reached its maximum, until the next dawn.<br><table><tr><th>Liquid</th><th>MaxAmount</th></tr><tr><td>Acid</td><td>8ounces</td></tr><tr><td>Basicpoison</td><td>1/2ounce</td></tr><tr><td>Beer</td><td>4gallons</td></tr><tr><td>Honey</td><td>1gallon</td></tr><tr><td>Mayonnaise</td><td>2gallons</td></tr><tr><td>Oil</td><td>1quart</td></tr><tr><td>Vinegar</td><td>2gallons</td></tr><tr><td>Water,fresh</td><td>8gallons</td></tr><tr><td>Water,salt</td><td>12gallons</td></tr><tr><td>Wine</td><td>1gallon</td></tr></table>",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Алхимический сосуд",
+      "text": "Этот керамический кувшин, кажется способным вместить 1 галлон жидкости и весит 12 фунтов вне зависимости от того, полный он или пустой. Если его потрясти, то можно услышать звуки плескающийся жидкости, даже если кувшин пуст.<br> Вы можете действием назвать одну жидкость из приведённой ниже таблицы, отчего кувшин начнёт её производить. После этого вы можете ещё одним действием откупорить кувшин и вылить эту жидкость из сосуда со скоростью до 2 галлонов в минуту. Максимальное количество жидкости, которое может произвести кувшин, зависит от вида жидкости, названной вами.<br> После того, как кувшин начинает производить выбранную жидкость, он не может производить другую, или произвести названную жидкость в объёме больше её максимума, пока не наступит следующий рассвет.<br><table><tr><td>Жидкость</td><td>Макс. объём</td></tr><tr><td>Вино</td><td>1 галлон</td></tr><tr><td>Вода, пресная</td><td>8 галлонов</td></tr><tr><td>Вода, солёная</td><td>12 галлонов</td></tr><tr><td>Кислота</td><td>8 унций</td></tr><tr><td>Майонез</td><td>2 галлона</td></tr><tr><td>Масло</td><td>1 кварта</td></tr><tr><td>Мёд</td><td>1 галлон</td></tr><tr><td>Пиво</td><td>4 галлона</td></tr><tr><td>Уксус</td><td>2 галлона</td></tr><tr><td>Яд</td><td>1/2 унции</td></tr></table>"
+    }
+  },
+  {
+    "en": {
+      "name": "AMULET OF HEALTH",
+      "type": "Wondrous item",
+      "rarity": 2,
+      "rarityInfo": "(requires attunement)",
       "text": "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher.",
       "source": "DMG"
     },
     "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
+      "name": "Амулет здоровья",
+      "text": "Пока вы носите этот амулет, ваше значение Телосложения равно 19. Если ваше Телосложение без него уже 19 или выше, то амулет не оказывает на вас никакого действия."
     }
   },
   {
     "en": {
-      "name": "AMULET OF PROOF AGAINST DETECTION AND LOCATION ",
+      "name": "AMULET OF PROOF AGAINST DETECTION AND LOCATION",
       "type": "Wondrous item",
-      "rarity": "uncommon",
-      "rarityInfo": "requires attunement",
+      "rarity": 1,
+      "rarityInfo": "(requires attunement)",
       "text": "While wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors.",
       "source": "DMG"
     },
     "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
+      "name": "Амулет защиты от обнаружения и поиска",
+      "text": "Пока вы носите этот амулет, вы скрыты от магии школы Прорицания. Вы не можете быть целью подобной магии, и вас не воспринимают магические сенсоры слежения."
     }
   },
   {
     "en": {
-      "name": "AMULET OF THE PLANES ",
+      "name": "AMULET OF THE PLANES",
       "type": "Wondrous item",
-      "rarity": "very rare",
-      "rarityInfo": "requires attunement",
-      "text": "While wearing this amulet, you can use an action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence check. On a successful check, you cast the plane shift spell. On a failure, you and each creature and object within 15 feet of you travel to a random destination. Roll a dlOO. On a 1- 60, you travel to a random location on the plane you named. On a 61- 100, you travel to a randomly determined plane of existence.",
+      "rarity": 3,
+      "rarityInfo": "(requires attunement)",
+      "text": "While wearing this amulet, you can use an action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence check. On a successful check, you cast the plane shift spell. On a failure, you and each creature and object within 15 feet of you travel to a random destination. <br>Roll a dlOO. On a 1- 60, you travel to a random location on the plane you named. On a 61- 100, you travel to a randomly determined plane of existence.",
       "source": "DMG"
     },
     "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
+      "name": "Амулет планов",
+      "text": "Пока вы носите этот амулет, вы можете действием назвать хорошо знакомое вам место на другом плане. <br>После этого необходимо совершить проверку Интеллекта со Сл 15. При успехе вы накладываете заклинание уход в иной мир. При провале вы и все существа и предметы в пределах 15 футов от вас переноситесь в случайном направлении. Бросьте к100. При результате 1–60 вы переноситесь в случайное место на названном вами плане. При результате 61–100 вы переноситесь в случайное место на вашем текущем плане существования."
+    }
+  },
+  {
+     "en": {
+      "name": "ANIMATED SHIELD",
+      "type": "Armor ",
+      "typeInfo": "(shield)",
+      "rarity": 3,
+      "rarityInfo": "(requires atttinement)",
+      "text": "While holding this shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. <br>The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free.",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Живой щит",
+      "text": "Если вы держите этот щит, вы можете бонусным действием произнести командное слово, чтобы он ожил. <br>Щит поднимается в воздух и парит в вашем пространстве, защищая так, как если бы вы его использовали, но ваши руки при этом свободны. Щит остаётся живым 1 минуту, пока вы не окончите эффект бонусным действием или пока вы не станете недееспособным или не умрёте, после чего щит падает на землю или в вашу руку, если она свободна."
     }
   },
   {
     "en": {
-      "name": "ANIMATED SHIELD ",
+      "name": "APPARATUS OF KWALISH",
+      "type": "Wondrous item",
+      "rarity": 4,
+      "text": "This item first appears to be a Large sealed iron barrel weighing 500 pounds. The barrel has a hidden catch, which can be found with a successful DC 20 Intelligence (Investigation) check. Releasing the catch unlocks a hatch at one end of the barrel, allowing two Medium or smaller creatures to crawl inside. Ten levers are set in a row at the far end, each in a neutral position, able to move either up or down. When certain levers are used, the apparatus transforms to resemble a giant lobster. <br>The apparatus of Kwalish is a Large object with the following statistics:<br><b>Armor Class:</b> 20<br><b>Armor Class:</b> 20<br><b>Hit Points:</b> 200<br><b>Speed:</b> 30 ft., swim 30 ft. (or 0 ft. for both if the legs and tail aren't extended)<br><b>Damage Immunities:</b> poison, psychic<br>To be used as a vehicle, the apparatus requires one pilot. While the apparatus's hatch is closed, the compartment is airtight and watertight. The compartment holds enough air for 10 hours of breathing, divided by the number of breathing creatures inside. <br>The apparatus floats on water. It can also go underwater to a depth of 900 feet. Below that, the vehicle takes 2d6 bludgeoning damage per minute from pressure. <br>A creature in the compartment can use an action to move as many as two of the apparatus's levers up or down. After each use, a lever goes back to its neutral position. Each lever, from left to right, functions as shown in the Apparatus of Kwalish Levers table.<br><b>APPARATUS OF KWALISH LEVERS</b> <table> <tr> <th>Lever </th> <th>Up </th> <th>Down </th> </tr> <tr> <td>1 </td> <td>Legs and tail extend,allowing the apparatus towalk and swim. </td> <td>Legs and tail retract,reducing the apparatu s'sspeed to 0 and makingit unable to benefit frombonuses to speed. </td> </tr> <tr> <td>2 </td> <td>Forward window shutteropens. </td> <td>Forward window shuttercloses. </td> </tr> <tr> <td>3 </td> <td>Side window shuttersopen (two per side). </td> <td>Side window shuttersclose (two per side) . </td> </tr> <tr> <td>4 </td> <td>Two claws extend fromthe front sides of theapparatus. </td> <td>The claws retract. </td> </tr> <tr> <td>5 </td> <td>Each extended clawmakes the followingmelee weapon attack:+8 to hit, reach 5 ft.,one target. Hit: 7 (2d6)bludgeoning damage. </td> <td>Each extended clawmakes the followingmelee weapon attack:+8 to hit, reach 5 ft. , onetarget. Hit: The target isgrappled (escape DC 15). </td> </tr> <tr> <td>6 </td> <td>The apparatus walks orswims forward. </td> <td>The apparatus walks orswims backward. </td> </tr> <tr> <td>7 </td> <td>The apparatus turns 90 degrees left. </td> <td>The apparatus turns 90degrees right. </td> </tr> <tr> <td>8 </td> <td>Eyelike fixtures emitbright light in a 30-footradius and dim light foran additional 30 feet. </td> <td>The light turns off. </td> </tr> <tr> <td>9 </td> <td>The apparatus sinks asmuch as 20 feet in liquid. </td> <td>The apparatus rises up to 20 feet in liquid. </td> </tr> <tr> <td>10 </td> <td>The rear hatch unseals and opens. </td> <td>The rear hatch closes and seals. </td> </tr> </table>",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Аппарат Квалиша",
+      "text": "На первый взгляд этот предмет выглядит как Большая запечатанная железная бочка, весящая 500 фунтов. У бочки есть потайной затвор, который можно найти успешной проверкой Интеллекта (Анализ) со <br>Сл 20. Этот затвор отпирает люк на одном конце бочки, позволяющий забраться внутрь двум существам <br>Среднего или меньшего размера. У дальнего конца торчат в ряд десять рычагов, все в нейтральной позиции, но их можно перевести или в верхнее или в нижнее положение. Если использовать определённые рычаги, аппарат трансформируется и станет напоминать гигантского лобстера. <br>Аппарат Квалиша это Большой предмет со следующей статистикой: <br>Класс Доспеха: 20 <br>Хиты: 200 <br>Скорость: 30 фт., плавая 30 фт. (или 0 фт. если не выдвинуты ноги и хвост) <br>Иммунитет к урону: психическая энергия, яд <br>Для того чтобы использовать аппарат в качестве транспортного средства, требуется один водитель. <br>Пока люк заперт, аппарат водо- и воздухонепроницаем. Воздуха внутри хватит одному дышащему существу на 10 часов. <br>Аппарат держится на плаву. Он может погружаться на глубину до 900 футов. Глубже этой отметки аппарат получает дробящий урон 2к6 в минуту от давления. <br>Существо в аппарате может действием переместить от одного до двух рычагов вверх или вниз. После каждого использования рычаги сами возвращаются в нейтральное положение. Назначение десяти рычагов показано в таблице. <br><table><tr><td>Рычаг</td><td>Вверх</td><td>Вниз</td></tr><tr><td>1</td><td>Ноги и хвост выдвигаются, позволяя аппарату ходить и плавать.</td><td>Ноги и хвост втягиваются, уменьшая скорость аппарата до 0 и лишая его способности получать преимущества от бонусов к скорости.</td></tr><tr><td>2</td><td>Заслонка переднего иллюминатора открывается.</td><td>Заслонка переднего иллюминатора закрывается.</td></tr><tr><td>3</td><td>Заслонки боковых иллюминаторов (по два на каждом борту) открываются.</td><td>Заслонки боковых иллюминаторов (по два на каждом борту) закрываются.</td></tr><tr><td>4</td><td>Из передней части аппарата выдвигаются два когтя.</td><td>Когти убираются.</td></tr><tr><td>5</td><td>Каждый выдвинутый коготь совершает рукопашную атаку оружием: +8 к попаданию, досягаемость 5 фт., одна цель. Попадание: Дробящий урон 7 (2к6).</td><td>Каждый выдвинутый коготь совершает</td></tr><tr><td>рукопашную атаку оружием: +8 к попаданию, досягаемость 5 фт., одна цель. Попадание: цель становится схваченной (Сл высвобождения 15).</td></tr><tr><td>6</td><td>Аппарат идёт или плывёт вперёд.</td><td>Аппарат идёт или плывёт назад.</td></tr><tr><td>7</td><td>Аппарат поворачивает на 90 градусов налево.</td><td>Аппарат поворачивает на 90 градусов направо.</td></tr><tr><td>8</td><td>Похожие на глаза приспособления испускают яркий свет в пределах 30-футового радиуса и тусклый свет в пределах ещё 30 футов.</td><td>Свет тухнет.</td></tr><tr><td>9</td><td>Аппарат погружается в жидкость на глубину до 20 футов.</td><td>Аппарат всплывает в жидкости не более чем на 20 футов.</td></tr><tr><td>10</td><td>Задний люк отпирается и открывается.</td><td>Задний люк закрывается и запирается.</td></tr></table>"
+    }
+  },
+  {
+    "en": {
+      "name": "ARMOR +1",
       "type": "Armor",
-      "typeInfo": "shield",
-      "rarity": "very rare",
-      "rarityInfo": "requires atttinement",
-      "text": "While holding this shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free.",
+      "typeInfo": "(light, medium, or heavy)",
+      "rarity": 1,
+      "text": "You have a bonus to AC while wearing this armor.",
       "source": "DMG"
     },
     "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
+      "name": "Доспех +1",
+      "text": "Вы получаете бонус к КД, пока носите этот доспех."
     }
   },
   {
     "en": {
-      "name": "APPARATUS OF KWALISH ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "This item first appears to be a Large sealed iron barrel weighing 500 pounds. The barrel has a hidden catch, which can be found with a successful DC 20 Intelligence (Investigation) check. Releasing the catch unlocks a hatch at one end of the barrel, allowing two Medium or smaller creatures to crawl inside. Ten levers are set in a row at the far end, each in a neutral position, able to move either up or down. When certain levers are used, the apparatus transforms to resemble a giant lobster. The apparatus of Kwalish is a Large object with the following statistics: ARMOR, +1 , +2 , OR +3",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "ARMOR O F INVULNERAB ILI TY ",
-      "type": "Armor (light",
-      "rarity": "Armor (light",
-      "text": "You have a bonus to AC while wearing this armor. The bonus is determined by its rarity.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "ARMOR OF INVULNERABILITY ",
+      "name": "ARMOR +2",
       "type": "Armor",
-      "typeInfo": "plate",
-      "rarity": "legendary",
-      "rarityInfo": "requires attunement",
-      "text": "You have resistance to nonmagical damage while you wear this armor. Additionally, you can use an action to make yourself immune to nonmagical damage for 10 minutes or until you are no longer wearing the armor. Once this special action is used, it can't be used again until the next dawn.",
+      "typeInfo": "(light, medium, or heavy)",
+      "rarity": 2,
+      "text": "You have a bonus to AC while wearing this armor.",
       "source": "DMG"
     },
     "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
+      "name": "Доспех +2",
+      "text": "Вы получаете бонус к КД, пока носите этот доспех."
     }
   },
   {
     "en": {
-      "name": "ARMOR OF RESISTANCE ",
-      "type": "Armor (light",
-      "rarity": "Armor (light",
-      "text": "You have resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly from the options below.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "ARMOR OF VULNERABILITY ",
+      "name": "ARMOR +3",
       "type": "Armor",
-      "typeInfo": "plate",
-      "rarity": "rare",
-      "rarityInfo": "requires attunement",
-      "text": "While wearing this armor, you have resistance to one of the following damage types: bludgeoning, piercing, or slashing. The DM chooses the type or determines it randomly. Curse. This armor is cursed, a fact that is revealed only when an identify spell is cast on the armor or you attune to it. Attuning to the armor curses you until you are targeted by the remove curse spell or similar magic: removing the armor fails to end the curse. While cursed you have vulnerability to two of the three damage type associated with the armor (not the one to which it grants resistance). ARROW-CATCHING SHIELD Armor (shield), rare (requires attunement) You gain a +2 bonus to AC against ranged attacks while you wield this shield. This bonus is in addition to the shield's normal bonus to AC. In addition, whenever an attacker makes a ranged attack against a target within 5 feet of you, you can use your reaction to become the target of the attack instead.",
+      "typeInfo": "(light, medium, or heavy)",
+      "rarity": 3,
+      "text": "You have a bonus to AC while wearing this armor.",
       "source": "DMG"
     },
     "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
+      "name": "Доспех +3",
+      "text": "Вы получаете бонус к КД, пока носите этот доспех."
     }
   },
   {
     "en": {
-      "name": "ARROW OF SLAYING ",
-      "type": "Weapon",
-      "typeInfo": "arrow",
-      "rarity": "Weapon (arrow)",
-      "text": "An arrow of slaying is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both arrows of dragon slaying and arrows of blue dragon slaying. If a creature belonging to the type, race, or group associated with an arrow of slaying takes damage from the arrow, the creature must make a DC 17 Constitution saving throw, taking an extra 6d10 piercing damage on a failed save, or half as much extra damage on a successful one. Once an arrow of slaying deals its extra damage to a creature, it becomes a nonmagical arrow. Other types of magic ammunition of this kind exist, such as bolts of slaying meant for a crossbow, though arrows are most common.",
+      "name": "ARMOR OF INVULNERABILITY",
+      "type": "Armor ",
+      "typeInfo": "(plate)",
+      "rarity": 4,
+      "rarityInfo": "(requires attunement)",
+      "text": "You have resistance to nonmagical damage while you wear this armor. Additionally, you can use an action to make yourself immune to nonmagical damage for 10 minutes or until you are no longer wearing the armor. <br>Once this special action is used, it can't be used again until the next dawn.",
       "source": "DMG"
     },
     "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
+      "name": "Доспех неуязвимости",
+      "text": "Вы получаете сопротивление к немагическому урону, пока носите этот доспех. Кроме того, вы можете действием получить иммунитет к немагическому урону на 10 минут или пока вы не снимете этот доспех. <br>Вы не можете повторно использовать это особое действие до следующего рассвета."
+    }
+  },
+  {
+     "en": {
+      "name": "ARMOR OF RESISTANCE",
+      "type": "Armor ",
+      "typeInfo": "(light, medium, or heavy)",
+      "rarity": 2,
+      "rarityInfo": "(requiresattunement)",
+      "text": "You have resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly from the options below.<br> <table> <tr> <th>dlO </th> <th>Damage Type </th> </tr> <tr> <td>1 </td> <td>Acid </td> </tr> <tr> <td>2 </td> <td>Cold </td> </tr> <tr> <td>3 </td> <td>Fire </td> </tr> <tr> <td>4 </td> <td>Force </td> </tr> <tr> <td>5 </td> <td>Lightning </td> </tr> <tr> <td>6 </td> <td>Necrotic </td> </tr> <tr> <td>7 </td> <td>Poison </td> </tr> <tr> <td>8 </td> <td>Psychic </td> </tr> <tr> <td>9 </td> <td>Radiant </td> </tr> <tr> <td>10 </td> <td>Thunder </td> </tr> </table> ",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Доспех сопротивления",
+      "text": "Вы получаете сопротивление к одному из видов урона, пока носите этот доспех. Мастер выбирает вид урона сам или случайным образом, из представленных ниже вариантов.<br><table><tr><td>к10</td><td>Вид урона</td></tr><tr><td>1</td><td>Звук</td></tr><tr><td>2</td><td>Излучение</td></tr><tr><td>3</td><td>Кислота</td></tr><tr><td>4</td><td>Некротическая энергия</td></tr><tr><td>5</td><td>Огонь</td></tr><tr><td>6</td><td>Психическая энергия</td></tr><tr><td>7</td><td>Силовое</td></tr><tr><td>8</td><td>Холод</td></tr><tr><td>9</td><td>Электричество</td></tr><tr><td>10</td><td>Яд</td></tr></table>"
     }
   },
   {
     "en": {
-      "name": "BAG OF BEANS ",
+      "name": "ARMOR OF VULNERABILITY",
+      "type": "Armor ",
+      "typeInfo": "(plate)",
+      "rarity": 2,
+      "rarityInfo": "(requires attunement)",
+      "text": "While wearing this armor, you have resistance to one of the following damage types: bludgeoning, piercing, or slashing. The DM chooses the type or determines it randomly. <br><b>Curse.</b> This armor is cursed, a fact that is revealed only when an identify spell is cast on the armor or you attune to it. Attuning to the armor curses you until you are targeted by the remove curse spell or similar magic: removing the armor fails to end the curse. While cursed you have vulnerability to two of the three damage type associated with the armor (not the one to which it grants resistance).",
+      "source": "DMG"
+    },
+     "ru": {
+      "name": "Доспех уязвимости",
+      "text": "Когда вы надеваете этот доспех, вы получаете сопротивление к одному из следующих видов урона: дробящий, колющий или рубящий. Мастер определяет вид урона самостоятельно или случайным образом. <br><b>Проклятье.</b> Этот доспех проклят, но это становится понятно только когда на него используется заклинание опознание или когда вы настраиваетесь на него. Настройка на доспех проклинает вас до тех пор, пока вы не станете целью заклинания снятие проклятья или похожей магии. Снятие доспеха не прекращает проклятье. Пока вы прокляты, вы получаете уязвимость к двум оставшимся видам урона, исключая тот, к которому доспех даёт сопротивление."
+    }
+  },
+  {
+    "en": {
+      "name": "ARROW-CATCHING SHIELD",
+      "type": "Armor ",
+      "typeInfo": "(shield)",
+      "rarity": 2,
+      "rarityInfo": "(requires attunement)",
+      "text": "You gain a +2 bonus to AC against ranged attacks while you wield this shield. This bonus is in addition to the shield's normal bonus to AC. In addition, whenever an attacker makes a ranged attack against a target within 5 feet of you, you can use your reaction to become the target of the attack instead.",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Ловящий стрелы щит",
+      "text": "Вы получаете бонус +2 к КД от дальнобойных атак, пока носите этот щит. Этот бонус идёт в дополнение к обычному бонусу щита к КД. Кроме того, каждый раз, когда кто-нибудь совершает дальнобойную атаку по цели, находящейся в пределах 5 футов от вас, вы можете реакцией вместо этого сделать целью атаки себя."
+    }
+  },
+  {
+    "en": {
+      "name": "ARROW OF SLAYING",
+      "type": "Weapon ",
+      "typeInfo": "(arrow)",
+      "rarity": 3,
+      "text": "An arrow of slaying is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both arrows of dragon slaying and arrows of blue dragon slaying. If a creature belonging to the type, race, or group associated with an arrow of slaying takes damage from the arrow, the creature must make a DC 17 Constitution saving throw, taking an extra 6d10 piercing damage on a failed save, or half as much extra damage on a successful one. <br>Once an arrow of slaying deals its extra damage to a creature, it becomes a nonmagical arrow. <br>Other types of magic ammunition of this kind exist, such as bolts of slaying meant for a crossbow, though arrows are most common.",
+      "source": "DMG"
+    },
+    "ru": {
+      "name": "Стрела убийства",
+      "text": "Стрела убийства это магическое оружие, предназначенное для убийства существ определённого вида. <br>Область применения может быть как широкой, так и более конкретной; например, существуют и стрелы убийства драконов и стрелы убийства синих драконов. Если существо, принадлежащее к виду, расе или группе, связанной со стрелой убийства, получает неё урон, оно должно совершить спасбросок Телосложения со Сл 17, получая дополнительный колющий урон 6к10 при провале или половину этого урона при успехе. <br>После того как стрела убийства причиняет существу дополнительный урон, она становится немагической стрелой. <br>Есть и другие разновидности боеприпасов с такой же магией, такие как арбалетные болты убийства, хотя стрелы встречаются чаще всего."
+    }
+  },
+  {
+    "en": {
+      "name": "BAG OF BEANS",
       "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "Inside this heavy cloth bag are 3d4 dry beans. The bag weighs 1/2 pound plus 1/4 pound for each bean it contains. If you dump the bag's contents out on the ground, they explode in a 10-foot radius, extending from the beans. Each creature in the area, including you, must make a DC 15 Dexterity saving throw, taking 5d4 fire damage on a failed save, or half as much damage on a successful one. The fire ignites flammable objects in the area that aren't being worn or carried. If you remove a bean from the bag, plant it in dirt or sand, and then water it, the bean produces an effect 1 minute later from the ground where it was planted. The DM can choose an effect from the following table, determine it randomly, or create an effect.",
+      "rarity": 2,
+      "text": "Inside this heavy cloth bag are 3d4 dry beans. The bag weighs 1/2 pound plus 1/4 pound for each bean it contains. <br>If you dump the bag's contents out on the ground, they explode in a 10-foot radius, extending from the beans. <br>Each creature in the area, including you, must make a <br>DC 15 Dexterity saving throw, taking 5d4 fire damage on a failed save, or half as much damage on a successful one. The fire ignites flammable objects in the area that aren't being worn or carried. <br>If you remove a bean from the bag, plant it in dirt or sand, and then water it, the bean produces an effect 1 minute later from the ground where it was planted. <br>The DM can choose an effect from the following table, determine it randomly, or create an effect.<br> <table> <tr> <th>dlO0 </th> <th>Effect </th> </tr> <tr> <td>01 </td> <td>5d4 toadstools sp ro ut. If a c reature eats a toadstool, roll any d ie. On an odd roll , the eater must succeed on a DC 15 Constitution saving throw or take Sd6 poi son damage and become poisoned for 1 hour. On an even ro ll, the eater gains Sd6 temporary hit points for 1 hour. </td> </tr> <tr> <td>02-10 </td> <td>A geyser erupts and spouts water, beer, berry juice, tea, vinegar, wine, or oil (DM's choice) 30 feet into the air for 1 d12 rounds. </td> </tr> <tr> <td>11-20 </td> <td>A <a href='https://tentaculus.ru/monsters/?q=treant'>treant</a> sprouts (see the Monster Manual for statistics) . There 's a 50 percent chance that the treant is chaotic evil and attacks. </td> </tr> <tr> <td>21-30 </td> <td>An animate, immobile stone statue in your likeness rises. It makes verbal threats against you. If you leave it and others come near, it describes you as the most heinous of villains and directs the newcomers to find and attack you. If you are on the same plane of existence as the statue, it knows where you are. The statue becomes inanimate after 24 hours. </td> </tr> <tr> <td>31-40 </td> <td>A campfire with blue Aames springs forth and burns for 24 hours (or until it is ext inguished). </td> </tr> <tr> <td>41-50 </td> <td>1d6 + 6 <a href='https://tentaculus.ru/monsters/?q=shrieker'>shriekers</a> sprout (see the Monster Manual for statistics). </td> </tr> <tr> <td>51-60 </td> <td>1d4 + 8 bright pink toads crawl forth. Whenever a toad is touched , it transforms into a Large or smaller monster of the DM's choice. The monster rema ins for 1 minute, then disappears in a putT of bright pink smoke. </td> </tr> <tr> <td>61-70 </td> <td>A hungry <a href='https://tentaculus.ru/monsters/?q=bulette'>bulette</a> (see the Monster Manual for statistics) burrows up and attacks. </td> </tr> <tr> <td>71-80 </td> <td>A fruit tree grows. It has 1d10 + 20 fruit , 1 d8 of which act as randomly determined magic potions, whi le one acts as an ingested poison of the DM 's choice. The tree vanis hes after 1 hour. Picked fruit remains , reta ining any magic fo r 30 days. </td> </tr> <tr> <td>81-90 </td> <td>A nest of1d4 + 3 eggs springs up. Any creature that eats an egg must make a DC 20 Constitution saving throw. On a successful save, a creature permanently increases its lowest ability score by 1, randomly choosing among equally low scores. On a failed save, the creature takes 10d6 force damage from an internal magical explosion. </td> </tr> <tr> <td>91-99 </td> <td>A pyramid with a 60-foot-square base bursts upward . Inside is a sarcophagus conta ining a <a href='https://tentaculus.ru/monsters/?q=mummy_lord'>mummy lord</a> (see the Monster Manual for statistics). The pyramid is treated as the mummy lord's lair, and its sarcophagus contains treasure of the DM's choice. </td> </tr> <tr> <td>00 </td> <td>AA giant beanstalk sprouts, growing to a height of the DM's choice. The top leads where the DM chooses, such as to a great view, a cloud giant's castle, or a different plane of existence. </td> </tr> </table> ",
       "source": "DMG"
     },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
+     "ru": {
+      "name": "Сумка с бобами",
+      "text": "Внутри этой тяжёлой тканой сумки находятся 3к4 сухих боба. Сумка весит 1/2 фунта, плюс 1/4 фунта за каждый боб, находящийся внутри. <br>Если вы высыпаете содержимое сумки на землю, то они взрываются с радиусом 10 футов. Все существа в этой зоне, включая вас, должно совершить спасбросок Ловкости со Сл 15, получая урон огнём 5к4 при провале или половину этого урона, если спасбросок был успешен. Этот огонь также поджигает легковоспламеняющиеся объекты в зоне поражения, которые никто не несёт и не носит. <br>Если вы извлечёте боб из сумки, посадите его в землю или песок и затем польёте его, то боб спустя 1 минуту после того, как вы посадили его, произведёт некоторый эффект. Мастер может сам выбрать эффект из таблицы, может определить эффект случайным образом, или же придумать свой вариант.<br><table><tr><td>к100</td><td>Эффект</td></tr><tr><td>01</td><td>Вырастают 5к4 поганок. Если существо съедает поганку, то необходимо бросить любую кость для определения эффекта. При выпадении нечётного числа существо должно преуспеть в спасброске Телосложения со Сл 15, иначе оно получит урон ядом 5к6 и становится отравленным на 1 час. Если же выпадет чётное число, то существо получает 5к6 временных хитов на 1 час.</td></tr><tr><td>2–10</td><td>Появляется гейзер, фонтанирующий на высоту 30 футов потоками воды, пива, ягодного сока, чая, уксуса или масла (по выбору Мастера) в течение 1к12 раундов.</td></tr><tr><td>11–20</td><td>Появляется трент (характеристики смотрите в Бестиарии). Существует 50-процентный шанс, что появившийся трент будет обладать хаотично-злым мировоззрением и нападёт.</td></tr><tr><td>21–30</td><td>Появляется ожившая, но неподвижная каменная статуя, похожая на вас и выкрикивающая в ваш адрес угрозы. Если вы уходите от неё, а кто-то другой приближается к ней, статуя описывает вас как самого гнусного злодея и побуждает новоприбывших найти и атаковать вас. Если вы находитесь с ней на одном плане существования, то статуя знает ваше местоположение. По прошествии 24 часов статуя перестаёт быть ожившей.</td></tr><tr><td>31–40</td><td>Появляется походный костёр с синими языками пламени ,который горит в течение 24 часов (или пока не будет погашен).</td></tr><tr><td>41–50</td><td>Вырастают 1к6 + 6 визгунов (характеристики смотрите в Бестиарии).</td></tr><tr><td>51–60</td><td>Наружу выползают 1к4 + 8 ярко-розовых жаб. Всякий раз, когда кто-либо прикасается к жабе, та превращается в чудовище (размером вплоть до Большого) по выбору Мастера. Это чудовище существует в течение минуты, после чего исчезает в клубах ярко-розового дыма.</td></tr><tr><td>61–70</td><td>Из норы выползает голодная панцирница (характеристики смотрите в Бестиарии) и немедленно нападает.</td></tr><tr><td>71–80</td><td>Вырастает фруктовое дерево. На дереве растёт 1к10 + 20 фруктов, 1к8 из которых действуют как магические зелья (определяются случайным образом), в то время, как один из фруктов, будучи съеденным, действует как пищевой яд на выбор Мастера. Дерево исчезает спустя 1 час. Сорванные фрукты остаются, сохраняя свои магические свойства в течение 30 дней.</td></tr><tr><td>81–90</td><td>Появляется гнездо, содержащее 1к4 + 3 яиц. Существа, съедающие одно из этих яиц, должно совершить спасбросок Телосложения со Сл 20. При успехе существо навсегда увеличивает на единицу значение своей самой низкой характеристики. Если две или более характеристики имеют минимальное значение, то случайно выбирается какая-либо одна. При провале существо получает урон силовым полем 10к6 от внутреннего взрыва магической природы.</td></tr><tr><td>91–99</td><td>Вверх возносится пирамида с квадратным основанием 60 × 60 футов. Внутри неё находится саркофаг с покоящейся в нём лорд-мумией (характеристики смотрите в Бестиарии). Эта пирамида считается логовом лорд-мумии, а в саркофаге находится сокровище на усмотрение Мастера.</td></tr><tr><td>00</td><td>Вырастает гигантский бобовый стебель такой высоты, какой будет угодно Мастеру. Мастер также решает, что ждёт добравшегося до его вершины персонажа: ему откроется величественный вид, он окажется в замке облачного великана или же вершина стебля приведёт его на другой план существования.</td></tr></table>"
     }
   },
   {
     "en": {
-      "name": "BAG OF DEVOURING ",
+      "name": "BAG OF DEVOURING",
       "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "This bag superficially resembles a bag of holding but is a feeding orifice for a gigantic extradimensional creature. Turning the bag inside out closes the orifice. The extradimensional creature attached to the bag can sense whatever is placed inside the bag. Animal or vegetable matter placed wholly in the bag is devoured and lost forever. When part of a living creature is placed in the bag, as happens when someone reaches inside it, there is a 50 percent chance that the creature is pulled inside the bag. A creature inside the bag can use its action to try to escape with a successful DC 15 Strength check. Another creature can use its action to reach into the bag to pull a creature out, doing so with a successful DC 20 Strength check (provided it isn't pulled inside the bag first). Any creature that starts its turn inside the bag is devoured, its body destroyed. Inanimate objects can be stored in the bag, which can hold a cubic foot of such material. However, once each day, the bag swallows any objects inside it and spits them out into another plane of existence. The DM determines the time and plane. If the bag is pierced or torn, it is destroyed, and anything contained within it is transported to a random location on the Astral Plane.",
+      "rarity": 3,
+      "text": "This bag superficially resembles a bag of holding but is a feeding orifice for a gigantic extradimensional creature. <br>Turning the bag inside out closes the orifice. <br>The extradimensional creature attached to the bag can sense whatever is placed inside the bag. Animal or vegetable matter placed wholly in the bag is devoured and lost forever. When part of a living creature is placed in the bag, as happens when someone reaches inside it, there is a 50 percent chance that the creature is pulled inside the bag. A creature inside the bag can use its action to try to escape with a successful DC 15 Strength check. Another creature can use its action to reach into the bag to pull a creature out, doing so with a successful <br>DC 20 Strength check (provided it isn't pulled inside the bag first). Any creature that starts its turn inside the bag is devoured, its body destroyed. <br>Inanimate objects can be stored in the bag, which can hold a cubic foot of such material. However, once each day, the bag swallows any objects inside it and spits them out into another plane of existence. The DM determines the time and plane. <br>If the bag is pierced or torn, it is destroyed, and anything contained within it is transported to a random location on the Astral Plane.",
       "source": "DMG"
     },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
+     "ru": {
+      "name": "Сумка пожирания",
+      "text": "На первый взгляд эта сумка напоминает сумку хранения, но на самом деле это ротовое отверстие гигантского межпространственного существа. Если сумку вывернуть наизнанку, ротовое отверстие закроется. <br>Существо, связанное с сумкой, может чувствовать всё, что помещают в сумку. Материя животного или растительного происхождения, помещённая в сумку, пожирается и исчезает навсегда. Если в сумку будет помещена часть живого существа, как в случае, когда кто-нибудь засовывает в неё руку, существует 50-процентный шанс, что существо затянет в сумку. Существо в сумке может действием попытаться высвободиться, совершая проверку Силы со Сл 15. Другое существо может действием залезть рукой в сумку, чтобы вытянуть оттуда другое существо, совершая проверку Силы со Сл 20 (при условии, что его самого не затянет туда). Все существа, начинающие ход в сумке, пожираются, а их тела уничтожаются. <br>Неживые предметы могут храниться в сумке, которая вмещает один кубический фут такой материи. <br>Однако, один раз в день сумка пожирает все хранящиеся в ней предметы, выплёвывая их на другом плане существования. Мастер сам определяет время и план. <br>Если сумку проткнут или разорвут, она уничтожается, а всё её содержимое переносится в случайным образом выбранное место на Астральном Плане."
     }
   },
   {
-    "en": {
-      "name": "BAG OF HOLDING ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "This bag has an interior space considerably larger than its outside dimensions, roughly 2 feet in diameter at the mouth and 4 feet deep. The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet. The bag weighs 15 pounds, regardless of its contents. Retrieving an item from the bag requires an action. If the bag is overloaded, pierced, or torn, it ruptures and is destroyed, and its contents are scattered in the Astral Plane. If the bag is turned inside out, its contents spill forth, unharmed, but the bag must be put right before it can be used again. Breathing creatures inside the bag can survive up to a number of minutes equal to 10 divided by the number of creatures (minimum 1 minute), after which time they begin to suffocate. Placing a bag of holding inside an extradimensional space created by a Heward's handy haversack, portable hole, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way only and can't be reopened.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BAG OF TRICKS ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "This ordinary bag, made from gray, rust, or tan cloth, appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object. The bag weighs 1/2 pound. You can use an action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling a d8 and consulting the table that corresponds to the bag's color. See the Monster Manual for the creature's statistics. The creature is friendly to you and your companions, and it acts on your turn. You can use a bonus action to command how the creature moves and what action it takes on its next turn, or to give it general orders, such as to attack your enemies. In the absence of such orders, the creature acts in a fashion appropriate to its nature. Once three fuzzy objects have been pulled from the bag, the bag can't be used again until the next dawn.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BEAD OF FORCE ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "This small black sphere measures 3/4 of an inch in diameter and weighs an ounce. Typically, 1d4 + 4 beads of force are found together. You can use an action to throw the bead up to 60 feet. The bead explodes on impact and is destroyed. Each creature within a 10-foot radius of where the bead landed must succeed on a DC 15 Dexterity saving throw or take 5d4 force damage. A sphere of transparent force then encloses the area for 1 minute. Any creature that failed the save and is completely within the area is trapped inside this sphere. Creatures that succeeded on the save, or are partially within the area, are pushed away from the center of the sphere until they are no longer inside it. Only breathable air can pass through the sphere's wall. No attack or other effect can. An enclosed creature can use its action to push against the sphere's wall, moving the sphere up to half the creature's walking speed. The sphere can be picked up, and its magic causes it to weigh only 1 pound, regardless of the weight of creatures inside.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BELT OF DWARVENKIND ",
-      "type": "Wondrous item",
-      "rarity": "rare",
-      "rarityInfo": "requires attunement",
-      "text": "While wearing this belt, you gain the following benefits: Your Constitution score increases by 2, to a maximum of 20. You have advantage on Charisma (Persuasion) checks made to interact with dwarves. In addition, while attuned to the belt, you have a 50 percent chance each day at dawn of growing a full beard if you're capable of growing one, or a visibly thicker beard if you already have one. If you aren't a dwarf, you gain the following additional benefits while wearing the belt: You have advantage on saving throws against poison, and you have resistance against poison damage. You have darkvision out to a range of 60 feet. You can speak, read, and write Dwarvish.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BELT OF GIANT STRENGTH ",
-      "type": "Wondrous item",
-      "rarity": "rarity varies",
-      "rarityInfo": "requires attunement",
-      "text": "While wearing this belt, your Strength score changes to a score granted by the belt. If your Strength is already equal to or greater than the belt's score, the item has no effect on you. Six varieties of this belt exist, corresponding with and having rarity according to the six kinds of true giants. The belt of stone giant strength and the belt of frost giant strength look different, but they have the same effect. BERSERKER AxE Weapon (any axe), rare (requires attunement) You gain a +1 bonus to attack and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your hit point maximum increases by 1 for each level you have attained. Curse. This axe is cursed, and becoming attuned to it extends the curse to you. As long as you remain cursed, you are unwilling to part with the axe, keeping it within reach at all times. You also have disadvantage on attack rolls with weapons other than this one, unless no foe is within 60 feet of you that you can see or hear. Whenever a hostile creature damages you while the axe is in your possession, you must succeed on a DC 15 Wisdom saving throw or go berserk. While berserk, you must use your action each round to attack the creature nearest to you with the axe. If you can make extra attacks as part of the Attack action, you use those extra attacks, moving to attack the next nearest creature after you fell your current target. If you have multiple possible targets, you attack one at random. You are berserk until you start your turn with no creatures within 60 feet of you that you can see or hear.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BOOTS OF ELVENKIND ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have advantage on Dexterity (Stealth) checks that rely on moving silently.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BOOTS OF LEVITATION ",
-      "type": "Wondrous item",
-      "rarity": "rare",
-      "rarityInfo": "requires attunement",
-      "text": "While you wear these boots, you can use an action to cast the levitate spell on yourself at will.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BOOTS OF SPEED ",
-      "type": "Wondrous item",
-      "rarity": "rare",
-      "rarityInfo": "requires attunement",
-      "text": "While you wear these boots, you can use a bonus action and click the boots' heels together. If you do, the boots double your walking speed, and any creature that makes an opportunity attack against you has disadvantage on the attack roll. If you click your heels together again, you end the effect. When the boots' property has been used for a total of 10 minutes, the magic ceases to function until you finish a long rest.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BOOTS OF STRIDING AND SPRINGING ",
-      "type": "Wondrous item",
-      "rarity": "uncommon",
-      "rarityInfo": "requires attunement",
-      "text": "While you wear these boots, your walking speed becomes 30 feet, unless your walking speed is higher, and your speed isn't reduced if you are encumbered or wearing heavy armor. In addition, you can jump three times the normal distance, though you can't jump farther than your remaining movement would allow.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BOOTS OF THE WINTERLANDS ",
-      "type": "Wondrous item",
-      "rarity": "uncommon",
-      "rarityInfo": "requires attunement",
-      "text": "These furred boots are snug and feel quite warm. While you wear them, you gain the following benefits: • You have resistance to cold damage. • You ignore difficult terrain created by ice or snow. You can tolerate temperatures as low as -50 degrees Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as -100 degrees Fahrenheit.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BOWL OF COMMANDING WATER ELEMENTALS ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "While this bowl is filled with water, you can use an action to speak the bowl's command word and summon a water elemental, as if you had cast the conjure elemental spell. The bowl can't be used this way again until the next dawn. The bowl is about 1 foot in diameter and half as deep. It weighs 3 pounds and holds about 3 gallons.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
   {
-    "en": {
-      "name": "BRACERS OF ARCHERY ",
-      "type": "Wondrous item",
-      "rarity": "uncommon",
-      "rarityInfo": "requires attunement",
-      "text": "While wearing these bracers, you have proficiency with the longbow and shortbow, and you gain a +2 bonus to damage rolls on ranged attacks made with such weapons.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
+    
   },
-  {
-    "en": {
-      "name": "BRACERS OF DEFENSE ",
-      "type": "Wondrous item",
-      "rarity": "rare",
-      "rarityInfo": "requires attunement",
-      "text": "While wearing these bracers, you gain a +2 bonus to AC if you are wearing no armor and using no shield.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "BRAZIER OF COMMANDING FIRE ELEMENTALS ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "While a fire burns in this brass brazier, you can use an action to speak the brazier's command word and summon a fire elemental, as if you had cast the conjure elemental spell. The brazier can't be used this way again until the next dawn. The brazier weighs 5 pounds.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "BROOCH OF SHIELDING ",
-      "type": "Wondrous item",
-      "rarity": "uncommon",
-      "rarityInfo": "requires attunement",
-      "text": "While wearing this brooch, you have resistance to force damage, and you have immunity to damage from the magic missile spell.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "BROOM OF FLYING ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "This wooden broom, which weighs 3 pounds, functions like a mundane broom until you stand astride it and speak its command word. It then hovers beneath you and can be ridden in the air. It has a flying speed of 50 feet. It can carry up to 400 pounds, but its flying speed becomes 30 feet while carrying over 200 pounds. The broom stops hovering when you land. You can send the broom to travel alone to a destination within 1 mile of you if you speak the command word, name the location, and are familiar with that place. The broom comes back to you when you speak another command word, provided that the broom is still within 1 mile of you.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CANDLE OF INVOCATION ",
-      "type": "Wondrous item",
-      "rarity": "very rare",
-      "rarityInfo": "requires attunement",
-      "text": "This slender taper is dedicated to a deity and shares that deity's alignment. The candle's alignment can be detected with the detect evil and good spell. The DM chooses the god and associated alignment or determines the alignment randomly. The candle's magic is activated when the candle is lit, which requires an action. After burning for 4 hours, the candle is destroyed. You can snuff it out early for use at a later time. Deduct the time it burned in increments of 1 minute from the candle's total burn time. While lit, the candle sheds dim light in a 30-foot radius. Any creature within that light whose alignment matches that of the candle makes attack rolls, saving throws, and ability checks with advantage. In addition, a cleric or druid in the light whose a lignment matches the candle's can cast 1st-level spells he or she has prepared without expending spell slots, though the spell's effect is as if cast with a 1st-level slot. Alternatively, when you light the candle for the first time, you can cast the gate spell with it. Doing so destroys the candle.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CAP OF WATER BREATHING ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "While wearing this cap underwater, you can speak its command word as an action to create a bubble of air around your head. It allows you to breathe normally underwater. This bubble stays with you until you speak the command word again, the cap is removed, or you are no longer underwater.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CAPE OF THE MOUNTEBANK ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "This cape smells faintly of brimstone. While wearing it, you can use it to cast the dimension door spell as an action. This property of the cape can't be used again until the next dawn. When you disappear, you leave behind a cloud of smoke, and you appear in a similar cloud of smoke at your destination. The smoke lightly obscures the space you left and the space you appear in, and it dissipates at the end of your next turn. A light or stronger wind disperses the smoke.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CARPET OF FLYING ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it. Four sizes of carpet of flying exist. The DM chooses the size of a given carpet or determines it randomly. A carpet can carry up to twice the weight shown on the table, but it flies at half speed if it carries more than its normal capacity.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CENSER OF CONTROLLING AIR ELEMENTALS ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "While incense is burning in this censer, you can use an action to speak the censer's command word and summon an air elemental, as if you had cast the conjure elemental spell. The censer can't be used this way again until the next dawn. This 6-inch-wide, 1-foot-high vessel resembles a chalice with a decorated lid. It weighs 1 pound.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CHIME OF OPENING ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "This hollow metal tube measures about 1 foot long and :-veighs 1 pound. You can strike it as an action, pointing 1t at an object within 120 feet of you that can be opened, such as a door, lid, or lock. The chime issues a clear tone, and one lock or latch on the object opens unless the sound can't reach the object. If no locks or latches remain, the object itself opens. The chime can be used ten times. After the tenth time it cracks and becomes useless. '",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CIRCLET OF BLASTING ",
-      "type": "Wondrous item",
-      "rarity": "Wondrous item",
-      "text": "While wearing this circlet, you can use an action to cast the scorching ray spell with it. When you make the spell's attacks, you do so with an attack bonus of +5'. The circlet can't be used this way again until the next dawn.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CLOAK OF ARACHNIDA ",
-      "type": "Wondrous item",
-      "rarity": "very rare",
-      "rarityInfo": "requires attunement",
-      "text": "This fine garment is made of black silk interwoven with faint silvery threads. While wearing it, you gain the following benefits: You have resistance to poison damage. You have a climbing speed equal to your walking speed. You can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. • You can't be caught in webs of any sort and can move through webs as if they were difficult terrain. • You can use an action to cast the web spell (save DC 13). The web created by the spell fills twice its normal area. Once used, this property of the cloak can't be used again until the next dawn.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CLOAK OF DISPLACEMENT ",
-      "type": "Wondrous item",
-      "rarity": "rare",
-      "rarityInfo": "requires attunement",
-      "text": "While you wear this cloak, it projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while you are in-capacitated, restrained, or otherwise unable to move.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "en": {
-      "name": "CLOAK OF ELVENKIND ",
-      "type": "Wondrous item",
-      "rarity": "uncommon",
-      "rarityInfo": "requires attunement",
-      "text": "While you wear this cloak with its hood up, Wisdom (Perception) checks made to see you have disadvantage. and you have advantage on Dexterity (Stealth) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action.",
-      "source": "DMG"
-    },
-    "ru": {
-      "name": "",
-      "notes": "",
-      "text": ""
-    }
-  },
-  {
-    "name": "CLOAK OF INVISIBILITY ",
-    "type": "Wondrous item",
-    "rarity": "legendary",
-    "rarityInfo": "requires attunement",
-    "text": "While wearing this cloak, you can pull its hood over your head to cause yourself to become invisible. While you are invisible, anything you are carrying or wearing is invisible with you. You become visible when you cease wearing the hood. Pulling the hood up or down requires an action. Deduct the time you are invisible, in increments of 1 minute, from the cloak's maximum duration of 2 hours. After 2 hours of use, the cloak ceases to function. For every uninterrupted period of 12 hours the cloak goes unused, it regains 1 hour of duration. "
-  }
 ]
