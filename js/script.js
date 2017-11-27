@@ -236,8 +236,8 @@ window.onload = function(){
 		return "";
 	}
 	function getItemAttrFromDB(oDataSource, oParam) {
-		var sAttr = oParam.attr;
-		var sLang = oParam.lang;
+		var sAttr = oParam.attr? String(oParam.attr).toLowerCase().trim() : undefined;
+		var sLang = oParam.lang? String(oParam.lang).toLowerCase().trim() : undefined;
 		var sSubAttr = oParam.subattr || "title";
 		if(oDataSource[sAttr]){
 			if(oDataSource[sAttr][sLang]){
@@ -584,11 +584,11 @@ window.onload = function(){
 		createButtons();
 		createNameFilter();
 		createTypeCombobox();
-		createRarityCombobox();
-		createSourceCombobox();
-		createCardWidthButtons();
-		createAutoSizeTextButton();
-		createLangSelect(lang);
+		 createRarityCombobox();
+		 createSourceCombobox();
+		 createCardWidthButtons();
+		 createAutoSizeTextButton();
+		 createLangSelect(lang);
 
 		$(".p_side").fadeIn();
 	}
