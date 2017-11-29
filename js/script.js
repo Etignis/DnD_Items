@@ -240,8 +240,8 @@ window.onload = function(){
 		var sLang = oParam.lang? String(oParam.lang).toLowerCase().trim() : undefined;
 		var sSubAttr = oParam.subattr || "title";
 		if(oDataSource[sAttr]){
-			if(oDataSource[sAttr][sLang]){
-				return oDataSource[sAttr][sLang][sSubAttr] || oDataSource[sAttr][sLang].title;
+			if(oDataSource[sAttr].text[sLang]){
+				return oDataSource[sAttr].text[sLang][sSubAttr] || oDataSource[sAttr].text[sLang].title;
 			}
 
 			var aLang = [];
@@ -249,8 +249,8 @@ window.onload = function(){
 				aLang.push(lang);
 			}
 			for(var i=0; i<aLang.length; i++){
-				if(oDataSource[sAttr][aLang[i]]) {
-					return oDataSource[sAttr][aLang[i]][sSubAttr] || oDataSource[sAttr][aLang[i]].title;
+				if(oDataSource[sAttr].text[aLang[i]]) {
+					return oDataSource[sAttr].text[aLang[i]][sSubAttr] || oDataSource[sAttr].text[aLang[i]].title;
 				}
 			}
 		}
@@ -270,6 +270,11 @@ window.onload = function(){
 			var s_text = getItemAttr(oItem, "text", lang);
 			var s_source = getItemAttr(oItem, "source", "en");
 			var s_sourcePage = getItemAttr(oItem, "sourcePage", lang);
+
+      var s_coast = getItemAttr(oItem, "coast", lang) || oRarity[oItem.en.rarity] || "";
+      if(s_coast){
+        s_coast = "<div class='coast'>"+s_coast+"</div>";
+      }
 
 
 			var bHideItem = '<span class="bHideItem" title="Скрыть предмет (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';
@@ -294,6 +299,7 @@ window.onload = function(){
 						bHideItem +
 						'<h1 title="'+s_name+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' +s_name+ '</h1>'+
 						'<span class="subtitle">' + s_rariry + " " + s_type+  " " + s_attunement + '</span>'+
+            s_coast+
 						'<div class="text">' + s_text + '</div>	'+
 						"<div class='source' title=\"Источник: "+ s_source+"\">"+ s_source+"</div>"+
 						textSizeButtons +
