@@ -562,7 +562,7 @@ var allItems = [
     "en": {
       "name": "BELT OF GIANT STRENGTH",
       "type": "Wondrous item",
-      "rarity": "rarity varies",
+      "rarity": 0,
       "attunement": "(requires attunement)",
       "text": "While wearing this belt, your Strength score changes to a score granted by the belt. If your Strength is already equal to or greater than the belt's score, the item has no effect on you. <br>Six varieties of this belt exist, corresponding with and having rarity according to the six kinds of true giants. <br>The belt of stone giant strength and the belt of frost giant strength look different, but they have the same effect.<br> <table> <tr> <th>Type </th> <th>Strength </th> <th>Rarity </th> </tr> <tr> <td>Hill giant </td> <td>21 </td> <td>Rare </td> </tr> <tr> <td>Stonejfrost giant </td> <td>23 </td> <td>Very rare </td> </tr> <tr> <td>Fire giant </td> <td>25 </td> <td>Very rare </td> </tr> <tr> <td>Cloud giant </td> <td>27 </td> <td>Legendary </td> </tr> <tr> <td>Storm giant </td> <td>29 </td> <td>Legendary </td> </tr> </table> ",
       "source": "DMG"
@@ -874,7 +874,7 @@ var allItems = [
     "en": {
       "name": "CRYSTAL BALL",
       "type": "Wondrous item",
-      "rarity": "very rare or legendary",
+      "rarity": [4,5],
       "attunement": "(requires attunement)",
       "text": "The typical crystal ball, a very rare item, is about 6 inches in diameter. While touching it, you can cast the scrying spell (save DC 17) with it. <br>The following crystal ball variants are legendary items and have additional properties. <br>Crystal Ball of Mind Reading. You can use an action to cast the detect thoughts spell (save DC 17) while you are scrying with the crystal ball, targeting creatures you can see within 30 feet of the spell's sensor. You don't need to concentrate on this detect thoughts to maintain it during its duration, but it ends if scrying ends. <br>Crystal Ball of Telepathy. While scrying with the crystal ball, you can communicate telepathically with creatures you can see within 30 feet of the spell's sensor. You can also use an action to cast the suggestion spell (save DC 17) through the sensor on one of those creatures. You don't need to concentrate on this suggestion to maintain it during its duration, but it ends if scrying ends. Once used, the suggestion power of the crystal ball can't be used again until the next dawn. <br>Crystal Ball of True Seeing. While scrying with the crystal ball, you have truesight with a radius of 120 feet centered on the spell's sensor.",
       "source": "DMG"
@@ -1267,7 +1267,7 @@ var allItems = [
     "en": {
       "name": "FIGURINE OF WONDROUS POWER",
       "type": "Wondrous item",
-      "rarity": "rarity by figurine",
+      "rarity": 0,
       "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br><b>Bronze Griffon (Rare).</b> This bronze statuette is of a griffon rampant. It can become a griffon for up to 6 hours. Once it has been used, it can't be used again until 5 days have passed. <br><b>Ebony Fly (Rare).</b> This ebony statuette is carved in the likeness of a horsefly. It can become a giant fly for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 day have passed. <br><b>Golden Lions (Rare).</b> These gold statuettes of lions are always created in pairs. You can use one figurine or both simultaneously. Each can become a lion for up to 1 hour. Once a lion has been used, it can't be used again until 7 days have passed. <br><b>Ivory Goats (Rare).</b> These ivory statuettes of goats are always created in sets of three. Each goat looks unique and functions differently from the others. Their properties are as follows: <br>The goat of traveling can become a Large goat with the same statistics as a riding horse. It has 24 charges, and each hour or portion thereof it spends in beast form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can't be used again until 7 days have passed, when it regains all its charges. <br>The goat of travail becomes a giant goat for up to 3 hours. Once it has been used, it can't be used again until 30 days have passed. <br>The goat of terror becomes a giant goat for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a +1/ance, and the other becomes a +2 /ongsword. <br>Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. In addition, the goat radiates a 30-foot-radius aura of terror while you are riding it. <br>Any creature hostile to you that starts its turn in the aura must succeed on a DC 15 Wisdom saving throw or be frightened of the goat for 1 minute, or until the goat reverts to figurine form. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it successfully saves against the effect, a creature is immune to the goat's aura for the next 24 hours. Once the figurine has been used, it can't be used again until 15 days have passed. <br><b>Marble Elephant (Rare).</b> This marble statuette is about 4 inches high and long. It can become an elephant for up to 24 hours. Once it has been used, it can't be used again until 7 days have passed. <br><b>Obsidian Steed (Very Rare).</b> This polished obsidian horse can become a nightmare for up to 24 hours. The nightmare fights only to defend itself. Once it has been used, it can't be used again until 5 days have passed. <br>If you have a good alignment, the figurine has a 10 percent chance each time you use it to ignore your orders, including a command to revert to figurine form. <br>If you mount the nightmare while it is ignoring your orders, you and the nightmare are instantly transported to a random location on the plane of Hades, where the nightmare reverts to figurine form. <br><b>Onyx Dog (Rare).</b> This onyx statuette of a dog can become a mastiff for up to 6 hours. The mastiff has an Intelligence of 8 and can speak Common. It also has dark vision out to a range of 60 feet and can see invisible creatures and objects within that range. Once it has been used, it can't be used again until 7 days have passed. <br><b>Serpentine Owl (Rare).</b> This serpentine statuette of an owl can become a giant owl for up to 8 hours. Once it has been used, it can't be used again until 2 days have passed. The owl can telepathically communicate with you at any range if you and it are on the same plane of existence. <br><b>Silver Raven (Uncommon).</b> This silver statuette of a raven can become a raven for up to 12 hours. Once it has been used, it can't be used again until 2 days have passed. While in raven form, the figurine allows you to cast the animal messenger spell on it at will.",
       "source": "DMG"
     },
@@ -1637,7 +1637,7 @@ var allItems = [
     "en": {
      "name":"INSTRUMENT OF THE BARDS",
      "type":"Wondrous item",
-     "rarity":"rarity varies",
+     "rarity":0,
      "attunement":"(requires attunement by abard)",
      "text":"An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br><table><tr><td>Instrument</td><td>Rarity</td><td>Spells</td></tr><tr><td>All</td><td>-</td><td><a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>, plus the spells listed for the particular instrument</td></tr><tr><td>Anstruth harp</td><td>Very rare</td><td><a href='https://tentaculus.ru/spells/#q=Control_weather'>Control weather</a>, <a href='https://tentaculus.ru/spells/#q=cure_wounds'>cure wounds</a> (5th level), <a href='https://tentaculus.ru/spells/#q=wall_of_thorns'>wall of thorns</a></td></tr><tr><td>Canaith mandolin</td><td>Rare</td><td><a href='https://tentaculus.ru/spells/#q=Cure_wounds'>Cure wounds</a> (3rd level), <a href='https://tentaculus.ru/spells/#q=dispel_magic'>dispel magic</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>protection_from_energy</a> (lightning only)</td></tr><tr><td>Cli lyre</td><td>Rare</td><td><a href='https://tentaculus.ru/spells/#q=Stone_shape'>Stone shape</a>, <a href='https://tentaculus.ru/spells/#q=wall_of_fire'>wall of fire</a>, <a href='https://tentaculus.ru/spells/#q=wind_wall'>wind wall</a></td></tr><tr><td>Doss lute</td><td>Uncommon</td><td><a href='https://tentaculus.ru/spells/#q=Animal_friendship'>Animal friendship</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>protection from energy</a> (fire only), <a href='https://tentaculus.ru/spells/#q=protection_from_poison'>protection from poison</a></td></tr><tr><td>Fochlucan bandore</td><td>Uncommon</td><td><a href='https://tentaculus.ru/spells/#q=Entangle'>Entangle</a>,<a href='https://tentaculus.ru/spells/#q=faerie_fire'>faerie fire</a>, <a href='https://tentaculus.ru/spells/#q=shillelagh'>shillelagh</a>,  <a href='https://tentaculus.ru/spells/#q=speak_with_animals'>speak with animals</a></td></tr><tr><td>Mac-Fuirmidh cittern</td><td>Uncommon</td><td><a href='https://tentaculus.ru/spells/#q=Barkskin'>Barkskin</a>, <a href='https://tentaculus.ru/spells/#q=cure_wounds'>cure wounds</a>,<a href='https://tentaculus.ru/spells/#q=fog_cloud'>fog  cloud</a></td></tr><tr><td>Ollamh harp</td><td>Legendary</td><td><a href='https://tentaculus.ru/spells/#q=Confusion'>Confusion</a>, <a href='https://tentaculus.ru/spells/#q=control_weather'>control weather</a>, <a href='https://tentaculus.ru/spells/#q=fire_storm'>fire storm</a></td></tr></table>",
      "source":"DMG"
@@ -2070,6 +2070,9 @@ var allItems = [
   {
     "en": {
      "name":"PERIAPT OF WOUND CLOSURE",
+     "type": "Wondrous item",
+     "attunement":"(requires attunement)",
+     "rarity":2,
      "text":"While you wear this pendant, you stabilize whenever",
      "source":"DMG"
     },
@@ -2082,7 +2085,7 @@ var allItems = [
     "en": {
      "name":"PHILTER OF LOVE",
      "type":"Potion",
-     "rarity":"uncommon",
+     "rarity":2,
      "text":"The next time you see a creature within 10 minutes after drinking this philter, you become charmed by that creature for 1 hour. If the creature is of a species and gender you are normally attracted to, you regard it as your true love while you are charmed. This potion's rose-hued, effervescent liquid contains one easy-to-mis bubble shaped like a heart.",
      "source":"DMG"
     },
@@ -2176,7 +2179,7 @@ var allItems = [
     "en": {
      "name":"POTION OF CLIMBING",
      "type":"Potion",
-     "rarity":"common",
+     "rarity":1,
      "text":"When you drink this potion, you gain a climbing speed equal to your walking speed for 1 hour. During this rime, you have advantage on Strength (Athletics) checks you make to climb. The potion is separated into brown, silver, and gray layers resembling bands of stone. <br>Shaking the bottle fails to mix the colors.",
      "source":"DMG"
     },
@@ -2241,7 +2244,7 @@ var allItems = [
     "en": {
      "name":"POTION OF GIANT STRENGTH",
      "type":"Potion",
-     "rarity":"rarity varies",
+     "rarity":0,
      "text":"When you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table below). The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>The potion of frost giant strength and the potion of stone giant strength have the same effect. <br>When you drink this potion, you gain the \"enlarge\" effect of the enlarge/reduce spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.<br><table><tr><td>Type of Giant</td><td>Strength</td><td>Rarity</td></tr><tr><td>Hill giant</td><td>21</td><td>Uncommon</td></tr><tr><td>Frostjstone giant</td><td>23</td><td>Rare</td></tr><tr><td>Fire giant</td><td>25</td><td>Rare</td></tr><tr><td>Cloud giant</td><td>27</td><td>Very rare</td></tr><tr><td>Storm giant</td><td>29</td><td>Legendary</td></tr></table>",
      "source":"DMG"
     },
@@ -2254,7 +2257,7 @@ var allItems = [
     "en": {
      "name":"POTION OF HEALING",
      "type":"Potion",
-     "rarity":"rarity varies",
+     "rarity":0,
      "text":"You regain hit points when you drink this potion. The number of hit points depends on the potion's rarity, as shown in the Potions of Healing table. Whatever its potency, the potion's red liquid glimmers when agitated.<br><table><tr><td>Potion of ...</td><td>Rarity</td><td>HP Regained</td></tr><tr><td>Healing</td><td>Common</td><td>2d4 + 2</td></tr><tr><td>Greater healing</td><td>Uncommon</td><td>4d4 + 4</td></tr><tr><td>Superior healing</td><td>Rare</td><td>8d4 + 8</td></tr><tr><td>Supreme healing</td><td>Very rare</td><td>10d4 + 20</td></tr></table>",
      "source":"DMG"
     },
@@ -2828,7 +2831,7 @@ var allItems = [
     "en": {
      "name":"ROD OF THE PACT KEEPER",
      "type":"rod",
-     "rarity":"uncommonn",
+     "rarity":2,
      "text":"The rod regains 1 expended charge daily at dawn. If ·· e rod is reduced to 0 charges, roll a d20. On a 1, the zod disappears in a burst of radiance. <br>• On OF RULERSHIP ~od, rare (requires attunement) <br>• ·ou can use an action to present the rod and command : edience from each creature of your choice that you can see within 120 feet of you. Each target must succeed :1 a DC 15 Wisdom saving throw or be charmed by you · r 8 hours. While charmed in this way, the creature gards you as its trusted leader. If harmed by you or ur companions, or commanded to do something contrary to its nature, a target ceases to be charmed in this way. The rod can't be used again until the next dawn.",
      "source":"DMG"
     },
@@ -3032,7 +3035,7 @@ var allItems = [
     "en": {
      "name":"SPELL SCROLL",
      "type":"Scroll",
-     "rarity":"varies",
+     "rarity": 0,
      "text":"A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen \" <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as th scroll's rarity, as shown in the Spell Scroll table. Spell Level| Rarity |Save DC| Attack Bonus@Cantrip| Common| 13 |+5@1st| Common| 13 |+5@2nd |Uncommon |13| +5@3rd |Uncommon| 15 |+7@4th |Rare |15| +7@5th|Rare| 17| +9@6th| Very rare| 17| +9@7th| Very rare| 18| +10@8th |Very rare| 18| +10@9th |Legendary |19 |+11<br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
      "source":"DMG"
     },
@@ -3328,7 +3331,7 @@ var allItems = [
      "name":"SWORD OF SHARPNESS",
      "type":"Weapon",
      "typeAdditions":"(any sword that deals slashing damage)",
-     "rarity":"very",
+     "rarity": 4,
      "text":"When you attack an object with this magic sword and hit, maximize your weapon damage dice agains£ the target. <br>When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra : slashing damage. Then roll another d20. If you roll a .:: you lop off one of the target's limbs, with the effect of such loss determined by the DM. If the creature has limb to sever, you lop off a portion of its body instead. <br>In addition, you can speak the sword's command to cause the blade to shed bright light in a 10-foot rad:: and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts ou· the light.",
      "source":"DMG"
     },

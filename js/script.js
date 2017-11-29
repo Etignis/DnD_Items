@@ -236,25 +236,36 @@ window.onload = function(){
 		return "";
 	}
 	function getItemAttrFromDB(oDataSource, oParam) {
-		var sAttr = (oParam.attr!=undefined)? String(oParam.attr).toLowerCase().trim() : undefined;
-		var sLang = (oParam.lang!=undefined)? String(oParam.lang).toLowerCase().trim() : undefined;
-		var sSubAttr = oParam.subattr || "title";
-		if(oDataSource[sAttr]){
-			if(oDataSource[sAttr].text[sLang]){
-				return oDataSource[sAttr].text[sLang][sSubAttr] || oDataSource[sAttr].text[sLang].title;
-			}
+    var aParam = [], aReturn = [];
+    if(Array.isArray(oParam.attr)){
+      aParam = oParam.attr;
+    } else {
+      aParam = new Array(oParam.attr);
+    }
+    for(var i=0; i<aParam.length; i++) {
+      var sAttr = (aParam[i]!=undefined)? String(aParam[i]).toLowerCase().trim() : undefined;
+      var sLang = (oParam.lang!=undefined)? String(oParam.lang).toLowerCase().trim() : undefined;
+      var sSubAttr = oParam.subattr || "title";
+      if(oDataSource[sAttr]){
+        if(oDataSource[sAttr].text[sLang]){
+          aReturn.push(oDataSource[sAttr].text[sLang][sSubAttr] || oDataSource[sAttr].text[sLang].title);
+          continue;
+        }
 
-			var aLang = [];
-			for (lang in oDataSource[sAttr]){
-				aLang.push(lang);
-			}
-			for(var i=0; i<aLang.length; i++){
-				if(oDataSource[sAttr].text[aLang[i]]) {
-					return oDataSource[sAttr].text[aLang[i]][sSubAttr] || oDataSource[sAttr].text[aLang[i]].title;
-				}
-			}
-		}
-		return "";
+        var aLang = [];
+        for (lang in oDataSource[sAttr]){
+          aLang.push(lang);
+        }
+        for(var i=0; i<aLang.length; i++){
+          if(oDataSource[sAttr].text[aLang[i]]) {
+            aReturn.push(oDataSource[sAttr].text[aLang[i]][sSubAttr] || oDataSource[sAttr].text[aLang[i]].title);
+            break;
+          }
+        }
+      }     
+    }
+
+    return aReturn.join(", ");
 	}
 
 	function createCard(oItem, lang, sClass, sLockedItem) {
