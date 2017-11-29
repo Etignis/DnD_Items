@@ -240,7 +240,7 @@ window.onload = function(){
     if(Array.isArray(oParam.attr)){
       aParam = oParam.attr;
     } else {
-      aParam = new Array(oParam.attr);
+      aParam = [oParam.attr];
     }
     for(var i=0; i<aParam.length; i++) {
       var sAttr = (aParam[i]!=undefined)? String(aParam[i]).toLowerCase().trim() : undefined;

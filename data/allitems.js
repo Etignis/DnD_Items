@@ -135,7 +135,7 @@ var oTypes = {
         "title": "scroll"
       },
       "ru": {
-        "title": "cdbnjr",
+        "title": "свиток",
         "gender": "he"
       }
     },
