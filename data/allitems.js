@@ -45,17 +45,17 @@ var oTypes = {
     },
 	"img": "type_weapon.jpg"
   },
-  "stuff": {
+  "staff": {
     "text": {
       "en": {
-        "title": "stuff"
+        "title": "staff"
       },
       "ru": {
         "title": "жезл",
         "gender": "he"
       }
     },
-	"img": "type_stuff.jpg"
+	"img": "type_staff.jpg"
   },
   "ring": {
     "text": {
@@ -128,6 +128,18 @@ var oTypes = {
       }
     },
 	"img": "type_rod.jpg"
+  },
+  "scroll": {
+    "text": {
+      "en": {
+        "title": "scroll"
+      },
+      "ru": {
+        "title": "cdbnjr",
+        "gender": "he"
+      }
+    },
+	"img": "type_scroll.jpg"
   }
 }
 var oRarity = {
@@ -156,7 +168,7 @@ var oRarity = {
         "title": "обычная"
       }
     },
-    "coast": 10
+    "coast": "50-100 gp"
   },
   2: {
     "text": {
@@ -169,7 +181,7 @@ var oRarity = {
         "title": "необычная"
       }
     },
-    "coast": 100
+    "coast": "101-500 gp"
   },
   3: {
     "text": {
@@ -183,7 +195,7 @@ var oRarity = {
         "title": "редкая"
       }
     },
-    "coast": 200
+    "coast": "501 -5,000 gp"
   },
   4: {
     "text": {
@@ -197,7 +209,7 @@ var oRarity = {
         "title": "очень редкая"
       }
     },
-    "coast": 500
+    "coast": "5,001 - 50,000 gp"
   },
   5: {
     "text": {
@@ -211,7 +223,7 @@ var oRarity = {
         "title": "легендарная"
       }
     },
-    "coast": 900
+    "coast": "50,001+ gp"
   }
 }
 
@@ -249,7 +261,7 @@ var allItems = [
       "source": "DMG"
     },
     "ru": {
-      "name": "Боеприпасы +2 ",
+      "name": "Боеприпасы +2",
       "text": "Вы получаете бонус к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим."
     }
   },
@@ -339,7 +351,7 @@ var allItems = [
   {
      "en": {
       "name": "ANIMATED SHIELD",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(shield)",
       "rarity": 4,
       "attunement": "(requires atttinement)",
@@ -409,7 +421,7 @@ var allItems = [
   {
     "en": {
       "name": "ARMOR OF INVULNERABILITY",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(plate)",
       "rarity": 5,
       "attunement": "(requires attunement)",
@@ -424,7 +436,7 @@ var allItems = [
   {
      "en": {
       "name": "ARMOR OF RESISTANCE",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(light, medium, or heavy)",
       "rarity": 3,
       "attunement": "(requiresattunement)",
@@ -439,7 +451,7 @@ var allItems = [
   {
     "en": {
       "name": "ARMOR OF VULNERABILITY",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(plate)",
       "rarity": 3,
       "attunement": "(requires attunement)",
@@ -454,7 +466,7 @@ var allItems = [
   {
     "en": {
       "name": "ARROW-CATCHING SHIELD",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(shield)",
       "rarity": 3,
       "attunement": "(requires attunement)",
@@ -469,7 +481,7 @@ var allItems = [
   {
     "en": {
       "name": "ARROW OF SLAYING",
-      "type": "Weapon ",
+      "type": "Weapon",
       "typeAdditions": "(arrow)",
       "rarity": 4,
       "text": "An arrow of slaying is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both arrows of dragon slaying and arrows of blue dragon slaying. If a creature belonging to the type, race, or group associated with an arrow of slaying takes damage from the arrow, the creature must make a DC 17 Constitution saving throw, taking an extra 6d10 piercing damage on a failed save, or half as much extra damage on a successful one. <br>Once an arrow of slaying deals its extra damage to a creature, it becomes a nonmagical arrow. <br>Other types of magic ammunition of this kind exist, such as bolts of slaying meant for a crossbow, though arrows are most common.",
@@ -550,7 +562,7 @@ var allItems = [
     "en": {
       "name": "BELT OF GIANT STRENGTH",
       "type": "Wondrous item",
-      "rarity": "rarity varies ",
+      "rarity": "rarity varies",
       "attunement": "(requires attunement)",
       "text": "While wearing this belt, your Strength score changes to a score granted by the belt. If your Strength is already equal to or greater than the belt's score, the item has no effect on you. <br>Six varieties of this belt exist, corresponding with and having rarity according to the six kinds of true giants. <br>The belt of stone giant strength and the belt of frost giant strength look different, but they have the same effect.<br> <table> <tr> <th>Type </th> <th>Strength </th> <th>Rarity </th> </tr> <tr> <td>Hill giant </td> <td>21 </td> <td>Rare </td> </tr> <tr> <td>Stonejfrost giant </td> <td>23 </td> <td>Very rare </td> </tr> <tr> <td>Fire giant </td> <td>25 </td> <td>Very rare </td> </tr> <tr> <td>Cloud giant </td> <td>27 </td> <td>Legendary </td> </tr> <tr> <td>Storm giant </td> <td>29 </td> <td>Legendary </td> </tr> </table> ",
       "source": "DMG"
@@ -563,7 +575,7 @@ var allItems = [
   {
     "en": {
       "name": "BERSERKER AXE",
-      "type": "Weapon ",
+      "type": "Weapon",
       "typeAdditions": "(any axe)",
       "rarity": 3,
       "attunement": "(requires attunement)",
@@ -915,7 +927,7 @@ var allItems = [
   {
     "en": {
       "name": "DAGGER OF VENOM",
-      "type": "Weapon ",
+      "type": "Weapon",
       "typeAdditions": "(dagger)",
       "rarity": 3,
       "text": "You gain a +1 bonus to attack and damage rolls made with this magic weapon. <br>You can use an action to cause thick, black poison to coat the blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. <br>That creature must succeed on a DC 15 Constitution saving throw or take 2d10 poison damage and become poisoned for 1 minute. The dagger can't be used this way again until the next dawn.",
@@ -981,7 +993,7 @@ var allItems = [
   {
     "en": {
       "name": "DEFENDER",
-      "type": "Weapon ",
+      "type": "Weapon",
       "typeAdditions": "(any sword)",
       "rarity": 5,
       "attunement": "(requires attunement)",
@@ -996,7 +1008,7 @@ var allItems = [
   {
     "en": {
       "name": "DEMON ARMOR",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(plate)",
       "rarity": 4,
       "attunement": "(requires attunement)",
@@ -1011,7 +1023,7 @@ var allItems = [
   {
      "en": {
       "name": "DRAGON SCALEMAIL",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(scale mail)",
       "rarity": 4,
       "attunement": "(requires attunement)",
@@ -1026,7 +1038,7 @@ var allItems = [
   {
     "en": {
       "name": "DRAGON SLAYER",
-      "type": "Weapon ",
+      "type": "Weapon",
       "typeAdditions": "(any sword)",
       "rarity": 3,
       "text": "You gain a +1 bonus to attack and damage rolls made with this magic weapon. <br>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.",
@@ -1092,7 +1104,7 @@ var allItems = [
   {
     "en": {
       "name": "DWARVEN PLATE",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(plate)",
       "rarity": 4,
       "text": "Vhile wearing this armor, you gain a +2 bonus to AC. In addition, if an effect moves you against your will along the ground, you can use your reaction to reduce the distance you are moved by up to 10 feet.",
@@ -1106,7 +1118,7 @@ var allItems = [
   {
     "en": {
       "name": "DWARVEN THROWER",
-      "type": "Veapon ",
+      "type": "Weapon",
       "typeAdditions": "(warhammer)",
       "rarity": 4,
       "attunement": "(requires attunementby a dwarf)",
@@ -1135,7 +1147,7 @@ var allItems = [
   {
     "en": {
       "name": "EFREETI CHAIN",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(chain mail)",
       "rarity": 5,
       "attunement": "(requires attunement)",
@@ -1176,7 +1188,7 @@ var allItems = [
   {
     "en": {
       "name": "ELVEN CHAIN",
-      "type": "Armor ",
+      "type": "Armor",
       "typeAdditions": "(chain shirt)",
       "rarity": 3,
       "text": "You gain a +1 bonus to AC while you wear this armor. <br>You are considered proficient with this armor even if you lack proficiency with medium armor.",
@@ -1267,7 +1279,7 @@ var allItems = [
   {
     "en": {
       "name": "FLAME TONGUE",
-      "type": "Weapon ",
+      "type": "Weapon",
       "typeAdditions": "(any sword)",
       "rarity": 3,
       "attunement": "(requires attunement)",
@@ -1639,13 +1651,13 @@ var allItems = [
     "en": {
      "name":"IOUN STONE",
      "type":"Wondrous item",
-     "rarity": -1,
+     "rarity": 0,
      "text":"An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of <br>Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br><b>Absorption (Very Rare).</b> While this pale lavender ellipsoid orbits your head, you can use your reaction to cancel a spell of 4th level or lower cast by a creature you can see and targeting only you. <br>Once the stone has canceled 20 levels of spells, it burns out and turns dull gray, losing its magic. If you are targeted by a spell whose level is higher than the number of spell levels the stone has left, the stone can't cancel it. <br><b>Agility(Very Rare).</b> Your Dexterity score increases by 2, to a maximum of 20, while this deep red sphere orbits your head. <br><b>Awareness (Rare).</b> You can't be surprised while this dark blue rhomboid orbits your head. <br><b>Fortitude (Very Rare).</b> Your Constitution score increases by 2, to a maximum of 20, while this pink rhomboid orbits your head. <br><b>Greater Absorption (Legendary).</b> While this marbled lavender and green ellipsoid orbits your head, you can use your reaction to cancel a spell of 8th level or lower cast by a creature you can see and targeting only you. <br>Once the stone has canceled 50 levels of spells, it burns out and turns dull gray, losing its magic. If you are targeted by a spell whose level is higher than the number of spell levels the stone has left, the stone can't cancel it. <br><b>Insight (Very Rare).</b> Your Wisdom score increases by 2, to a maximum of 20, while this incandescent blue sphere orbits your head. <br><b>Intellect (Very Rare).</b> Your Intelligence score increases by 2, to a maximum of 20, while this marbled scarlet and blue sphere orbits your head. <br><b>Leadership (Very Rare).</b> Your Charisma score increases by 2, to a maximum of 20, while this marbled pink and green sphere orbits your head. <br><b>Mastery (Legendary).</b> Your proficiency bonus increases by 1 while this pale green prism orbits your head. <br><b>Protection (Rare).</b> You gain a +1 bonus to AC while this dusty rose prism orbits your head. <br><b>Regeneration (Legendary).</b> You regain 15 hit points at the end of each hour this pearly white spindle orbits your head, provided that you have at least 1 hit point. <br><b>Reserve (Rare).</b> This vibrant purple prism stores spells cast into it, holding them until you use them. The stone can store up to 3 levels worth of spells at a time. <br>When found, it contains ld4 - 1 levels of stored spells chosen by the DM. <br>Any creature can cast a spell of 1st through 3rd level into the stone by touching it as the spell is cast. The s pell has no effect, other than to be stored in the stone. <br>If the stone can't hold the spell, the spell is expended without effect. The level of the slot used to cast the spell determines how much space it uses. <br>While this stone orbits your head, you can cast any spell stored in it. The spell uses the slot level, spell save <br>DC, spell attack bonus, and spellcasting ability of the original caster, but is otherwise treated as if you cast the spell. The spell cast from the stone is no longer stored in it, freeing up space. <br><b>Strength (Very Rare).</b> Your Strength score increases by 2, to a maximum of 20, while this pale blue rhomboid orbits your head. <br><b>Sustenance (Rare).</b> You don't need to eat or drink while this clear spindle orbits your head.",
      "source":"DMG"
     },
     "ru": {
       "name": "Камень Йоун",
-      "text": "Камень Йоун назван в честь богини знаний и пророчеств, почитаемой в нескольких мирах. Существует много разновидностей камней Йоун, все они отличаются по форме и цвету. <br>Если вы действием подбрасываете один из этих камней в воздух, он начинает вращаться вокруг вашей головы на расстоянии 1к3 футов, предоставляя вам постоянное преимущество. Впоследствии другое существо может действием схватить руками или чем-то иным камень, забирая его себе, если совершит успешный бросок атаки по КД 24 или совершит успешную проверку Ловкости (Акробатика) со Сл 24. <br>Вы сами можете действием схватить и убрать камень, оканчивая его эффект. <br>У камня КД 24, 10 хитов и сопротивление ко всем видам урона. Пока он вращается вокруг вашей головы, он считается носимым. <br>Большое поглощение (легендарный). Пока этот эллипсоид с зелёными и лавандовыми прожилками вращается вокруг вашей головы, вы можете реакцией отменить заклинание с уровнем не больше 8, наложенное видимым вами существом и нацеленное только на вас. <br>Как только камень отменит 50 уровней заклинаний, он выгорит и станет тускло-серым, потеряв всю магию. Если вы становитесь целью заклинания, чей уровень настолько большой, что камень не может поглотить его целиком, это заклинание нельзя отменить. <br><b>Восприятие (редкий).</b> Вы не можете быть захвачены врасплох, пока этот тёмно-синий ромбоид вращается вокруг вашей головы. <br><b>Защита (редкий).</b> Вы получаете бонус +1 к КД, пока эта серо-розовая призма вращается вокруг вашей головы. <br><b>Лидерство (очень редкий).</b> Ваше значение Харизмы увеличивается на 2, с максимумом 20, пока эта сфера с розовыми и зелёными прожилками вращается вокруг вашей головы. <br><b>Мастерство (легендарный).</b> Ваш бонус мастерства увеличивается на 1, пока эта бледно-зелёная призма вращается вокруг вашей головы. <br><b>Питание (редкий).</b> Вам не нужно ни есть и ни пить, пока этот прозрачный веретенообразный камень вращается вокруг вашей головы. <br><b>Поглощение (очень редкий).</b> Пока этот бледнолавандовый эллипсоид вращается вокруг вашей головы, вы можете реакцией отменить заклинание с уровнем не больше 4, наложенное видимым вами существом и нацеленное только на вас. <br>Как только камень отменит 20 уровней заклинаний, он выгорит и станет тускло-серым, потеряв всю магию. Если вы становитесь целью заклинания, чей уровень настолько большой, что камень не может поглотить его целиком, это заклинание нельзя отменить. <br><b>Проворство (очень редкий).</b> Ваше значение Ловкости увеличивается на 2, с максимумом 20, пока эта тёмно-красная сфера вращается вокруг вашей головы. <br><b>Проницательность (очень редкий).</b> Ваше значение Мудрости увеличивается на 2, с максимумом 20, пока эта ярко-синяя сфера вращается вокруг вашей головы. <br><b>Рассудок (очень редкий).</b> Ваше значение Интеллекта увеличивается на 2, с максимумом 20, пока эта сфера с алыми и синими прожилками вращается вокруг вашей головы. <br><b>Регенерация (легендарный).</b> Вы восстанавливаете 15 хитов в конце каждого часа, в течение которого этот жемчужно-белый веретенообразный камень вращается вокруг вашей головы, при условии, что у вас есть как минимум 1 хит. <br><b>Резерв (редкий).</b> Эта ярко-фиолетовая призма хранит заклинания, наложенные в неё, пока вы не используете их. Этот камень может хранить до 3 уровней заклинаний одновременно. Когда его находят, он хранит 1к4 − 1 уровень заклинаний, выбранных Мастером. <br>Любое существо может заложить в камень заклинание с уровнем от 1 до 3, касаясь его при накладыщается в камень. Если камень не может уместить заклинание, заклинание тратится безо всякого эффекта. Занимаемое число уровней определяется уровнем, с которым заклинание было наложено. <br>Пока этот камень вращается вокруг вашей головы, вы можете наложить заклинание, хранящееся в нём. <br>Заклинание использует уровень ячейки, Сл спасброска, бонус атаки заклинанием и базовую характеристику исходного заклинателя, но во всём остальном считается, что заклинание наложили вы. Наложенное заклинание перестаёт храниться в камне, освобождая пространство. <br><b>Сила (очень редкий).</b> Ваше значение Силы увеличивается на 2, с максимумом 20, пока этот бледносиний ромбоид вращается вокруг вашей головы. <br><b>Стойкость (очень редкий).</b> Ваше значение Телосложения увеличивается на 2, с максимумом 20, пока этот розовый ромбоид вращается вокруг вашей головы."
+      "text": "Камень Йоун назван в честь богини знаний и пророчеств, почитаемой в нескольких мирах. Существует много разновидностей камней Йоун, все они отличаются по форме и цвету. <br>Если вы действием подбрасываете один из этих камней в воздух, он начинает вращаться вокруг вашей головы на расстоянии 1к3 футов, предоставляя вам постоянное преимущество. Впоследствии другое существо может действием схватить руками или чем-то иным камень, забирая его себе, если совершит успешный бросок атаки по КД 24 или совершит успешную проверку Ловкости (Акробатика) со Сл 24. <br>Вы сами можете действием схватить и убрать камень, оканчивая его эффект. <br>У камня КД 24, 10 хитов и сопротивление ко всем видам урона. Пока он вращается вокруг вашей головы, он считается носимым. <br><b>Большое поглощение (легендарный).</b> Пока этот эллипсоид с зелёными и лавандовыми прожилками вращается вокруг вашей головы, вы можете реакцией отменить заклинание с уровнем не больше 8, наложенное видимым вами существом и нацеленное только на вас. <br>Как только камень отменит 50 уровней заклинаний, он выгорит и станет тускло-серым, потеряв всю магию. Если вы становитесь целью заклинания, чей уровень настолько большой, что камень не может поглотить его целиком, это заклинание нельзя отменить. <br><b>Восприятие (редкий).</b> Вы не можете быть захвачены врасплох, пока этот тёмно-синий ромбоид вращается вокруг вашей головы. <br><b>Защита (редкий).</b> Вы получаете бонус +1 к КД, пока эта серо-розовая призма вращается вокруг вашей головы. <br><b>Лидерство (очень редкий).</b> Ваше значение Харизмы увеличивается на 2, с максимумом 20, пока эта сфера с розовыми и зелёными прожилками вращается вокруг вашей головы. <br><b>Мастерство (легендарный).</b> Ваш бонус мастерства увеличивается на 1, пока эта бледно-зелёная призма вращается вокруг вашей головы. <br><b>Питание (редкий).</b> Вам не нужно ни есть и ни пить, пока этот прозрачный веретенообразный камень вращается вокруг вашей головы. <br><b>Поглощение (очень редкий).</b> Пока этот бледнолавандовый эллипсоид вращается вокруг вашей головы, вы можете реакцией отменить заклинание с уровнем не больше 4, наложенное видимым вами существом и нацеленное только на вас. <br>Как только камень отменит 20 уровней заклинаний, он выгорит и станет тускло-серым, потеряв всю магию. Если вы становитесь целью заклинания, чей уровень настолько большой, что камень не может поглотить его целиком, это заклинание нельзя отменить. <br><b>Проворство (очень редкий).</b> Ваше значение Ловкости увеличивается на 2, с максимумом 20, пока эта тёмно-красная сфера вращается вокруг вашей головы. <br><b>Проницательность (очень редкий).</b> Ваше значение Мудрости увеличивается на 2, с максимумом 20, пока эта ярко-синяя сфера вращается вокруг вашей головы. <br><b>Рассудок (очень редкий).</b> Ваше значение Интеллекта увеличивается на 2, с максимумом 20, пока эта сфера с алыми и синими прожилками вращается вокруг вашей головы. <br><b>Регенерация (легендарный).</b> Вы восстанавливаете 15 хитов в конце каждого часа, в течение которого этот жемчужно-белый веретенообразный камень вращается вокруг вашей головы, при условии, что у вас есть как минимум 1 хит. <br><b>Резерв (редкий).</b> Эта ярко-фиолетовая призма хранит заклинания, наложенные в неё, пока вы не используете их. Этот камень может хранить до 3 уровней заклинаний одновременно. Когда его находят, он хранит 1к4 − 1 уровень заклинаний, выбранных Мастером. <br>Любое существо может заложить в камень заклинание с уровнем от 1 до 3, касаясь его при накладыщается в камень. Если камень не может уместить заклинание, заклинание тратится безо всякого эффекта. Занимаемое число уровней определяется уровнем, с которым заклинание было наложено. <br>Пока этот камень вращается вокруг вашей головы, вы можете наложить заклинание, хранящееся в нём. <br>Заклинание использует уровень ячейки, Сл спасброска, бонус атаки заклинанием и базовую характеристику исходного заклинателя, но во всём остальном считается, что заклинание наложили вы. Наложенное заклинание перестаёт храниться в камне, освобождая пространство. <br><b>Сила (очень редкий).</b> Ваше значение Силы увеличивается на 2, с максимумом 20, пока этот бледносиний ромбоид вращается вокруг вашей головы. <br><b>Стойкость (очень редкий).</b> Ваше значение Телосложения увеличивается на 2, с максимумом 20, пока этот розовый ромбоид вращается вокруг вашей головы."
     }
   },
   {
@@ -2384,7 +2396,7 @@ var allItems = [
   {
     "en": {
      "name":"QUAAL'S FEATHER TOKEN",
-     "type":"Wondrous iteni",
+     "type":"Wondrous item",
      "rarity": 3,
      "text":"This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The DM chooses the kind of token or determines it randomly.<br><table><tr><td>dlOO</td><td>Feather Token</td></tr><tr><td>01-20</td><td>Anchor</td></tr><tr><td>21-35</td><td>Bird</td></tr><tr><td>36-50</td><td>Fan</td></tr><tr><td>51-65</td><td>Swan boat</td></tr><tr><td>66-90</td><td>Tree</td></tr><tr><td>91-00</td><td>Whip</td></tr></table> <br><b>Anchor.</b> You can use an action to touch the token to a boat or ship. For the next 24 hours, the vessel can't be moved by any means. Touching the token to the vessel again ends the effect. When the effect ends, the token disappears. <br><b>Bird.</b> You can use an action to toss the token 5 feet into the air. The token disappears and an enormous, multicolored bird takes its place. The bird has the statistics of a roc (see the Monster Manual), but it obeys your simple commands and can't attack. It can carry up to 500 pounds while flying at its maximum speed (16 miles an hour for a maximum of 144 miles per day. with a one-hour rest for every 3 hours of flying), or 1,00G pounds at half that speed. The bird disappears after flying its maximum distance for a day or if it drops to 0 hit points. You can dismiss the bird as an action. <br><b>Fan.</b> If you are on a boat or ship, you can use an action to toss the token up to 10 feet in the air. The token disappears, and a giant flapping fan takes its place. The fan floats and creates a wind strong enough to fill the sails of one ship, increasing its speed by 5 miles per hour for 8 hours. You can dismiss the fan as an action. <br><b>Swan Boat.</b> You can use an action to touch the token to a body of water at least 60 feet in diameter. The token disappears, and a 50-foot-long, 20-foot-wide boat shaped like a swan takes its place. The boat is self-propelled and moves across water at a speed of 6 miles per hour. <br>You can use an action while on the boat to command it to move or to turn up to 90 degrees. The boat can carry up to thirty-two Medium or smaller creatures. A Large creature counts as four Medium creatures, while a <br>Huge creature counts as nine. The boat remains for 24 hours and then disappears. You can dismiss the boat as an action. <br><b>Tree.</b> You must be outdoors to use this token. You can use an action to touch it to an unoccupied space on the ground. The token disappears, and in its place a nonmagical oak tree springs into existence. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius. <br><b>Whip.</b> You can use an action to throw the token to a point within 10 feet of you. The token disappears, and a floating whip takes its place. You can then use a bonus action to make a melee spell attack against a creature within 10 feet of the whip, with an attack bonus of +9. <br>On a hit, the target takes 1d6 + 5 force damage. <br>As a bonus action on your turn, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of it. The whip disappears after 1 hour, when you use an action to dismiss it, or when you are incapacitated or die.",
      "source":"DMG"
@@ -3144,7 +3156,7 @@ var allItems = [
   {
     "en": {
      "name":"STAFF OF SWARMING INSECTS",
-     "type":"Sta ff",
+     "type":"Staff",
      "rarity": 3,
      "attunement":"(requires attunement by a bard, cleric, druid,sorcerer, warlock, or wizard)",
      "text":"This staff has 10 charges and regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, a swarm of insects consumes and destroys the staff, then disperses. <br><b>Spells.</b> While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC: giant insect (4 charges) or insect plague (5 charges). <br><b>Insect Cloud.</b> While holding the staff, you can use an action and expend 1 charge to cause a swarm of harmless flying insects to spread out in a 30-foot radius from you. The insects remain for 10 minutes, making the area heavily obscured for creatures other than you. <br>The swarm moves with you, remaining centered on you. A wind of at least 10 miles per hour disperses the swarm and ends the effect.",
@@ -3453,7 +3465,7 @@ var allItems = [
   {
     "en": {
      "name":"TOME OF UNDERSTANDING",
-     "type":"Tondrous item",
+     "type":"Wondrous item",
      "rarity": 4,
      "text":"Veapon (trident), uncommon (requires attunement) -:'his trident is a magic weapon. It has 3 charges. While _. ou carry it, you can use an action and expend 1 charge o cast dominate beast (save DC 15) from it on a beast rhat has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn.",
      "source":"DMG"
@@ -3493,8 +3505,10 @@ var allItems = [
   {
     "en": {
      "name":"VORPAL SWORD",
-     "type":" In addition",
-     "rarity":"the weapon ignoresresistance to slashing damage",
+     "type":"Weapon",
+     "typeAdditions":"(any sword that deals slashing damage)",
+     "attunement":"(requires attunement)",
+     "rarity":5,
      "text":"You gain a +3 bonus to attack and damage rolls made <br>When you attack a creature that has at least one head with this weapon and roll a 20 on the attack roll, you cut off one of the creature's heads. The creature dies if it can't survive without the lost head. A creature is immune to this effect if it is immune to slashing damage, doesn't have or need a head, has legendary actions, or rhe DM decides that the creature is too big for its head ro be cut off with this weapon. Such a creature instead takes an extra 6d8 slashing damage from the hit.",
      "source":"DMG"
     },

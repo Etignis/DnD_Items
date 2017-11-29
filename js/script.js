@@ -168,14 +168,14 @@ window.onload = function(){
 		} else {
 			for(key in src) {
 				var type = src[key];
-				var max = Math.max(type.en.title.length, type.ru.title.length)/2;
+				var max = Math.max(type.text.en.title.length, type.text.ru.title.length)/2;
 				if (max > min_width) {
 					min_width = max;
 				}
 
 				var sOptionValue = key;
 
-				ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.en.title+"<br>"+type.ru.title+"</label>";
+				ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.text.en.title+"<br>"+type.text.ru.title+"</label>";
 			}
 		}
 
@@ -236,8 +236,8 @@ window.onload = function(){
 		return "";
 	}
 	function getItemAttrFromDB(oDataSource, oParam) {
-		var sAttr = oParam.attr? String(oParam.attr).toLowerCase().trim() : undefined;
-		var sLang = oParam.lang? String(oParam.lang).toLowerCase().trim() : undefined;
+		var sAttr = (oParam.attr!=undefined)? String(oParam.attr).toLowerCase().trim() : undefined;
+		var sLang = (oParam.lang!=undefined)? String(oParam.lang).toLowerCase().trim() : undefined;
 		var sSubAttr = oParam.subattr || "title";
 		if(oDataSource[sAttr]){
 			if(oDataSource[sAttr].text[sLang]){
@@ -271,9 +271,18 @@ window.onload = function(){
 			var s_source = getItemAttr(oItem, "source", "en");
 			var s_sourcePage = getItemAttr(oItem, "sourcePage", lang);
 
-      var s_coast = getItemAttr(oItem, "coast", lang) || oRarity[oItem.en.rarity] || "";
+      var s_coast = getItemAttr(oItem, "coast", lang) || 
+        oRarity[oItem.en.rarity] && oRarity[oItem.en.rarity].coast || 
+        "";
       if(s_coast){
         s_coast = "<div class='coast'>"+s_coast+"</div>";
+      }
+      try{
+      if(!s_img) {
+        s_img = "placeholder/"+oTypes[oItem.en.type.toLowerCase()].img;
+      }
+      } catch(err){
+        console.log(s_name);
       }
 
 
