@@ -871,63 +871,29 @@ window.onload = function(){
 			filterItems();
 		}, nTimerSeconds*3);
 	});
-	// class select
-	$("body").on('focusout', "#ClassSelect", function(){
+
+	// tipe combobox
+	$("body").on('click', "#TypeCombobox label", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
-			filterItems();
-			var sClass = $("#ClassSelect .label").attr("data-selected-key");
-			createSubClassSelect(sClass);
 			updateHash();
+			filterItems();
 		}, nTimerSeconds);
 	});
-	// sub class select
-	$("body").on('focusout', "#SubClassSelect", function(){
-		clearTimeout(oTimer);
-
-		oTimer = setTimeout(function(){
-			filterItems();
-			var sClass = $("#ClassSelect .label").attr("data-selected-key");
-			var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
-			createSubSubClassSelect(sClass, sSubClass);
-			updateHash();
-		}, nTimerSeconds);
-	});
-	// sub sub class select
-	$("body").on('focusout', "#SubSubClassSelect", function(){
-		clearTimeout(oTimer);
-
-		oTimer = setTimeout(function(){
-			updateHash();
-			filterItems();
-		}, nTimerSeconds);
+	$("body").on('click', "#TypeCombobox .combo_box_title, #TypeCombobox .combo_box_arrow", function(){
+		setConfig("typeOpen", $("#TypeCombobox").attr("data-content-open"));
 	});
 
-	// level select
-	$("body").on('focusout', "#LevelStart", function(){
+	// rarity combobox
+	$("body").on('click', "#RarityCombobox label", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			updateHash();
 			filterItems();
 		}, nTimerSeconds);
 	});
-	$("body").on('focusout', "#LevelEnd", function(){
-		clearTimeout(oTimer);
-		oTimer = setTimeout(function(){
-			updateHash();
-			filterItems();
-		}, nTimerSeconds);
-	});
-	// school combobox
-	$("body").on('click', "#SchoolCombobox label", function(){
-		clearTimeout(oTimer);
-		oTimer = setTimeout(function(){
-			updateHash();
-			filterItems();
-		}, nTimerSeconds);
-	});
-	$("body").on('click', "#SchoolCombobox .combo_box_title, #SchoolCombobox .combo_box_arrow", function(){
-		setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
+	$("body").on('click', "#RarityCombobox .combo_box_title, #RarityCombobox .combo_box_arrow", function(){
+		setConfig("rarityOpen", $("#RarityCombobox").attr("data-content-open"));
 	});
 
 	// source combobox
@@ -944,6 +910,23 @@ window.onload = function(){
 
 	// lang select
 	$("body").on('focusout', "#LangSelect", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			updateHash();
+			filterItems();
+		}, nTimerSeconds);
+	});
+
+	// sort select
+	$("body").on('focusout', "#SortSelect", function(){
+		clearTimeout(oTimer);
+		oTimer = setTimeout(function(){
+			updateHash();
+			filterItems();
+		}, nTimerSeconds);
+	});
+	// card view select
+	$("body").on('focusout', "#CardViewSelect", function(){
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
 			updateHash();
