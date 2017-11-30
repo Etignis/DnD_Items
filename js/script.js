@@ -129,8 +129,10 @@ window.onload = function(){
 		var list = "<ul class='list'>" + options + "</ul>";
 
 		var selectedKey = selected_key;
-		var label="<div class='label "+atr_class+"' data-selected-key='" + selectedKey + "' "+width+"'>" + lableText + "</div>";
-		var select = "<button " + id + " " + sParams + " class='customSelect "+sClass+"' "+width+"'>" + label + list + "</button>"
+		//var label="<div class='label"+atr_class+"' data-selected-key='" + selectedKey + "'>" + lableText + "</div>";
+		var label="<div class='label' data-selected-key='" + selectedKey + "'>" + lableText + "</div>";
+		//var select = "<button " + id + " " + sParams + " class='customSelect "+sClass+"' >" + label + list + "</button>";
+		var select = "<button " + id + " class='customSelect' >" + label + list + "</button>";
 
 		return select;
 	}
@@ -268,7 +270,7 @@ window.onload = function(){
     return aReturn.join(", ");
 	}
 
-	function createCard(oItem, lang, sClass, sLockedItem) {
+	function createCard(oItem, lang, sLockedItem) {
 		if (oItem[lang] || (lang="en", oItem[lang])) {
 			var o = oItem[lang];
 			var s_name = getItemAttr(oItem, "name", lang);
@@ -312,7 +314,7 @@ window.onload = function(){
 			var sNeedHelp = (lang == "ru")?  getItemAttr(oItem, "name", "en") : getItemAttr(oItem, "name", "ru");
       var sImg = 'style="background-image: url(img/items/'+s_img+');"';
 
-			ret = '<div class="cardContainer ' + sClass + sLockedItem +'" '+ style +' data-level="' + oItem.en.level + '" data-type="' + oItem.en.school + '" data-rarity="' + oItem.en.name + '"  data-lang="' + lang + '">'+
+			ret = '<div class="cardContainer ' + sLockedItem +'" '+ style +' data-level="' + oItem.en.level + '" data-type="' + oItem.en.school + '" data-rarity="' + oItem.en.name + '"  data-lang="' + lang + '">'+
 				'<div class="ItemCard">'+
 					'<div class="content" '+sImg+'>'+
 						bLockItem +
@@ -346,11 +348,12 @@ window.onload = function(){
 	function showFiltered(oParams) {
 		try{
 			var sName = oParams.sName;
-			var sClass = "";//oParams.sClass;
 			var aSources = oParams.aSources;
 			var aRarity = oParams.aRarity;
 			var aTypes = oParams.aTypes;
 			var sLang = oParams.sLang;
+			var sView = oParams.sView;
+			var sSort = oParams.sSort;
 		} catch (err) {
 			console.dir(oParams);
 		}
@@ -365,6 +368,13 @@ window.onload = function(){
 		filteredItems = allItems; //[]; //arrDiff(filteredItems, aHiddenItems);
 
 
+		// name
+		if (sName) {
+			sName = sName.toLowerCase().trim();
+			filteredItems = filteredItems.filter(function(Item){
+				return (Item.en.name.toLowerCase().trim().indexOf(sName)>=0 || (Item.ru && Item.ru.name.toLowerCase().trim().indexOf(sName)>=0));
+			});
+		}
 
 		//types
 		if(aTypes && aTypes.length>0) {
@@ -403,13 +413,6 @@ window.onload = function(){
 			});
 		}
 
-		// name
-		if (sName) {
-			sName = sName.toLowerCase().trim();
-			filteredItems = filteredItems.filter(function(Item){
-				return (Item.en.name.toLowerCase().trim().indexOf(sName)>=0 || (Item.ru && Item.ru.name.toLowerCase().trim().indexOf(sName)>=0));
-			});
-		}
 
 
 		// filteredItems = fHiddenItems? arrDiff(filteredItems, aHiddenItems) : filteredItems;
@@ -426,20 +429,33 @@ window.onload = function(){
 		// }
 
 		// sort
-		filteredItems.sort(function(a, b) {
-			if(a[sLang] && b[sLang]) {
-				if (a.en.rarity+a[sLang].name.toLowerCase().trim() < b.en.rarity+b[sLang].name.toLowerCase().trim() )
-					return -1;
-				if (a.en.rarity+a[sLang].name.toLowerCase().trim() > b.en.rarity+b[sLang].name.toLowerCase().trim() )
-					return 1;
-			}
-			return 0
-		});
+		if(sSort == 'alpha') {
+			filteredItems.sort(function(a, b) {
+				if(a[sLang] && b[sLang]) {
+					if (a[sLang].name.toLowerCase().trim() < b[sLang].name.toLowerCase().trim() )
+						return -1;
+					if (a[sLang].name.toLowerCase().trim() > b[sLang].name.toLowerCase().trim() )
+						return 1;
+				}
+				return 0
+			});
+		} else {
+			filteredItems.sort(function(a, b) {
+				if(a[sLang] && b[sLang]) {
+					if (a.en.rarity+a[sLang].name.toLowerCase().trim() < b.en.rarity+b[sLang].name.toLowerCase().trim() )
+						return -1;
+					if (a.en.rarity+a[sLang].name.toLowerCase().trim() > b.en.rarity+b[sLang].name.toLowerCase().trim() )
+						return 1;
+				}
+				return 0
+			});
+		}
+
 
 		for (var i in filteredItems) {
 			if(filteredItems[i]) {
 				var fLocked = filteredItems[i].locked? true: false;
-				var tmp = createCard(filteredItems[i], sLang, sClass, fLocked)
+				var tmp = createCard(filteredItems[i], sLang, fLocked)
 				if (tmp)
 					Items += tmp;
 			}
@@ -455,8 +471,10 @@ window.onload = function(){
 		 var aTypes = $("#TypeCombobox .combo_box_title").attr("data-val");
 		 var aRarity = $("#RarityCombobox .combo_box_title").attr("data-val");
 		 var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
-		// 	if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
+		 	if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
 		 var sLang = $("#LangSelect .label").attr("data-selected-key");
+		 var sView = $("#CardViewSelect .label").attr("data-selected-key");
+		 var sSort = $("#SortSelect .label").attr("data-selected-key");
 
 		 var fHidden = (aHiddenItems.length>0)? true: false;
 
@@ -470,6 +488,8 @@ window.onload = function(){
 				aTypes: aTypes,
 				aSources: aSources,
 				sLang: sLang,
+				sView: sView,
+				sSort: sSort,
 				fHidden: fHidden
 				});
 		}, nTimerSeconds/4);
@@ -546,11 +566,11 @@ window.onload = function(){
 		];
 		if(!lang)
 			lang = "ru";
-		var classSelect = createSelect(src, {id: "LangSelect", selected_key: lang, width: "100%"});
+		var Select = createSelect(src, {id: "LangSelect", selected_key: lang, width: "100%"});
 		var label = createLabel("Язык");
-		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
+		$(".p_side").append("<div class='mediaWidth'>" + label + Select + "</div>");
 	}
-	function createCardViewSelect(lang) {
+	function createCardViewSelect(selected) {
 		var src = [
 			{
 				name: "card",
@@ -561,13 +581,13 @@ window.onload = function(){
 				title: "Текст"
 			}
 		];
-		if(!lang)
-			lang = "card";
-		var classSelect = createSelect(src, {id: "CardViewSelect", selected_key: lang, width: "100%"});
+		if(!selected)
+			selected = "card";
+		var Select = createSelect(src, {id: "CardViewSelect", selected_key: selected, width: "100%"});
 		var label = createLabel("Вид");
-		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
+		$(".p_side").append("<div class='mediaWidth'>" + label + Select + "</div>");
 	}
-	function createSortSelect(lang) {
+	function createSortSelect(selected) {
 		var src = [
 			{
 				name: "rarity_alpha",
@@ -578,11 +598,11 @@ window.onload = function(){
 				title: "Алфавиту"
 			}
 		];
-		if(!lang)
-			lang = "rarity_alpha";
-		var classSelect = createSelect(src, {id: "SortSelect", selected_key: lang, width: "100%"});
+		if(!selected)
+			selected = "rarity_alpha";
+		var Select = createSelect(src, {id: "SortSelect", selected_key: selected, width: "100%"});
 		var label = createLabel("Сортировать по");
-		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
+		$(".p_side").append("<div class='mediaWidth'>" + label + Select + "</div>");
 	}
 
 	function createHiddenItemsList(){
@@ -1267,10 +1287,10 @@ window.onload = function(){
 		if(sLang && sLang.length > 0 && sLang != "ru") {
 			aFilters.push("lang="+sLang.replace(/\s+/g, "_"));
 		}
-		if(sCardView && sCardView.length > 0 && sCardView != "ru") {
+		if(sCardView && sCardView.length > 0 && sCardView != "card") {
 			aFilters.push("view="+sCardView.replace(/\s+/g, "_"));
 		}
-		if(sSort && sSort.length > 0 && sSort != "ru") {
+		if(sSort && sSort.length > 0 && sSort != "rarity_alpha") {
 			aFilters.push("sort="+sSort.replace(/\s+/g, "_"));
 		}
 
@@ -1309,7 +1329,7 @@ window.onload = function(){
       	$("#CardViewSelect .label").attr("data-selected-key", sView[1]).html($("#CardViewSelect li[data-key='"+sView[1]+"']"));
       }
       if(sSort && sSort[1]) {
-      	$("#SortSelect .label").attr("data-selected-key", sSort[1]).html($("#CardViewSelect li[data-key='"+sSort[1]+"']"));
+      	$("#SortSelect .label").attr("data-selected-key", sSort[1]).html($("#SortSelect li[data-key='"+sSort[1]+"']"));
       }
 
       if(sSources && sSources[1]) {
