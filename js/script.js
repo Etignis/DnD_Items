@@ -262,7 +262,7 @@ window.onload = function(){
             break;
           }
         }
-      }     
+      }
     }
 
     return aReturn.join(", ");
@@ -282,8 +282,8 @@ window.onload = function(){
 			var s_source = getItemAttr(oItem, "source", "en");
 			var s_sourcePage = getItemAttr(oItem, "sourcePage", lang);
 
-      var s_coast = getItemAttr(oItem, "coast", lang) || 
-        oRarity[oItem.en.rarity] && oRarity[oItem.en.rarity].coast || 
+      var s_coast = getItemAttr(oItem, "coast", lang) ||
+        oRarity[oItem.en.rarity] && oRarity[oItem.en.rarity].coast ||
         "";
       if(s_coast){
         s_coast = "<div class='coast'>"+s_coast+"</div>";
@@ -344,12 +344,16 @@ window.onload = function(){
 	// 	$("#info_text").hide();
 	// }
 	function showFiltered(oParams) {
-		var sName = oParams.sName;
-		var sClass = "";//oParams.sClass;
-		var aSources = oParams.aSources;
-		var aRarity = oParams.aRarity;
-		var aTypes = oParams.aTypes;
-		var sLang = oParams.sLang;
+		try{
+			var sName = oParams.sName;
+			var sClass = "";//oParams.sClass;
+			var aSources = oParams.aSources;
+			var aRarity = oParams.aRarity;
+			var aTypes = oParams.aTypes;
+			var sLang = oParams.sLang;
+		} catch (err) {
+			console.dir(oParams);
+		}
 
 		// var fHiddenItems = (aHiddenItems.length>0)? true: false;
 		// var fLockedItems = (aLockedItems.length>0)? true: false;
@@ -469,7 +473,7 @@ window.onload = function(){
 				fHidden: fHidden
 				});
 		}, nTimerSeconds/4);
-		oTimer = setTimeout(showFiltered, nTimerSeconds/4);
+		//oTimer = setTimeout(showFiltered, nTimerSeconds/4);
 		// showFiltered({
 		// 	sName: sName,
 		// 	aRarity: aRarity,
@@ -506,7 +510,7 @@ window.onload = function(){
 	function createRarityCombobox(isOpen) {
 		if(isOpen == undefined)
 			isOpen = false;
-		var s1=createComboBox(oRarity, {id: "TypeCombobox", title: "Редкость", checkAll: true, isOpen: isOpen});
+		var s1=createComboBox(oRarity, {id: "RarityCombobox", title: "Редкость", checkAll: true, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 	}
 	function createSourceCombobox(isOpen) {
@@ -544,6 +548,40 @@ window.onload = function(){
 			lang = "ru";
 		var classSelect = createSelect(src, {id: "LangSelect", selected_key: lang, width: "100%"});
 		var label = createLabel("Язык");
+		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
+	}
+	function createCardViewSelect(lang) {
+		var src = [
+			{
+				name: "card",
+				title: "Карточки"
+			},
+			{
+				name: "text",
+				title: "Текст"
+			}
+		];
+		if(!lang)
+			lang = "card";
+		var classSelect = createSelect(src, {id: "CardViewSelect", selected_key: lang, width: "100%"});
+		var label = createLabel("Вид");
+		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
+	}
+	function createSortSelect(lang) {
+		var src = [
+			{
+				name: "rarity_alpha",
+				title: "Редкости и алфавиту"
+			},
+			{
+				name: "alpha",
+				title: "Алфавиту"
+			}
+		];
+		if(!lang)
+			lang = "rarity_alpha";
+		var classSelect = createSelect(src, {id: "SortSelect", selected_key: lang, width: "100%"});
+		var label = createLabel("Сортировать по");
 		$(".p_side").append("<div class='mediaWidth'>" + label + classSelect + "</div>");
 	}
 
@@ -615,6 +653,8 @@ window.onload = function(){
 		 createCardWidthButtons();
 		 createAutoSizeTextButton();
 		 createLangSelect(lang);
+		 createCardViewSelect();
+		 createSortSelect();
 
 		$(".p_side").fadeIn();
 	}
@@ -1209,46 +1249,46 @@ window.onload = function(){
 
 // url filters
 	function updateHash() {
+		// text
 		var sName = $("#NameInput input").val();
-		var sClass = $("#ClassSelect .label").attr("data-selected-key");
-		var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
-		var sSubSubClass = $("#SubSubClassSelect .label").attr("data-selected-key");
-		var nLevelStart = $("#LevelStart .label").attr("data-selected-key");
-		var nLevelEnd = $("#LevelEnd .label").attr("data-selected-key");
-		var aSchools = $("#SchoolCombobox .combo_box_title").attr("data-val");
-			if(aSchools) aSchools = aSchools.split(",").map(function(item){return item.trim()});
+
+		//combobox
 		var aSources = $("#SourceCombobox .combo_box_title").attr("data-val");
 			if(aSources) aSources = aSources.split(",").map(function(item){return item.trim()});
+		var aTypes = $("#TypeCombobox .combo_box_title").attr("data-val");
+			if(aTypes) aTypes = aTypes.split(",").map(function(item){return item.trim()});
+		var aRarities = $("#RarityCombobox .combo_box_title").attr("data-val");
+			if(aRarities) aRarities = aRarities.split(",").map(function(item){return item.trim()});
+		// select
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
+		var sCardView = $("#CardViewSelect .label").attr("data-selected-key");
+		var sSort = $("#SortSelect .label").attr("data-selected-key");
+
+
+
 
 		//#q=Item_name&ls=0&le=9
 		var aFilters = [];
 		if(sName && sName.length>0) {
 			aFilters.push("q="+sName.replace(/\s+/g, "_"));
 		}
-		if(nLevelStart && nLevelStart>0 && nLevelStart<=9) {
-			aFilters.push("ls="+nLevelStart);
-		}
-		if(nLevelEnd && nLevelEnd>=0 && nLevelEnd<9) {
-			aFilters.push("le="+nLevelEnd);
-		}
-		if(sClass && sClass.length > 0 && sClass != "[ALL]") {
-			aFilters.push("class="+sClass.replace(/\s+/g, "_"));
-		}
-		if(sSubClass && sSubClass.length > 0 && sSubClass != "[NONE]") {
-			aFilters.push("subclass="+sSubClass.replace(/\s+/g, "_"));
-		}
-		if(sSubSubClass && sSubSubClass.length > 0 && sSubSubClass != "[NONE]") {
-			aFilters.push("subsubclass="+sSubSubClass.replace(/\s+/g, "_"));
-		}
-		if(aSchools && aSchools.length>0 && aSchools.length<8) {
-			aFilters.push("schools="+aSchools.join(","));
+		if(aTypes && aTypes.length>0 && $("#TypeCombobox .combo_box_content input").length > aTypes.length) {
+			aFilters.push("types="+aTypes.join(","));
 		}
 		if(aSources && aSources.length>0 && $("#SourceCombobox .combo_box_content input").length > aSources.length) {
 			aFilters.push("sources="+aSources.join(","));
 		}
+		if(aRarities && aRarities.length>0 && $("#RarityCombobox .combo_box_content input").length > aRarities.length) {
+			aFilters.push("rarities="+aRarities.join(","));
+		}
 		if(sLang && sLang.length > 0 && sLang != "ru") {
 			aFilters.push("lang="+sLang.replace(/\s+/g, "_"));
+		}
+		if(sCardView && sCardView.length > 0 && sCardView != "ru") {
+			aFilters.push("view="+sCardView.replace(/\s+/g, "_"));
+		}
+		if(sSort && sSort.length > 0 && sSort != "ru") {
+			aFilters.push("sort="+sSort.replace(/\s+/g, "_"));
 		}
 
 		if(aFilters.length>0) {
@@ -1265,53 +1305,30 @@ window.onload = function(){
     var sHash = window.location.hash.slice(1); // /archive#q=Item_name
     if(sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|,_=-]/.test(sHash)) {
       var sName = sHash.match(/\bq=([А-Яа-яЁё\/\w\d_]+)/);
-      var sClass = sHash.match(/\bclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
-      var sSubClass = sHash.match(/\bsubclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
-      var sSubSubClass = sHash.match(/\bsubsubclass=([\[\]А-Яа-яЁё\/\w\d_]+)/);
-      var nLevelStart = sHash.match(/\bls=([\d]+)/);
-      var nLevelEnd = sHash.match(/\ble=([\d]+)/);
+
       var sLang = sHash.match(/\blang=([\w]+)/);
-      var sSchools = sHash.match(/\bschools=([\w,]+)/);
+      var sView = sHash.match(/\bview=([\w]+)/);
+      var sSort = sHash.match(/\bsort=([\w_]+)/);
+
+      var sRarities = sHash.match(/\brarities=([\w,]+)/);
+      var sTypes = sHash.match(/\btypes=([\w,]+)/);
       var sSources = sHash.match(/\bsources=([\w,_]+)/);
+
 
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
       }
-      if(sClass && sClass[1]) {
-      	$("#ClassSelect .label").attr("data-selected-key", sClass[1]).html($("#ClassSelect li[data-key='"+sClass[1]+"']").html().replace("<br>", " | "));
-      	var sClass = $("#ClassSelect .label").attr("data-selected-key");
-				createSubClassSelect(sClass);
-      }
-      if(sSubClass && sSubClass[1]) {
-      	$("#SubClassSelect .label").attr("data-selected-key", sSubClass[1]).html($("#SubClassSelect li[data-key='"+sSubClass[1]+"']").html().replace("<br>", " | "));
-      	var sSubClass = $("#SubClassSelect .label").attr("data-selected-key");
-				createSubSubClassSelect(sClass, sSubClass);
-      }
-      if(sSubSubClass && sSubSubClass[1]) {
-      	$("#SubSubClassSelect .label").attr("data-selected-key", sSubSubClass[1]).html($("#SubSubClassSelect li[data-key='"+sSubSubClass[1]+"']").html().replace("<br>", " | "));
-      }
-      if(nLevelStart && nLevelStart[1]) {
-      	$("#LevelStart .label").attr("data-selected-key", nLevelStart[1]).text(nLevelStart[1]);
-      }
-      if(nLevelEnd && nLevelEnd[1]) {
-      	$("#LevelEnd .label").attr("data-selected-key", nLevelEnd[1]).text(nLevelEnd[1]);
-      }
+
       if(sLang && sLang[1]) {
-      	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']").html().replace("<br>", " | "));
+      	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']"));
       }
-      if(sSchools && sSchools[1]) {
-      	var aSchools = sSchools[1].split(",");
-
-      	$("#SchoolCombobox .combo_box_content input[type='checkbox']").each(function(){
-      		if(aSchools.indexOf($(this).val())>-1) {
-      			$(this).prop('checked', true);
-      		} else {
-      			$(this).prop('checked', false);
-      		}
-      	});
-      	$("#SchoolCombobox .combo_box_title").attr("data-val", sSchools[1])
-
+      if(sView && sView[1]) {
+      	$("#CardViewSelect .label").attr("data-selected-key", sView[1]).html($("#CardViewSelect li[data-key='"+sView[1]+"']"));
       }
+      if(sSort && sSort[1]) {
+      	$("#SortSelect .label").attr("data-selected-key", sSort[1]).html($("#CardViewSelect li[data-key='"+sSort[1]+"']"));
+      }
+
       if(sSources && sSources[1]) {
       	var aSources = sSources[1].split(",");
 
@@ -1323,8 +1340,35 @@ window.onload = function(){
       		}
       	});
       	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1])
-
       }
+      if(sRarities && sRarities[1]) {
+      	var aRarities = sRarities[1].split(",");
+
+      	$("#RarityCombobox .combo_box_content input[type='checkbox']").each(function(){
+      		if(aRarities.indexOf($(this).val())>-1) {
+      			$(this).prop('checked', true);
+      		} else {
+      			$(this).prop('checked', false);
+      		}
+      	});
+      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1])
+      }
+      if(sTypes && sTypes[1]) {
+      	var aTypes = sTypes[1].split(",");
+
+      	$("#SourceCombobox .combo_box_content input[type='checkbox']").each(function(){
+      		if(aTypes.indexOf($(this).val())>-1) {
+      			$(this).prop('checked', true);
+      		} else {
+      			$(this).prop('checked', false);
+      		}
+      	});
+      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1])
+      }
+
+      // if(sLang && sLang[1]) {
+      // 	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']").html().replace("<br>", " | "));
+      // }
     } else {
       removeHash();
       //hideClerFilter();
