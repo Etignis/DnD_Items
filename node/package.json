@@ -11,6 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "line-by-line": "^0.1.5",
-    "scissors": "^0.2.3"
+    "scissors": "^0.2.3",
+    "cheerio": "^1.0.0-rc.2",
+    "yargs": "^8.0.2",
+    "ftpsync": "^0.2.0",
+    "gm": "^1.23.0",
+    "child_process": "^1.0.2",
+    "showdown": "^1.7.5",
+    "request": "^2.83.0"
   }
 }

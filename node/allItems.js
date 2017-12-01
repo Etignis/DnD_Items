@@ -1,242 +1,4 @@
-var oSources = {
-  "PHB": {
-    "text": {
-      "en": {
-        "title": "Palyers Handbook"
-      },
-      "ru": {
-        "title": "Книга игрока"
-      }
-    }
-  },
-  "DMG": {
-    "text": {
-      "en": {
-        "title": "Dungeon Master Guide"
-      },
-      "ru": {
-        "title": "Книга мастера"
-      }
-    }
-  }
-}
-var oTypes = {
-  "armor": {
-    "text": {
-      "en": {
-        "title": "armor"
-      },
-      "ru": {
-        "title": "броня",
-        "gender": "she"
-      }
-    },
-	"img": "type_armor.jpg"
-  },
-  "weapon": {
-    "text": {
-      "en": {
-        "title": "weapon"
-      },
-      "ru": {
-        "title": "оружие",
-        "gender": "it"
-      }
-    },
-	"img": "type_weapon.jpg"
-  },
-  "staff": {
-    "text": {
-      "en": {
-        "title": "staff"
-      },
-      "ru": {
-        "title": "жезл",
-        "gender": "he"
-      }
-    },
-	"img": "type_staff.jpg"
-  },
-  "ring": {
-    "text": {
-      "en": {
-        "title": "ring"
-      },
-      "ru": {
-        "title": "кольцо",
-        "gender": "it"
-      }
-    },
-	"img": "type_ring.jpg"
-  },
-  "potion": {
-    "text": {
-      "en": {
-        "title": "potion"
-      },
-      "ru": {
-        "title": "зелье",
-        "gender": "it"
-      }
-    },
-	"img": "type_potion.jpg"
-  },
-  "wondrous item": {
-    "text": {
-      "en": {
-        "title": "wondrous item"
-      },
-      "ru": {
-        "title": "чудо-вещь",
-        "gender": "she"
-      }
-    },
-	"img": "type_wondrous_item.jpg"
-  },
-  "vehicle": {
-    "text": {
-      "en": {
-        "title": "vehicle"
-      },
-      "ru": {
-        "title": "транспорт",
-        "gender": "he"
-      }
-    },
-	"img": "type_vehicle.jpg"
-  },
-  "wand": {
-    "text": {
-      "en": {
-        "title": "wand"
-      },
-      "ru": {
-        "title": "волшебная палочка",
-        "gender": "she"
-      }
-    },
-	"img": "type_wand.jpg"
-  },
-  "rod": {
-    "text": {
-      "en": {
-        "title": "rod"
-      },
-      "ru": {
-        "title": "жезл",
-        "gender": "he"
-      }
-    },
-	"img": "type_rod.jpg"
-  },
-  "scroll": {
-    "text": {
-      "en": {
-        "title": "scroll"
-      },
-      "ru": {
-        "title": "свиток",
-        "gender": "he"
-      }
-    },
-	"img": "type_scroll.jpg"
-  }
-}
-var oRarity = {
-  0: {
-    "text": {
-      "en": {
-        "title": "vary"
-      },
-      "ru": {
-        "he": "разной редкости",
-        "she": "разной редкости",
-        "it": "разной редкости",
-        "title": "разной редкости"
-      }
-    }
-  },
-  1: {
-    "text": {
-      "en": {
-        "title": "Common"
-      },
-      "ru": {
-        "he": "обычный",
-        "she": "обычная",
-        "it": "обычное",
-        "title": "обычная"
-      }
-    },
-    "coast": "50-100 gp"
-  },
-  2: {
-    "text": {
-      "en": {
-        "title": "uncommon"
-      },
-      "ru": {
-        "he": "необычный",
-        "it": "необычное",
-        "title": "необычная"
-      }
-    },
-    "coast": "101-500 gp"
-  },
-  3: {
-    "text": {
-      "en": {
-        "title": "Rare"
-      },
-      "ru": {
-        "he": "редкий",
-        "she": "редкая",
-        "it": "редкое",
-        "title": "редкая"
-      }
-    },
-    "coast": "501-5,000 gp"
-  },
-  4: {
-    "text": {
-      "en": {
-        "title": "very Rare"
-      },
-      "ru": {
-        "he": "очень редкий",
-        "she": "очень редкая",
-        "it": "очень редкое",
-        "title": "очень редкая"
-      }
-    },
-    "coast": "5,001-50,000 gp"
-  },
-  5: {
-    "text": {
-      "en": {
-        "title": "legendary"
-      },
-      "ru": {
-        "he": "легендарный",
-        "she": "легендарная",
-        "it": "легендарное",
-        "title": "легендарная"
-      }
-    },
-    "coast": "50,001+ gp"
-  }
-}
-
-var oItemsAddInfo = {
-  "requires attunement": {
-    "text": {
-      "en": "requires attunement",
-      "ru": "требуется настройка"
-    }
-  }
-}
-
-var allItems = [
+[
   {
     "en": {
       "name": "AMMUNITION +1",
@@ -245,7 +7,7 @@ var allItems = [
       "rarity": 1,
       "text": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. Once it hit a target, the ammunition is no longer magical.",
       "source": "DMG",
-      "img": ""
+      "img": "AMMUNITION_1.jpg"
     },
     "ru": {
       "name": "Боеприпасы +1",
@@ -261,7 +23,7 @@ var allItems = [
       "rarity": 2,
       "text": "You have a bonus to attack and damage rolls made with this piece of magic ammunition.  Once it hit a target, the ammunition is no longer magical.",
       "source": "DMG",
-      "img": ""
+      "img": "AMMUNITION_2.jpg"
     },
     "ru": {
       "name": "Боеприпасы +2",
@@ -277,7 +39,7 @@ var allItems = [
       "rarity": 3,
       "text": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. Once it hit a target, the ammunition is no longer magical.",
       "source": "DMG",
-      "img": ""
+      "img": "AMMUNITION_3.jpg"
     },
     "ru": {
       "name": "Боеприпасы +3",
@@ -402,7 +164,7 @@ var allItems = [
       "rarity": 2,
       "text": "You have a bonus to AC while wearing this armor.",
       "source": "DMG",
-      "img": ""
+      "img": "ARMOR_1.jpg"
     },
     "ru": {
       "name": "Доспех +1",
@@ -418,7 +180,7 @@ var allItems = [
       "rarity": 3,
       "text": "You have a bonus to AC while wearing this armor.",
       "source": "DMG",
-      "img": ""
+      "img": "ARMOR_2.jpg"
     },
     "ru": {
       "name": "Доспех +2",
@@ -434,7 +196,7 @@ var allItems = [
       "rarity": 4,
       "text": "You have a bonus to AC while wearing this armor.",
       "source": "DMG",
-      "img": ""
+      "img": "ARMOR_3.jpg"
     },
     "ru": {
       "name": "Доспех +3",
@@ -610,7 +372,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this belt, your Strength score became 21 . If your Strength is already equal to or greater than the belt's score, the item has no effect on you. ",
       "source": "DMG",
-      "img": "BELT_OF_GIANT_STRENGTH.jpg"
+      "img": "BELT_OF_hill_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Пояс силы холмового великана",
@@ -626,7 +388,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this belt, your Strength score changes to 23. If your Strength is already equal to or greater than the belt's score, the item has no effect on you. ",
       "source": "DMG",
-      "img": "BELT_OF_GIANT_STRENGTH.jpg"
+      "img": "BELT_OF_stone_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Пояс силы каменного великана",
@@ -642,7 +404,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this belt, your Strength score changes to 23. If your Strength is already equal to or greater than the belt's score, the item has no effect on you. ",
       "source": "DMG",
-      "img": "BELT_OF_GIANT_STRENGTH.jpg"
+      "img": "BELT_OF_frost_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Пояс силы ледяного великана",
@@ -658,7 +420,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this belt, your Strength score changes to 25. If your Strength is already equal to or greater than the belt's score, the item has no effect on you. ",
       "source": "DMG",
-      "img": "BELT_OF_GIANT_STRENGTH.jpg"
+      "img": "BELT_OF_fire_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Пояс силы огненного великана",
@@ -674,7 +436,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this belt, your Strength score changes to 27. If your Strength is already equal to or greater than the belt's score, the item has no effect on you. ",
       "source": "DMG",
-      "img": "BELT_OF_GIANT_STRENGTH.jpg"
+      "img": "BELT_OF_cloud_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Пояс силы облачного великана",
@@ -690,7 +452,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this belt, your Strength score changes to 29. If your Strength is already equal to or greater than the belt's score, the item has no effect on you. ",
       "source": "DMG",
-      "img": "BELT_OF_GIANT_STRENGTH.jpg"
+      "img": "BELT_OF_storm_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Пояс силы великана",
@@ -1202,7 +964,7 @@ var allItems = [
       "name": "DECK OF MANY THINGS",
       "type": "Wondrous item",
       "rarity": 5,
-      "text": "Usually found in a box or pouch, this deck contains a number of cards made of ivory or vellum. Most (75 percent) of these decks have only thirteen cards, but the rest have twenty-two. <br>Before you draw a card, you must declare how many cards you intend to draw and then draw them randomly (you can use an altered deck of playing cards to simulate the deck). Any cards drawn in excess of this number have no effect. Otherwise, as soon as you draw a card from the deck, its magic takes effect. You must draw each card no more than 1 hour after the previous draw. <br>If you fail to draw the chosen number, the remaining number of cards fly from the deck on their own and take effect all at once. <br>Once a card is drawn, it fades from existence. Unless the card is the Fool or the Jester, the card reappears in the deck, making it possible to draw the same card twice.<br><table><tr><td>Playing Card</td><td>Card</td></tr><tr><td>Ace of diamonds</td><td>Vizier*</td></tr><tr><td>King of diamonds</td><td>Sun</td></tr><tr><td>Queen of diamonds</td><td>Moon</td></tr><tr><td>jack of diamonds</td><td>Star</td></tr><tr><td>Two of diamonds</td><td>Comet*</td></tr><tr><td>Ace of hearts</td><td>The Fates*</td></tr><tr><td>King of hearts</td><td>Throne</td></tr><tr><td>Queen of hearts</td><td>Key</td></tr><tr><td>jack of hearts</td><td>Knight</td></tr><tr><td>Two of hearts</td><td>Gem*</td></tr><tr><td>Ace of clubs</td><td>Talons*</td></tr><tr><td>King of clubs</td><td>The Void</td></tr><tr><td>Queen of clubs</td><td>Flames</td></tr><tr><td>jack of clubs</td><td>Skull</td></tr><tr><td>Two of clubs</td><td>Idiot*</td></tr><tr><td>Ace of spades</td><td>Donjon*</td></tr><tr><td>King of spades</td><td>Ruin</td></tr><tr><td>Queen of spades</td><td>Euryale</td></tr><tr><td>jack of spades</td><td>Rogue</td></tr><tr><td>Two of spades</td><td>Balance*</td></tr><tr><td>joker (with TM)</td><td>Fool*</td></tr><tr><td>joker (without TM)</td><td>jester</td></tr></table> <br><b>Balance.</b> Your mind suffers a wrenching alteration, causing your alignment to change. Lawful becomes chaotic, good becomes evil, and vice versa. If you are true neutral or unaligned, this card has no effect on you. <br><b>Comet.</b> If you single-handedly defeat the next hostile monster or group of monsters you encounter, you gain experience points enough to gain one level. Otherwise, this card has no effect. <br><b>Donjon.</b> You disappear and become entombed in a state of suspended animation in an extradimensional sphere. Everything you were wearing and carrying stays behind in the space you occupied when you disappeared. You remain imprisoned until you are found and removed from the sphere. You can't be located by any divination magic, but a wish spell can reveal the location of your prison. You draw no more cards. <br><b>Euryale.</b> The card's medusa-like visage curses you. <br>You take a -2 penalty on saving throws while cursed in this way. Only a god or the magic of The Fates card can end this curse. <br><b>The Fates.</b> Reality's fabric unravels and spins anew, allowing you to avoid or erase one event as if it never happened. You can use the card's magic as soon as you draw the card or at any other time before you die. <br><b>Flames.</b> A powerful devil becomes your enemy. The devil seeks your ruin and plagues your life, savoring your suffering before attempting to slay you. This enmity lasts until either you or the devil dies. <br><b>Fool.</b> You lose 10,000 XP, discard this card, and draw from the deck again, counting both draws as one of your declared draws. If losing that much XP would cause you to lose a level, you instead lose an amount that leaves you with just enough XP to keep your level. <br><b>Gem.</b> Twenty-five pieces of jewelry worth 2,000 gp each or fifty gems worth 1,000 gp each appear at your feet. <br><b>Idiot.</b> Permanently reduce your Intelligence by ld4 + 1 (to a minimum score of 1). You can draw one additional card beyond your declared draws. <br><b>Jester.</b> You gain 10,000 XP, or you can draw two additional cards beyond your declared draws. <br><b>Key.</b> A rare or rarer magic weapon with which you are proficient appears in your hands. The DM chooses the weapon. <br><b>Knight.</b> You gain the service of a 4th-level fighter who appears in a space you choose within 30 feet of you. The fighter is of the same race as you and serves you loyally until death, believing the fates have drawn him or her to you. You control this character. <br><b>Moon.</b> You are granted the ability to cast the wish spell 1d3 times. <br><b>Rogue.</b> A nonplayer character of the DM's choice becomes hostile toward you. The identity of your new enemy isn't known until the NPC or someone else reveals it. Nothing less than a wish spell or divine intervention can end the NPC's hostility toward you. <br><b>Ruin.</b> All forms of wealth that you carry or own, other than magic items, are lost to you. Portable property vanishes. Businesses, buildings, and land you own are lost in a way that alters reality the least. Any documentation that proves you should own something lost to this card also disappears. <br><b>Skull.</b> You summon an avatar of death-a ghostly humanoid skeleton clad in a tattered black robe and carrying a spectral scythe. It appears in a space of the DM's choice within 10 feet of you and attacks yo~, warning all others that you must win the battle alone. <br>The avatar fights until you die or it drops to 0 hit points, whereupon it disappears. If anyone tries to help you, the helper summons its own avatar of death. A creature slain by an avatar of death can't be restored to life. <br><b>Star.</b> Increase one of your ability scores by 2. The score can exceed 20 but can't exceed 24. <br><b>Sun.</b> You gain 50,000 XP, and a wondrous item (which the DM determines randomly) appears in your hands. <br><b>Talons.</b> Every magic item you wear or carry disintegrates. Artifacts in your possession aren't destroyed but do vanish. <br><b>Throne.</b> You gain proficiency in the Persuasion skill, and you double your proficiency bonus on checks made with that skill. In addition, you gain rightful ownership of a small keep somewhere in the world. However, the keep is currently in the hands of monsters, which you must clear out before you can claim the keep as. yours. <br><b>Vizier.</b> At any time you choose within one year of drawing this card, you can ask a question in meditation and mentally receive a truthful answer to that question. <br>Besides information, the answer helps you solve a puzzling problem or other dilemma. In other words, the knowledge comes with wisdom on how to apply it. <br><b>The Void.</b> This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the DM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is incapacitated. A wish spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards.",
+      "text": "Usually found in a box or pouch, this deck contains a number of cards made of ivory or vellum. Most (75 percent) of these decks have only thirteen cards, but the rest have twenty-two. <br>Before you draw a card, you must declare how many cards you intend to draw and then draw them randomly (you can use an altered deck of playing cards to simulate the deck). Any cards drawn in excess of this number have no effect. Otherwise, as soon as you draw a card from the deck, its magic takes effect. You must draw each card no more than 1 hour after the previous draw. <br>If you fail to draw the chosen number, the remaining number of cards fly from the deck on their own and take effect all at once. <br>Once a card is drawn, it fades from existence. Unless the card is the Fool or the Jester, the card reappears in the deck, making it possible to draw the same card twice.<br><table><tr><td>Playing Card</td><td>Card</td></tr><tr><td>Ace of diamonds</td><td>Vizier*</td></tr><tr><td>King of diamonds</td><td>Sun</td></tr><tr><td>Queen of diamonds</td><td>Moon</td></tr><tr><td>jack of diamonds</td><td>Star</td></tr><tr><td>Two of diamonds</td><td>Comet*</td></tr><tr><td>Ace of hearts</td><td>The Fates*</td></tr><tr><td>King of hearts</td><td>Throne</td></tr><tr><td>Queen of hearts</td><td>Key</td></tr><tr><td>jack of hearts</td><td>Knight</td></tr><tr><td>Two of hearts</td><td>Gem*</td></tr><tr><td>Ace of clubs</td><td>Talons*</td></tr><tr><td>King of clubs</td><td>The Void</td></tr><tr><td>Queen of clubs</td><td>Flames</td></tr><tr><td>jack of clubs</td><td>Skull</td></tr><tr><td>Two of clubs</td><td>Idiot*</td></tr><tr><td>Ace of spades</td><td>Donjon*</td></tr><tr><td>King of spades</td><td>Ruin</td></tr><tr><td>Queen of spades</td><td>Euryale</td></tr><tr><td>jack of spades</td><td>Rogue</td></tr><tr><td>Two of spades</td><td>Balance*</td></tr><tr><td>joker (with TM)</td><td>Fool*</td></tr><tr><td>joker (without TM)</td><td>jester</td></tr></table> <br><b>Balance.<b> Your mind suffers a wrenching alteration, causing your alignment to change. Lawful becomes chaotic, good becomes evil, and vice versa. If you are true neutral or unaligned, this card has no effect on you. <br><b>Comet.</b> If you single-handedly defeat the next hostile monster or group of monsters you encounter, you gain experience points enough to gain one level. Otherwise, this card has no effect. <br><b>Donjon.</b> You disappear and become entombed in a state of suspended animation in an extradimensional sphere. Everything you were wearing and carrying stays behind in the space you occupied when you disappeared. You remain imprisoned until you are found and removed from the sphere. You can't be located by any divination magic, but a wish spell can reveal the location of your prison. You draw no more cards. <br><b>Euryale.</b> The card's medusa-like visage curses you. <br>You take a -2 penalty on saving throws while cursed in this way. Only a god or the magic of The Fates card can end this curse. <br><b>The Fates.</b> Reality's fabric unravels and spins anew, allowing you to avoid or erase one event as if it never happened. You can use the card's magic as soon as you draw the card or at any other time before you die. <br><b>Flames.</b> A powerful devil becomes your enemy. The devil seeks your ruin and plagues your life, savoring your suffering before attempting to slay you. This enmity lasts until either you or the devil dies. <br><b>Fool.</b> You lose 10,000 XP, discard this card, and draw from the deck again, counting both draws as one of your declared draws. If losing that much XP would cause you to lose a level, you instead lose an amount that leaves you with just enough XP to keep your level. <br><b>Gem.</b> Twenty-five pieces of jewelry worth 2,000 gp each or fifty gems worth 1,000 gp each appear at your feet. <br><b>Idiot.</b> Permanently reduce your Intelligence by ld4 + 1 (to a minimum score of 1). You can draw one additional card beyond your declared draws. <br><b>Jester.</b> You gain 10,000 XP, or you can draw two additional cards beyond your declared draws. <br><b>Key.</b> A rare or rarer magic weapon with which you are proficient appears in your hands. The DM chooses the weapon. <br><b>Knight.</b> You gain the service of a 4th-level fighter who appears in a space you choose within 30 feet of you. The fighter is of the same race as you and serves you loyally until death, believing the fates have drawn him or her to you. You control this character. <br><b>Moon.</b> You are granted the ability to cast the wish spell 1d3 times. <br><b>Rogue.</b> A nonplayer character of the DM's choice becomes hostile toward you. The identity of your new enemy isn't known until the NPC or someone else reveals it. Nothing less than a wish spell or divine intervention can end the NPC's hostility toward you. <br><b>Ruin.</b> All forms of wealth that you carry or own, other than magic items, are lost to you. Portable property vanishes. Businesses, buildings, and land you own are lost in a way that alters reality the least. Any documentation that proves you should own something lost to this card also disappears. <br><b>Skull.</b> You summon an avatar of death-a ghostly humanoid skeleton clad in a tattered black robe and carrying a spectral scythe. It appears in a space of the DM's choice within 10 feet of you and attacks yo~, warning all others that you must win the battle alone. <br>The avatar fights until you die or it drops to 0 hit points, whereupon it disappears. If anyone tries to help you, the helper summons its own avatar of death. A creature slain by an avatar of death can't be restored to life. <br><b>Star.</b> Increase one of your ability scores by 2. The score can exceed 20 but can't exceed 24. <br><b>Sun.</b> You gain 50,000 XP, and a wondrous item (which the DM determines randomly) appears in your hands. <br><b>Talons.</b> Every magic item you wear or carry disintegrates. Artifacts in your possession aren't destroyed but do vanish. <br><b>Throne.</b> You gain proficiency in the Persuasion skill, and you double your proficiency bonus on checks made with that skill. In addition, you gain rightful ownership of a small keep somewhere in the world. However, the keep is currently in the hands of monsters, which you must clear out before you can claim the keep as. yours. <br><b>Vizier.</b> At any time you choose within one year of drawing this card, you can ask a question in meditation and mentally receive a truthful answer to that question. <br>Besides information, the answer helps you solve a puzzling problem or other dilemma. In other words, the knowledge comes with wisdom on how to apply it. <br><b>The Void.</b> This black card spells disaster. Your soul is drawn from your body and contained in an object in a place of the DM's choice. One or more powerful beings guard the place. While your soul is trapped in this way, your body is incapacitated. A wish spell can't restore your soul, but the spell reveals the location of the object that holds it. You draw no more cards.",
       "source": "DMG",
       "img": "DECK_OF_MANY_THINGS.jpg"
     },
@@ -1249,14 +1011,14 @@ var allItems = [
   },
   {
     "en": {
-      "name": "DRAGON SCALE MAIL",
+      "name": "DRAGON SCALEMAIL",
       "type": "Armor",
       "typeAdditions": "(scale mail)",
       "rarity": 4,
       "attunement": "(requires attunement)",
       "text": "Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off : a les and gift them to humanoids. Other times, hunters arefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. <br>While wearing this armor, you gain a +1 bonus to <br>C, you have advantage on saving throws against the <br>Frightful Presence and breath weapons of dragons, and you have resistance to one damage type that is etermined by the kind of dragon that provided the : a les (see the table). <br>Additionally, you can focus your senses as an action '0 magically discern the distance and direction to the losest dragon within 30 miles of you that is of the same _·pe as the armor. This special action can't be used gain until the next dawn.<br><table><tr><th>Dragon</th><th>Resistance</th><th>Dragon</th><th>Resistance</th></tr><tr><td>Black</td><td>Acid</td><td>Gold</td><td>Fire</td></tr><tr><td>Blue</td><td>Lightning</td><td>Green</td><td>Poison</td></tr><tr><td>Brass</td><td>Fire</td><td>Red</td><td>Fire</td></tr><tr><td>Bronze</td><td>Lightning</td><td>Silver</td><td>Cold</td></tr><tr><td>Copper</td><td>Acid</td><td>White</td><td>Cold</td></tr></table>",
       "source": "DMG",
-      "img": "DRAGON_SCALE_MAIL.jpg"
+      "img": "DRAGON_SCALEMAIL.jpg"
     },
     "ru": {
       "name": "Доспех из драконьей чешуи",
@@ -1492,6 +1254,20 @@ var allItems = [
   },
   {
     "en": {
+      "name": "EYES OF MINUTE SEEING",
+      "type": "Wondrous item",
+      "rarity": 2,
+      "text": "These crystal lenses fit over the eyes. While wearing them, you can see much better than normal out to a range of 1 foot. You have advantage on Intelligence (Investigation) checks that rely on sight while searching an area or studying an object within that range.",
+      "source": "DMG",
+      "img": "EYES_OF_MINUTE_SEEING.jpg"
+    },
+    "ru": {
+      "name": "Очки детального зрения",
+      "text": "Эти кристаллические линзы размещаются напротив глаз. Пока вы их носите, вы видите лучше, чем обычно, в пределах 1 фута. Вы совершаете с преимуществом проверки Интеллекта (Анализ), полагающиеся на исследование местности или предмета в пределах 1 фута."
+    }
+  },
+  {
+    "en": {
       "name": "EYES OF THE EAGLE",
       "type": "Wondrous item",
       "rarity": 2,
@@ -1513,7 +1289,7 @@ var allItems = [
       "rarity": 3,
       "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br>This bronze statuette is of a griffon rampant. It can become a griffon for up to 6 hours. Once it has been used, it can't be used again until 5 days have passed. ",
       "source": "DMG",
-      "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
+      "img": "Bronze_Griffon_FIGURINE_OF_WONDROUS_POWER_.jpg"
     },
     "ru": {
       "name": "Бронзовый грифон (Статуэтка чудесной силы)",
@@ -1527,7 +1303,7 @@ var allItems = [
       "rarity": 3,
       "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This ebony statuette is carved in the likeness of a horsefly. It can become a giant fly for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 day have passed. ",
       "source": "DMG",
-      "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
+      "img": "Ebony_Fly_FIGURINE_OF_WONDROUS_POWER_.jpg"
     },
     "ru": {
       "name": "Эбеновая муха (Статуэтка чудесной силы)",
@@ -1541,7 +1317,7 @@ var allItems = [
       "rarity": 3,
       "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br>These ivory statuettes of goats are always created in sets of three. Each goat looks unique and functions differently from the others. Their properties are as follows: <br>The goat of traveling can become a Large goat with the same statistics as a riding horse. It has 24 charges, and each hour or portion thereof it spends in beast form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can't be used again until 7 days have passed, when it regains all its charges. <br>The goat of travail becomes a giant goat for up to 3 hours. Once it has been used, it can't be used again until 30 days have passed. <br>The goat of terror becomes a giant goat for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a +1/ance, and the other becomes a +2 /ongsword. <br>Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. In addition, the goat radiates a 30-foot-radius aura of terror while you are riding it. <br>Any creature hostile to you that starts its turn in the aura must succeed on a DC 15 Wisdom saving throw or be frightened of the goat for 1 minute, or until the goat reverts to figurine form. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it successfully saves against the effect, a creature is immune to the goat's aura for the next 24 hours. Once the figurine has been used, it can't be used again until 15 days have passed. ",
       "source": "DMG",
-      "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
+      "img": "Ivory_Goats_FIGURINE_OF_WONDROUS_POWER_.jpg"
     },
     "ru": {
       "name": "Костяные козлы (Статуэтка чудесной силы)",
@@ -1555,7 +1331,7 @@ var allItems = [
       "rarity": 3,
       "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This marble statuette is about 4 inches high and long. It can become an elephant for up to 24 hours. Once it has been used, it can't be used again until 7 days have passed. ",
       "source": "DMG",
-      "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
+      "img": "Marble_Elephant_FIGURINE_OF_WONDROUS_POWER_.jpg"
     },
     "ru": {
       "name": "Мраморный слон (Статуэтка чудесной силы)",
@@ -1569,7 +1345,7 @@ var allItems = [
       "rarity": 4,
       "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This polished obsidian horse can become a nightmare for up to 24 hours. The nightmare fights only to defend itself. Once it has been used, it can't be used again until 5 days have passed. <br>If you have a good alignment, the figurine has a 10 percent chance each time you use it to ignore your orders, including a command to revert to figurine form. <br>If you mount the nightmare while it is ignoring your orders, you and the nightmare are instantly transported to a random location on the plane of Hades, where the nightmare reverts to figurine form. ",
       "source": "DMG",
-      "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
+      "img": "Obsidian_Steed_FIGURINE_OF_WONDROUS_POWER_.jpg"
     },
     "ru": {
       "name": "Обсидиановый скакун (Статуэтка чудесной силы)",
@@ -1583,7 +1359,7 @@ var allItems = [
       "rarity": 3,
       "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This onyx statuette of a dog can become a mastiff for up to 6 hours. The mastiff has an Intelligence of 8 and can speak Common. It also has dark vision out to a range of 60 feet and can see invisible creatures and objects within that range. Once it has been used, it can't be used again until 7 days have passed. ",
       "source": "DMG",
-      "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
+      "img": "Onyx_Dog_FIGURINE_OF_WONDROUS_POWER_.jpg"
     },
     "ru": {
       "name": "Ониксовая собака (Статуэтка чудесной силы)",
@@ -1597,7 +1373,7 @@ var allItems = [
       "rarity": 3,
       "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This serpentine statuette of an owl can become a giant owl for up to 8 hours. Once it has been used, it can't be used again until 2 days have passed. The owl can telepathically communicate with you at any range if you and it are on the same plane of existence. ",
       "source": "DMG",
-      "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
+      "img": "Serpentine_Owl_FIGURINE_OF_WONDROUS_POWER_.jpg"
     },
     "ru": {
       "name": "Серпентиновая сова (Статуэтка чудесной силы)",
@@ -1611,7 +1387,7 @@ var allItems = [
       "rarity": 2,
       "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description.<br> This silver statuette of a raven can become a raven for up to 12 hours. Once it has been used, it can't be used again until 2 days have passed. While in raven form, the figurine allows you to cast the animal messenger spell on it at will.",
       "source": "DMG",
-      "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
+      "img": "Silver_Raven_FIGURINE_OF_WONDROUS_POWER_.jpg"
     },
     "ru": {
       "name": "Серебряный ворон (Статуэтка чудесной силы)",
@@ -2021,7 +1797,7 @@ var allItems = [
   {
     "en": {
       "name": "Anstruth harp (INSTRUMENT OF THE BARDS)",
-      "img": "ANSTRUTH_HARP.jpg",
+      "img": "Anstruth_harp_INSTRUMENT_OF_THE_BARDS_.jpg",
       "type": "Wondrous item",
       "rarity": 4,
       "attunement": "(requires attunement by abard)",
@@ -2041,7 +1817,7 @@ var allItems = [
       "attunement": "(requires attunement by abard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>,  <a href='https://tentaculus.ru/spells/#q=Cure_wounds'>Cure wounds</a> (3rd level), <a href='https://tentaculus.ru/spells/#q=dispel_magic'>dispel magic</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>protection_from_energy</a> (lightning only) ",
       "source": "DMG",
-      "img": "CANAITH_MANDOLIN.jpg"
+      "img": "Canaith_mandolin_INSTRUMENT_OF_THE_BARDS_.jpg"
     },
     "ru": {
       "name": "Мандолина Канаит (Инструмент бардов)",
@@ -2056,7 +1832,7 @@ var allItems = [
       "attunement": "(requires attunement by abard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>,  <a href='https://tentaculus.ru/spells/#q=Stone_shape'>Stone shape</a>, <a href='https://tentaculus.ru/spells/#q=wall_of_fire'>wall of fire</a>, <a href='https://tentaculus.ru/spells/#q=wind_wall'>wind wall</a>",
       "source": "DMG",
-      "img": "CLI_LYRE.jpg"
+      "img": "Cli_lyre_INSTRUMENT_OF_THE_BARDS_.jpg"
     },
     "ru": {
       "name": "Лира Кли (Инструмент бардов)",
@@ -2071,7 +1847,7 @@ var allItems = [
       "attunement": "(requires attunement by abard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>, <a href='https://tentaculus.ru/spells/#q=Animal_friendship'>Animal friendship</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>protection from energy</a> (fire only), <a href='https://tentaculus.ru/spells/#q=protection_from_poison'>protection from poison</a>",
       "source": "DMG",
-      "img": "DOSE_LUTE.jpg"
+      "img": "Doss_lute_INSTRUMENT_OF_THE_BARDS_.jpg"
     },
     "ru": {
       "name": "Лютня Досс (Инструмент бардов)",
@@ -2086,7 +1862,7 @@ var allItems = [
       "attunement": "(requires attunement by abard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>, <a href='https://tentaculus.ru/spells/#q=Entangle'>Entangle</a>,<a href='https://tentaculus.ru/spells/#q=faerie_fire'>faerie fire</a>, <a href='https://tentaculus.ru/spells/#q=shillelagh'>shillelagh</a>,  <a href='https://tentaculus.ru/spells/#q=speak_with_animals'>speak with animals</a>",
       "source": "DMG",
-      "img": "FOCHLUCAN_BANDORE.jpg"
+      "img": "Fochlucan_bandore_INSTRUMENT_OF_THE_BARDS_.jpg"
     },
     "ru": {
       "name": "Бандура Фоклучан (Инструмент бардов)",
@@ -2101,7 +1877,7 @@ var allItems = [
       "attunement": "(requires attunement by abard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>,  <a href='https://tentaculus.ru/spells/#q=Barkskin'>Barkskin</a>, <a href='https://tentaculus.ru/spells/#q=cure_wounds'>cure wounds</a>,<a href='https://tentaculus.ru/spells/#q=fog_cloud'>fog  cloud</a>",
       "source": "DMG",
-      "img": "MAC-FUIRMITH_CITTERN.jpg"
+      "img": "Mac-Fuirmidh_cittern_INSTRUMENT_OF_THE_BARDS_.jpg"
     },
     "ru": {
       "name": "Цитра Мак-Фуирмид (Инструмент бардов)",
@@ -2116,7 +1892,7 @@ var allItems = [
       "attunement": "(requires attunement by abard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>,  <a href='https://tentaculus.ru/spells/#q=Confusion'>Confusion</a>, <a href='https://tentaculus.ru/spells/#q=control_weather'>control weather</a>, <a href='https://tentaculus.ru/spells/#q=fire_storm'>fire storm</a> ",
       "source": "DMG",
-      "img": "OLLAMH_HARP.jpg"
+      "img": "Ollamh_harp_INSTRUMENT_OF_THE_BARDS_.jpg"
     },
     "ru": {
       "name": "Арфа Оллава (Инструмент бардов)",
@@ -3465,7 +3241,7 @@ var allItems = [
       "type": "Ring",
       "rarity": 4,
       "attunement": "(requires attunement outdoors at night)",
-      "text": "While wearing this ring in dim light or darkness, you can cast dancing lights and light from the ring at will. <br>Casting either spell from the ring requires an action. <br>The ring has 6 charges for the following other properties. The ring regains ld6 expended charges daily at dawn. <br><b>Faerie Fire.</b> You can expend 1 charge as an action to cast faerie fire from the ring. <br><b>Ball Lightning.</b> You can expend 2 charges as an , action to create one to four 3-foot-diameter spheres of lightning. The more spheres you create, the less powerful each sphere is individually. <br>Each sphere appears in an unoccupied space you can see within 120 feet of you. The spheres last as long as you concentrate (as if concentrating on a spell), up to 1 minute. Each sphere sheds dim light in a 30-foot radius. <br>As a bonus action, you can move each sphere up to 30 feet, but no farther than 120 feet away from you. <br>When a creature other than you comes within 5 feet of a sphere, the sphere discharges lightning at that creature and disappears. That creature must make a DC 15 <br>Dexterity saving throw. On a failed save, the creature takes lightning damage based on the number of spheres you created.<br><table><tr><td>Spheres</td><td>Lightning Damage</td></tr><tr><td>4</td><td>2d4</td></tr><tr><td>3</td><td>2d6</td></tr><tr><td>2</td><td>5d4</td></tr><tr><td>1</td><td>4dl2</td></tr></table> <br><b>Shooting Stars.</b> You can expend 1 to 3 charges as an action. For every charge you expend, you launch a glowing mote of light from the ring at a point you can see within 60 feet of you. Each creature within a 15-foot cube originating from that point is showered in sparks and must make a DC 15 Dexterity saving throw. taking 5d4 fire damage on a failed save, or half as much damage on a successful one.",
+      "text": "While wearing this ring in dim light or darkness, you can cast dancing lights and light from the ring at will. <br>Casting either spell from the ring requires an action. <br>The ring has 6 charges for the following other properties. The ring regains ld6 expended charges daily at dawn. <br><b>Faerie Fire.</b> You can expend 1 charge as an action to cast faerie fire from the ring. <br><b>Ball Lightning.<b/> You can expend 2 charges as an , action to create one to four 3-foot-diameter spheres of lightning. The more spheres you create, the less powerful each sphere is individually. <br>Each sphere appears in an unoccupied space you can see within 120 feet of you. The spheres last as long as you concentrate (as if concentrating on a spell), up to 1 minute. Each sphere sheds dim light in a 30-foot radius. <br>As a bonus action, you can move each sphere up to 30 feet, but no farther than 120 feet away from you. <br>When a creature other than you comes within 5 feet of a sphere, the sphere discharges lightning at that creature and disappears. That creature must make a DC 15 <br>Dexterity saving throw. On a failed save, the creature takes lightning damage based on the number of spheres you created.<br><table><tr><td>Spheres</td><td>Lightning Damage</td></tr><tr><td>4</td><td>2d4</td></tr><tr><td>3</td><td>2d6</td></tr><tr><td>2</td><td>5d4</td></tr><tr><td>1</td><td>4dl2</td></tr></table> <br><b>Shooting Stars.</b> You can expend 1 to 3 charges as an action. For every charge you expend, you launch a glowing mote of light from the ring at a point you can see within 60 feet of you. Each creature within a 15-foot cube originating from that point is showered in sparks and must make a DC 15 Dexterity saving throw. taking 5d4 fire damage on a failed save, or half as much damage on a successful one.",
       "source": "DMG",
       "img": "RING_OF_SHOOTING_STARS.jpg"
     },
@@ -4774,7 +4550,7 @@ var allItems = [
       "attunement": "(requires attunement by a spellcaster)",
       "text": "While holding this wand, you gain a bonus to spell attack rolls, you ignore half cover when making a spell attack.",
       "source": "DMG",
-      "img": ""
+      "img": "WAND_OF_THE_WAR_MAGE_1.jpg"
     },
     "ru": {
       "name": "Волшебная палочка боевого мага +1",
@@ -4789,7 +4565,7 @@ var allItems = [
       "attunement": "(requires attunement by a spellcaster)",
       "text": "While holding this wand, you gain a bonus to spell attack rolls, you ignore half cover when making a spell attack.",
       "source": "DMG",
-      "img": ""
+      "img": "WAND_OF_THE_WAR_MAGE_2.jpg"
     },
     "ru": {
       "name": "Волшебная палочка боевого мага +2",
@@ -4804,7 +4580,7 @@ var allItems = [
       "attunement": "(requires attunement by a spellcaster)",
       "text": "While holding this wand, you gain a bonus to spell attack rolls, you ignore half cover when making a spell attack.",
       "source": "DMG",
-      "img": ""
+      "img": "WAND_OF_THE_WAR_MAGE_3.jpg"
     },
     "ru": {
       "name": "Волшебная палочка боевого мага +3",
@@ -4850,7 +4626,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "TYou have a bonus to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
-      "img": ""
+      "img": "WEAPON_1.jpg"
     },
     "ru": {
       "name": "Оружие +1",
@@ -4868,7 +4644,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "TYou have a bonus to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
-      "img": ""
+      "img": "WEAPON_2.jpg"
     },
     "ru": {
       "name": "Оружие +2",
@@ -4886,7 +4662,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "TYou have a bonus to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
-      "img": ""
+      "img": "WEAPON_3.jpg"
     },
     "ru": {
       "name": "Оружие +3",
@@ -4971,6 +4747,22 @@ var allItems = [
     "ru": {
       "name": "Плащ невидимости",
       "text": "Если вы носите этот плащ, вы можете надеть на голову капюшон и стать невидимым. Пока вы невидимы, всё, что вы несёте и носите, становится невидимым вместе с вами. Вы видимы, если не надеваете капюшон. Капюшон надевается и снимается действием. <br>Суммируйте время, в течение которого вы остаётесь невидимы, порциями по 1 минуте. После 2 накопленных часов невидимости плащ перестаёт действовать. За каждые 12 часов, пока плащ не используется, он восстанавливает 1 час использования.",
+      "attunement": "(требуется настройка)"
+    }
+  },
+  {
+    "en": {
+      "name": "BOOTS OF THE WINTERLANDS",
+      "type": "Wondrous item",
+      "rarity": 2,
+      "attunement": "(requires attunement)",
+      "text": "These furred boots are snug and feel quite warm. While you wear them, you gain the following benefits: <br>• You have resistance to cold damage. <br>• You ignore difficult terrain created by ice or snow. <br>You can tolerate temperatures as low as -50 degrees <br>Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as -100 degrees Fahrenheit.",
+      "source": "DMG",
+      "img": "BOOTS_OF_THE_WINTERLANDS.jpg"
+    },
+    "ru": {
+      "name": "Заполярные сапоги",
+      "text": "Эти меховые сапоги очень плотные и тёплые. Пока вы их носите, вы получаете следующие преимущества:<br><br>• Вы получаете сопротивление к урону холодом.<br><br>• Вы игнорируете труднопроходимую местность, созданную льдом или снегом.<br><br>• Вы нормально выносите такую низкую температуру как −50 °F (−45 °C), без дополнительной тёплой одежды. Если вы одеты очень тепло, то можете переносить температуру до −100 °F (−73 °C).",
       "attunement": "(требуется настройка)"
     }
   },

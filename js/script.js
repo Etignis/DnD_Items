@@ -1295,7 +1295,6 @@ window.onload = function(){
 		}
 
 		if(aFilters.length>0) {
-
 			var sHash = aFilters.join("&");
 			window.location.hash = sHash;
 		} else {
@@ -1323,13 +1322,13 @@ window.onload = function(){
       }
 
       if(sLang && sLang[1]) {
-      	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']"));
+      	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']").text());
       }
       if(sView && sView[1]) {
-      	$("#CardViewSelect .label").attr("data-selected-key", sView[1]).html($("#CardViewSelect li[data-key='"+sView[1]+"']"));
+      	$("#CardViewSelect .label").attr("data-selected-key", sView[1]).html($("#CardViewSelect li[data-key='"+sView[1]+"']").text());
       }
       if(sSort && sSort[1]) {
-      	$("#SortSelect .label").attr("data-selected-key", sSort[1]).html($("#SortSelect li[data-key='"+sSort[1]+"']"));
+      	$("#SortSelect .label").attr("data-selected-key", sSort[1]).html($("#SortSelect li[data-key='"+sSort[1]+"']").text());
       }
 
       if(sSources && sSources[1]) {
