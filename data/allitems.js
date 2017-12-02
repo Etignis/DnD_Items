@@ -243,13 +243,13 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any ammunition)",
       "rarity": 1,
-      "text": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. Once it hit a target, the ammunition is no longer magical.",
+      "text": "You have a bonus +1 to attack and damage rolls made with this piece of magic ammunition. Once it hit a target, the ammunition is no longer magical.",
       "source": "DMG",
-      "img": ""
+      "img": "AMMUNITION.jpg"
     },
     "ru": {
       "name": "Боеприпасы +1",
-      "text": "Вы получаете бонус к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим.",
+      "text": "Вы получаете бонус +1 к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим.",
       "typeAdditions": "(любой боеприпас)"
     }
   },
@@ -259,13 +259,13 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any ammunition)",
       "rarity": 2,
-      "text": "You have a bonus to attack and damage rolls made with this piece of magic ammunition.  Once it hit a target, the ammunition is no longer magical.",
+      "text": "You have a bonus +2 to attack and damage rolls made with this piece of magic ammunition.  Once it hit a target, the ammunition is no longer magical.",
       "source": "DMG",
-      "img": ""
+      "img": "AMMUNITION.jpg"
     },
     "ru": {
       "name": "Боеприпасы +2",
-      "text": "Вы получаете бонус к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим.",
+      "text": "Вы получаете бонус +2 к броскам атаки и урона, совершённым при использовании этих магических боеприпасов. Попав в цель, боеприпас перестаёт быть магическим.",
       "typeAdditions": "(любой боеприпас)"
     }
   },
@@ -275,13 +275,13 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any ammunition)",
       "rarity": 3,
-      "text": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. Once it hit a target, the ammunition is no longer magical.",
+      "text": "You have a bonus +3 to attack and damage rolls made with this piece of magic ammunition. Once it hit a target, the ammunition is no longer magical.",
       "source": "DMG",
-      "img": ""
+      "img": "AMMUNITION.jpg"
     },
     "ru": {
       "name": "Боеприпасы +3",
-      "text": "Вы получаете бонус к броскам атаки и урона, совершённым при использовании этих магических боеприпасов.  Попав в цель, боеприпас перестаёт быть магическим.",
+      "text": "Вы получаете бонус +3 к броскам атаки и урона, совершённым при использовании этих магических боеприпасов.  Попав в цель, боеприпас перестаёт быть магическим.",
       "typeAdditions": "(любой боеприпас)"
     }
   },
@@ -391,7 +391,7 @@ var allItems = [
     },
     "ru": {
       "name": "Аппарат Квалиша",
-      "text": "На первый взгляд этот предмет выглядит как Большая запечатанная железная бочка, весящая 500 фунтов. У бочки есть потайной затвор, который можно найти успешной проверкой Интеллекта (Анализ) со <br>Сл 20. Этот затвор отпирает люк на одном конце бочки, позволяющий забраться внутрь двум существам <br>Среднего или меньшего размера. У дальнего конца торчат в ряд десять рычагов, все в нейтральной позиции, но их можно перевести или в верхнее или в нижнее положение. Если использовать определённые рычаги, аппарат трансформируется и станет напоминать гигантского лобстера. <br>Аппарат Квалиша это Большой предмет со следующей статистикой: <br>Класс Доспеха: 20 <br>Хиты: 200 <br>Скорость: 30 фт., плавая 30 фт. (или 0 фт. если не выдвинуты ноги и хвост) <br>Иммунитет к урону: психическая энергия, яд <br>Для того чтобы использовать аппарат в качестве транспортного средства, требуется один водитель. <br>Пока люк заперт, аппарат водо- и воздухонепроницаем. Воздуха внутри хватит одному дышащему существу на 10 часов. <br>Аппарат держится на плаву. Он может погружаться на глубину до 900 футов. Глубже этой отметки аппарат получает дробящий урон 2к6 в минуту от давления. <br>Существо в аппарате может действием переместить от одного до двух рычагов вверх или вниз. После каждого использования рычаги сами возвращаются в нейтральное положение. Назначение десяти рычагов показано в таблице. <br><table><tr><td>Рычаг</td><td>Вверх</td><td>Вниз</td></tr><tr><td>1</td><td>Ноги и хвост выдвигаются, позволяя аппарату ходить и плавать.</td><td>Ноги и хвост втягиваются, уменьшая скорость аппарата до 0 и лишая его способности получать преимущества от бонусов к скорости.</td></tr><tr><td>2</td><td>Заслонка переднего иллюминатора открывается.</td><td>Заслонка переднего иллюминатора закрывается.</td></tr><tr><td>3</td><td>Заслонки боковых иллюминаторов (по два на каждом борту) открываются.</td><td>Заслонки боковых иллюминаторов (по два на каждом борту) закрываются.</td></tr><tr><td>4</td><td>Из передней части аппарата выдвигаются два когтя.</td><td>Когти убираются.</td></tr><tr><td>5</td><td>Каждый выдвинутый коготь совершает рукопашную атаку оружием: +8 к попаданию, досягаемость 5 фт., одна цель. Попадание: Дробящий урон 7 (2к6).</td><td>Каждый выдвинутый коготь совершает</td></tr><tr><td>рукопашную атаку оружием: +8 к попаданию, досягаемость 5 фт., одна цель. Попадание: цель становится схваченной (Сл высвобождения 15).</td></tr><tr><td>6</td><td>Аппарат идёт или плывёт вперёд.</td><td>Аппарат идёт или плывёт назад.</td></tr><tr><td>7</td><td>Аппарат поворачивает на 90 градусов налево.</td><td>Аппарат поворачивает на 90 градусов направо.</td></tr><tr><td>8</td><td>Похожие на глаза приспособления испускают яркий свет в пределах 30-футового радиуса и тусклый свет в пределах ещё 30 футов.</td><td>Свет тухнет.</td></tr><tr><td>9</td><td>Аппарат погружается в жидкость на глубину до 20 футов.</td><td>Аппарат всплывает в жидкости не более чем на 20 футов.</td></tr><tr><td>10</td><td>Задний люк отпирается и открывается.</td><td>Задний люк закрывается и запирается.</td></tr></table>"
+      "text": "На первый взгляд этот предмет выглядит как Большая запечатанная железная бочка, весящая 500 фунтов. У бочки есть потайной затвор, который можно найти успешной проверкой Интеллекта (Анализ) со <br>Сл 20. Этот затвор отпирает люк на одном конце бочки, позволяющий забраться внутрь двум существам <br>Среднего или меньшего размера. У дальнего конца торчат в ряд десять рычагов, все в нейтральной позиции, но их можно перевести или в верхнее или в нижнее положение. Если использовать определённые рычаги, аппарат трансформируется и станет напоминать гигантского лобстера. <br>Аппарат Квалиша это Большой предмет со следующей статистикой: <br>Класс Доспеха: 20 <br>Хиты: 200 <br>Скорость: 30 фт., плавая 30 фт. (или 0 фт. если не выдвинуты ноги и хвост) <br>Иммунитет к урону: психическая энергия, яд <br>Для того чтобы использовать аппарат в качестве транспортного средства, требуется один водитель. <br>Пока люк заперт, аппарат водо- и воздухонепроницаем. Воздуха внутри хватит одному дышащему существу на 10 часов. <br>Аппарат держится на плаву. Он может погружаться на глубину до 900 футов. Глубже этой отметки аппарат получает дробящий урон 2к6 в минуту от давления. <br>Существо в аппарате может действием переместить от одного до двух рычагов вверх или вниз. После каждого использования рычаги сами возвращаются в нейтральное положение. Назначение десяти рычагов показано в таблице. <br><table><tr><td>Рычаг</td><td>Вверх</td><td>Вниз</td></tr><tr><td>1</td><td>Ноги и хвост выдвигаются, позволяя аппарату ходить и плавать.</td><td>Ноги и хвост втягиваются, уменьшая скорость аппарата до 0 и лишая его способности получать преимущества от бонусов к скорости.</td></tr><tr><td>2</td><td>Заслонка переднего иллюминатора открывается.</td><td>Заслонка переднего иллюминатора закрывается.</td></tr><tr><td>3</td><td>Заслонки боковых иллюминаторов (по два на каждом борту) открываются.</td><td>Заслонки боковых иллюминаторов (по два на каждом борту) закрываются.</td></tr><tr><td>4</td><td>Из передней части аппарата выдвигаются два когтя.</td><td>Когти убираются.</td></tr><tr><td>5</td><td>Каждый выдвинутый коготь совершает рукопашную атаку оружием: +8 к попаданию, досягаемость 5 фт., одна цель. Попадание: Дробящий урон 7 (2к6).</td><td>Каждый выдвинутый коготь совершает рукопашную атаку оружием: +8 к попаданию, досягаемость 5 фт., одна цель. Попадание: цель становится схваченной (Сл высвобождения 15).</td></tr><tr><td>6</td><td>Аппарат идёт или плывёт вперёд.</td><td>Аппарат идёт или плывёт назад.</td></tr><tr><td>7</td><td>Аппарат поворачивает на 90 градусов налево.</td><td>Аппарат поворачивает на 90 градусов направо.</td></tr><tr><td>8</td><td>Похожие на глаза приспособления испускают яркий свет в пределах 30-футового радиуса и тусклый свет в пределах ещё 30 футов.</td><td>Свет тухнет.</td></tr><tr><td>9</td><td>Аппарат погружается в жидкость на глубину до 20 футов.</td><td>Аппарат всплывает в жидкости не более чем на 20 футов.</td></tr><tr><td>10</td><td>Задний люк отпирается и открывается.</td><td>Задний люк закрывается и запирается.</td></tr></table>"
     }
   },
   {
@@ -400,13 +400,13 @@ var allItems = [
       "type": "Armor",
       "typeAdditions": "(light, medium, or heavy)",
       "rarity": 2,
-      "text": "You have a bonus to AC while wearing this armor.",
+      "text": "You have a bonus to AC +1 while wearing this armor.",
       "source": "DMG",
-      "img": ""
+      "img": "ARMOR.jpg"
     },
     "ru": {
       "name": "Доспех +1",
-      "text": "Вы получаете бонус к КД, пока носите этот доспех.",
+      "text": "Вы получаете бонус к КД +1, пока носите этот доспех.",
       "typeAdditions": "(легкая, средняя, или тяжелая)"
     }
   },
@@ -416,13 +416,13 @@ var allItems = [
       "type": "Armor",
       "typeAdditions": "(light, medium, or heavy)",
       "rarity": 3,
-      "text": "You have a bonus to AC while wearing this armor.",
+      "text": "You have a bonus to AC +2 while wearing this armor.",
       "source": "DMG",
-      "img": ""
+      "img": "ARMOR.jpg"
     },
     "ru": {
       "name": "Доспех +2",
-      "text": "Вы получаете бонус к КД, пока носите этот доспех.",
+      "text": "Вы получаете бонус к КД +2, пока носите этот доспех.",
       "typeAdditions": "(легкая, средняя, или тяжелая)"
     }
   },
@@ -432,13 +432,13 @@ var allItems = [
       "type": "Armor",
       "typeAdditions": "(light, medium, or heavy)",
       "rarity": 4,
-      "text": "You have a bonus to AC while wearing this armor.",
+      "text": "You have a bonus to AC +3 while wearing this armor.",
       "source": "DMG",
-      "img": ""
+      "img": "ARMOR.jpg"
     },
     "ru": {
       "name": "Доспех +3",
-      "text": "Вы получаете бонус к КД, пока носите этот доспех.",
+      "text": "Вы получаете бонус к КД +3, пока носите этот доспех.",
       "typeAdditions": "(легкая, средняя, или тяжелая)"
     }
   },
@@ -945,7 +945,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "This fine garment is made of black silk interwoven with faint silvery threads. While wearing it, you gain the following benefits: <br>You have resistance to poison damage. <br>You have a climbing speed equal to your walking speed. <br>You can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. <br>• You can't be caught in webs of any sort and can move through webs as if they were difficult terrain. <br>• You can use an action to cast the web spell (save DC 13). The web created by the spell fills twice its normal area. Once used, this property of the cloak can't be used again until the next dawn.",
       "source": "DMG",
-      "img": "CLOAK_OF_ARACHNIDA.jpg"
+      "img": "CLOAK_OF_ARACHNIDA.png"
     },
     "ru": {
       "name": "Плащ паука",
@@ -993,7 +993,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this cloak, you have advantage on <br>Dexterity (Stealth) checks. In an area of dim light or darkness, you can grip the edges of the cloak with both hands and use it to fly at a speed of 40 feet. If you ever fa il to grip the cloak's edges while flying in this way, or if you are no longer in dim light or darkness, you lose this flying speed. <br>While wearing the cloak in an area of dim light or darkness, you can use your action to cast polymorph on yourself, transforming into a bat. While you are in the form of the bat, you retain your Intelligence, Wisdom, and Charisma scores. The cloak can't be used this way again until the next dawn.",
       "source": "DMG",
-      "img": "CLOAK_OF_THE_BAT.jpg"
+      "img": "CLOAK_OF_THE_BAT.png"
     },
     "ru": {
       "name": "Плащ летучей мыши",
@@ -1055,7 +1055,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "You can use an action to cast the detect thoughts spell (save DC 17) while you are scrying with the crystal ball, targeting creatures you can see within 30 feet of the spell's sensor. You don't need to concentrate on this detect thoughts to maintain it during its duration, but it ends if scrying ends.",
       "source": "DMG",
-      "img": "CRYSTAL_BALL_of_Mind_Reading.jpg"
+      "img": "CRYSTAL_BALL.jpg"
     },
     "ru": {
       "name": "Хрустальный шар чтения мыслей",
@@ -1071,7 +1071,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While scrying with the crystal ball, you can communicate telepathically with creatures you can see within 30 feet of the spell's sensor. You can also use an action to cast the suggestion spell (save DC 17) through the sensor on one of those creatures. You don't need to concentrate on this suggestion to maintain it during its duration, but it ends if scrying ends. Once used, the suggestion power of the crystal ball can't be used again until the next dawn. ",
       "source": "DMG",
-      "img": "CRYSTAL_BALL_of_Telepathy.jpg"
+      "img": "CRYSTAL_BALL.jpg"
     },
     "ru": {
       "name": "Хрустальный шар телепатии",
@@ -1087,7 +1087,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While scrying with the crystal ball, you have truesight with a radius of 120 feet centered on the spell's sensor.",
       "source": "DMG",
-      "img": "CRYSTAL_BALL_of_True_Seeing.jpg"
+      "img": "CRYSTAL_BALL.jpg"
     },
     "ru": {
       "name": "Хрустальный шар истинного зрения",
@@ -1132,7 +1132,7 @@ var allItems = [
       "rarity": 3,
       "text": "You can use an action to place this l-inch metal cube on the ground and speak its command word. The cube rapidly grows into a fortress that remains until you use an action to speak the command word that dismisses ir. which works only if the fortress is empty. <br>The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors. with a ladder running along one wall to connect them. <br>The ladder ends at a trapdoor leading to the roof. When activated, the tower has a small door on the side facing you. The door opens only at your command, which you can speak as a bonus action. It is immune to the knock spell and similar magic, such as that of a chime of opening. <br>Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking lOdlO bludgeoning damage on a failed save, or half as much damage on a successful one. In either case, the creature is pushed to an unoccupied space outside but next to the fortress. Objects in the area that aren't being worn or carried take this damage and are pushed automatically. <br>The tower is made of adamantine, and its magic prevents it from being tipped over. The roof, the door, and the walls each have 100 hit points, immunity to damage from nonmagical weapons excluding siege weapons, and resistance to all other damage. Only a wish spell can repair the fortress (this use of the spell counts as replicating a spell of 8th level or lower). Each casting of wish causes the roof, the door, or one wall to regain 50 hit points.",
       "source": "DMG",
-      "img": "DAERN'S_INSTANT_FORTRESS.jpg"
+      "img": "DAERNS_INSTANT_FORTRESS.jpg"
     },
     "ru": {
       "name": "Мгновенная крепость Даэрна",
@@ -1316,7 +1316,7 @@ var allItems = [
       "rarity": 2,
       "text": "This small packet contains 1d6 + 4 pinches of dust. You can use an action to sprinkle a pinch of it over water. <br>The dust turns a cube of water 15 feet on a side into one marble-sized pellet, which floats or rests near where the dust was sprinkled. The pellet's weight is negligible. <br>Someone can use an action to smash the pellet against a hard surface, causing the pellet to shatter and release the water the dust absorbed. Doing so ends that pellet's magic. <br>An elemental composed mostly of water that is exposed to a pinch of the dust must make a DC 13 <br>Constitution saving throw, taking 10d6 necrotic damage on a failed save, or half as much damage on a successful one.",
       "source": "DMG",
-      "img": "DUST_OF_DRYNESS.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Порошок сухости",
@@ -1359,13 +1359,14 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(warhammer)",
       "rarity": 4,
-      "attunement": "(requires attunementby a dwarf)",
+      "attunement": "(requires attunement by a dwarf)",
       "text": "You gain a +3 bonus to attack and damage rolls made ·ith this magic weapon. It has the thrown property with a normal range of 20 feet and a long range of 60 feet. .\\'hen you hit with a ranged attack using this weapon, . deals an extra ld8 damage or, if the target is a giant, 2d8 damage. Immediately after the attack, the weapon ies back to your hand.",
       "source": "DMG",
       "img": "DWARVEN_THROWER.jpg"
     },
     "ru": {
       "name": "Дварфский метатель",
+      "attunement": "(требует настройки дварфом)",
       "text": "Вы получаете бонус +3 к броскам атаки и урона, совершённым этим магическим оружием. Оно обладает свойством «метательное» с нормальной дистанцией 20 футов и максимальной дистанцией 60 футов. Если вы попадёте дальнобойной атакой этим оружием, оно причиняет дополнительный урон 1к8 или, если цель — великан, то 2к8. Сразу же после атаки оружие возвращается в вашу руку.",
       "typeAdditions": "(боевой молот)"
     }
@@ -1511,13 +1512,13 @@ var allItems = [
       "name": "Bronze Griffon (FIGURINE OF WONDROUS POWER)",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br>This bronze statuette is of a griffon rampant. It can become a griffon for up to 6 hours. Once it has been used, it can't be used again until 5 days have passed. ",
+      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br>This bronze statuette is of a griffon rampant. It can become a <a href='https://tentaculus.ru/monsters/#q=грифон'>griffon</a> for up to 6 hours. Once it has been used, it can't be used again until 5 days have passed. ",
       "source": "DMG",
       "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
     },
     "ru": {
       "name": "Бронзовый грифон (Статуэтка чудесной силы)",
-      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает. Смотрите статистику всех существ кроме гигантской мухи в Бестиарии. <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта бронзовая статуэтка грифона, стоящего на задних лапах. Она становится грифоном на 6 часов. Её нельзя использовать повторно, пока не пройдёт 5 дней. "
+      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает.  <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта бронзовая статуэтка грифона, стоящего на задних лапах. Она становится <a href='https://tentaculus.ru/monsters/#q=грифон'>грифоном</a> на 6 часов. Её нельзя использовать повторно, пока не пройдёт 5 дней. "
     }
   },
   {
@@ -1525,13 +1526,13 @@ var allItems = [
       "name": "Ebony Fly (FIGURINE OF WONDROUS POWER)",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This ebony statuette is carved in the likeness of a horsefly. It can become a giant fly for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 day have passed. ",
+      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This ebony statuette is carved in the likeness of a horsefly. It can become a <a href='https://tentaculus.ru/monsters/#q=giant_fly'>giant fly</a> for up to 12 hours and can be ridden as a mount. Once it has been used, it can't be used again until 2 day have passed. ",
       "source": "DMG",
       "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
     },
     "ru": {
       "name": "Эбеновая муха (Статуэтка чудесной силы)",
-      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает. Смотрите статистику всех существ кроме гигантской мухи в Бестиарии. <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта статуэтка из чёрного дерева похожа на обычную муху. Она становится гигантской мухой на 12 часов и на ней можно летать как на верховом животном. Её нельзя использовать повторно, пока не пройдёт 2 дня."
+      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает.  <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта статуэтка из чёрного дерева похожа на обычную муху. Она становится <a href='https://tentaculus.ru/monsters/#q=giant_fly'>гигантской мухой</a> на 12 часов и на ней можно летать как на верховом животном. Её нельзя использовать повторно, пока не пройдёт 2 дня."
     }
   },
   {
@@ -1539,13 +1540,13 @@ var allItems = [
       "name": "Ivory Goats (FIGURINE OF WONDROUS POWER)",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br>These ivory statuettes of goats are always created in sets of three. Each goat looks unique and functions differently from the others. Their properties are as follows: <br>The goat of traveling can become a Large goat with the same statistics as a riding horse. It has 24 charges, and each hour or portion thereof it spends in beast form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can't be used again until 7 days have passed, when it regains all its charges. <br>The goat of travail becomes a giant goat for up to 3 hours. Once it has been used, it can't be used again until 30 days have passed. <br>The goat of terror becomes a giant goat for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a +1/ance, and the other becomes a +2 /ongsword. <br>Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. In addition, the goat radiates a 30-foot-radius aura of terror while you are riding it. <br>Any creature hostile to you that starts its turn in the aura must succeed on a DC 15 Wisdom saving throw or be frightened of the goat for 1 minute, or until the goat reverts to figurine form. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it successfully saves against the effect, a creature is immune to the goat's aura for the next 24 hours. Once the figurine has been used, it can't be used again until 15 days have passed. ",
+      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br>These ivory statuettes of goats are always created in sets of three. Each goat looks unique and functions differently from the others. Their properties are as follows: <br>The goat of traveling can become a Large goat with the same statistics as a <a href='https://tentaculus.ru/monsters/#q=riding_horse'>riding horse</a>. It has 24 charges, and each hour or portion thereof it spends in beast form costs 1 charge. While it has charges, you can use it as often as you wish. When it runs out of charges, it reverts to a figurine and can't be used again until 7 days have passed, when it regains all its charges. <br>The goat of travail becomes a <a href='https://tentaculus.ru/monsters/#q=giant_goat'>giant goat</a> for up to 3 hours. Once it has been used, it can't be used again until 30 days have passed. <br>The goat of terror becomes a <a href='https://tentaculus.ru/monsters/#q=giant_goat'>giant goat</a> for up to 3 hours. The goat can't attack, but you can remove its horns and use them as weapons. One horn becomes a +1/ance, and the other becomes a +2 /ongsword. <br>Removing a horn requires an action, and the weapons disappear and the horns return when the goat reverts to figurine form. In addition, the goat radiates a 30-foot-radius aura of terror while you are riding it. <br>Any creature hostile to you that starts its turn in the aura must succeed on a DC 15 Wisdom saving throw or be frightened of the goat for 1 minute, or until the goat reverts to figurine form. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once it successfully saves against the effect, a creature is immune to the goat's aura for the next 24 hours. Once the figurine has been used, it can't be used again until 15 days have passed. ",
       "source": "DMG",
       "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
     },
     "ru": {
       "name": "Костяные козлы (Статуэтка чудесной силы)",
-      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает. Смотрите статистику всех существ кроме гигантской мухи в Бестиарии. <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br>Эти статуэтки козлов из слоновой кости всегда создаются по три штуки. Каждый козёл имеет уникальную внешность, и функционирует по-своему. Вот их свойства:<br>• Козёл путешествия может стать Большим козлом со статистикой ездовой лошади. У него есть 24 заряда, и каждый час или его часть, пока козёл остаётся животным, расходуется 1 заряд. Пока у него есть заряды, вы можете его использовать так часто, как вам вздумается. Когда у него кончаются заряды, он становится статуэткой и не может использоваться, пока не пройдёт 7 дней, после чего он восстанавливает все свои заряды.<br>• Козёл перевозки становится гигантским козлом на 3 часа. Его нельзя использовать повторно, пока не пройдёт 30 дней.<br>• Козёл ужаса становится гигантским козлом на 3 часа. Он не может атаковать, но вы можете брать его рога и использовать их в качестве оружия. <br>Один рог становится длинным копьём +1, а другой становится длинным мечом +2. Рог берётся действием, и оружие исчезает, когда козёл становится статуэткой, вновь превращаясь в рог. Кроме того, козёл излучает ауру ужаса с радиусом 30 футов, когда вы на нём едете. Все враждебные вам существа, начинающие ход в ауре, должны преуспевать в спасброске Мудрости со Сл 15, иначе они станут испуганными козлом на 1 минуту, ли пока козёл не станет статуэткой. Испуганное существо может повторять спасбросок в конце каждого своего хода, оканчивая эффект на себе при успехе. Успешно спасшееся существо получает иммунитет к ауре козла на следующие 24 часа. <br>Статуэтку нельзя использовать повторно, пока не пройдёт 15 дней. "
+      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает.  <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br>Эти статуэтки козлов из слоновой кости всегда создаются по три штуки. Каждый козёл имеет уникальную внешность, и функционирует по-своему. Вот их свойства:<br>• Козёл путешествия может стать Большим козлом со статистикой <a href='https://tentaculus.ru/monsters/#q=riding_horse'>ездовой лошади</a>. У него есть 24 заряда, и каждый час или его часть, пока козёл остаётся животным, расходуется 1 заряд. Пока у него есть заряды, вы можете его использовать так часто, как вам вздумается. Когда у него кончаются заряды, он становится статуэткой и не может использоваться, пока не пройдёт 7 дней, после чего он восстанавливает все свои заряды.<br>• Козёл перевозки становится <a href='https://tentaculus.ru/monsters/#q=giant_goat'>гигантским козлом</a> на 3 часа. Его нельзя использовать повторно, пока не пройдёт 30 дней.<br>• Козёл ужаса становится <a href='https://tentaculus.ru/monsters/#q=giant_goat'>гигантским козлом</a> на 3 часа. Он не может атаковать, но вы можете брать его рога и использовать их в качестве оружия. <br>Один рог становится длинным копьём +1, а другой становится длинным мечом +2. Рог берётся действием, и оружие исчезает, когда козёл становится статуэткой, вновь превращаясь в рог. Кроме того, козёл излучает ауру ужаса с радиусом 30 футов, когда вы на нём едете. Все враждебные вам существа, начинающие ход в ауре, должны преуспевать в спасброске Мудрости со Сл 15, иначе они станут испуганными козлом на 1 минуту, ли пока козёл не станет статуэткой. Испуганное существо может повторять спасбросок в конце каждого своего хода, оканчивая эффект на себе при успехе. Успешно спасшееся существо получает иммунитет к ауре козла на следующие 24 часа. <br>Статуэтку нельзя использовать повторно, пока не пройдёт 15 дней. "
     }
   },
   {
@@ -1553,13 +1554,13 @@ var allItems = [
       "name": "Marble Elephant (FIGURINE OF WONDROUS POWER)",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This marble statuette is about 4 inches high and long. It can become an elephant for up to 24 hours. Once it has been used, it can't be used again until 7 days have passed. ",
+      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This marble statuette is about 4 inches high and long. It can become an <a href='https://tentaculus.ru/monsters/#q=elephant'>elephant</a> for up to 24 hours. Once it has been used, it can't be used again until 7 days have passed. ",
       "source": "DMG",
       "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
     },
     "ru": {
       "name": "Мраморный слон (Статуэтка чудесной силы)",
-      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает. Смотрите статистику всех существ кроме гигантской мухи в Бестиарии. <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта мраморная статуэтка примерно 4 дюйма в высоту и длину. Она становится слоном на 24 часа. Её нельзя использовать повторно, пока не пройдёт 7 дней. "
+      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает.  <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта мраморная статуэтка примерно 4 дюйма в высоту и длину. Она становится <a href='https://tentaculus.ru/monsters/#q=elephant'>слоном</a> на 24 часа. Её нельзя использовать повторно, пока не пройдёт 7 дней. "
     }
   },
   {
@@ -1567,13 +1568,13 @@ var allItems = [
       "name": "Obsidian Steed (FIGURINE OF WONDROUS POWER)",
       "type": "Wondrous item",
       "rarity": 4,
-      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This polished obsidian horse can become a nightmare for up to 24 hours. The nightmare fights only to defend itself. Once it has been used, it can't be used again until 5 days have passed. <br>If you have a good alignment, the figurine has a 10 percent chance each time you use it to ignore your orders, including a command to revert to figurine form. <br>If you mount the nightmare while it is ignoring your orders, you and the nightmare are instantly transported to a random location on the plane of Hades, where the nightmare reverts to figurine form. ",
+      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This polished obsidian horse can become a <a href='https://tentaculus.ru/monsters/#q=nightmare'>nightmare</a> for up to 24 hours. The nightmare fights only to defend itself. Once it has been used, it can't be used again until 5 days have passed. <br>If you have a good alignment, the figurine has a 10 percent chance each time you use it to ignore your orders, including a command to revert to figurine form. <br>If you mount the nightmare while it is ignoring your orders, you and the nightmare are instantly transported to a random location on the plane of Hades, where the nightmare reverts to figurine form. ",
       "source": "DMG",
       "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
     },
     "ru": {
       "name": "Обсидиановый скакун (Статуэтка чудесной силы)",
-      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает. Смотрите статистику всех существ кроме гигантской мухи в Бестиарии. <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта лошадь из полированного обсидиана становится кошмаром на 24 часа. Кошмар сражается только чтобы защитить самого себя. Его нельзя использовать повторно, пока не пройдёт 5 дней. <br>Если у вас доброе мировоззрение, каждый раз, когда вы отдаёте приказ, в том числе приказ вернуться в форму статуэтки, у статуэтки есть 10-процентный шанс, что она проигнорирует его. Если вы едете верхом на кошмаре, когда он игнорирует вас, вы с ним мгновенно переноситесь в случайное место на плане Гадес, где он вновь становится статуэткой. "
+      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает.  <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта лошадь из полированного обсидиана становится <a href='https://tentaculus.ru/monsters/#q=nightmare'>кошмаром</a> на 24 часа. Кошмар сражается только чтобы защитить самого себя. Его нельзя использовать повторно, пока не пройдёт 5 дней. <br>Если у вас доброе мировоззрение, каждый раз, когда вы отдаёте приказ, в том числе приказ вернуться в форму статуэтки, у статуэтки есть 10-процентный шанс, что она проигнорирует его. Если вы едете верхом на кошмаре, когда он игнорирует вас, вы с ним мгновенно переноситесь в случайное место на плане Гадес, где он вновь становится статуэткой. "
     }
   },
   {
@@ -1581,13 +1582,13 @@ var allItems = [
       "name": "Onyx Dog (FIGURINE OF WONDROUS POWER)",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This onyx statuette of a dog can become a mastiff for up to 6 hours. The mastiff has an Intelligence of 8 and can speak Common. It also has dark vision out to a range of 60 feet and can see invisible creatures and objects within that range. Once it has been used, it can't be used again until 7 days have passed. ",
+      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This onyx statuette of a dog can become a <a href='https://tentaculus.ru/monsters/#q=Mastiff'>mastiff</a> for up to 6 hours. The mastiff has an Intelligence of 8 and can speak Common. It also has dark vision out to a range of 60 feet and can see invisible creatures and objects within that range. Once it has been used, it can't be used again until 7 days have passed. ",
       "source": "DMG",
       "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
     },
     "ru": {
       "name": "Ониксовая собака (Статуэтка чудесной силы)",
-      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает. Смотрите статистику всех существ кроме гигантской мухи в Бестиарии. <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br><b>Ониксовая собака (редкая).</b> Эта ониксовая статуэтка становится мастифом на 6 часов. У мастифа Интеллект 8, и он может говорить на Общем. Он также обладает тёмным зрением в пределах 60 футов и может видеть невидимых существ и предметы в пределах этого диапазона. Его нельзя использовать повторно, пока не пройдёт 7 дней. "
+      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает.  <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br><b>Ониксовая собака (редкая).</b> Эта ониксовая статуэтка становится <a href='https://tentaculus.ru/monsters/#q=Mastiff'>мастифом</a> на 6 часов. У мастифа Интеллект 8, и он может говорить на Общем. Он также обладает тёмным зрением в пределах 60 футов и может видеть невидимых существ и предметы в пределах этого диапазона. Его нельзя использовать повторно, пока не пройдёт 7 дней. "
     }
   },
   {
@@ -1595,13 +1596,13 @@ var allItems = [
       "name": "Serpentine Owl (FIGURINE OF WONDROUS POWER)",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This serpentine statuette of an owl can become a giant owl for up to 8 hours. Once it has been used, it can't be used again until 2 days have passed. The owl can telepathically communicate with you at any range if you and it are on the same plane of existence. ",
+      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description. <br> This serpentine statuette of an owl can become a <a href='https://tentaculus.ru/monsters/#q=giant_owl'>giant owl</a> for up to 8 hours. Once it has been used, it can't be used again until 2 days have passed. The owl can telepathically communicate with you at any range if you and it are on the same plane of existence. ",
       "source": "DMG",
       "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
     },
     "ru": {
       "name": "Серпентиновая сова (Статуэтка чудесной силы)",
-      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает. Смотрите статистику всех существ кроме гигантской мухи в Бестиарии. <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта серпентиновая статуэтка становится гигантской совой на 8 часов. Её нельзя использовать повторно, пока не пройдёт 2 дня. <br>Сова может телепатически общаться с вами на любом расстоянии, если вы с ней находитесь на одном плане существования. "
+      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает.  <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта серпентиновая статуэтка становится <a href='https://tentaculus.ru/monsters/#q=giant_owl'>гигантской совой</a> на 8 часов. Её нельзя использовать повторно, пока не пройдёт 2 дня. <br>Сова может телепатически общаться с вами на любом расстоянии, если вы с ней находитесь на одном плане существования. "
     }
   },
   {
@@ -1609,13 +1610,13 @@ var allItems = [
       "name": "Silver Raven (FIGURINE OF WONDROUS POWER)",
       "type": "Wondrous item",
       "rarity": 2,
-      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description.<br> This silver statuette of a raven can become a raven for up to 12 hours. Once it has been used, it can't be used again until 2 days have passed. While in raven form, the figurine allows you to cast the animal messenger spell on it at will.",
+      "text": "A figurine of wondrous power is a statuette of a beast small enough to fit in a pocket. If you use an action to speak the command word and throw the figurine to a point on the ground within 60 feet of you, the figurine becomes a living creature. If the space where the creature would appear is occupied by other creatures or objects, or if there isn't enough space for the creature, the figurine doesn't become a creature. <br>The creature is friendly to you and your companions. <br>It understands your languages and obeys your spoken commands. If you issue no commands, the creature defends itself but takes no other actions. See the <br>Monster Manual for the creature's statistics, except for the giant fly. <br>The creature exists for a duration specific to each figurine. At the end of the duration, the creature reverts to its figurine form. It reverts to a figurine early if it drops to 0 hit points or if you use an action to speak the command word again while touching it. When the creature becomes a figurine again, its property can't be used again until a certain amount of time has passed, as specified in the figurine's description.<br> This silver statuette of a <a href='https://tentaculus.ru/monsters/#q=raven'>raven</a> can become a raven for up to 12 hours. Once it has been used, it can't be used again until 2 days have passed. While in raven form, the figurine allows you to cast the animal messenger spell on it at will.",
       "source": "DMG",
       "img": "FIGURINE_OF_WONDROUS_POWER.jpg"
     },
     "ru": {
       "name": "Серебряный ворон (Статуэтка чудесной силы)",
-      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает. Смотрите статистику всех существ кроме гигантской мухи в Бестиарии. <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта серебряная статуэтка становится вороном на 12 часов. Её нельзя использовать повторно, пока не пройдёт 2 дня. Пока статуэтка находится в облике ворона, вы можете неограниченно накладывать на неё заклинание почтовое животное. "
+      "text": "Статуэтка чудесной силы это небольшая статуэтка зверя, помещающаяся в карман. Если вы действием произнесёте командное слово и бросите статуэтку на расстояние до 60 футов, статуэтка станет живым существом. Если пространство, в котором существо должно появиться, занято другим существом или предметом, или если для этого существа просто нет пространства, статуэтка не становится существом. <br>Существо дружественно по отношению к вам и вашим спутникам. Оно понимает ваши языки и подчиняется устным командам. Если вы не отдаёте команды, существо обороняется, но других действий не совершает.  <br>Животное существует в течение времени, зависящего от вида статуэтки. В конце этого периода животное вновь становится статуэткой. Оно становится статуэткой преждевременно, если его хиты опускаются до 0, или если вы действием произнесёте командное слово, касаясь его. Когда существо становится статуэткой, её свойства нельзя использовать повторно, пока не пройдёт определённое количество времени, специфичное для каждой статуэтки. <br> Эта серебряная статуэтка становится <a href='https://tentaculus.ru/monsters/#q=raven'>вороном<a/> на 12 часов. Её нельзя использовать повторно, пока не пройдёт 2 дня. Пока статуэтка находится в облике ворона, вы можете неограниченно накладывать на неё заклинание почтовое животное. "
     }
   },
   {
@@ -1770,7 +1771,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing these gloves, climbing and swimming don't cost you extra movement, and you gain a +5 bonu_ to Strength (Athletics) checks made to climb or swim.",
       "source": "DMG",
-      "img": "GLOVES_OF_SWIMMING_AND_CLIMBING.jpg"
+      "img": "GLOVES_OF_SWIMMING_AND_CLIMBING.png"
     },
     "ru": {
       "name": "Перчатки плавания и лазания",
@@ -1785,7 +1786,7 @@ var allItems = [
       "rarity": 2,
       "text": "These gloves are invisible while worn. While wearing them, you gain a +5 bonus to Dexterity (Sleight of Hand checks and Dexterity checks made to pick locks.",
       "source": "DMG",
-      "img": "GLOVES_OF_THIEVERY.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Перчатки воровства",
@@ -1803,7 +1804,7 @@ var allItems = [
     },
     "ru": {
       "name": "Ночные очки",
-      "text": "Пока вы носите эти тёмные очки, вы получаете тёмное зрение в радиусе 60 фт. Если у вас уже было тёмное зрение, очки увеличивают его радиус на 60 фт. <br>Обруч сжигания <br>Чудесный предмет, необычный <br>Пока вы носите этот обруч, вы можете действием наложить им заклинание палящий луч. Вы совершаете бросок атаки этого заклинания с бонусом +5. Обруч не может использоваться повторно до следующего рассвета."
+      "text": "Пока вы носите эти тёмные очки, вы получаете тёмное зрение в радиусе 60 фт. Если у вас уже было тёмное зрение, очки увеличивают его радиус на 60 фт. "
     }
   },
   {
@@ -1830,7 +1831,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this hat, you can use an action to cast the disguise self spell from it at will. The spell ends if the hat is removed.",
       "source": "DMG",
-      "img": "HAT_OF_DISGUISE.jpg"
+      "img": "HAT_OF_DISGUISE.png"
     },
     "ru": {
       "name": "Шапка маскировки",
@@ -1923,7 +1924,7 @@ var allItems = [
       "rarity": 3,
       "text": "This backpack has a central pouch and two side pouches, each of which is an extradimensional space. <br>Each side pouch can hold up to 20 pounds of material, not exceeding a volume of 2 cubic feet. The large central pouch can hold up to 8 cubic feet or 80 pounds of material. The backpack always weighs 5 pounds, regardless of its contents. <br>Placing an object in the haversack follows the normal rules for interacting with objects. Retrieving an item from the haversack requires you to use an action. When you reach into the haversack for a specific item, the item is always magically on top. <br>The haversack has a few limitations. If it is overloaded, or if a sharp object pierces it or tears it, the haversack ruptures and is destroyed. If the haversack is destroyed, its contents are lost forever, although an artifact always turns up again somewhere. If the haversack is turned inside out, its contents spill forth, unharmed, and the haversack must be put right before it can be used again. If a breathing creature is placed within the haversack, the creature can survive for up to 10 minutes, after which time it begins to suffocate. <br>Placing the haversack inside an extradimensional space created by a bag of holding, portable hole, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10-feet of the gate is sucked through it and deposited in a random location on the Astral Plane. <br>The gate then closes. The gate is one-way only and can·I be reopened.",
       "source": "DMG",
-      "img": "HEWARD'S_HANDY_HAVERSACK.jpg"
+      "img": "HEWARDS_HANDY_HAVERSACK.jpg"
     },
     "ru": {
       "name": "Удобный рюкзак Хеварда",
@@ -1943,6 +1944,7 @@ var allItems = [
     },
     "ru": {
       "name": "Святой мститель",
+      "attunement": "(требует настройки паладином)",
       "text": "Вы получаете бонус +3 к броскам атаки и урона, совершённым этим магическим оружием. Если вы попадаете им по исчадию или нежити, это существо получает дополнительный урон излучением 2к10. <br>Пока вы держите в руке этот вынутый из ножен меч, он создаёт ауру с радиусом 10 футов вокруг вас. <br>Вы и все дружественные вам существа в этой ауре совершаете с преимуществом спасброски от заклинаний и других магических эффектов. Если у вас есть 17 уровней в классе паладина, радиус ауры увеличивается до 30 футов.",
       "typeAdditions": "(любой swилиd)"
     }
@@ -1983,7 +1985,7 @@ var allItems = [
       "rarity": 4,
       "text": "These iron horseshoes come in a set of four. While all four shoes are affixed to the hooves of a horse or similar creature, they allow the creature to move normally while floating 4 inches above the ground. This effect means the cre.ature can cross or stand above nonsolid or unstable surfaces, such as water or lava. The creature leaves no tracks and ignores difficult terrain. In addition, the creature can move at normal speed for up to 12 hours a day without suffering exhaustion from a forced march.",
       "source": "DMG",
-      "img": "HORSESHOES_OF_A_ZEPHYR.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Подковы ветра",
@@ -1997,7 +1999,7 @@ var allItems = [
       "rarity": 3,
       "text": "These iron horseshoes come in a set of four. While all four shoes are affixed to the hooves of a horse or similar creature, they increase the creature's walking speed by 30 feet.",
       "source": "DMG",
-      "img": "HORSESHOES_OF_SPEED.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Подковы скорости",
@@ -2024,12 +2026,13 @@ var allItems = [
       "img": "ANSTRUTH_HARP.jpg",
       "type": "Wondrous item",
       "rarity": 4,
-      "attunement": "(requires attunement by abard)",
+      "attunement": "(requires attunement by a bard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=Control_weather'>Control weather</a>, <a href='https://tentaculus.ru/spells/#q=cure_wounds'>cure wounds</a> (5th level), <a href='https://tentaculus.ru/spells/#q=wall_of_thorns'>wall of thorns</a> <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>",
       "source": "DMG"
     },
     "ru": {
       "name": "Арфа Анструт (Инструмент бардов)",
+      "attunement": "(требует настройки бардом",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Control_weather'>Власть над погодой</a>, <a href='https://tentaculus.ru/spells/#q=cure_wounds'>лечение ран</a> (5 уровень), <a href='https://tentaculus.ru/spells/#q=wall_of_thorns'>терновая стена</a>"
     }
   },
@@ -2038,13 +2041,14 @@ var allItems = [
       "name": "Canaith mandolin (INSTRUMENT OF THE BARDS)",
       "type": "Wondrous item",
       "rarity": 3,
-      "attunement": "(requires attunement by abard)",
+      "attunement": "(requires attunement by a bard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>,  <a href='https://tentaculus.ru/spells/#q=Cure_wounds'>Cure wounds</a> (3rd level), <a href='https://tentaculus.ru/spells/#q=dispel_magic'>dispel magic</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>protection_from_energy</a> (lightning only) ",
       "source": "DMG",
       "img": "CANAITH_MANDOLIN.jpg"
     },
     "ru": {
       "name": "Мандолина Канаит (Инструмент бардов)",
+      "attunement": "(требует настройки бардом",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Cure_wounds'>лечение ран</a> (3 уровень), <a href='https://tentaculus.ru/spells/#q=dispel_magic'>рассеивание магии</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>Защита от энергии</a> (только электричество)"
     }
   },
@@ -2053,13 +2057,14 @@ var allItems = [
       "name": "Cli lyre (INSTRUMENT OF THE BARDS)",
       "type": "Wondrous item",
       "rarity": 3,
-      "attunement": "(requires attunement by abard)",
+      "attunement": "(requires attunement by a bard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>,  <a href='https://tentaculus.ru/spells/#q=Stone_shape'>Stone shape</a>, <a href='https://tentaculus.ru/spells/#q=wall_of_fire'>wall of fire</a>, <a href='https://tentaculus.ru/spells/#q=wind_wall'>wind wall</a>",
       "source": "DMG",
       "img": "CLI_LYRE.jpg"
     },
     "ru": {
       "name": "Лира Кли (Инструмент бардов)",
+      "attunement": "(требует настройки бардом",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Stone_shape'>Изменение формы камня,</a>, <a href='https://tentaculus.ru/spells/#q=wall_of_fire'>огненная стена</a>, <a href='https://tentaculus.ru/spells/#q=wind_wall'>стена ветров</a>"
     }
   },
@@ -2068,13 +2073,14 @@ var allItems = [
       "name": "Doss lute (INSTRUMENT OF THE BARDS)",
       "type": "Wondrous item",
       "rarity": 2,
-      "attunement": "(requires attunement by abard)",
+      "attunement": "(requires attunement by a bard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>, <a href='https://tentaculus.ru/spells/#q=Animal_friendship'>Animal friendship</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>protection from energy</a> (fire only), <a href='https://tentaculus.ru/spells/#q=protection_from_poison'>protection from poison</a>",
       "source": "DMG",
-      "img": "DOSE_LUTE.jpg"
+      "img": "DOSS_LUTE.jpg"
     },
     "ru": {
       "name": "Лютня Досс (Инструмент бардов)",
+      "attunement": "(требует настройки бардом",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Animal_friendship'>Дружба с животными</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>защита от энергии</a> (только огон), <a href='https://tentaculus.ru/spells/#q=protection_from_poison'>защита от яда</a>"
     }
   },
@@ -2083,13 +2089,14 @@ var allItems = [
       "name": "Fochlucan bandore (INSTRUMENT OF THE BARDS)",
       "type": "Wondrous item",
       "rarity": 2,
-      "attunement": "(requires attunement by abard)",
+      "attunement": "(requires attunement by a bard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>, <a href='https://tentaculus.ru/spells/#q=Entangle'>Entangle</a>,<a href='https://tentaculus.ru/spells/#q=faerie_fire'>faerie fire</a>, <a href='https://tentaculus.ru/spells/#q=shillelagh'>shillelagh</a>,  <a href='https://tentaculus.ru/spells/#q=speak_with_animals'>speak with animals</a>",
       "source": "DMG",
       "img": "FOCHLUCAN_BANDORE.jpg"
     },
     "ru": {
       "name": "Бандура Фоклучан (Инструмент бардов)",
+      "attunement": "(требует настройки бардом",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Entangle'>опутывание</a>,<a href='https://tentaculus.ru/spells/#q=faerie_fire'>огонь фей</a>, <a href='https://tentaculus.ru/spells/#q=shillelagh'>Дубинка</a>,  <a href='https://tentaculus.ru/spells/#q=speak_with_animals'>разговор с животными</a>"
     }
   },
@@ -2098,10 +2105,11 @@ var allItems = [
       "name": "Mac-Fuirmidh cittern (INSTRUMENT OF THE BARDS)",
       "type": "Wondrous item",
       "rarity": 2,
-      "attunement": "(requires attunement by abard)",
+      "attunement": "(requires attunement by a bard)",
+      "attunement": "(требует настройки бардом",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>,  <a href='https://tentaculus.ru/spells/#q=Barkskin'>Barkskin</a>, <a href='https://tentaculus.ru/spells/#q=cure_wounds'>cure wounds</a>,<a href='https://tentaculus.ru/spells/#q=fog_cloud'>fog  cloud</a>",
       "source": "DMG",
-      "img": "MAC-FUIRMITH_CITTERN.jpg"
+      "img": "MAC-FUIRMIDH_CITTERN.jpg"
     },
     "ru": {
       "name": "Цитра Мак-Фуирмид (Инструмент бардов)",
@@ -2113,13 +2121,14 @@ var allItems = [
       "name": "Ollamh harp (INSTRUMENT OF THE BARDS)",
       "type": "Wondrous item",
       "rarity": 5,
-      "attunement": "(requires attunement by abard)",
+      "attunement": "(requires attunement by a bard)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>,  <a href='https://tentaculus.ru/spells/#q=Confusion'>Confusion</a>, <a href='https://tentaculus.ru/spells/#q=control_weather'>control weather</a>, <a href='https://tentaculus.ru/spells/#q=fire_storm'>fire storm</a> ",
       "source": "DMG",
       "img": "OLLAMH_HARP.jpg"
     },
     "ru": {
       "name": "Арфа Оллава (Инструмент бардов)",
+      "attunement": "(требует настройки бардом",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Confusion'>смятение,</a>, <a href='https://tentaculus.ru/spells/#q=control_weather'>Власть над погодой</a>, <a href='https://tentaculus.ru/spells/#q=fire_storm'>огненная буря</a>"
     }
   },
@@ -2370,7 +2379,7 @@ var allItems = [
       "rarity": 2,
       "text": "This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound. <br>As an action, one dose of the ointment can be swallowed or applied to the skin. The creature that receives it regains 2d8 + 2 hit points, ceases to be poisoned, and is cured of any disease.",
       "source": "DMG",
-      "img": "KEOGHTOM'S_OINTMENT.jpg"
+      "img": "KEOGHTOMS_OINTMENT.jpg"
     },
     "ru": {
       "name": "Мазь Кеогтома",
@@ -2498,7 +2507,7 @@ var allItems = [
       "rarity": 4,
       "text": "This book describes fitness exercises, and its words are charged with magic. If you spend 48 hours over a peri of 6 days or fewer studying the book's contents and practicing its guidelines, your Strength score increase_ by 2, as does your maximum for that score. The manueL then loses its magic, but regains it in a century.",
       "source": "DMG",
-      "img": "MANUAL_OF_GAINFUL_EXERCISE.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Справочник полезных упражнений",
@@ -2541,7 +2550,7 @@ var allItems = [
       "rarity": 2,
       "text": "While wearing this armor, you have a swimming speed equal to your walking speed. In addition, whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface. The armor is decorated with fish and shell motifs.",
       "source": "DMG",
-      "img": "MARINER'S_ARMOR.jpg"
+      "img": "MARINERS_ARMOR.jpg"
     },
     "ru": {
       "name": "Доспех моряка",
@@ -2587,7 +2596,7 @@ var allItems = [
       "rarity": 2,
       "text": "Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. I£ the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn't.",
       "source": "DMG",
-      "img": "MITHRAL_ARMOR.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Мифрильный доспех",
@@ -2637,6 +2646,7 @@ var allItems = [
     },
     "ru": {
       "name": "Ожерелье молитвенных чёток",
+      "attunement": "(требует настройки жрецом, друидом или паладином)",
       "text": "У этого ожерелья 1к4 + 2 магические бусины, изготовленные из аквамарина, чёрного жемчуга или топаза. На нём также много немагических бусин, изготовленных из янтаря, кровавика, цитрина, коралла, жадеита, жемчуга или кварца. Если магическую бусину снимут с ожерелья, она теряет свою магию. <br>Существует шесть видов магических бусин. Мастер сам решает вид каждой бусины или определяет их случайным образом. На ожерелье могут быть бусины одного и того же вида. Для того чтобы использовать одну из них, вы должны носить это ожерелье. <br>В каждой бусине находится заклинание, которое вы можете наложить ей бонусным действием (при необходимости используйте свою Сл спасброска). После того как заклинание магической бусины наложено, эту бусину нельзя использовать повторно до следующего рассвета.<br><table><tr><td>к20</td><td>Бусина...</td><td>Заклинание</td></tr><tr><td>1–6</td><td>Благословения</td><td><a href='https://tentaculus.ru/spells/#q=bless'>Благословение</a></td></tr><tr><td>7–12</td><td>Лечения</td><td><a href='https://tentaculus.ru/spells/#q=cure_wounds&le=1'>Лечение ран<a/> (2 уровень) или <a href='https://tentaculus.ru/spells/#q=lesser_restoration'>малое восстановление</a></td></tr><tr><td>13–16</td><td>Благоволения</td><td><a href='https://tentaculus.ru/spells/#q=greater_restoration'>Высшее восстановление</a></td></tr><tr><td>17–18</td><td>Кары</td><td><a href='https://tentaculus.ru/spells/#q=Branding_smite'>Клеймящий удар</a></td></tr><tr><td>19</td><td>Призыва</td><td><a href='https://tentaculus.ru/spells/#q=planar_ally'>Планарный союзник</a></td></tr><tr><td>20</td><td>Хождения по ветру</td><td><a href='https://tentaculus.ru/spells/#q=wind_walk' title='Хождение до ветру'>Хождение по ветру</a></td></tr></table>"
     }
   },
@@ -2679,7 +2689,7 @@ var allItems = [
       "rarity": 4,
       "text": "Typically found in 1d4 pots inside a fine wooden box with a brush (weighing 1 pound in total), these pigments allow you to create three-dimensional objects by painting them in two dimensions. The paint flows from the brush to form the desired object as you concentrate on its image. <br>Each pot of paint is sufficient to cover 1,000 square feet of a surface, which lets you create inanimate objects or terrain features-such as a door, a pit, flowers, trees, cells, rooms, or weapons- that are up to 10,000 cubic feet. It takes 10 minutes to cover 100 square feet. <br>When you complete the painting, the object or terrain feature depicted becomes a real, nonmagical object. <br>Thus, painting a door on a wall creates an actual door that can be opened to whatever is beyond. Painting a pit on a floor creates a real pit, and its depth counts against the total area of objects you create. <br>Nothing created by the pigments can have a value greater than 25 gp. If you paint an object of greater value (such as a diamond or a pile of gold), the object looks authentic, but close inspection reveals it is made from paste, bone, or some other worthless material. <br>If you paint a form of energy such as fire or lightning, the energy appears but dissipates as soon as you complete the painting, doing no harm to anything. 0ATHBOW <br>Weapon (longbow), very rare (requires attunement) <br>When you nock an arrow on this bow, it whispers in <br>Elvish, \"Swift defeat to my enemies.\" When you use this weapon to make a ranged attack, you can, as a command phrase, say, \"Swift death to you who have wronged me.\" The target of your attack becomes your sworn enemy until it dies or until dawn seven days later. <br>You can have only one such sworn enemy at a time. <br>When your sworn enemy dies, you can choose a new one after the next dawn. <br>When you make a ranged attack roll with this weapon against your sworn enemy, you have advantage on the roll. In addition, your target gains no benefit from cover, other than total cover, and you suffer no disadvantage due to long range. If the attack hits, your sworn enemy takes an extra 3d6 piercing damage. <br>While your sworn enemy lives, you have disadvantage on attack rolls with all other weapons.",
       "source": "DMG",
-      "img": "NOLZUR'S_MARVELOUS_PIGMENTS.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Чудесные краски Нолзура",
@@ -2693,7 +2703,7 @@ var allItems = [
       "rarity": 3,
       "text": "Beads of this cloudy gray oil form on the outside of its container and quickly evaporate. The oil can cover a <br>Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the etherealness spell for 1 hour.",
       "source": "DMG",
-      "img": "OIL_OF_ETHEREALNESS.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Масло эфирности",
@@ -2707,7 +2717,7 @@ var allItems = [
       "rarity": 4,
       "text": "This clear, gelatinous oil sparkles with tiny, ultrathin silver shards. The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil takes 1 minute. For 1 hour, the coated item is magical and has a +3 bonus to attack and damage rolls.",
       "source": "DMG",
-      "img": "OIL_OF_SHARPNESS.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Масло остроты",
@@ -2721,7 +2731,7 @@ var allItems = [
       "rarity": 2,
       "text": "This sticky black unguent is thick and heavy in the container, but it flows quickly when poured. The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). <br>Applying the oil takes 10 minutes. The affected creature then gains the effect of a freedom of movement spell for 8 hours. <br>Alternatively, the oil can be poured on the ground as an action, where it covers a 10-foot square, duplicating the effect of the grease spell in that area for 8 hours.",
       "source": "DMG",
-      "img": "OIL_OF_SLIPPERINESS.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Масло ускользания",
@@ -2733,13 +2743,14 @@ var allItems = [
       "name": "PEARL OF POWER",
       "type": "Wondrous item",
       "rarity": 2,
-      "attunement": "(requires attunement by aspellcaster)",
+      "attunement": "(requires attunement by a spellcaster)",
       "text": "You can use an action to speak this pearl's command word and regain one expended spell slot of up to 3rd level. Once you have used the pearl, it can't be used again until the next dawn.",
       "source": "DMG",
       "img": "PEARL_OF_POWER.jpg"
     },
     "ru": {
       "name": "Жемчужина силы",
+      "attunement": "(требует настройки заклинателем)",
       "text": "Если эта жемчужина находится у вас, вы можете действием произнести командное слово и восстановить одну использованную ячейку заклинания. Если уровень потраченной ячейки 4 или больше, вы получите ячейку 3 уровня. Вы не можете повторно использовать жемчужину до следующего рассвета."
     }
   },
@@ -2764,7 +2775,7 @@ var allItems = [
       "rarity": 3,
       "text": "This delicate silver chain has a brilliant-cut black gem pendant. While you wear it, poisons have no effect on you. You are immune to the poisoned condition and ha\\\"e immunity to poison damage.",
       "source": "DMG",
-      "img": "PERIAPT_OF_PROOF_AGAINST_POISON.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Медальон защиты от яда",
@@ -2856,7 +2867,7 @@ var allItems = [
       "rarity": 3,
       "text": "This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter. <br>You can use an action to unfold a portable hole and place it on or against a solid surface, whereupon the portable hole creates an extradimensional hole 10 feet deep. The cylindrical space within the hole exists on a different plane, so it can't be u ed to create open passages. Any creature inside an open portable hole can exit the hole by climbing out of it. <br>You can use an action to close a portable hole by taking hold of the edges of the cloth and folding it up. <br>Folding the cloth closes the hole, and any creatures or objects within remain in the extradimensional space. o matter what's in it, the hole weighs next to nothing. <br>If the hole is folded up, a creature with in the hole's extradimensional space can use an action to make a DC 10 Strength check. On a successful check, the creature forces its way out and appears within 5 feet of the portable hole or the creature carrying it. A breathing creature within a closed portable hole can survive for up to 10 minutes, after which time it begins to suffocate. <br>Placing a portable hole inside an extradimensional space created by a bag of holding, Heward's handy haversack, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate is sucked through it and deposited in a random location on the Astral Plane. <br>The gate then closes. The gate is one-way only and can't be reopened.",
       "source": "DMG",
-      "img": "PORTABLE_HOLE.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Переносная дыра",
@@ -2870,7 +2881,7 @@ var allItems = [
       "rarity": 2,
       "text": "When you drink this potion, you can cast the animal friendship spell (save DC 13) for 1 hour at will. Agitating this muddy liquid brings little bits into view: a fish scale, a hummingbird tongue, a cat claw, or a squirrel hair.",
       "source": "DMG",
-      "img": "POTION_OF_ANIMAL_FRIENDSHIP.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье дружбы с животными",
@@ -2884,7 +2895,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, you gain the effect of the clairvoyance spell. An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.",
       "source": "DMG",
-      "img": "POTION_OF_CLAIRVOYANCE.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье ясновидения",
@@ -2898,7 +2909,7 @@ var allItems = [
       "rarity": 1,
       "text": "When you drink this potion, you gain a climbing speed equal to your walking speed for 1 hour. During this rime, you have advantage on Strength (Athletics) checks you make to climb. The potion is separated into brown, silver, and gray layers resembling bands of stone. <br>Shaking the bottle fails to mix the colors.",
       "source": "DMG",
-      "img": "POTION_OF_CLIMBING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье лазания",
@@ -2912,7 +2923,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, you gain the \"reduce\" effect of the enlarge/reduce spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": "POTION_OF_DIMINUTION.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье уменьшения",
@@ -2926,7 +2937,7 @@ var allItems = [
       "rarity": 2,
       "text": "After drinking this potion, you can use a bonus action to exhale fire at a target within 30 feet of you. The target must make a DC 13 Dexterity saving throw, taking 4d6 li re damage on a failed save, or half as much damage on a successful one. The effect t;nds after you exhale the li re three times or when 1 hour has passed. <br>This potion's orange liquid flickers, and smoke fills the top of the container and wafts out whenever it is opened.",
       "source": "DMG",
-      "img": "POTION_OF_FIRE_BREATH.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье огненного дыхания",
@@ -2940,7 +2951,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, you gain a flying speed equal to your walking speed for 1 hour and can hover. <br>If you're in the air when the potion wears off, you fall unless you have some other means of staying aloft. This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it.",
       "source": "DMG",
-      "img": "POTION_OF_FLYING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье полёта",
@@ -2954,7 +2965,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, you gain the effect of the gaseous form spell for 1 hour (no concentration required) or until you end the effect as a bonus action. <br>This potion's container seems to hold fog that moves and pours like water.",
       "source": "DMG",
-      "img": "POTION_OF_GASEOUS_FORM.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье газообразной формы",
@@ -2968,7 +2979,7 @@ var allItems = [
       "rarity": 1,
       "text": "When you drink this potion, your Strength score became 21 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": "POTION_OF_Hill_GIANT_STRENGTH.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье силы холмового великана",
@@ -2982,7 +2993,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, your Strength score became 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": "POTION_OF_FROST_GIANT_STRENGTH.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье силы ледяного великана",
@@ -2996,7 +3007,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, your Strength score became 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": "POTION_OF_stone_GIANT_STRENGTH.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье силы каменного великана",
@@ -3010,7 +3021,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, your Strength score became 27 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": "POTION_OF_cloud_GIANT_STRENGTH.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье силы облачного великана",
@@ -3024,7 +3035,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, your Strength score became 25 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": "POTION_OF_fire_STRENGTH.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье силы огненного великана",
@@ -3038,7 +3049,7 @@ var allItems = [
       "rarity": 5,
       "text": "When you drink this potion, your Strength score became 29 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": "POTION_OF_storm_GIANT_STRENGTH.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье силы грозового великана",
@@ -3052,7 +3063,7 @@ var allItems = [
       "rarity": 1,
       "text": "You regain 2d4 + 2 hit points when you drink this potion.  The potion's red liquid glimmers when agitated.",
       "source": "DMG",
-      "img": "POTION_OF_HEALING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье лечения",
@@ -3066,7 +3077,7 @@ var allItems = [
       "rarity": 2,
       "text": "You regain 4d4 + 4 hit points when you drink this potion. The potion's red liquid glimmers when agitated.",
       "source": "DMG",
-      "img": "POTION_OF_Greater_HEALING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье большого лечения",
@@ -3080,7 +3091,7 @@ var allItems = [
       "rarity": 3,
       "text": "You regain 8d4 + 8 hit points when you drink this potion. The potion's red liquid glimmers when agitated.",
       "source": "DMG",
-      "img": "POTION_OF_Superior_HEALING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье отличного лечения",
@@ -3094,7 +3105,7 @@ var allItems = [
       "rarity": 4,
       "text": "You regain 10d4 + 20 hit points when you drink this potion. The potion's red liquid glimmers when agitated.",
       "source": "DMG",
-      "img": "POTION_OF_Supreme_HEALING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье превосходного лечения",
@@ -3108,7 +3119,7 @@ var allItems = [
       "rarity": 3,
       "text": "HP Regained 2d4 + 2 4d4 + 4 8d4 + 8 10d4 + 20 <br>For 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect of the bless spell (no concentration required). This blue potion bubbles and steams as if boiling.",
       "source": "DMG",
-      "img": "POTION_OF_HEROISM.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье героизма",
@@ -3122,7 +3133,7 @@ var allItems = [
       "rarity": 4,
       "text": "This potion's container looks empty but feels as though it holds liquid. When you drink it, you become invisible for 1 hour. Anything you wear or carry is invisible with you. The effect ends early if you attack or cast a spell.",
       "source": "DMG",
-      "img": "POTION_OF_INVISIBILITY.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье невидимости",
@@ -3136,7 +3147,7 @@ var allItems = [
       "rarity": 3,
       "text": "For 1 minute after you drink this potion, you have resistance to all damage. The potion's syrupy liquid looks like liquified iron.",
       "source": "DMG",
-      "img": "POTION_OF_INVULNERABILITY.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье неуязвимости",
@@ -3150,7 +3161,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, your physical age is reduced by 1d6 + 6 years, to a minimum of 13 years. <br>Each time you subsequently drink a potion of longevity, there is 10 percent cumulative chance that you instead age by 1d6 + 6 years. Suspended in this amber liquid are a scorpion's tail, an adder's fang, a dead spider, and a tiny heart that, against all reason, is still beating. <br>These ingredients vanish when the potion is opened.",
       "source": "DMG",
-      "img": "POTION_OF_LONGEVITY.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье долголетия",
@@ -3164,7 +3175,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, you gain the effect of the detect thoughts spell (save DC 13). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
       "source": "DMG",
-      "img": "POTION_OF_MIND_READING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье чтения мыслей",
@@ -3176,13 +3187,13 @@ var allItems = [
       "name": "POTION OF POISON",
       "type": "Potion",
       "rarity": 2,
-      "text": "This concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, it is actpally poison masked by illusion magic. An identify spell reveals its true nature. <br>If you drink it, you take 3d6 poison damage, and you must succeed on a DC 13 Constitution saving throw or be poisoned. At the start of each of your turns while you are poisoned in this way, you take 3d6 poison damage. <br>At the end of each of your turns, you can repeat the saving throw. On a successful save, the poison damage you take on your subsequent turns decreases by 1d6. <br>The poison ends when the damage decreases to 0.",
+      "text": "This concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, it is actpally poison masked by illusion magic. An <a href='https://tentaculus.ru/spells/#q=identify'>identify</a> spell reveals its true nature. <br>If you drink it, you take 3d6 poison damage, and you must succeed on a DC 13 Constitution saving throw or be poisoned. At the start of each of your turns while you are poisoned in this way, you take 3d6 poison damage. <br>At the end of each of your turns, you can repeat the saving throw. On a successful save, the poison damage you take on your subsequent turns decreases by 1d6. <br>The poison ends when the damage decreases to 0.",
       "source": "DMG",
-      "img": "POTION_OF_POISON.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье яда",
-      "text": "Эта смесь выглядит, пахнет и обладает таким же вкусом, что и зелье лечения или другое полезное зелье. <br>Однако, это самый настоящий яд, чья истинная природа скрыта магией иллюзий. Заклинание опознание раскрывает этот обман. <br>Если вы всё же выпьете это зелье, вы получаете урон ядом 3к6 и должны преуспеть в спасброске Телосложения со Сл 13, иначе станете отравленным. В начале каждого вашего хода, пока вы отравлены этим зельем, вы получаете урон ядом 3к6. В конце каждого своего хода вы можете повторять спасбросок. В случае успеха каждый урон ядом в последующих раундах будет уменьшен на 1к6. Яд прекращает действие, когда его урон станет равным нулю."
+      "text": "Эта смесь выглядит, пахнет и обладает таким же вкусом, что и зелье лечения или другое полезное зелье. <br>Однако, это самый настоящий яд, чья истинная природа скрыта магией иллюзий. Заклинание <a href='https://tentaculus.ru/spells/#q=identify'>опознания</a> раскрывает этот обман. <br>Если вы всё же выпьете это зелье, вы получаете урон ядом 3к6 и должны преуспеть в спасброске Телосложения со Сл 13, иначе станете отравленным. В начале каждого вашего хода, пока вы отравлены этим зельем, вы получаете урон ядом 3к6. В конце каждого своего хода вы можете повторять спасбросок. В случае успеха каждый урон ядом в последующих раундах будет уменьшен на 1к6. Яд прекращает действие, когда его урон станет равным нулю."
     }
   },
   {
@@ -3192,7 +3203,7 @@ var allItems = [
       "rarity": 2,
       "text": "When you drink this potion, you gain resistance to one type of damage for 1 hour. The DM chooses the type determines it randomly from the options below. <br><table><tr><td>d10</td><td>Damage Type</td></tr><tr><td>1</td><td>Acid</td></tr><tr><td>2</td><td>Cold</td></tr><tr><td>3</td><td>Fire</td></tr><tr><td>4</td><td>Force</td></tr><tr><td>5</td><td>Lightning</td></tr><tr><td>6</td><td>Necrotic</td></tr><tr><td>7</td><td>Poison</td></tr><tr><td>8</td><td>Psychic</td></tr><tr><td>9</td><td>Radiant</td></tr><tr><td>10</td><td>Thunder</td></tr></table>",
       "source": "DMG",
-      "img": "POTION_OF_RESISTANCE.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье сопротивления",
@@ -3206,7 +3217,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, you gain the effect of the haste spell for 1 minute (no concentration required). 1~potion's yellow fluid is streaked with black and swirl on its own.",
       "source": "DMG",
-      "img": "POTION_OF_SPEED.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье скорости",
@@ -3220,7 +3231,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, it removes any exhaustion you are suffering and cures any disease or poison affecting you. For the next 24 hours, you regain the maximum number of hit points for any Hit Die you spend. The potion's crimson liquid regularly pulses wi-dulllight, calling to mind a heartbeat.",
       "source": "DMG",
-      "img": "POTION_OF_VITALITY.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье живучести",
@@ -3234,7 +3245,7 @@ var allItems = [
       "rarity": 2,
       "text": "You can breathe underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
       "source": "DMG",
-      "img": "POTION_OF_WATER_BREATHING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Зелье подводного дыхания",
@@ -3248,7 +3259,7 @@ var allItems = [
       "rarity": 3,
       "text": "This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The DM chooses the kind of token or determines it randomly.<br><table><tr><td>dlOO</td><td>Feather Token</td></tr><tr><td>01-20</td><td>Anchor</td></tr><tr><td>21-35</td><td>Bird</td></tr><tr><td>36-50</td><td>Fan</td></tr><tr><td>51-65</td><td>Swan boat</td></tr><tr><td>66-90</td><td>Tree</td></tr><tr><td>91-00</td><td>Whip</td></tr></table> <br><b>Anchor.</b> You can use an action to touch the token to a boat or ship. For the next 24 hours, the vessel can't be moved by any means. Touching the token to the vessel again ends the effect. When the effect ends, the token disappears. <br><b>Bird.</b> You can use an action to toss the token 5 feet into the air. The token disappears and an enormous, multicolored bird takes its place. The bird has the statistics of a roc (see the Monster Manual), but it obeys your simple commands and can't attack. It can carry up to 500 pounds while flying at its maximum speed (16 miles an hour for a maximum of 144 miles per day. with a one-hour rest for every 3 hours of flying), or 1,00G pounds at half that speed. The bird disappears after flying its maximum distance for a day or if it drops to 0 hit points. You can dismiss the bird as an action. <br><b>Fan.</b> If you are on a boat or ship, you can use an action to toss the token up to 10 feet in the air. The token disappears, and a giant flapping fan takes its place. The fan floats and creates a wind strong enough to fill the sails of one ship, increasing its speed by 5 miles per hour for 8 hours. You can dismiss the fan as an action. <br><b>Swan Boat.</b> You can use an action to touch the token to a body of water at least 60 feet in diameter. The token disappears, and a 50-foot-long, 20-foot-wide boat shaped like a swan takes its place. The boat is self-propelled and moves across water at a speed of 6 miles per hour. <br>You can use an action while on the boat to command it to move or to turn up to 90 degrees. The boat can carry up to thirty-two Medium or smaller creatures. A Large creature counts as four Medium creatures, while a <br>Huge creature counts as nine. The boat remains for 24 hours and then disappears. You can dismiss the boat as an action. <br><b>Tree.</b> You must be outdoors to use this token. You can use an action to touch it to an unoccupied space on the ground. The token disappears, and in its place a nonmagical oak tree springs into existence. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius. <br><b>Whip.</b> You can use an action to throw the token to a point within 10 feet of you. The token disappears, and a floating whip takes its place. You can then use a bonus action to make a melee spell attack against a creature within 10 feet of the whip, with an attack bonus of +9. <br>On a hit, the target takes 1d6 + 5 force damage. <br>As a bonus action on your turn, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of it. The whip disappears after 1 hour, when you use an action to dismiss it, or when you are incapacitated or die.",
       "source": "DMG",
-      "img": "QUAAL'S_FEATHER_TOKEN.jpg"
+      "img": "QUAALS_FEATHER_TOKEN.jpg"
     },
     "ru": {
       "name": "Перо Кваля",
@@ -3665,13 +3676,14 @@ var allItems = [
       "name": "ROBE OF THE ARCHMAGI",
       "type": "Wondrous item",
       "rarity": 5,
-      "attunement": "(requires attunement by asorcerer, warlock, or wizard)",
+      "attunement": "(requires attunement by a sorcerer, warlock, or wizard)",
       "text": "This elegant garment is made from exquisite cloth of white, gray, or black and adorned with silvery runes. <br>The robe's color corresponds to the alignment for whi - the item was created. A white robe was made for good. gray for neutral, and black for evil. You can't attune to a robe of the archmagi that doesn't correspond to your alignment. <br>You gain these benefits while wearing the robe: <br>• If you aren't wearing armor, your base Armor Class is 15 +your Dexterity modifier. <br>You have advantage on saving throws against spell and other magical effects. <br>Your spell save DC and spell attack bonus each increase by 2.",
       "source": "DMG",
       "img": "ROBE_OF_THE_ARCHMAGI.jpg"
     },
     "ru": {
       "name": "Мантия архимага",
+      "attunement": "(требует настройки чародеем, колдуном или волшебником)",
       "text": "Этот красивый наряд пошит из белой, серой или чёрной ткани и украшен серебристыми рунами. Цвет мантии соответствует мировоззрению, для которого она и создана. Белые мантии делают для добрых, серые для нейтральных, а чёрные для злых. Вы не можете настроиться на мантию архимага, чьё мировоззрение не совпадает с вашим. <br>Вы получаете следующие преимущества, пока носите мантию:<br><br>• Если вы не носите доспех, ваш базовый Класс Доспеха равен 15 + ваш модификатор Ловкости.<br><br>• Вы совершаете с преимуществом спасброски от заклинаний и других магических эффектов.<br><br>• Сл спасбросков от ваших заклинаний и бонус атаки заклинаниями увеличиваются на 2."
     }
   },
@@ -3761,6 +3773,7 @@ var allItems = [
     },
     "ru": {
       "name": "Жезл воскрешения",
+      "attunement": "(требует настройки жрецом, друидом или паладином)",
       "text": "У этого жезла есть 5 зарядов. Если вы держите его, вы можете действием наложить им одно из следующих заклинаний: полное исцеление (тратит 1 заряд) или воскрешение (тратит 5 зарядов). <br>Жезл ежедневно восстанавливает 1 заряд на рассвете. Если заряды жезла уменьшаются до 0, бросьте к20. Если выпадет «1», жезл исчезнет во вспышке света."
     }
   },
@@ -3815,7 +3828,7 @@ var allItems = [
       "rarity": 2,
       "text": "While in this saddle on a mount, you can't be dismounted against your will if you're conscious, and attack rolls against the mount have disadvantage.",
       "source": "DMG",
-      "img": "SADDLE_OF_THE_CAVALIER.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Седло кавалериста",
@@ -3847,7 +3860,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "You gain a +2 bonus to attack and damage rolls made with this magic weapon. In addition, you can make one attack with it as a bonus action on each of your turns.",
       "source": "DMG",
-      "img": "SCIMITAR_OF_SPEED.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Скимитар скорости",
@@ -3863,7 +3876,7 @@ var allItems = [
       "rarity": 3,
       "text": "Each scroll of protection works against a specific type of creature chosen by the DM or determined randomly by rolling on the following table.<br><table><tr><td>dlOO</td><td>Creature Type</td></tr><tr><td>01-10</td><td>Aberrations</td></tr><tr><td>11-20</td><td>Beasts</td></tr><tr><td>21-30</td><td>Celestials</td></tr><tr><td>31-40</td><td>Elementals</td></tr><tr><td>41-50</td><td>Fey</td></tr><tr><td>51-75</td><td>Fiends</td></tr><tr><td>76-80</td><td>Plants</td></tr><tr><td>81-00</td><td>Undead</td></tr></table> <br>Using an action to read the scroll encloses you in a invisible barrier that extends from you to form a 5-footradius, 10-foot-high cylinder. For 5 minutes, this barrier prevents creatures of the specified type from entering or affecting anything within the cylinder. <br>The cylinder moves with you and remains centered on you. However, if you move in such a way that a creature of the specified type would be inside the cylinder, the effect ends. <br>A creature can attempt to overcome the barrier by using an action to make a DC 15 Charisma check. <br>On a success, the creature ceases to be affected by the barrier.",
       "source": "DMG",
-      "img": "SCROLL_OF_PROTECTION.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Свиток защиты",
@@ -3892,7 +3905,7 @@ var allItems = [
       "rarity": 2,
       "text": "While holding this shield, you have advantage on initiative rolls and Wisdom (Perception) checks. The shield is emblazoned with a symbol of an eye. <br>SHIELD, +1, +2, OR +3 <br>Armor (shield), uncommon (+1), rare (+2), or very rare (+3) <br>While holding this shield, you have a bonus to AC determined by the shield's rarity. This bonus is in addition to the shield's normal bonus to AC.",
       "source": "DMG",
-      "img": "SENTINEL_SHIELD.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Щит часового",
@@ -3955,7 +3968,7 @@ var allItems = [
       "rarity": 1,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen <br> Save DC: 13, Attack Bonus: +5 <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_Cantrip.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания (заговора)",
@@ -3969,7 +3982,7 @@ var allItems = [
       "rarity": 1,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen <br> Save DC: 13, Attack Bonus: +5  <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_1_lvl.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания 1 уровня",
@@ -3983,7 +3996,7 @@ var allItems = [
       "rarity": 2,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen <br> Save DC: 13, Attack Bonus: +5   <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_2_lvl.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания 2 уровня",
@@ -3997,7 +4010,7 @@ var allItems = [
       "rarity": 2,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen <br> Save DC: 15, Attack Bonus: +7   <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_3_lvl.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания 3 уровня",
@@ -4011,7 +4024,7 @@ var allItems = [
       "rarity": 3,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen <br> Save DC: 15, Attack Bonus: +7  <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_4_lvl.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания 4 уровня",
@@ -4025,7 +4038,7 @@ var allItems = [
       "rarity": 4,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen <br> Save DC: 17, Attack Bonus: +9  <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_5_lvl.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания 5 уровня",
@@ -4039,7 +4052,7 @@ var allItems = [
       "rarity": 4,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen <br> Save DC: 17, Attack Bonus: +9  <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_6_lvl.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания 6 уровня",
@@ -4053,7 +4066,7 @@ var allItems = [
       "rarity": 4,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen <br> Save DC: 18, Attack Bonus: +10 <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.<br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_7_lvl.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания 7 уровня",
@@ -4067,7 +4080,7 @@ var allItems = [
       "rarity": 4,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen<br> Save DC: 18, Attack Bonus: +10 <br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_8_lvl.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания 8 уровня",
@@ -4081,7 +4094,7 @@ var allItems = [
       "rarity": 5,
       "text": "A spell scroll bears the words of a single spell, written - a mystical cipher. If the spell is on your class's spellli you can use an action to read the scroll and cast its spe without having to provide any of the spell's componen<br> Save DC: 19, Attack Bonus: +11<br>Otherwise, the scroll is unintelligible. <br>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determ· whether you cast it successfully. The DC equals 10 + spell's level. On a failed check, the spell disappears frothe scroll with no other effect. <br>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust. <br>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check ucceeds or fa ils, the spell scroll is destroyed.",
       "source": "DMG",
-      "img": "SPELL_SCROLL_9_lvl.jpg"
+      "img": "SPELL_SCROLL.jpg"
     },
     "ru": {
       "name": "Свиток заклинания 9 уровня",
@@ -4132,6 +4145,7 @@ var allItems = [
     },
     "ru": {
       "name": "Посох очарования",
+      "attunement": "(требует настройки бардом, жрецом, друидом, чародеем, колдуном или волшебником)",
       "text": "Держа этот посох, вы можете действием потратить 1 из его 10 зарядов на то, чтобы наложить им очарование личности, понимание языков или приказ, используя свою Сл спасброска от заклинания. Этот посох также может использоваться как магический боевой посох. <br>Если вы держите этот посох и проваливаете спасбросок от заклинания школы Очарования, нацеленного только на вас, вы можете превратить проваленный спасбросок в успешный. Вы не можете использовать это свойство повторно до следующего рассвета. <br>Если вы преуспели в спасброске от заклинания, нацеленного только на вас, вне зависимости от того, пришлось ли для этого прибегнуть к помощи посоха, вы можете реакцией потратить 1 заряд из посоха и отразить заклинание в того, кто его наложил, как если бы вы сами наложили это заклинание. <br>Посох ежедневно восстанавливает 1к8 + 2 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «1», посох становится немагическим боевым посохом."
     }
   },
@@ -4147,6 +4161,7 @@ var allItems = [
     },
     "ru": {
       "name": "Посох огня",
+      "attunement": "(требует настройки друидом, чародеем, колдуном или волшебником)",
       "text": "Вы получаете сопротивление к урону огнём, пока держите этот посох. <br>У этого посоха есть 10 зарядов. Держа его, вы можете действием потратить часть зарядов и наложить им одно из следующих заклинаний, используя свою <br>Сл спасброска от заклинания: огненная стена (4 заряда), огненные ладони (1 заряд) или огненный шар (3 заряда). <br>Посох ежедневно восстанавливает 1к6 + 4 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «1», посох чернеет, разваливается на угли и уничтожается."
     }
   },
@@ -4162,6 +4177,7 @@ var allItems = [
     },
     "ru": {
       "name": "Посох мороза",
+      "attunement": "(требует настройки друидом, чародеем, колдуном или волшебником)",
       "text": "Вы получаете сопротивление к урону холодом, пока держите этот посох. <br>У этого посоха есть 10 зарядов. Держа его, вы можете действием потратить часть зарядов и наложить им одно из следующих заклинаний, используя свою <br>Сл спасброска от заклинания: град (4 заряда), конус холода (5 зарядов), ледяная стена (4 заряда) или туманное облако (1 заряд). <br>Посох ежедневно восстанавливает 1к6 + 4 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «1», посох превращается в воду и уничтожается."
     }
   },
@@ -4170,13 +4186,14 @@ var allItems = [
       "name": "STAFF OF HEALING",
       "type": "Staff",
       "rarity": 3,
-      "attunement": "(requires attunement by a bard, cleric, ordruid)",
+      "attunement": "(requires attunement by a bard, cleric, or druid)",
       "text": "This staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability modifier: cure wounds (1 charge per spell level, up to 4th), lesser restoration (2 charges). or mass cure wounds (5 charges). <br>The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1. the staff vanishes in a flash of light, lost forever.",
       "source": "DMG",
       "img": "STAFF_OF_HEALING.jpg"
     },
     "ru": {
       "name": "Посох лечения",
+      "attunement": "(требует настройки бардом, жрецом или друидом)",
       "text": "У этого посоха есть 10 зарядов. Держа его, вы можете действием потратить часть зарядов и наложить им одно из следующих заклинаний, используя свою Сл спасброска от заклинания и базовую характеристику: лечение ран (1 заряд за каждый уровень заклинания, максимум 4 уровень), малое восстановление (2 заряда) или множественное лечение ран (5 зарядов). <br>Посох ежедневно восстанавливает 1к6 + 4 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «1», посох исчезает во вспышке света, теряясь навсегда."
     }
   },
@@ -4192,6 +4209,7 @@ var allItems = [
     },
     "ru": {
       "name": "Посох силы",
+      "attunement": "(требует настройки чародеем, колдуном или волшебником)",
       "text": "Этот посох можно использовать как магический боевой посох, предоставляющий бонус +3 к броскам атаки и урона им. Держа его, вы получаете бонус +2 к Классу Доспеха, спасброскам и броскам атаки заклинаниями.<br>У посоха есть 20 зарядов для описанных ниже свойств. Он ежедневно восстанавливает 2к8 + 4 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «1», посох сохраняет бонус +2 к броскам атаки и урона, но теряет все остальные свойства. Если выпадет «20», посох восстанавливает 1к8 + 2 заряда.<br><b>Силовой удар.</b> Если вы попадаете рукопашной атакой этим посохом, вы можете потратить 1 заряд, чтобы причинить цели дополнительный урон силовым полем 1к6.<br><b>Заклинания.</b> Если вы держите этот посох, вы можете действием потратить часть зарядов, чтобы наложить им одно из следующих заклинаний, используя свою Сл спасброска от заклинания и бонус броска атаки заклинанием: волшебная стрела (1 заряд), конус холода (5 зарядов), левитация (2 заряда), луч слабости (1 заряд), молния (версия 5 уровня, 5 зарядов), огненный шар (версия 5 уровня, 5 зарядов), силовая стена (5 зарядов), сфера неуязвимости (6 зарядов) или удержание чудовища (5 зарядов).<br><b>Карающий удар.</b> Вы можете действием сломать посох о колено или твёрдую поверхность, совершая, таким образом, карающий удар. Посох уничтожается, испуская оставшуюся в нём магию взрывом, заполняющим сферу радиусом 30 футов с центром на нём.<bt>У вас есть 50-процентный шанс мгновенно перенестись на случайный план существования, избежав взрыва. Если вы его не избегаете, то получаете урон силовым полем, равный 16 × количество зарядов в посохе. Все другие существа в области взрыва должны совершить спасбросок Ловкости со Сл 17. При провале существо получает урон, зависящий от того, как далеко оно находится от исходной точки взрыва, как показано в таблице. При успехе существо получает половину этого урона <br> <table><tr><td>к100</td><td>Эффект</td></tr><tr><td>01–15</td><td>Веер</td></tr><tr><td>16–40</td><td>Дерево</td></tr><tr><td>41–50</td><td>Кнут</td></tr><tr><td>51–65</td><td>Лодка-лебедь</td></tr><tr><td>66–80</td><td>Птица</td></tr><tr><td>81–00</td><td>Якорь</td></tr></table>"
     }
   },
@@ -4223,6 +4241,7 @@ var allItems = [
     },
     "ru": {
       "name": "Посох роя насекомых",
+      "attunement": "(требует настройки бардом, жрецом, друидом, чародеем, колдуном или волшебником)",
       "text": "У этого посоха 10 зарядов, и он ежедневно восстанавливает 1к6 + 4 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «1», рой насекомых пожирает посох, уничтожая его, и рассеивается. <br><b>Заклинания.</b> Если вы держите этот посох, вы можете действием потратить часть зарядов, чтобы наложить им одно из следующих заклинаний, используя свою Сл спасброска от заклинания: гигантское насекомое (4 заряда) или нашествие насекомых (5 зарядов). <br><b>Облако насекомых.</b> Если вы держите посох, вы можете действием потратить 1 заряд, чтобы окружить себя роем летучих насекомых с 30-футовым радиусом. Насекомые остаются на 10 минут, делая эту область сильно заслонённой для всех существ кроме вас. Рой перемещается с вами, оставаясь с центром на вас. Ветер со скоростью как минимум 10 миль в час (16 километров в час) рассеивает рой и оканчивает этот эффект."
     }
   },
@@ -4238,6 +4257,7 @@ var allItems = [
     },
     "ru": {
       "name": "Посох гадюки",
+      "attunement": "(требует настройки жрецом, друидом или колдуном)",
       "text": "Вы можете бонусным действием произнести командное слово посоха, чтобы сделать на 1 минуту его навершие головой ядовитой змеи. Произнеся бонусным действием командное слово ещё раз, вы делаете посох обычным. <br>Вы можете совершить рукопашную атаку головой змеи, у которой досягаемость 5 футов. К броску атаки применяется ваш бонус мастерства. При попадании цель получает колющий урон 1к6 и должна преуспеть в спасброске Телосложения со Сл 15, иначе получит урон ядом 3к6. <br>Голову змеи можно атаковать, пока она жива. У неё Класс Доспеха 15 и 20 хитов. Если хиты головы уменьшатся до 0, посох уничтожается. Если посох пока не уничтожен, и вы делаете его неоживлённым, он восстанавливает все свои хиты."
     }
   },
@@ -4253,6 +4273,7 @@ var allItems = [
     },
     "ru": {
       "name": "Посох магов",
+      "attunement": "(требует настройки чародеем, колдуном или волшебником)",
       "text": "Этот посох можно использовать как магический боевой посох, предоставляющий бонус +2 к броскам атаки и урона им. Держа его, вы получаете бонус +2 к броскам атаки заклинаниями. <br>У посоха есть 50 зарядов для описанных ниже свойств. Он ежедневно восстанавливает 4к6 + 2 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «20», посох восстановит 1к12 + 1 заряд. <br><b>Впитывание заклинаний.</b> Пока вы держите посох, вы совершаете спасброски от заклинаний с преимуществом. Кроме того, вы можете использовать реакцию, когда другое существо накладывает заклинание, целью которого являетесь только вы. Если вы это делаете, посох впитывает магию этого заклинания, отменяя его эффект и восстанавливая количество зарядов, равное уровню поглощённого заклинания. Однако если из-за этого сумма зарядов в посохе превысит 50, посох взорвётся, как если бы вы активировали его «карающий удар» (смотрите ниже). <br><b>Заклинания.</b> Если вы держите этот посох, вы можете действием потратить часть зарядов, чтобы наложить им одно из следующих заклинаний (Сл спасброска 17): град (4 заряда), молния (версия 7 уровня, 7 зарядов), невидимость (2 заряда), огненная стена (4 заряда), огненный шар (версия 7 уровня, 7 зарядов), открывание (2 заряда), паутина (2 заряда), призыв элементаля (7 зарядов), пылающий шар (2 заряда), рассеивание магии (3 заряда), создание прохода (5 зарядов), телекинез (5 зарядов) или уход в иной мир (7 зарядов). <br>Вы также можете действием наложить посохом одно из следующих заклинаний, не тратя зарядов: волшебная рука, волшебный замок, защита от добра и зла, обнаружение магии, свет или увеличение/уменьшение. <br><b>Карающий удар.</b> Вы можете действием сломать посох о колено или твёрдую поверхность, совершая, таким образом, карающий удар. Посох уничтожается, испуская оставшуюся в нём магию взрывом, заполняющим сферу радиусом 30 футов с центром на нём. <br>У вас есть 50-процентный шанс мгновенно перенестись на случайный план существования, избежав взрыва. Если вы его не избегаете, то получаете урон силовым полем, равный 16 × количество зарядов в посохе. Все другие существа в области взрыва должны совершить спасбросок Ловкости со Сл 17. При провале существо получает урон, зависящий от того, как далеко оно находится от исходной точки взрыва, как показано в таблице. При успехе существо получает половину этого урона.Расстояние от исходной точки |Урон@10 фт. или ближе| 8 × количество зарядов в посохе@от 11 до 20 фт. |6 × количество зарядов в посохе@от 21 до 30 фт. |4 × количество зарядов в посохе"
     }
   },
@@ -4268,6 +4289,7 @@ var allItems = [
     },
     "ru": {
       "name": "Посох питона",
+      "attunement": "(требует настройки жрецом, друидом или колдуном)",
       "text": "Вы можете действием произнести командное слово и бросить посох на пол в пределах 10 футов от себя. <br>Посох становится гигантским удавом (смотрите характеристики в Бестиарии) под вашим контролем и у него есть своё место в порядке инициативы. Произнеся бонусным действием командное слово ещё раз, вы возвращаете посоху его естественный облик, и он будет лежать в пространстве, ранее занимаемом удавом. <br>В свой ход вы можете мысленно отдавать команды удаву, если он находится в пределах 60 футов от вас и дееспособен. Вы определяете, какие действия ему совершать и куда перемещаться в следующем ходу, или же можете отдать общую команду, такую как «нападай на врагов» или «охраняй место». Если хиты змеи опустятся до 0, она умирает и становится посохом. <br>Посох при этом раскалывается на куски и уничтожается. Если змея становится посохом до того как потеряет все хиты, она их тут же восстанавливает."
     }
   },
@@ -4283,6 +4305,7 @@ var allItems = [
     },
     "ru": {
       "name": "Посох леса",
+      "attunement": "(требует настройки друидом)",
       "text": "Этот посох можно использовать как магический боевой посох, предоставляющий бонус +2 к броскам атаки и урона им. Держа его, вы получаете бонус +2 к броскам атаки заклинаниями. <br>У посоха есть 10 зарядов для описанных ниже свойств. Он ежедневно восстанавливает 1к6 + 4 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «1», посох теряет все свои свойства и становится немагическим боевым посохом. <br><b>Заклинания.</b> Вы можете действием потратить 1 или несколько зарядов посоха, чтобы наложить им одно из следующих заклинания, используя свою Сл спасброска от заклинания: дружба с животными (1 заряд), дубовая кора (2 заряда), поиск животных или растений (2 заряда), пробуждение разума (5 зарядов), разговор с животными (1 заряд), разговор с растениями (3 заряда) или терновая стена (6 зарядов). <br>Вы также можете действием накладывать посохом заклинание бесследное передвижение, не тратя зарядов. <br><b>Древесный облик.</b> Вы можете действием воткнуть посох в плодородную землю и потратить 1 заряд, чтобы превратить посох в здоровое дерево. Высота дерева 60 футов, диаметр ствола — 5 футов, а ветви на макушке раскинуты в радиусе 20 футов. Это дерево выглядит обычным, но излучает слабую магию школы Преобразования, если становится целью обнаружения магии. Прикоснувшись к дереву и произнеся действием командное слово, вы возвращаете посоху его обычный облик. Все находящиеся на дереве существа при этом падают."
     }
   },
@@ -4307,13 +4330,14 @@ var allItems = [
       "name": "STAFF OF WITHERING",
       "type": "Staff",
       "rarity": 3,
-      "attunement": "(requires attunement by a cleric, druid, orwarlock)",
+      "attunement": "(requires attunement by a cleric, druid, or warlock)",
       "text": "This staff has 3 charges and regains 1d3 expended charges daily at dawn. <br>The staff can be wielded as a magic quarterstaff. On a hit, it deals damage as a normal quarterstaff, and you can expend 1 charge to deal an extra 2d10 necrotic damage to the target. In addition, the target must succeed on a DC 15 Constitution saving throw or have disadvantage for 1 hour on any ability check or saving throw that uses Strength or Constitution.",
       "source": "DMG",
       "img": "STAFF_OF_WITHERING.jpg"
     },
     "ru": {
       "name": "Посох иссушения",
+      "attunement": "(требует настройки жрецом, друидом или чародеем)",
       "text": "У этого посоха 3 заряда, и он ежедневно восстанавливает 1к3 заряда на рассвете. <br>Этот посох можно использовать как магический боевой посох. При попадании он причиняет урон как обычный боевой посох, и вы можете потратить 1 заряд, чтобы причинить цели дополнительный урон некротической энергией 2к10. Кроме того, цель должна преуспеть в спасброске Телосложения со Сл 15, иначе она в течение 1 часа будет совершать с помехой проверки характеристик и спасброски, использующие Силу или Телосложение."
     }
   },
@@ -4371,13 +4395,14 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(longsword)",
       "rarity": 5,
-      "attunement": "(requires attunement bya creature with the same alignment as the sword)",
+      "attunement": "(requires attunement by a creature with the same alignment as the sword)",
       "text": "In the world of Greyhawk, only nine of these blades are known to exist. Each is patterned after the legendary sword Fragarach, which is variously translated as \"Final Word.\" Each of the nine swords has its own name and alignment, and each bears a different gem in its pommel. <br><table><tr><td>Name</td><td>Alignment</td><td>Gem</td></tr><tr><td>Answerer</td><td>Chaotic good</td><td>Emerald</td></tr><tr><td>Back Talker</td><td>Chaotic evil</td><td>Jet</td></tr><tr><td>Concluder</td><td>Lawful neutral</td><td>Amethyst</td></tr><tr><td>Last Quip</td><td>Chaotic neutral</td><td>Tourmaline</td></tr><tr><td>Rebutter</td><td>Neutral good</td><td>Topaz</td></tr><tr><td>Replier</td><td>Neutral</td><td>Peridot</td></tr><tr><td>Retorter</td><td>Lawful good</td><td>Aquamarine<br>•</td></tr><tr><td>Scather</td><td>Lawful evil</td><td>Garnet</td></tr></table><br>You gain a +3 bonus to attack and damage rolls made with this sword. In addition, while you hold the sword, you can use your reaction to make one melee attack with it against any creature in your reach that deals damage to you. You have advantage on the attack roll, and any damage dealt with this special attack ignores any damage immunity or resistance the target has.",
       "source": "DMG",
-      "img": "SWORD_OF_ANSWERING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Меч ответа",
+      "attunement": "(требует настройки созданием того же мировоззрения, что и меч)",
       "text": " В мире Грейхок известны девять таких мечей. Все они изготовлены по образу легендарного меча, Фрагараха, чьё название часто переводят как «Последнее слово». У каждого из девяти мечей есть своё название и своё мировоззрение, и у всех у них в навершии использованы разные драгоценные камни. <br><table><tr><td>Название</td><td>Мировоззрение</td><td>Камень</td></tr><tr><td>Возразитель</td><td>Законно-доброе</td><td>Аквамарин</td></tr><tr><td>Грубитель</td><td>Законно-злое</td><td>Гранат</td></tr><tr><td>Дерзитель</td><td>Хаотично-злое</td><td>Агат</td></tr><tr><td>Опровергатель</td><td>Нейтрально-доброе</td><td>Топаз</td></tr><tr><td>Ответчик</td><td>Хаотично-доброе</td><td>Изумруд</td></tr><tr><td>Подавитель</td><td>Нейтрально-злое</td><td>Шпинель</td></tr><tr><td>Рассказчик</td><td>Нейтральное</td><td>Перидот</td></tr><tr><td>Решатель</td><td>Законно-нейтральное</td><td>Аметист</td></tr><tr><td>Язвитель</td><td>Хаотично-нейтральное</td><td>Турмалин</td></tr></table>Вы получаете бонус +3 к броскам атаки и урона, совершаемым этим мечом. Кроме того, пока вы держите этот меч, вы можете реакцией совершать им одну рукопашную атаку по существу, находящемуся в пределах вашей досягаемости, которое причиняет вам урон. Вы совершаете этот бросок атаки с преимуществом, и урон, причиняемый этой особой атакой, игнорирует все сопротивления к урону и иммунитеты, которые могут быть у цели.",
       "typeAdditions": "(longswилиd)"
     }
@@ -4424,7 +4449,7 @@ var allItems = [
       "rarity": 2,
       "text": "You gain a +1 bonus to attack and damage rolls made with this magic weapon. <br><b>Curse.</b> This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the cu:-: to you. As long as you remain cursed, you are unwilli- ~ to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons othethan this one. <br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed sa,-you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it. <br>You can break the curse in the usual ways. <br>Alternatively, casting banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
       "source": "DMG",
-      "img": "SWORD_OF_VENGEANCE.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Меч мести",
@@ -4441,7 +4466,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means. <br>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. <br>At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.",
       "source": "DMG",
-      "img": "SWORD_OF_WOUNDING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Меч ранения",
@@ -4458,10 +4483,11 @@ var allItems = [
       "attunement": "(requires attunement by acreature of good alignment)",
       "text": "This talisman is a mighty symbol of goodness. A creature that is neither good nor evil in alignment takes 6d6 radiant damage upon touching the talisman. An evil creature takes 8d6 radiant damage upon touching the talisman. Either sort of creature takes the damage again each time it ends its turn holding or carrying the talisman. <br>If you are a good cleric or paladin, you can use the talisman as a holy symbol, and you gain a +2 bonus to pel! attack rolls while you wear or hold it. <br>The talisman has 7 charges. If you are wearing or holding it, you can use an action to expend 1 charge from it and choose one creature you can see on the ground within 120 feet of you. If the target is of evil alignment, a flaming fissure opens under it. The target must succeed on a DC 20 Dexterity saving throw or fall into the fissure and be destroyed, leaving no remains. <br>The fissure then closes, leaving no trace of its existence. <br>When you expend the last charge, the talisman disperses into motes of golden light and is destroyed.",
       "source": "DMG",
-      "img": "TALISMAN_OF_PURE_GOOD.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Талисман чистого добра",
+      "attunement": "(требует настройки созданием с добрым мировоззрением)",
       "text": "Этот талисман — могущественный символ добра. Существа, чьё мировоззрение и не доброе и не злое, получают урон излучением 6к6, когда прикасаются к талисману. Злое существо получает урон излучением 8к6, когда прикасается к талисману. Все эти существа получают такой же урон каждый раз, когда оканчивают ход, держа или неся талисман. <br>Если вы — добрый жрец или паладин, вы можете использовать талисман как святой символ, и вы получаете бонус +2 к броскам атаки заклинаний, пока носите или держите его. <br>У талисмана есть 7 зарядов. Если вы носите или держите его, вы можете действием потратить 1 заряд и выбрать одно существо, которое видите находящимся на полу в пределах 120 футов от вас. Если у цели злое мировоззрение, под ней откроется огненная расщелина. Цель должна преуспеть в спасброске <br>Ловкости со Сл 20, иначе она упадёт в расщелину и уничтожится, не оставив после себя останков. Расщелина после этого закрывается, не оставляя следов. <br>Когда вы тратите последний заряд, талисман распадается искрами золотистого света и уничтожается."
     }
   },
@@ -4493,6 +4519,7 @@ var allItems = [
     },
     "ru": {
       "name": "Талисман абсолютного зла",
+      "attunement": "(требует настройки создание со злым мировоззреним)",
       "text": "Этот предмет символизирует чистое зло. Существа, чьё мировоззрение и не доброе и не злое, получают урон некротической энергией 6к6, когда прикасаются к талисману. Доброе существо получает урон некротической энергией 8к6, когда прикасается к талисману. Все эти существа получают такой же урон каждый раз, когда оканчивают ход, держа или неся талисман. <br>Если вы — злой жрец или паладин, вы можете использовать талисман как святой символ, и вы получаете бонус +2 к броскам атаки заклинаний, пока носите или держите его. <br>У талисмана есть 6 зарядов. Если вы носите или держите его, вы можете действием потратить 1 заряд и выбрать одно существо, которое видите находящимся на полу в пределах 120 футов от вас. Если у цели доброе мировоззрение, под ней откроется огненная расщелина. Цель должна преуспеть в спасброске Ловкости со Сл 20, иначе она упадёт в расщелину и уничтожится, не оставив после себя останков. Расщелина после этого закрывается, не оставляя следов. <br>Когда вы тратите последний заряд, талисман растворяется дурно пахнущей слизью и уничтожается."
     }
   },
@@ -4545,13 +4572,14 @@ var allItems = [
       "name": "TOME OF THE STILLED TONGUE",
       "type": "Wondrous item",
       "rarity": 5,
-      "attunement": "(requires attunement by awizard)",
+      "attunement": "(requires attunement by a wizard)",
       "text": "This thick leather-bound volume has a desiccated tongue pinned to the front cover. Five of these tomes exist, and it's unknown which one is the original. The grisly cover decoration on the first tome of the stilled tongue once belonged to a treacherous former servant of the lich-god Vecna, keeper of secrets. The tongues pinned to the covers of the four copies came from othe:spellcasters who crossed Vecna. The first few pages o' each tome are filled with indecipherable scrawls. The remaining pages are blank and pristine. <br>If you can attune to this item, you can use it as a spellbook and an arcane focus. In addition, while holding the tome, you can use a bonus action to cast a spell you have written in this tome, without expend in a spell slot or using any verbal or somatic component <br>Once used, this property of the tome can't be used agai::. until the next dawn. <br>While attuned to the book, you can remove the tonguF from the book's cover. If you do so, all spells written in the book are permanently erased. <br>Vecna watches anyone using this tome. He can also <br>Tite cryptic messages in the book. These messages appear at midnight and fade away after they are read.",
       "source": "DMG",
-      "img": "TOME_OF_THE_STILLED_TONGUE.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Том молчаливого языка",
+      "attunement": "(требует настройки волшебником)",
       "text": "У этого толстого тома с кожаным переплётом к обложке пришит язык. Всего существует пять таких томов, и никто не может сказать, какой из них оригинальный. Жуткое украшение на обложке первого тома когда-то было языком вероломного слуги личабога Векны, хранителя тайн. Языки на обложках четырёх копий принадлежали заклинателям, предавшим Векну. Первые несколько страниц каждого тома исписаны непонятными каракулями. Оставшиеся страницы девственно чисты. <br>Если вы можете настроиться на этот том, вы можете использовать его в качестве магической фокусировки. Кроме того, держа этот том в руке, вы можете бонусным действием наложить заклинание, которое вы в него записали, не тратя ячейку заклинания и не используя ни вербальный, ни соматический компонент. Вы не можете повторно использовать это свойство тома до следующего рассвета. <br>Будучи настроенным на эту книгу, вы можете оторвать язык с обложки. Если вы это сделаете, все заклинания, записанные в ней, мгновенно стираются. <br>Векна следит за всеми, кто использует этот том. <br>Он также записывает в книгу таинственные сообщения. Эти сообщения появляются в полночь и исчезают после прочтения."
     }
   },
@@ -4576,7 +4604,7 @@ var allItems = [
       "rarity": 5,
       "text": "This tube holds milky liquid with a strong alcohol ~me lt. You can use an action to pour the contents of the rube onto a surface within reach. The liquid instantly dissolves up to 1 square foot of adhesive it touches, including sovereign glue.",
       "source": "DMG",
-      "img": "TRIDENT_OF_FISH_COMMAND_UNIVERSAL_SOLVENT.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Трезубец командования рыбами",
@@ -4629,6 +4657,7 @@ var allItems = [
     },
     "ru": {
       "name": "Волшебная палочка сковывания",
+      "attunement": "(требует настройки заклинателем)",
       "text": "У этой волшебной палочки 7 зарядов для использования описанными ниже свойствами. Она ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится. <br>Заклинания. Если вы держите эту палочку, вы можете действием потратить часть зарядов, чтобы наложить одно из следующих заклинаний (Сл спасброска 17): удержание чудовища (5 зарядов) или удержание личности (2 заряда). <br>Помощь в освобождении: Если вы держите эту палочку, вы можете реакцией потратить 1 заряд, чтобы получить преимущество для спасброска, совершаемого для того, чтобы не быть парализованным или опутанным, или вы можете потратить 1 заряд, чтобы получить преимущество для проверки, совершаемой, чтобы вырваться из захвата."
     }
   },
@@ -4676,6 +4705,7 @@ var allItems = [
     },
     "ru": {
       "name": "Волшебная палочка огненных шаров",
+      "attunement": "(требует настройки заклинателем)",
       "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 или несколько зарядов, чтобы наложить ей заклинание огненный шар (Сл спасброска 15). За 1 заряд вы накладываете это заклинание 3-го уровня. Вы можете увеличить уровень заклинания на 1 за каждый дополнительный используемый заряд. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
@@ -4691,6 +4721,7 @@ var allItems = [
     },
     "ru": {
       "name": "Волшебная палочка молний",
+      "attunement": "(требует настройки заклинателем)",
       "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 или несколько зарядов, чтобы наложить ей заклинание молния (Сл спасброска 15). За 1 заряд вы накладываете это заклинание 3-го уровня. Вы можете увеличить уровень заклинания на 1 за каждый дополнительный используемый заряд. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
@@ -4734,6 +4765,7 @@ var allItems = [
     },
     "ru": {
       "name": "Волшебная палочка паралича",
+      "attunement": "(требует настройки заклинателем)",
       "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд, чтобы выпустить из её кончика тонкий синий луч в сторону существа, которое видите в пределах 60 футов. Цель должна преуспеть в спасброске Телосложения со Сл 15, иначе она станет парализованной на 1 минуту. <br>В конце каждого своего хода цель может повторять спасбросок, оканчивая эффект на себе при успехе. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
@@ -4749,6 +4781,7 @@ var allItems = [
     },
     "ru": {
       "name": "Волшебная палочка превращения",
+      "attunement": "(требует настройки заклинателем)",
       "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд, чтобы наложить ей заклинание превращение (Сл спасброска 15). <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
@@ -4757,7 +4790,7 @@ var allItems = [
       "name": "WAND OF SECRETS",
       "type": "Wand",
       "rarity": 2,
-      "text": "The wand has 3 charges. While holding it. you can use an action to expend 1 of its charges, and if a secret door or trap is within 30 feet of you, the wand pulses and points at the one nearest to you. The wand regains ld3 expended charges daily at dawn. <br>WAND OF THE WAR MAGE, +1 , +2 , OR +3 <br>Wand, uncommon (+1), rare (+2), or very rare (+3) (requires attunement by a spellcaster) <br>While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity. In addition, you ignore half cover when making a spell attack.",
+      "text": "The wand has 3 charges. While holding it. you can use an action to expend 1 of its charges, and if a secret door or trap is within 30 feet of you, the wand pulses and points at the one nearest to you. The wand regains ld3 expended charges daily at dawn. ",
       "source": "DMG",
       "img": "WAND_OF_SECRETS.jpg"
     },
@@ -4774,10 +4807,11 @@ var allItems = [
       "attunement": "(requires attunement by a spellcaster)",
       "text": "While holding this wand, you gain a bonus to spell attack rolls, you ignore half cover when making a spell attack.",
       "source": "DMG",
-      "img": ""
+      "img": "WAND_OF_THE_WAR_MAGE.jpg"
     },
     "ru": {
       "name": "Волшебная палочка боевого мага +1",
+      "attunement": "(требует настройки заклинателем)",
       "text": "Держа эту палочку в руке, вы получаете бонус к броскам атаки заклинаний. Кроме того, вы игнорируете укрытие на половину, когда совершаете атаки заклинаниями."
     }
   },
@@ -4789,10 +4823,11 @@ var allItems = [
       "attunement": "(requires attunement by a spellcaster)",
       "text": "While holding this wand, you gain a bonus to spell attack rolls, you ignore half cover when making a spell attack.",
       "source": "DMG",
-      "img": ""
+      "img": "WAND_OF_THE_WAR_MAGE.jpg"
     },
     "ru": {
       "name": "Волшебная палочка боевого мага +2",
+      "attunement": "(требует настройки заклинателем)",
       "text": "Держа эту палочку в руке, вы получаете бонус к броскам атаки заклинаний. Кроме того, вы игнорируете укрытие на половину, когда совершаете атаки заклинаниями."
     }
   },
@@ -4804,10 +4839,11 @@ var allItems = [
       "attunement": "(requires attunement by a spellcaster)",
       "text": "While holding this wand, you gain a bonus to spell attack rolls, you ignore half cover when making a spell attack.",
       "source": "DMG",
-      "img": ""
+      "img": "WAND_OF_THE_WAR_MAGE.jpg"
     },
     "ru": {
       "name": "Волшебная палочка боевого мага +3",
+      "attunement": "(требует настройки заклинателем)",
       "text": "Держа эту палочку в руке, вы получаете бонус к броскам атаки заклинаний. Кроме того, вы игнорируете укрытие на половину, когда совершаете атаки заклинаниями."
     }
   },
@@ -4823,6 +4859,7 @@ var allItems = [
     },
     "ru": {
       "name": "Волшебная палочка паутины",
+      "attunement": "(требует настройки заклинателем)",
       "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд, чтобы наложить ей заклинание паутина (Сл спасброска 15). <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
@@ -4838,6 +4875,7 @@ var allItems = [
     },
     "ru": {
       "name": "Волшебная палочка чудес",
+      "attunement": "(требует настройки заклинателем)",
       "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд и выбрать цель в пределах 120 футов. Цель должна быть существом, предметом или точкой в пространстве. <br>Бросьте к100 и определите последствия с помощью таблицы. <br>Если эффект накладывает заклинание, Сл спасброска от него равна 15. Если обычно у этого заклинания есть дистанция в футах, то эта дистанция становится равной 120 футам. <br>Если эффект покрывает площадь, то вы должны сделать центром заклинания цель и включить её в качестве цели заклинания. Если эффект может воздействовать на несколько разных субъектов, Мастер случайным образом выбирает, кто станет целью. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится. <br><a href='https://tentaculus.ru/archive/tables/wonder_stick_standart.html'>Эффекты</a>"
     }
   },
@@ -4850,7 +4888,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "TYou have a bonus to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
-      "img": ""
+      "img": "WEAPON.jpg"
     },
     "ru": {
       "name": "Оружие +1",
@@ -4868,7 +4906,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "TYou have a bonus to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
-      "img": ""
+      "img": "WEAPON.jpg"
     },
     "ru": {
       "name": "Оружие +2",
@@ -4886,7 +4924,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "TYou have a bonus to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
-      "img": ""
+      "img": "WEAPON.jpg"
     },
     "ru": {
       "name": "Оружие +3",
@@ -4981,7 +5019,7 @@ var allItems = [
       "rarity": 2,
       "text": "While wearing this cap underwater, you can speak its command word as an action to create a bubble of air around your head. It allows you to breathe normally underwater. This bubble stays with you until you speak the command word again, the cap is removed, or you are no longer underwater.",
       "source": "DMG",
-      "img": "CAP_OF_WATER_BREATHING.jpg"
+      "img": ""
     },
     "ru": {
       "name": "Шапка подводного дыхания",
@@ -5012,22 +5050,8 @@ var allItems = [
       "img": "CIRCLET_OF_BLASTING.jpg"
     },
     "ru": {
-      "name": "Бусина силы",
+      "name": "Обруч сжигания",
       "text": "Пока на вас надета эта диадема, вы можете действием сотворить заклинание <a href='https://tentaculus.ru/spells/#q=scorching_ray'>ОБЖИГАЮЩИЙ ЛУЧ</a>. Вы совершаете магическую атаку с бонусом +5. Диадему нельзя использовать повторно до следующего рассвета."
-    }
-  },
-  {
-    "en": {
-      "name": "EFREETI BOTTLE",
-      "type": "Wondrous item",
-      "rarity": 4,
-      "text": "This painted brass bottle weighs 1 pound. When you  use an action to remove the stopper, a cloud of thick  smoke flows out of the bottle. At the end of your turn,  die smoke disappears with a flash of harmless fire,  and an efreeti appears in an unoccupied space within  30 feet of you. See the Monster Manual for the efreeti's  statistics.  <br>The first time the bottle is opened, the DM rolls to  determine what happens. <br> <table><tr><td>dlOO</td><td>Effect</td></tr><tr><td>01-10</td><td>The efreeti attacks you. After fighting for 5 rounds, the efreeti disappears , and the bottle loses its magic.</td></tr><tr><td>ll-90</td><td>The efreeti serves you for 1 hour, doing as you command. Then the efreeti returns to the bottle, and a new stopper contains it. The stopper can't be removed for 24 hours . The next two times the bottle is opened , the same effect occurs. If the bottle is opened a fourth time , the efreeti escapes and disappears, and the bottle loses its magic.</td></tr><tr><td>91-00</td><td>The efreeti can cast the wish spell three times for you. It disappears when it grants the final wish or after 1 hour, and the bottle loses its magic.</td></tr></table>",
-      "source": "DMG",
-      "img": "EFREETI_BOTTLE.jpg"
-    },
-    "ru": {
-      "name": "Бутылка с ифритом",
-      "text": "Эта раскрашенная латунная бутылка весит 1 фунт. <br>Если вы действием вынете пробку, из бутылки вырвется густое облако дыма. В конце вашего хода дым исчезает во вспышке безвредного огня, и в свободном пространстве в пределах 30 футов от вас появляется ифрит. Характеристики ифрита смотрите в Бестиарии. <br>Когда бутылку открывают в первый раз, Мастер определяет, что произойдёт дальше: <br> <table><tr><td>dlOO</td><td>Эффект</td></tr><tr><td>01-10</td><td>Ифрит нападёт на вас. Через 5 раундов сражения ифрит исчезает, а бутылка теряет магию.</td></tr><tr><td>ll-90</td><td>Ифрит служит вам 1 час, выполняя все ваши команды. После этого ифрит возвращается в бутылку, которая закрывается новой пробкой. Пробку нельзя вынуть в течение 24 часов. В последующие два открытия будет происходить то же самое. Если бутылку откроют в четвёртый раз, ифрит сбежит и исчезнет, а бутылка потеряет магию.</td></tr><tr><td>91-00</td><td>Ифрит может три раза наложить для вас заклинание исполнение желаний. Он исчезает после того как исполнит последнее желание или спустя 1 час, а бутылка после этого теряет магию.</td></tr></table>"
     }
   }
 ]

@@ -65,33 +65,59 @@
     width: 2.5in;
     margin-right: 1px;
     margin-top: 1px;
-    float: left; 
-    // .row{
-    //     border-bottom: 2px solid @mainColor; 
-    //     display: flex;
-    //     flex-direction: row;
-    //     align-content: stretch;
-    //     .cell{  
-    //         float: none;
-    //         text-align: center;
-    //         font-size: 65%;      
-            
-    //         &:first-of-type{
-    //             border-right: 1px solid @mainColor;      
-    //         }
-    //         &:last-of-type{
-    //             border-left: 1px solid @mainColor;      
-    //         }
-    //         span, b{
-    //             display: block;
-    //         }
-    //         b{
-    //             text-transform: uppercase;
-    //             font-size: 90%;
-    //             padding: 2px 0 0;
-    //         }
-    //     }
-    // }
+    float: left;
+
+  table{
+    tr:nth-child(even){
+      background: lighten(@l-gray, 10%);
+    }
+  }
+
+    &.textView{
+      float: none;
+      width: auto;
+      max-width: 90rem;
+      margin: 0 auto;
+      .ItemCard {
+        height: auto;
+        //background: @mainColor;
+        //border: 2px solid @mainColor;
+        border-width: 3px;
+        position: relative;
+        color: @m-gray - #111;
+        margin-bottom: 1rem;
+
+        .content{
+          position: relative;
+          min-height: 19rem;
+          background-image: none;
+         // background-position: right top;
+        }
+        .header_info{
+          flex-direction: row;
+          flex-wrap: wrap;
+          border-bottom: 1px solid @mainColor;
+
+          div, h1{
+            margin-right: 0.5rem;
+            margin-left: 0.1rem;
+          }
+        }
+
+        .info{
+          margin-top: 0;
+          margin-bottom: 0.8rem;
+          max-height: 900rem;
+          padding: 0.9em;
+          line-height: 140%;
+        }
+        .img{
+          display: inline;
+          float: right;
+          max-height: 19rem;
+        }
+      }
+    }
 }
 
 .ItemCard{
@@ -102,35 +128,35 @@
     //overflow: hidden;
     position: relative;
     color: @m-gray - #111;
-    
+
     &.selected{
-    	transform: scale(0.94);
-    	outline: 5px rgba(250,250,250,.8) solid;
-    	transition: outline .2s;
-    	&:hover{
-    		outline-color: @color;
-    	}
+        transform: scale(0.94);
+        outline: 5px rgba(250,250,250,.8) solid;
+        transition: outline .2s;
+        &:hover{
+            outline-color: @color;
+        }
     }
-    
+
     .bHideItem, .bLockItem, .bUnlockItem{
         position: absolute;
         top: -.1em;
         color: @l-gray;
         cursor: pointer;
         transition: color .3s;
-        
+
         &:hover{
-            color: @color + #222;    
+            color: @color + #222;
         }
         &:active{
-            color: @color;    
+            color: @color;
         }
     }
     .bHideItem{
-       right: .1em; 
+        right: .1em;
     }
     .bLockItem, .bUnlockItem{
-       left: .1em; 
+        left: .1em;
     }
     .content{
         border-radius: @radius;
@@ -140,21 +166,22 @@
         bottom: 0;
         left: 0;
         right: 0;
-        
+
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: stretch;
-        
+
         background-repeat: no-repeat;
         background-position: center 2em;
         background-size: contain;
     }
-    // .cell{
-    //     span{
-    //         font-size: 109%;
-    //     }
-    // }
+    .header_info{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
     h1{
         font-size: 95%;
         margin: 0;
@@ -164,82 +191,64 @@
         text-align: center;
         text-transform: uppercase;
         background: @bgwhite;
-       // border-bottom: 2px solid @mainColor;
+        // border-bottom: 2px solid @mainColor;
     }
     .subtitle{
-    	text-align: center;
+        text-align: center;
         background: @bgwhite;
     }
-    // .materials{
-    //     color: @white;
-    //     background: @mainColor !important;
-    //     font-size: 75%;
-    //     padding: 0 2px;
-    //     font-style: oblique;
-    // }
+    .info{
+      //font-size: 75%;
+      padding: 2px;
+      margin-top: auto;
+      margin-bottom: 1.5em;
+      overflow-y: auto;
+      color: @black;
+      max-height: 11rem;
+      //flex-shrink: 99;
+      //flex-grow: 99;
+      background: @bgwhite;
+      line-height: normal;
+      .scrollbars(5px, @m-gray, @l-gray);
+    }
     .text{
-        //font-size: 75%;
-        padding: 2px;
-        margin-top: auto;
-        margin-bottom: 1.5em;
-        overflow-y: auto;
-        color: @black;
-        max-height: 11rem;
-        //flex-shrink: 99;
-        //flex-grow: 99;
-        background: @bgwhite;
-        line-height: normal;
-        .scrollbars(5px, @m-gray, @l-gray);
+
+    }
+    .img{
+      display: none;
     }
     .sizeButtonsContainer{
-    	position: absolute;
-    	bottom: 0;
-    	left: .1em;
-    	right: .1em;
-    	display: flex;
+        position: absolute;
+        bottom: 0;
+        left: .1em;
+        right: .1em;
+        display: flex;
         flex-direction: row;
         align-content: stretch;
         justify-content: space-between;
-    	.textMin, .textMax{
-    		padding: 0 .5em;
-    		font-size: 120%;
-    		//color: @d-gray;
-    		//opacity: 0.3;
-    		color: @l-gray - #111;
-    		font-weight: bold;
-    		text-decoration: none;
-    		transition: color 0.2s;
-    		&:hover{
-    			color: @color;
-    		}
-    	}
+        .textMin, .textMax{
+            padding: 0 .5em;
+            font-size: 120%;
+            //color: @d-gray;
+            //opacity: 0.3;
+            color: @l-gray - #111;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.2s;
+            &:hover{
+                color: @color;
+            }
+        }
     }
     .source{
-    	text-align: center;
-    	position: absolute;
-    	bottom: 0px;	
-    	width: 100%;
-    	font-size: 90%;
-    	font-weight: bold;
-    	color: darken(@l-gray, 10%);
+        text-align: center;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        font-size: 90%;
+        font-weight: bold;
+        color: darken(@l-gray, 10%);
     }
-    // .class{
-    //     position: absolute;
-    //     left: 1px;
-    //     bottom: -20px;
-    //     font-size: 70%;
-    //     color: @white;
-    //     cursor: default;
-    // }
-    // .school{
-    //     position: absolute;
-    //     right: 1px;
-    //     bottom: -20px;
-    //     font-size: 70%;
-    //     color: @white;
-    //     cursor: default;
-    // }
-
 }
 
 .lockedItem{
@@ -249,195 +258,64 @@
     }
 }
 
-.Bard{
+.common{
+  @mainColor: #607d8b;
     .ItemCard{
-        @mainColor: #e91e63;
         background-color: @mainColor;
         border-color: @mainColor;
-        h1{
-            border-bottom-color: @mainColor;
-        }
-        .materials{
-            background: @mainColor !important;
-        }
-        .row{
-            border-bottom-color: @mainColor; 
-            .cell{ 
-                &:first-of-type{
-                    border-right-color: @mainColor;      
-                }
-                &:last-of-type{
-                    border-left-color: @mainColor;      
-                }                
-            }
-        }
     }
+  &.textView{
+    h1{
+      color: @mainColor;
+    }
+  }
 }
-.Cleric{
+.uncommon{
+  @mainColor: #8bc34a;
     .ItemCard{
-        @mainColor: #FDD835;
         background-color: @mainColor;
         border-color: @mainColor;
-        h1{
-            border-bottom-color: @mainColor;
-        }
-        .materials{
-            background: @mainColor !important;
-        }
-        .row{
-            border-bottom-color: @mainColor; 
-            .cell{ 
-                &:first-of-type{
-                    border-right-color: @mainColor;      
-                }
-                &:last-of-type{
-                    border-left-color: @mainColor;      
-                }                
-            }
-        }
     }
+  &.textView{
+    h1{
+      color: @mainColor;
+    }
+  }
 }
-.Druid{
+.rare{
+  @mainColor: #03a9f4;
     .ItemCard{
-        @mainColor: #795548;
         background-color: @mainColor;
         border-color: @mainColor;
-        h1{
-            border-bottom-color: @mainColor;
-        }
-        .materials{
-            background: @mainColor !important;
-        }
-        .row{
-            border-bottom-color: @mainColor; 
-            .cell{ 
-                &:first-of-type{
-                    border-right-color: @mainColor;      
-                }
-                &:last-of-type{
-                    border-left-color: @mainColor;      
-                }                
-            }
-        }
     }
+  &.textView{
+    h1{
+      color: @mainColor;
+    }
+  }
 }
-.Paladin{
+.very_rare{
+  @mainColor: #9c27b0;
     .ItemCard{
-        @mainColor: #2196f3;
         background-color: @mainColor;
         border-color: @mainColor;
-        h1{
-            border-bottom-color: @mainColor;
-        }
-        .materials{
-            background: @mainColor !important;
-        }
-        .row{
-            border-bottom-color: @mainColor; 
-            .cell{ 
-                &:first-of-type{
-                    border-right-color: @mainColor;      
-                }
-                &:last-of-type{
-                    border-left-color: @mainColor;      
-                }                
-            }
-        }
     }
-}
-.Ranger{
-    .ItemCard{
-        @mainColor: #4caf50;
-        background-color: @mainColor;
-        border-color: @mainColor;
-        h1{
-            border-bottom-color: @mainColor;
-        }
-        .materials{
-            background: @mainColor !important;
-        }
-        .row{
-            border-bottom-color: @mainColor; 
-            .cell{ 
-                &:first-of-type{
-                    border-right-color: @mainColor;      
-                }
-                &:last-of-type{
-                    border-left-color: @mainColor;      
-                }                
-            }
-        }
+  &.textView{
+    h1{
+      color: @mainColor;
     }
+  }
 }
-.Sorcerer{
-    .ItemCard{
-        @mainColor: #ff9800;
-        background-color: @mainColor;
-        border-color: @mainColor;
-        h1{
-            border-bottom-color: @mainColor;
-        }
-        .materials{
-            background: @mainColor !important;
-        }
-        .row{
-            border-bottom-color: @mainColor; 
-            .cell{ 
-                &:first-of-type{
-                    border-right-color: @mainColor;      
-                }
-                &:last-of-type{
-                    border-left-color: @mainColor;      
-                }                
-            }
-        }
+.legendary{
+  @mainColor: #ffc107;
+    .ItemCard {
+      background-color: @mainColor;
+      border-color: @mainColor;
     }
-}
-.Warlock{
-    .ItemCard{
-        @mainColor: #673ab7;
-        background-color: @mainColor;
-        border-color: @mainColor;
-        h1{
-            border-bottom-color: @mainColor;
-        }
-        .materials{
-            background: @mainColor !important;
-        }
-        .row{
-            border-bottom-color: @mainColor; 
-            .cell{ 
-                &:first-of-type{
-                    border-right-color: @mainColor;      
-                }
-                &:last-of-type{
-                    border-left-color: @mainColor;      
-                }                
-            }
-        }
+  &.textView{
+    h1{
+      color: @mainColor;
     }
+  }
 }
-.Wizard{
-    .ItemCard{
-        @mainColor: #f44336;
-        background-color: @mainColor;
-        border-color: @mainColor;
-        h1{
-            border-bottom-color: @mainColor;
-        }
-        .materials{
-            background: @mainColor !important;
-        }
-        .row{
-            border-bottom-color: @mainColor; 
-            .cell{ 
-                &:first-of-type{
-                    border-right-color: @mainColor;      
-                }
-                &:last-of-type{
-                    border-left-color: @mainColor;      
-                }                
-            }
-        }
-    }
-}
+

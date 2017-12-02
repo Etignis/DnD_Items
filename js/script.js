@@ -270,7 +270,7 @@ window.onload = function(){
     return aReturn.join(", ");
 	}
 
-	function createCard(oItem, lang, sLockedItem) {
+	function createCard(oItem, lang, sLockedItem, fText) {
 		if (oItem[lang] || (lang="en", oItem[lang])) {
 			var o = oItem[lang];
 			var s_name = getItemAttr(oItem, "name", lang);
@@ -278,11 +278,14 @@ window.onload = function(){
 			var s_type = getItemAttrFromDB(oTypes, {attr: getItemAttr(oItem, "type", lang), lang: lang});
 			var s_gender = getItemAttrFromDB(oTypes, {attr: getItemAttr(oItem, "type", lang), subattr: "gender", lang: lang});
 			var s_rariry = getItemAttrFromDB(oRarity, {attr: getItemAttr(oItem, "rarity", lang), subattr: s_gender, lang: lang});
-			var s_attunement = getItemAttr(oItem, getItemAttr(oItem, "attunement", lang), lang);
+			var s_attunement = getItemAttr(oItem, "attunement", lang);
+      var s_typeAdditions = getItemAttr(oItem, "typeAdditions", lang);
 			var s_notes = getItemAttr(oItem, "notes", lang);
 			var s_text = getItemAttr(oItem, "text", lang);
 			var s_source = getItemAttr(oItem, "source", "en");
 			var s_sourcePage = getItemAttr(oItem, "sourcePage", lang);
+      
+      var s_rarity_class = getItemAttrFromDB(oRarity, {attr: getItemAttr(oItem, "rarity", "en"), subattr: s_gender, lang: "en"}).toLowerCase().trim();
 
       var s_coast = getItemAttr(oItem, "coast", lang) ||
         oRarity[oItem.en.rarity] && oRarity[oItem.en.rarity].coast ||
@@ -291,9 +294,14 @@ window.onload = function(){
         s_coast = "<div class='coast'>"+s_coast+"</div>";
       }
       try{
-      if(!s_img) {
-        s_img = "placeholder/"+oTypes[oItem.en.type.toLowerCase()].img;
-      }
+        
+        var oImg = "<img class='img' src='img/items/"+s_img+"'>";
+        if(!s_img) {
+          oImg = "<img class='img' src='img/items/placeholder/"+oTypes[oItem.en.type.toLowerCase()].img+"'>";
+          s_img = "img/items/placeholder/"+oTypes[oItem.en.type.toLowerCase()].img;
+        } else{
+          s_img = "img/items/"+s_img
+        }
       } catch(err){
         console.log(s_name);
       }
@@ -312,17 +320,22 @@ window.onload = function(){
 			}
 
 			var sNeedHelp = (lang == "ru")?  getItemAttr(oItem, "name", "en") : getItemAttr(oItem, "name", "ru");
-      var sImg = 'style="background-image: url(img/items/'+s_img+');"';
+      var sImg = fText? "" :'style="background-image: url('+s_img+');"';
 
-			ret = '<div class="cardContainer ' + sLockedItem +'" '+ style +' data-level="' + oItem.en.level + '" data-type="' + oItem.en.school + '" data-rarity="' + oItem.en.name + '"  data-lang="' + lang + '">'+
+			ret = '<div class="cardContainer '+(fText? "textView " : "") + sLockedItem + " " + s_rarity_class +'" '+ style +' data-level="' + oItem.en.level + '" data-type="' + oItem.en.school + '" data-rarity="' + oItem.en.name + '"  data-lang="' + lang + '">'+
 				'<div class="ItemCard">'+
 					'<div class="content" '+sImg+'>'+
-						bLockItem +
-						bHideItem +
-						'<h1 title="'+s_name+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' +s_name+ '</h1>'+
-						'<span class="subtitle">' + s_rariry + " " + s_type+  " " + s_attunement + '</span>'+
-            s_coast+
-						'<div class="text">' + s_text + '</div>	'+
+            bLockItem +
+            bHideItem +
+            "<div class='header_info'>"+
+              '<h1 title="'+s_name+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' +s_name+ '</h1>'+
+              '<div class="subtitle">' + s_rariry + " " + s_type+  " " + s_typeAdditions+  " " + s_attunement + '</div>'+
+              s_coast+
+            "</div>"+
+            "<div class='info'>"+
+              oImg+
+              '<div class="text">' + s_text + '</div>	'+
+            "</div>"+
 						"<div class='source' title=\"Источник: "+ s_source+"\">"+ s_source+"</div>"+
 						textSizeButtons +
 					'</div>'+
@@ -455,7 +468,7 @@ window.onload = function(){
 		for (var i in filteredItems) {
 			if(filteredItems[i]) {
 				var fLocked = filteredItems[i].locked? true: false;
-				var tmp = createCard(filteredItems[i], sLang, fLocked)
+				var tmp = createCard(filteredItems[i], sLang, fLocked, sView=="text")
 				if (tmp)
 					Items += tmp;
 			}
@@ -493,14 +506,6 @@ window.onload = function(){
 				fHidden: fHidden
 				});
 		}, nTimerSeconds/4);
-		//oTimer = setTimeout(showFiltered, nTimerSeconds/4);
-		// showFiltered({
-		// 	sName: sName,
-		// 	aRarity: aRarity,
-		// 	aTypes: aTypes,
-		// 	aSources: aSources,
-		// 	sLang: sLang
-		// });
 	}
 
 	function createButtons() {

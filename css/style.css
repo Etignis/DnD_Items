@@ -898,6 +898,49 @@ p {
   margin-top: 1px;
   float: left;
 }
+.cardContainer table tr:nth-child(even) {
+  background: #f7f7f7;
+}
+.cardContainer.textView {
+  float: none;
+  width: auto;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.cardContainer.textView .ItemCard {
+  height: auto;
+  border-width: 3px;
+  position: relative;
+  color: #666666;
+  margin-bottom: 1rem;
+}
+.cardContainer.textView .ItemCard .content {
+  position: relative;
+  min-height: 19rem;
+  background-image: none;
+}
+.cardContainer.textView .ItemCard .header_info {
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #000;
+}
+.cardContainer.textView .ItemCard .header_info div,
+.cardContainer.textView .ItemCard .header_info h1 {
+  margin-right: 0.5rem;
+  margin-left: 0.1rem;
+}
+.cardContainer.textView .ItemCard .info {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  max-height: 900rem;
+  padding: 0.9em;
+  line-height: 140%;
+}
+.cardContainer.textView .ItemCard .img {
+  display: inline;
+  float: right;
+  max-height: 19rem;
+}
 .ItemCard {
   height: 3.5in;
   background: #000;
@@ -955,6 +998,12 @@ p {
   background-position: center 2em;
   background-size: contain;
 }
+.ItemCard .header_info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
 .ItemCard h1 {
   font-size: 95%;
   margin: 0;
@@ -969,7 +1018,7 @@ p {
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
 }
-.ItemCard .text {
+.ItemCard .info {
   padding: 2px;
   margin-top: auto;
   margin-bottom: 1.5em;
@@ -979,19 +1028,22 @@ p {
   background: rgba(255, 255, 255, 0.5);
   line-height: normal;
 }
-.ItemCard .text::-webkit-scrollbar {
+.ItemCard .info::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
-.ItemCard .text::-webkit-scrollbar-thumb {
+.ItemCard .info::-webkit-scrollbar-thumb {
   background: #777;
 }
-.ItemCard .text::-webkit-scrollbar-track {
+.ItemCard .info::-webkit-scrollbar-track {
   background: #ddd;
 }
-.ItemCard .text body {
+.ItemCard .info body {
   scrollbar-face-color: #777;
   scrollbar-track-color: #ddd;
+}
+.ItemCard .img {
+  display: none;
 }
 .ItemCard .sizeButtonsContainer {
   position: absolute;
@@ -1029,157 +1081,40 @@ p {
   color: #000;
   text-shadow: 0 0 2px #487EC5;
 }
-.Bard .ItemCard {
-  background-color: #e91e63;
-  border-color: #e91e63;
+.common .ItemCard {
+  background-color: #607d8b;
+  border-color: #607d8b;
 }
-.Bard .ItemCard h1 {
-  border-bottom-color: #e91e63;
+.common.textView h1 {
+  color: #607d8b;
 }
-.Bard .ItemCard .materials {
-  background: #e91e63 !important;
+.uncommon .ItemCard {
+  background-color: #8bc34a;
+  border-color: #8bc34a;
 }
-.Bard .ItemCard .row {
-  border-bottom-color: #e91e63;
+.uncommon.textView h1 {
+  color: #8bc34a;
 }
-.Bard .ItemCard .row .cell:first-of-type {
-  border-right-color: #e91e63;
+.rare .ItemCard {
+  background-color: #03a9f4;
+  border-color: #03a9f4;
 }
-.Bard .ItemCard .row .cell:last-of-type {
-  border-left-color: #e91e63;
+.rare.textView h1 {
+  color: #03a9f4;
 }
-.Cleric .ItemCard {
-  background-color: #FDD835;
-  border-color: #FDD835;
+.very_rare .ItemCard {
+  background-color: #9c27b0;
+  border-color: #9c27b0;
 }
-.Cleric .ItemCard h1 {
-  border-bottom-color: #FDD835;
+.very_rare.textView h1 {
+  color: #9c27b0;
 }
-.Cleric .ItemCard .materials {
-  background: #FDD835 !important;
+.legendary .ItemCard {
+  background-color: #ffc107;
+  border-color: #ffc107;
 }
-.Cleric .ItemCard .row {
-  border-bottom-color: #FDD835;
-}
-.Cleric .ItemCard .row .cell:first-of-type {
-  border-right-color: #FDD835;
-}
-.Cleric .ItemCard .row .cell:last-of-type {
-  border-left-color: #FDD835;
-}
-.Druid .ItemCard {
-  background-color: #795548;
-  border-color: #795548;
-}
-.Druid .ItemCard h1 {
-  border-bottom-color: #795548;
-}
-.Druid .ItemCard .materials {
-  background: #795548 !important;
-}
-.Druid .ItemCard .row {
-  border-bottom-color: #795548;
-}
-.Druid .ItemCard .row .cell:first-of-type {
-  border-right-color: #795548;
-}
-.Druid .ItemCard .row .cell:last-of-type {
-  border-left-color: #795548;
-}
-.Paladin .ItemCard {
-  background-color: #2196f3;
-  border-color: #2196f3;
-}
-.Paladin .ItemCard h1 {
-  border-bottom-color: #2196f3;
-}
-.Paladin .ItemCard .materials {
-  background: #2196f3 !important;
-}
-.Paladin .ItemCard .row {
-  border-bottom-color: #2196f3;
-}
-.Paladin .ItemCard .row .cell:first-of-type {
-  border-right-color: #2196f3;
-}
-.Paladin .ItemCard .row .cell:last-of-type {
-  border-left-color: #2196f3;
-}
-.Ranger .ItemCard {
-  background-color: #4caf50;
-  border-color: #4caf50;
-}
-.Ranger .ItemCard h1 {
-  border-bottom-color: #4caf50;
-}
-.Ranger .ItemCard .materials {
-  background: #4caf50 !important;
-}
-.Ranger .ItemCard .row {
-  border-bottom-color: #4caf50;
-}
-.Ranger .ItemCard .row .cell:first-of-type {
-  border-right-color: #4caf50;
-}
-.Ranger .ItemCard .row .cell:last-of-type {
-  border-left-color: #4caf50;
-}
-.Sorcerer .ItemCard {
-  background-color: #ff9800;
-  border-color: #ff9800;
-}
-.Sorcerer .ItemCard h1 {
-  border-bottom-color: #ff9800;
-}
-.Sorcerer .ItemCard .materials {
-  background: #ff9800 !important;
-}
-.Sorcerer .ItemCard .row {
-  border-bottom-color: #ff9800;
-}
-.Sorcerer .ItemCard .row .cell:first-of-type {
-  border-right-color: #ff9800;
-}
-.Sorcerer .ItemCard .row .cell:last-of-type {
-  border-left-color: #ff9800;
-}
-.Warlock .ItemCard {
-  background-color: #673ab7;
-  border-color: #673ab7;
-}
-.Warlock .ItemCard h1 {
-  border-bottom-color: #673ab7;
-}
-.Warlock .ItemCard .materials {
-  background: #673ab7 !important;
-}
-.Warlock .ItemCard .row {
-  border-bottom-color: #673ab7;
-}
-.Warlock .ItemCard .row .cell:first-of-type {
-  border-right-color: #673ab7;
-}
-.Warlock .ItemCard .row .cell:last-of-type {
-  border-left-color: #673ab7;
-}
-.Wizard .ItemCard {
-  background-color: #f44336;
-  border-color: #f44336;
-}
-.Wizard .ItemCard h1 {
-  border-bottom-color: #f44336;
-}
-.Wizard .ItemCard .materials {
-  background: #f44336 !important;
-}
-.Wizard .ItemCard .row {
-  border-bottom-color: #f44336;
-}
-.Wizard .ItemCard .row .cell:first-of-type {
-  border-right-color: #f44336;
-}
-.Wizard .ItemCard .row .cell:last-of-type {
-  border-left-color: #f44336;
+.legendary.textView h1 {
+  color: #ffc107;
 }
 .p_side {
   background: rgba(0, 0, 0, 0.4);
@@ -1486,5 +1421,3 @@ p {
 @page {
   margin: 1.14cm .9cm .9cm;
 }
-
-/*# sourceMappingURL=style.css.map */
