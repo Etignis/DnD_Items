@@ -45,18 +45,6 @@ var oTypes = {
     },
 	"img": "type_weapon.jpg"
   },
-  "staff": {
-    "text": {
-      "en": {
-        "title": "staff"
-      },
-      "ru": {
-        "title": "жезл",
-        "gender": "he"
-      }
-    },
-	"img": "type_staff.jpg"
-  },
   "ring": {
     "text": {
       "en": {
@@ -69,18 +57,6 @@ var oTypes = {
     },
 	"img": "type_ring.jpg"
   },
-  "potion": {
-    "text": {
-      "en": {
-        "title": "potion"
-      },
-      "ru": {
-        "title": "зелье",
-        "gender": "it"
-      }
-    },
-	"img": "type_potion.jpg"
-  },
   "wondrous item": {
     "text": {
       "en": {
@@ -92,18 +68,6 @@ var oTypes = {
       }
     },
 	"img": "type_wondrous_item.jpg"
-  },
-  "vehicle": {
-    "text": {
-      "en": {
-        "title": "vehicle"
-      },
-      "ru": {
-        "title": "транспорт",
-        "gender": "he"
-      }
-    },
-	"img": "type_vehicle.jpg"
   },
   "wand": {
     "text": {
@@ -129,6 +93,18 @@ var oTypes = {
     },
 	"img": "type_rod.jpg"
   },
+  "staff": {
+    "text": {
+      "en": {
+        "title": "staff"
+      },
+      "ru": {
+        "title": "жезл",
+        "gender": "he"
+      }
+    },
+	"img": "type_staff.jpg"
+  },
   "scroll": {
     "text": {
       "en": {
@@ -140,6 +116,30 @@ var oTypes = {
       }
     },
 	"img": "type_scroll.jpg"
+  },
+  "potion": {
+    "text": {
+      "en": {
+        "title": "potion"
+      },
+      "ru": {
+        "title": "зелье",
+        "gender": "it"
+      }
+    },
+	"img": "type_potion.jpg"
+  },
+  "vehicle": {
+    "text": {
+      "en": {
+        "title": "vehicle"
+      },
+      "ru": {
+        "title": "транспорт",
+        "gender": "he"
+      }
+    },
+	"img": "type_vehicle.jpg"
   }
 }
 var oRarity = {
@@ -583,7 +583,7 @@ var allItems = [
     },
     "ru": {
       "name": "Сумка фокусов",
-      "text": "Эта обычная с виду сумка, изготовленная из серой, рыжей или коричневой ткани, выглядит пустой. Однако если засунуть в неё руку, можно нащупать маленький пушистый предмет. Весит сумка половину фунта. <br>Вы можете действием вынуть из сумки пушистый предмет и бросить его на 20 футов. Когда предмет приземляется, он превращается в существо, которое вы выбираете броском к8, консультируясь с приведённой таблицей, соответствующей цвету сумки. Характеристики существ смотрите в Бестиарии. Существо исчезает на следующем рассвете или когда его хиты будут уменьшены до 0. <br>Существо дружественно к вам и вашим спутникам, и действует в ваш ход. Вы можете бонусным действием отдать команду, как существу перемещаться, и какое действие ему совершать в следующем ходу, или можете отдать общий приказ, такой как «атакуй врагов». Если приказов нет, существо действует сообразно своей природе. <br>Как только из сумки достанут три пушистых предмета, её нельзя будет использовать до следующего рассвета.<br><b>Серая сумка фокусов</b><br> <table> <tr> <th>d8 </th> <th>Существо </th> </tr> <tr> <td>1 </td> <td><a href='https://tentaculus.ru/monsters/?q=weasel'>Куница</a> </td> </tr> <tr> <td>2 </td> <td><a href='https://tentaculus.ru/monsters/?q=giant_rat'>Гигантская крыса</a> </td> </tr> <tr> <td>3 </td> <td><a href='https://tentaculus.ru/monsters/?q=Badger'>Барсук</a> </td> </tr> <tr> <td>4 </td> <td><a href='https://tentaculus.ru/monsters/?q=Boar'>Кабан</a> </td> </tr> <tr> <td>5 </td> <td><a href='https://tentaculus.ru/monsters/?q=Panther'>Пантера</a> </td> </tr> <tr> <td>6 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_badger'>Гигантский барсук</a> </td> </tr> <tr> <td>7 </td> <td><a href='https://tentaculus.ru/monsters/?q=Dire_wolf'>Лютый волк</a> </td> </tr> <tr> <td>8 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_elk'>Гигантский лось</a> </td> </tr> </table> <br><b>Рыжая сумка фокусов</b><br> <table> <tr> <th>d8 </th> <th>Существо </th> </tr> <tr> <td>1 </td> <td><a href='https://tentaculus.ru/monsters/?q=Rat'>Крыса</a> </td> </tr> <tr> <td>2 </td> <td><a href='https://tentaculus.ru/monsters/?q=Owl'>Сова</a> </td> </tr> <tr> <td>3 </td> <td><a href='https://tentaculus.ru/monsters/?q=Mastiff'>Мастиф</a> </td> </tr> <tr> <td>4 </td> <td><a href='https://tentaculus.ru/monsters/?q=Goat'>Козёл</a> </td> </tr> <tr> <td>5 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_goat'>Гигантский козёл</a> </td> </tr> <tr> <td>6 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_boar'>Гигантский кабан</a> </td> </tr> <tr> <td>7 </td> <td><a href='https://tentaculus.ru/monsters/?q=Lion'>Лев</a> </td> </tr> <tr> <td>8 </td> <td><a href='https://tentaculus.ru/monsters/?q=Brown_bear'>Бурый медведь</a> </td> </tr> </table> <br><b>Коричневая сумка фокусов</b><br> <table> <tr> <th>d8 </th> <th>Существо </th> </tr> <tr> <td>1 </td> <td><a href='https://tentaculus.ru/monsters/?q=Jackal'>Шакал</a> </td> </tr> <tr> <td>2 </td> <td><a href='https://tentaculus.ru/monsters/?q=Ape'>Человекообразная обезьяна</a> </td> </tr> <tr> <td>3 </td> <td><a href='https://tentaculus.ru/monsters/?q=Baboon'>Бабуин</a> </td> </tr> <tr> <td>4 </td> <td><a href='https://tentaculus.ru/monsters/?q=Axe beak'>Топороклюв</a> </td> </tr> <tr> <td>5 </td> <td><a href='https://tentaculus.ru/monsters/?q=Black_bear'>Чёрный медведь</a> </td> </tr> <tr> <td>6 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_weasel'>Гигантская куница</a> </td> </tr> <tr> <td>7 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_hyena'>Гигантская гиена/a> </td> </tr> <tr> <td>8 </td> <td><a href='https://tentaculus.ru/monsters/?q=Tiger'>Тигр</a> </td> </tr> </table>"
+      "text": "Эта обычная с виду сумка, изготовленная из серой, рыжей или коричневой ткани, выглядит пустой. Однако если засунуть в неё руку, можно нащупать маленький пушистый предмет. Весит сумка половину фунта. <br>Вы можете действием вынуть из сумки пушистый предмет и бросить его на 20 футов. Когда предмет приземляется, он превращается в существо, которое вы выбираете броском к8, консультируясь с приведённой таблицей, соответствующей цвету сумки. Характеристики существ смотрите в Бестиарии. Существо исчезает на следующем рассвете или когда его хиты будут уменьшены до 0. <br>Существо дружественно к вам и вашим спутникам, и действует в ваш ход. Вы можете бонусным действием отдать команду, как существу перемещаться, и какое действие ему совершать в следующем ходу, или можете отдать общий приказ, такой как «атакуй врагов». Если приказов нет, существо действует сообразно своей природе. <br>Как только из сумки достанут три пушистых предмета, её нельзя будет использовать до следующего рассвета.<br><b>Серая сумка фокусов</b><br> <table> <tr> <th>d8 </th> <th>Существо </th> </tr> <tr> <td>1 </td> <td><a href='https://tentaculus.ru/monsters/?q=weasel'>Куница</a> </td> </tr> <tr> <td>2 </td> <td><a href='https://tentaculus.ru/monsters/?q=giant_rat'>Гигантская крыса</a> </td> </tr> <tr> <td>3 </td> <td><a href='https://tentaculus.ru/monsters/?q=Badger'>Барсук</a> </td> </tr> <tr> <td>4 </td> <td><a href='https://tentaculus.ru/monsters/?q=Boar'>Кабан</a> </td> </tr> <tr> <td>5 </td> <td><a href='https://tentaculus.ru/monsters/?q=Panther'>Пантера</a> </td> </tr> <tr> <td>6 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_badger'>Гигантский барсук</a> </td> </tr> <tr> <td>7 </td> <td><a href='https://tentaculus.ru/monsters/?q=Dire_wolf'>Лютый волк</a> </td> </tr> <tr> <td>8 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_elk'>Гигантский лось</a> </td> </tr> </table> <br><b>Рыжая сумка фокусов</b><br> <table> <tr> <th>d8 </th> <th>Существо </th> </tr> <tr> <td>1 </td> <td><a href='https://tentaculus.ru/monsters/?q=Rat'>Крыса</a> </td> </tr> <tr> <td>2 </td> <td><a href='https://tentaculus.ru/monsters/?q=Owl'>Сова</a> </td> </tr> <tr> <td>3 </td> <td><a href='https://tentaculus.ru/monsters/?q=Mastiff'>Мастиф</a> </td> </tr> <tr> <td>4 </td> <td><a href='https://tentaculus.ru/monsters/?q=Goat'>Козёл</a> </td> </tr> <tr> <td>5 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_goat'>Гигантский козёл</a> </td> </tr> <tr> <td>6 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_boar'>Гигантский кабан</a> </td> </tr> <tr> <td>7 </td> <td><a href='https://tentaculus.ru/monsters/?q=Lion'>Лев</a> </td> </tr> <tr> <td>8 </td> <td><a href='https://tentaculus.ru/monsters/?q=Brown_bear'>Бурый медведь</a> </td> </tr> </table> <br><b>Коричневая сумка фокусов</b><br> <table> <tr> <th>d8 </th> <th>Существо </th> </tr> <tr> <td>1 </td> <td><a href='https://tentaculus.ru/monsters/?q=Jackal'>Шакал</a> </td> </tr> <tr> <td>2 </td> <td><a href='https://tentaculus.ru/monsters/?q=Ape'>Человекообразная обезьяна</a> </td> </tr> <tr> <td>3 </td> <td><a href='https://tentaculus.ru/monsters/?q=Baboon'>Бабуин</a> </td> </tr> <tr> <td>4 </td> <td><a href='https://tentaculus.ru/monsters/?q=Axe beak'>Топороклюв</a> </td> </tr> <tr> <td>5 </td> <td><a href='https://tentaculus.ru/monsters/?q=Black_bear'>Чёрный медведь</a> </td> </tr> <tr> <td>6 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_weasel'>Гигантская куница</a> </td> </tr> <tr> <td>7 </td> <td><a href='https://tentaculus.ru/monsters/?q=Giant_hyena'>Гигантская гиена</a> </td> </tr> <tr> <td>8 </td> <td><a href='https://tentaculus.ru/monsters/?q=Tiger'>Тигр</a> </td> </tr> </table>"
     }
   },
   {
@@ -736,13 +736,13 @@ var allItems = [
       "type": "Wondrous item",
       "rarity": 3,
       "attunement": "(requires attunement)",
-      "text": "While you wear these boots, you can use an action to cast the levitate spell on yourself at will.",
+      "text": "While you wear these boots, you can use an action to cast the <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a> spell on yourself at will.",
       "source": "DMG",
       "img": "BOOTS_OF_LEVITATION.jpg"
     },
     "ru": {
       "name": "Сапоги левитации",
-      "text": "Если вы носите эти сапоги, вы можете неограниченно действием накладывать на себя заклинание левитация.",
+      "text": "Если вы носите эти сапоги, вы можете неограниченно действием накладывать на себя заклинание <a href='https://tentaculus.ru/spells/#q=levitate'>левитация</a>.",
       "attunement": "(требуется настройка)"
     }
   },
@@ -787,6 +787,11 @@ var allItems = [
       "text": "These furred boots are snug and feel quite warm. While you wear them, you gain the following benefits: <br>• You have resistance to cold damage. <br>• You ignore difficult terrain created by ice or snow. <br>You can tolerate temperatures as low as -50 degrees <br>Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as -100 degrees Fahrenheit.",
       "source": "DMG",
       "img": "BOOTS_OF_THE_WINTERLANDS.jpg"
+    },
+    "ru": {
+      "name": "Заполярные сапоги",
+      "attunement": "(требуют настройки)",
+      "text": "Эти меховые сапоги очень плотные и тёплые. Пока вы их носите, вы получаете следующие преимущества:<br> • Вы получаете сопротивление к урону холодом.<br> • Вы игнорируете труднопроходимую местность, созданную льдом или снегом.<br> • Вы нормально выносите такую низкую температуру как −50 °F (−45 °C), без дополнительной тёплой одежды. Если вы одеты очень тепло, то можете переносить температуру до −100 °F (−73 °C)."
     }
   },
   {
@@ -945,7 +950,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "This fine garment is made of black silk interwoven with faint silvery threads. While wearing it, you gain the following benefits: <br>You have resistance to poison damage. <br>You have a climbing speed equal to your walking speed. <br>You can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. <br>• You can't be caught in webs of any sort and can move through webs as if they were difficult terrain. <br>• You can use an action to cast the web spell (save DC 13). The web created by the spell fills twice its normal area. Once used, this property of the cloak can't be used again until the next dawn.",
       "source": "DMG",
-      "img": "CLOAK_OF_ARACHNIDA.png"
+      "img": "CLOAK_OF_ARACHNIDA.jpg"
     },
     "ru": {
       "name": "Плащ паука",
@@ -993,7 +998,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this cloak, you have advantage on <br>Dexterity (Stealth) checks. In an area of dim light or darkness, you can grip the edges of the cloak with both hands and use it to fly at a speed of 40 feet. If you ever fa il to grip the cloak's edges while flying in this way, or if you are no longer in dim light or darkness, you lose this flying speed. <br>While wearing the cloak in an area of dim light or darkness, you can use your action to cast polymorph on yourself, transforming into a bat. While you are in the form of the bat, you retain your Intelligence, Wisdom, and Charisma scores. The cloak can't be used this way again until the next dawn.",
       "source": "DMG",
-      "img": "CLOAK_OF_THE_BAT.png"
+      "img": "CLOAK_OF_THE_BAT.jpg"
     },
     "ru": {
       "name": "Плащ летучей мыши",
@@ -1225,7 +1230,7 @@ var allItems = [
     "ru": {
       "name": "Защитник",
       "text": "Вы получаете бонус +3 к броскам атаки и урона этим магическим оружием. <br>В первый раз в каждом своём ходу, когда вы атакуете этим оружием, вы можете перевести весь бонус или его часть в бонус к КД, а не броскам атаки и урона. Например, вы можете уменьшить бонус к броскам атаки и урона до +1, но получить +2 к КД. Изменённые бонусы действуют до начала вашего следующего хода, но вы должны держать этот меч, чтобы получать от него бонус к КД.",
-      "typeAdditions": "(любой swилиd)",
+      "typeAdditions": "(любой меч)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -1278,7 +1283,7 @@ var allItems = [
     "ru": {
       "name": "Убийца драконов",
       "text": "Вы получаете бонус +1 к броскам атаки и урона, совершённым этим магическим оружием. <br>Если вы попадаете этим оружием по дракону, он получит дополнительный урон 3к6, соответствующий виду оружия. Для этого оружия «дракон» означает любое существо с видом «дракон», включая виверн и дракочерепах.",
-      "typeAdditions": "(любой swилиd)"
+      "typeAdditions": "(любой меч)"
     }
   },
   {
@@ -1316,7 +1321,7 @@ var allItems = [
       "rarity": 2,
       "text": "This small packet contains 1d6 + 4 pinches of dust. You can use an action to sprinkle a pinch of it over water. <br>The dust turns a cube of water 15 feet on a side into one marble-sized pellet, which floats or rests near where the dust was sprinkled. The pellet's weight is negligible. <br>Someone can use an action to smash the pellet against a hard surface, causing the pellet to shatter and release the water the dust absorbed. Doing so ends that pellet's magic. <br>An elemental composed mostly of water that is exposed to a pinch of the dust must make a DC 13 <br>Constitution saving throw, taking 10d6 necrotic damage on a failed save, or half as much damage on a successful one.",
       "source": "DMG",
-      "img": ""
+      "img": "DUST_OF_DRYNESS.jpg"
     },
     "ru": {
       "name": "Порошок сухости",
@@ -1633,7 +1638,7 @@ var allItems = [
     "ru": {
       "name": "Язык пламени",
       "text": "Вы можете бонусным действием произнести командное слово этого магического меча, отчего из него вырвутся языки пламени. Это пламя испускает яркий свет в радиусе 40 футов и тусклый свет в радиусе ещё 40 футов. Пока меч пылает, он причиняет дополнительный урон огнём 2к6 целям, по которым попадает. Пламя остаётся, пока вы не произнесёте ещё раз командное слово бонусным действием, или пока не уберёте меч в ножны.",
-      "typeAdditions": "(любой swилиd)",
+      "typeAdditions": "(любой меч)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -1665,7 +1670,7 @@ var allItems = [
     "ru": {
       "name": "Морозный клинок",
       "text": "Если вы попадаете атакой, используя этот магический меч, цель получает дополнительный урон холодом 1к6. Кроме того, пока вы держите этот меч, вы обладаете сопротивлением к урону огнём. <br>При температуре, не превышающей 0 °C, клинок испускает яркий свет в радиусе 10 футов и тусклый свет в радиусе ещё 10 футов. <br>Когда вы вынимаете оружие из ножен, вы можете погасить все источники немагического огня в пределах 30 футов. Это свойство можно использовать не чаще раза в час.",
-      "typeAdditions": "(любой swилиd)",
+      "typeAdditions": "(любой меч)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -1771,7 +1776,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing these gloves, climbing and swimming don't cost you extra movement, and you gain a +5 bonu_ to Strength (Athletics) checks made to climb or swim.",
       "source": "DMG",
-      "img": "GLOVES_OF_SWIMMING_AND_CLIMBING.png"
+      "img": "GLOVES_OF_SWIMMING_AND_CLIMBING.jpg"
     },
     "ru": {
       "name": "Перчатки плавания и лазания",
@@ -1786,7 +1791,7 @@ var allItems = [
       "rarity": 2,
       "text": "These gloves are invisible while worn. While wearing them, you gain a +5 bonus to Dexterity (Sleight of Hand checks and Dexterity checks made to pick locks.",
       "source": "DMG",
-      "img": ""
+      "img": "GLOVES_OF_THIEVERY.jpg"
     },
     "ru": {
       "name": "Перчатки воровства",
@@ -1831,7 +1836,7 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "While wearing this hat, you can use an action to cast the disguise self spell from it at will. The spell ends if the hat is removed.",
       "source": "DMG",
-      "img": "HAT_OF_DISGUISE.png"
+      "img": "HAT_OF_DISGUISE.jpg"
     },
     "ru": {
       "name": "Шапка маскировки",
@@ -1946,7 +1951,7 @@ var allItems = [
       "name": "Святой мститель",
       "attunement": "(требует настройки паладином)",
       "text": "Вы получаете бонус +3 к броскам атаки и урона, совершённым этим магическим оружием. Если вы попадаете им по исчадию или нежити, это существо получает дополнительный урон излучением 2к10. <br>Пока вы держите в руке этот вынутый из ножен меч, он создаёт ауру с радиусом 10 футов вокруг вас. <br>Вы и все дружественные вам существа в этой ауре совершаете с преимуществом спасброски от заклинаний и других магических эффектов. Если у вас есть 17 уровней в классе паладина, радиус ауры увеличивается до 30 футов.",
-      "typeAdditions": "(любой swилиd)"
+      "typeAdditions": "(любой меч)"
     }
   },
   {
@@ -1985,7 +1990,7 @@ var allItems = [
       "rarity": 4,
       "text": "These iron horseshoes come in a set of four. While all four shoes are affixed to the hooves of a horse or similar creature, they allow the creature to move normally while floating 4 inches above the ground. This effect means the cre.ature can cross or stand above nonsolid or unstable surfaces, such as water or lava. The creature leaves no tracks and ignores difficult terrain. In addition, the creature can move at normal speed for up to 12 hours a day without suffering exhaustion from a forced march.",
       "source": "DMG",
-      "img": ""
+      "img": "HORSESHOES_OF_A_ZEPHYR.jpg"
     },
     "ru": {
       "name": "Подковы ветра",
@@ -1999,7 +2004,7 @@ var allItems = [
       "rarity": 3,
       "text": "These iron horseshoes come in a set of four. While all four shoes are affixed to the hooves of a horse or similar creature, they increase the creature's walking speed by 30 feet.",
       "source": "DMG",
-      "img": ""
+      "img": "HORSESHOES_OF_SPEED.jpg"
     },
     "ru": {
       "name": "Подковы скорости",
@@ -2414,7 +2419,7 @@ var allItems = [
     "ru": {
       "name": "Клинок удачи",
       "text": "Вы получаете бонус +1 к броскам атаки и урона, совершённым этим магическим оружием. Пока это оружие находится у вас, вы также получаете бонус +1 к спасброскам. <br>Удача. Если этот меч находится у вас, вы можете воззвать к его удаче (действие не требуется), чтобы перебросить один бросок атаки, проверку характеристики или спасбросок, который вам не понравился. <br>Вы обязаны использовать результат второго броска. <br>Это свойство нельзя использовать повторно до следующего рассвета. <br>Исполнение желаний. У меча есть 1к4 − 1 заряд. <br>Если вы держите его, вы можете действием потратить 1 заряд, чтобы наложить им заклинание исполнение желаний. Это свойство нельзя использовать повторно до следующего рассвета. Меч теряет это свойство, когда у него не останется зарядов.",
-      "typeAdditions": "(любой swилиd)",
+      "typeAdditions": "(любой меч)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -2507,7 +2512,7 @@ var allItems = [
       "rarity": 4,
       "text": "This book describes fitness exercises, and its words are charged with magic. If you spend 48 hours over a peri of 6 days or fewer studying the book's contents and practicing its guidelines, your Strength score increase_ by 2, as does your maximum for that score. The manueL then loses its magic, but regains it in a century.",
       "source": "DMG",
-      "img": ""
+      "img": "MANUAL_OF_GAINFUL_EXERCISE.jpg"
     },
     "ru": {
       "name": "Справочник полезных упражнений",
@@ -2596,7 +2601,7 @@ var allItems = [
       "rarity": 2,
       "text": "Mithral is a light, flexible metal. A mithral chain shirt or breastplate can be worn under normal clothes. I£ the armor normally imposes disadvantage on Dexterity (Stealth) checks or has a Strength requirement, the mithral version of the armor doesn't.",
       "source": "DMG",
-      "img": ""
+      "img": "MITHRAL_ARMOR.jpg"
     },
     "ru": {
       "name": "Мифрильный доспех",
@@ -2678,7 +2683,7 @@ var allItems = [
     "ru": {
       "name": "Вор девяти жизней",
       "text": "Вы получаете бонус +2 к броскам атаки и урона этим магическим оружием. <br>У меча есть 1к8 + 1 заряд. Если вы совершаете критическое попадание по существу, у которого меньше 100 хитов, оно должно преуспеть в спасброске Телосложения со Сл 15, иначе мгновенно умрёт, когда меч вырвет его жизненную силу из тела (конструкты и нежить обладают иммунитетом). Меч теряет 1 заряд, если существо умирает. Когда у меча не останется зарядов, он теряет это свойство.",
-      "typeAdditions": "(любой swилиd)",
+      "typeAdditions": "(любой меч)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -2689,7 +2694,7 @@ var allItems = [
       "rarity": 4,
       "text": "Typically found in 1d4 pots inside a fine wooden box with a brush (weighing 1 pound in total), these pigments allow you to create three-dimensional objects by painting them in two dimensions. The paint flows from the brush to form the desired object as you concentrate on its image. <br>Each pot of paint is sufficient to cover 1,000 square feet of a surface, which lets you create inanimate objects or terrain features-such as a door, a pit, flowers, trees, cells, rooms, or weapons- that are up to 10,000 cubic feet. It takes 10 minutes to cover 100 square feet. <br>When you complete the painting, the object or terrain feature depicted becomes a real, nonmagical object. <br>Thus, painting a door on a wall creates an actual door that can be opened to whatever is beyond. Painting a pit on a floor creates a real pit, and its depth counts against the total area of objects you create. <br>Nothing created by the pigments can have a value greater than 25 gp. If you paint an object of greater value (such as a diamond or a pile of gold), the object looks authentic, but close inspection reveals it is made from paste, bone, or some other worthless material. <br>If you paint a form of energy such as fire or lightning, the energy appears but dissipates as soon as you complete the painting, doing no harm to anything. 0ATHBOW <br>Weapon (longbow), very rare (requires attunement) <br>When you nock an arrow on this bow, it whispers in <br>Elvish, \"Swift defeat to my enemies.\" When you use this weapon to make a ranged attack, you can, as a command phrase, say, \"Swift death to you who have wronged me.\" The target of your attack becomes your sworn enemy until it dies or until dawn seven days later. <br>You can have only one such sworn enemy at a time. <br>When your sworn enemy dies, you can choose a new one after the next dawn. <br>When you make a ranged attack roll with this weapon against your sworn enemy, you have advantage on the roll. In addition, your target gains no benefit from cover, other than total cover, and you suffer no disadvantage due to long range. If the attack hits, your sworn enemy takes an extra 3d6 piercing damage. <br>While your sworn enemy lives, you have disadvantage on attack rolls with all other weapons.",
       "source": "DMG",
-      "img": ""
+      "img": "NOLZURS_MARVELOUS_PIGMENTS.jpg"
     },
     "ru": {
       "name": "Чудесные краски Нолзура",
@@ -2775,7 +2780,7 @@ var allItems = [
       "rarity": 3,
       "text": "This delicate silver chain has a brilliant-cut black gem pendant. While you wear it, poisons have no effect on you. You are immune to the poisoned condition and ha\\\"e immunity to poison damage.",
       "source": "DMG",
-      "img": ""
+      "img": "PERIAPT_OF_PROOF_AGAINST_POISON.jpg"
     },
     "ru": {
       "name": "Медальон защиты от яда",
@@ -2867,7 +2872,7 @@ var allItems = [
       "rarity": 3,
       "text": "This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter. <br>You can use an action to unfold a portable hole and place it on or against a solid surface, whereupon the portable hole creates an extradimensional hole 10 feet deep. The cylindrical space within the hole exists on a different plane, so it can't be u ed to create open passages. Any creature inside an open portable hole can exit the hole by climbing out of it. <br>You can use an action to close a portable hole by taking hold of the edges of the cloth and folding it up. <br>Folding the cloth closes the hole, and any creatures or objects within remain in the extradimensional space. o matter what's in it, the hole weighs next to nothing. <br>If the hole is folded up, a creature with in the hole's extradimensional space can use an action to make a DC 10 Strength check. On a successful check, the creature forces its way out and appears within 5 feet of the portable hole or the creature carrying it. A breathing creature within a closed portable hole can survive for up to 10 minutes, after which time it begins to suffocate. <br>Placing a portable hole inside an extradimensional space created by a bag of holding, Heward's handy haversack, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate is sucked through it and deposited in a random location on the Astral Plane. <br>The gate then closes. The gate is one-way only and can't be reopened.",
       "source": "DMG",
-      "img": ""
+      "img": "PORTABLE_HOLE.jpg"
     },
     "ru": {
       "name": "Переносная дыра",
@@ -2976,7 +2981,7 @@ var allItems = [
     "en": {
       "name": "POTION OF Hill GIANT STRENGTH",
       "type": "Potion",
-      "rarity": 1,
+      "rarity": 2,
       "text": "When you drink this potion, your Strength score became 21 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
       "img": ""
@@ -3482,6 +3487,7 @@ var allItems = [
     },
     "ru": {
       "name": "Кольцо падающих звёзд",
+      "attunement": "(требует настройки ночью на улице)",
       "text": "Нося это кольцо в области тусклого света или темноте, вы можете неограниченно действием накладывать им пляшущие огоньки или свет. <br>У кольца есть 6 зарядов для использования описанных ниже свойств. Кольцо ежедневно восстанавливает 1к6 зарядов на рассвете. <br><b>Огонь фей.</b> Вы можете действием потратить 1 заряд, чтобы наложить кольцом <a href='https://tentaculus.ru/spells/#q=faerie_fire'>огонь фей</a>. <br><b>Шаровая молния.</b> Вы можете действием потратить 2 заряда, чтобы создать кольцом от одной до четырёх шаровых молний диаметром 3 фута. Чем больше шаров вы создадите, тем менее эффективен каждый из них. <br>Каждый шар появляется в свободном пространстве, видимом вами в пределах 120 футов. Шары существуют, пока вы концентрируетесь (как при концентрации на заклинании), но не более 1 минуты. <br>Каждый шар испускает тусклый свет в радиусе 30 футов. <br>Вы можете бонусным действием переместить каждый шар на расстояние до 30 футов, но не более чем на 120 футов от себя. Если какое-нибудь существо кроме вас оказывается в пределах 5 футов от шара, шар выпускает в него разряд молнии и исчезает. Это существо должно совершить спасбросок Ловкости со Сл 15. При провале существо получает урон электричеством, зависящий от количества созданных вами шаров. <br><table><tr><td>Шары</td><td>Урон электричеством</td></tr><tr><td>4</td><td>2к4</td></tr><tr><td>3</td><td>2к6</td></tr><tr><td>2</td><td>5к4</td></tr><tr><td>1</td><td>4к12</td></tr></table><br><b>Падающие звёзды.</b> Вы можете действием потратить от 1 до 3 зарядов. За каждый потраченный заряд вы выпускаете из кольца по одному светящемуся шарику в точку, которую видите в пределах 60 футов. Все существа в пределах 15-футового куба, исходящего из этой точки, покрываются искрами и должны совершить спасбросок Ловкости со Сл 15, получая урон огнём 5к4 при провале или половину урона при успехе."
     }
   },
@@ -3828,7 +3834,7 @@ var allItems = [
       "rarity": 2,
       "text": "While in this saddle on a mount, you can't be dismounted against your will if you're conscious, and attack rolls against the mount have disadvantage.",
       "source": "DMG",
-      "img": ""
+      "img": "SADDLE_OF_THE_CAVALIER.jpg"
     },
     "ru": {
       "name": "Седло кавалериста",
@@ -3860,12 +3866,12 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "You gain a +2 bonus to attack and damage rolls made with this magic weapon. In addition, you can make one attack with it as a bonus action on each of your turns.",
       "source": "DMG",
-      "img": ""
+      "img": "SCIMITAR_OF_SPEED.jpg"
     },
     "ru": {
       "name": "Скимитар скорости",
       "text": "Вы получаете бонус +2 к броскам атаки и урона, совершённым этим магическим оружием. Кроме того, в каждом своём ходу вы можете совершить бонусным действием одну атаку им.",
-      "typeAdditions": "(ятаган)",
+      "typeAdditions": "(скимитар)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -3876,7 +3882,7 @@ var allItems = [
       "rarity": 3,
       "text": "Each scroll of protection works against a specific type of creature chosen by the DM or determined randomly by rolling on the following table.<br><table><tr><td>dlOO</td><td>Creature Type</td></tr><tr><td>01-10</td><td>Aberrations</td></tr><tr><td>11-20</td><td>Beasts</td></tr><tr><td>21-30</td><td>Celestials</td></tr><tr><td>31-40</td><td>Elementals</td></tr><tr><td>41-50</td><td>Fey</td></tr><tr><td>51-75</td><td>Fiends</td></tr><tr><td>76-80</td><td>Plants</td></tr><tr><td>81-00</td><td>Undead</td></tr></table> <br>Using an action to read the scroll encloses you in a invisible barrier that extends from you to form a 5-footradius, 10-foot-high cylinder. For 5 minutes, this barrier prevents creatures of the specified type from entering or affecting anything within the cylinder. <br>The cylinder moves with you and remains centered on you. However, if you move in such a way that a creature of the specified type would be inside the cylinder, the effect ends. <br>A creature can attempt to overcome the barrier by using an action to make a DC 15 Charisma check. <br>On a success, the creature ceases to be affected by the barrier.",
       "source": "DMG",
-      "img": ""
+      "img": "SCROLL_OF_PROTECTION.jpg"
     },
     "ru": {
       "name": "Свиток защиты",
@@ -3905,7 +3911,7 @@ var allItems = [
       "rarity": 2,
       "text": "While holding this shield, you have advantage on initiative rolls and Wisdom (Perception) checks. The shield is emblazoned with a symbol of an eye. <br>SHIELD, +1, +2, OR +3 <br>Armor (shield), uncommon (+1), rare (+2), or very rare (+3) <br>While holding this shield, you have a bonus to AC determined by the shield's rarity. This bonus is in addition to the shield's normal bonus to AC.",
       "source": "DMG",
-      "img": ""
+      "img": "SENTINEL_SHIELD.jpg"
     },
     "ru": {
       "name": "Щит часового",
@@ -4385,7 +4391,7 @@ var allItems = [
     "ru": {
       "name": "Солнечный клинок",
       "text": "Этот предмет выглядит как рукоять длинного меча. <br>Держа эту рукоятку, вы можете бонусным действием заставить появиться или исчезнуть клинок из чистого сияния. Пока клинок существует, этот магический длинный меч обладает свойством «фехтовальное». Если вы владеете обращением с короткими или длинными клинками, то вы владеете и обращением с солнечным клинком. <br>Вы получаете бонус +2 к броскам атаки и урона, совершённым этим оружием, и причиняете не рубящий урон, а урон излучением. Если вы попадаете им по нежити, цель получает дополнительный урон излучением 1к8. <br>Клинок этого меча испускает яркий свет в радиусе 15 футов и тусклый свет в радиусе ещё 15 футов. Это солнечный свет. Пока клинок существует, вы можете действием увеличить или уменьшить радиус и яркого и тусклого света на 5 футов каждый, с максимумом 30 футов и минимумом 10 футов для каждого.",
-      "typeAdditions": "longswилиd",
+      "typeAdditions": "длинный меч",
       "attunement": "(требуется настройка)"
     }
   },
@@ -4398,13 +4404,13 @@ var allItems = [
       "attunement": "(requires attunement by a creature with the same alignment as the sword)",
       "text": "In the world of Greyhawk, only nine of these blades are known to exist. Each is patterned after the legendary sword Fragarach, which is variously translated as \"Final Word.\" Each of the nine swords has its own name and alignment, and each bears a different gem in its pommel. <br><table><tr><td>Name</td><td>Alignment</td><td>Gem</td></tr><tr><td>Answerer</td><td>Chaotic good</td><td>Emerald</td></tr><tr><td>Back Talker</td><td>Chaotic evil</td><td>Jet</td></tr><tr><td>Concluder</td><td>Lawful neutral</td><td>Amethyst</td></tr><tr><td>Last Quip</td><td>Chaotic neutral</td><td>Tourmaline</td></tr><tr><td>Rebutter</td><td>Neutral good</td><td>Topaz</td></tr><tr><td>Replier</td><td>Neutral</td><td>Peridot</td></tr><tr><td>Retorter</td><td>Lawful good</td><td>Aquamarine<br>•</td></tr><tr><td>Scather</td><td>Lawful evil</td><td>Garnet</td></tr></table><br>You gain a +3 bonus to attack and damage rolls made with this sword. In addition, while you hold the sword, you can use your reaction to make one melee attack with it against any creature in your reach that deals damage to you. You have advantage on the attack roll, and any damage dealt with this special attack ignores any damage immunity or resistance the target has.",
       "source": "DMG",
-      "img": ""
+      "img": "SWORD_OF_ANSWERING.jpg"
     },
     "ru": {
       "name": "Меч ответа",
       "attunement": "(требует настройки созданием того же мировоззрения, что и меч)",
       "text": " В мире Грейхок известны девять таких мечей. Все они изготовлены по образу легендарного меча, Фрагараха, чьё название часто переводят как «Последнее слово». У каждого из девяти мечей есть своё название и своё мировоззрение, и у всех у них в навершии использованы разные драгоценные камни. <br><table><tr><td>Название</td><td>Мировоззрение</td><td>Камень</td></tr><tr><td>Возразитель</td><td>Законно-доброе</td><td>Аквамарин</td></tr><tr><td>Грубитель</td><td>Законно-злое</td><td>Гранат</td></tr><tr><td>Дерзитель</td><td>Хаотично-злое</td><td>Агат</td></tr><tr><td>Опровергатель</td><td>Нейтрально-доброе</td><td>Топаз</td></tr><tr><td>Ответчик</td><td>Хаотично-доброе</td><td>Изумруд</td></tr><tr><td>Подавитель</td><td>Нейтрально-злое</td><td>Шпинель</td></tr><tr><td>Рассказчик</td><td>Нейтральное</td><td>Перидот</td></tr><tr><td>Решатель</td><td>Законно-нейтральное</td><td>Аметист</td></tr><tr><td>Язвитель</td><td>Хаотично-нейтральное</td><td>Турмалин</td></tr></table>Вы получаете бонус +3 к броскам атаки и урона, совершаемым этим мечом. Кроме того, пока вы держите этот меч, вы можете реакцией совершать им одну рукопашную атаку по существу, находящемуся в пределах вашей досягаемости, которое причиняет вам урон. Вы совершаете этот бросок атаки с преимуществом, и урон, причиняемый этой особой атакой, игнорирует все сопротивления к урону и иммунитеты, которые могут быть у цели.",
-      "typeAdditions": "(longswилиd)"
+      "typeAdditions": "(длинный меч)"
     }
   },
   {
@@ -4421,7 +4427,7 @@ var allItems = [
     "ru": {
       "name": "Меч кражи жизни",
       "text": "Если вы атакуете этим магическим оружием существо, и при броске атаки выпадает «20», эта цель получает дополнительный урон некротической энергией 10, если не является ни конструктом ни нежитью. <br>Вы также получаете 10 временных хитов.",
-      "typeAdditions": "(любой swилиd)",
+      "typeAdditions": "(любой меч)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -4438,7 +4444,7 @@ var allItems = [
     "ru": {
       "name": "Меч остроты",
       "text": "Если вы атакуете этим магическим мечом предмет и попадаете, кости урона причиняют цели максимальный урон. <br>Если вы атакуете этим оружием существо, и при броске атаки выпадает «20», эта цель получит дополнительный рубящий урон 14. После этого бросьте ещё к20. Если выпадет «20», вы отрубаете одну из конечностей цели, а эффект этого определяет Мастер. <br>Если у существа не было конечностей, вы отрубаете часть его тела. <br>Кроме того, вы можете произнести командное слово меча, чтобы клинок начал излучать яркий свет в радиусе 10 футов и тусклый свет в пределах ещё 10 футов. Повторное произнесение этого слова или убирание меча в ножны гасит свет.",
-      "typeAdditions": "(любой swилиd который наносит рубящий урон)"
+      "typeAdditions": "(любой меч который наносит рубящий урон)"
     }
   },
   {
@@ -4449,12 +4455,12 @@ var allItems = [
       "rarity": 2,
       "text": "You gain a +1 bonus to attack and damage rolls made with this magic weapon. <br><b>Curse.</b> This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the cu:-: to you. As long as you remain cursed, you are unwilli- ~ to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons othethan this one. <br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed sa,-you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it. <br>You can break the curse in the usual ways. <br>Alternatively, casting banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
       "source": "DMG",
-      "img": ""
+      "img": "SWORD_O_VENGEANCE.jpg"
     },
     "ru": {
       "name": "Меч мести",
-      "text": "Вы получаете бонус +1 к броскам атаки и урона этим магическим оружием. <br>Проклятье. Этот меч проклят и одержим мстительным духом. Настроившись на него, вы тоже становитесь проклятым. Пока вы прокляты, вы не желаете расставаться с эти мечом, и всегда держите его при себе. Пока вы настроены на это оружие, вы совершаете с помехой все броски атаки другим оружием. <br>Кроме того, пока меч находится у вас, вы должны совершать спасбросок Мудрости со Сл 15 каждый раз, когда получаете урон в сражении. При провале вы должны атаковать существо, причинившее вам урон, пока хиты одного из вас не опустятся до 0, или пока вы не сможете дотянуться до существа, чтобы совершить по нему рукопашную атаку. <br>Вы можете избавиться от проклятья как обычно. <br>В качестве альтернативы, накладывание изгнания на меч заставляет мстительный дух покинуть его. После этого меч становится обычным оружием +1 без особых свойств.",
-      "typeAdditions": "(любой swилиd)"
+      "text": "Вы получаете бонус +1 к броскам атаки и урона этим магическим оружием. <br><b>Проклятье.</b> Этот меч проклят и одержим мстительным духом. Настроившись на него, вы тоже становитесь проклятым. Пока вы прокляты, вы не желаете расставаться с эти мечом, и всегда держите его при себе. Пока вы настроены на это оружие, вы совершаете с помехой все броски атаки другим оружием. <br>Кроме того, пока меч находится у вас, вы должны совершать спасбросок Мудрости со Сл 15 каждый раз, когда получаете урон в сражении. При провале вы должны атаковать существо, причинившее вам урон, пока хиты одного из вас не опустятся до 0, или пока вы не сможете дотянуться до существа, чтобы совершить по нему рукопашную атаку. <br>Вы можете избавиться от проклятья как обычно. <br>В качестве альтернативы, накладывание изгнания на меч заставляет мстительный дух покинуть его. После этого меч становится обычным оружием +1 без особых свойств.",
+      "typeAdditions": "(любой меч)"
     }
   },
   {
@@ -4466,12 +4472,12 @@ var allItems = [
       "attunement": "(requires attunement)",
       "text": "Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means. <br>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. <br>At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.",
       "source": "DMG",
-      "img": ""
+      "img": "SWORD_OF_WOUNDING.jpg"
     },
     "ru": {
       "name": "Меч ранения",
       "text": "Хиты, потерянные из-за урона этим оружием, могут восстановиться только за счёт короткого или продолжительного отдыха, а не за счёт регенерации, магии и других средств. <br>Один раз в ход, когда вы попадаете по существу атакой, используя это магическое оружие, вы можете ранить цель. В начале каждого своего хода раненое существо получает урон некротической энергией 1к4 за каждое ранение, а потом совершает спасбросок Телосложения со Сл 15, оканчивая эффекты всех таких ран на себе при успехе. В качестве альтернативы, раненое существо или любое существо в пределах 5 футов от неё может действием совершить проверку Мудрости (Медицина) со Сл 15, оканчивая эффект таких ран на нём при успехе.",
-      "typeAdditions": "(любой swилиd)",
+      "typeAdditions": "(любой меч)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -4483,12 +4489,12 @@ var allItems = [
       "attunement": "(requires attunement by acreature of good alignment)",
       "text": "This talisman is a mighty symbol of goodness. A creature that is neither good nor evil in alignment takes 6d6 radiant damage upon touching the talisman. An evil creature takes 8d6 radiant damage upon touching the talisman. Either sort of creature takes the damage again each time it ends its turn holding or carrying the talisman. <br>If you are a good cleric or paladin, you can use the talisman as a holy symbol, and you gain a +2 bonus to pel! attack rolls while you wear or hold it. <br>The talisman has 7 charges. If you are wearing or holding it, you can use an action to expend 1 charge from it and choose one creature you can see on the ground within 120 feet of you. If the target is of evil alignment, a flaming fissure opens under it. The target must succeed on a DC 20 Dexterity saving throw or fall into the fissure and be destroyed, leaving no remains. <br>The fissure then closes, leaving no trace of its existence. <br>When you expend the last charge, the talisman disperses into motes of golden light and is destroyed.",
       "source": "DMG",
-      "img": ""
+      "img": "TALISMAN_OF_PURE_GOOD.jpg"
     },
     "ru": {
       "name": "Талисман чистого добра",
       "attunement": "(требует настройки созданием с добрым мировоззрением)",
-      "text": "Этот талисман — могущественный символ добра. Существа, чьё мировоззрение и не доброе и не злое, получают урон излучением 6к6, когда прикасаются к талисману. Злое существо получает урон излучением 8к6, когда прикасается к талисману. Все эти существа получают такой же урон каждый раз, когда оканчивают ход, держа или неся талисман. <br>Если вы — добрый жрец или паладин, вы можете использовать талисман как святой символ, и вы получаете бонус +2 к броскам атаки заклинаний, пока носите или держите его. <br>У талисмана есть 7 зарядов. Если вы носите или держите его, вы можете действием потратить 1 заряд и выбрать одно существо, которое видите находящимся на полу в пределах 120 футов от вас. Если у цели злое мировоззрение, под ней откроется огненная расщелина. Цель должна преуспеть в спасброске <br>Ловкости со Сл 20, иначе она упадёт в расщелину и уничтожится, не оставив после себя останков. Расщелина после этого закрывается, не оставляя следов. <br>Когда вы тратите последний заряд, талисман распадается искрами золотистого света и уничтожается."
+      "text": "Этот талисман — могущественный символ добра. Существа, чьё мировоззрение и не доброе и не злое, получают урон излучением 6к6, когда прикасаются к талисману. Злое существо получает урон излучением 8к6, когда прикасается к талисману. Все эти существа получают такой же урон каждый раз, когда оканчивают ход, держа или неся талисман. <br>Если вы — добрый жрец или паладин, вы можете использовать талисман как святой символ, и вы получаете бонус +2 к броскам атаки заклинаний, пока носите или держите его. <br>У талисмана есть 7 зарядов. Если вы носите или держите его, вы можете действием потратить 1 заряд и выбрать одно существо, которое видите находящимся на полу в пределах 120 футов от вас. Если у цели злое мировоззрение, под ней откроется огненная расщелина. Цель должна преуспеть в спасброске Ловкости со Сл 20, иначе она упадёт в расщелину и уничтожится, не оставив после себя останков. Расщелина после этого закрывается, не оставляя следов. <br>Когда вы тратите последний заряд, талисман распадается искрами золотистого света и уничтожается."
     }
   },
   {
@@ -4575,7 +4581,7 @@ var allItems = [
       "attunement": "(requires attunement by a wizard)",
       "text": "This thick leather-bound volume has a desiccated tongue pinned to the front cover. Five of these tomes exist, and it's unknown which one is the original. The grisly cover decoration on the first tome of the stilled tongue once belonged to a treacherous former servant of the lich-god Vecna, keeper of secrets. The tongues pinned to the covers of the four copies came from othe:spellcasters who crossed Vecna. The first few pages o' each tome are filled with indecipherable scrawls. The remaining pages are blank and pristine. <br>If you can attune to this item, you can use it as a spellbook and an arcane focus. In addition, while holding the tome, you can use a bonus action to cast a spell you have written in this tome, without expend in a spell slot or using any verbal or somatic component <br>Once used, this property of the tome can't be used agai::. until the next dawn. <br>While attuned to the book, you can remove the tonguF from the book's cover. If you do so, all spells written in the book are permanently erased. <br>Vecna watches anyone using this tome. He can also <br>Tite cryptic messages in the book. These messages appear at midnight and fade away after they are read.",
       "source": "DMG",
-      "img": ""
+      "img": "TOME_OF_THE_STILLED_TONGUE.jpg"
     },
     "ru": {
       "name": "Том молчаливого языка",
@@ -4599,16 +4605,32 @@ var allItems = [
   },
   {
     "en": {
-      "name": "TRIDENT OF FISH COMMAND UNIVERSAL SOLVENT",
+      "name": "TRIDENT OF FISH COMMAND",
+      "type": "Weapon",
+      "typeAdditions": "(trident)",
+      "attunement": "(requires attunement)",
+      "rarity": 2,
+      "text": "-:'his trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast <a href='https://tentaculus.ru/spells/#q=dominate_beast'>dominate beast</a> (save DC 15) from it on a beast rhat has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn.",
+      "source": "DMG",
+      "img": "TRIDENT_OF_FISH_COMMAND.jpg"
+    },
+    "ru": {
+      "name": "Трезубец командования рыбами",
+      "text": "Этот трезубец — магическое оружие. У него есть 3 заряда. Если вы его держите, вы можете действием потратить 1 заряд, чтобы наложить им заклинание <a href='https://tentaculus.ru/spells/#q=dominate_beast'>подчинение зверя</a> (Сл спасброска 15) на зверя, у которого есть врождённая скорость плавания. Трезубец ежедневно восстанавливает 1к3 заряда на рассвете."
+    }
+  },
+  {
+    "en": {
+      "name": "UNIVERSAL SOLVENT",
       "type": "Wondrous item",
       "rarity": 5,
       "text": "This tube holds milky liquid with a strong alcohol ~me lt. You can use an action to pour the contents of the rube onto a surface within reach. The liquid instantly dissolves up to 1 square foot of adhesive it touches, including sovereign glue.",
       "source": "DMG",
-      "img": ""
+      "img": "UNIVERSAL_SOLVENT.jpg"
     },
     "ru": {
-      "name": "Трезубец командования рыбами",
-      "text": "Этот трезубец — магическое оружие. У него есть 3 заряда. Если вы его держите, вы можете действием потратить 1 заряд, чтобы наложить им заклинание подчинение зверя (Сл спасброска 15) на зверя, у которого есть врождённая скорость плавания. Трезубец ежедневно восстанавливает 1к3 заряда на рассвете."
+      "name": "Универсальный растворитель",
+      "text": "В этом тюбике находится молочно-белая жидкость с сильным запахом спирта. Вы можете действием вылить содержимое тюбика на поверхность в пределах досягаемости. Она мгновенно растворяет до 1 квадратного фута клейкой субстанции, которой касается, включая превосходный клей."
     }
   },
   {
@@ -4624,7 +4646,7 @@ var allItems = [
     "ru": {
       "name": "Жестокое оружие",
       "text": "Если у вас при броске атаки этим магическим оружием выпадает «20», цель получает дополнительный урон 7 того вида, который причиняет это оружие.",
-      "typeAdditions": "(любой)"
+      "typeAdditions": "(любое)"
     }
   },
   {
@@ -4641,7 +4663,7 @@ var allItems = [
     "ru": {
       "name": "Меч головоруб",
       "text": "Вы получаете бонус +3 к броскам атаки и урона этим магическим оружием. Кроме того, это оружие игнорирует сопротивление к рубящему урону. <br>Если вы атакуете этим оружием существо, у которого есть как минимум одна голова, и при броске атаки у вас выпадает «20», вы отрубаете одну из голов чудовища. Существо умирает, если не может жить без головы. Существо обладает иммунитетом к этому эффекту, если обладает иммунитетом к рубящему урону, не имеет головы или не нуждается в ней, обладает легендарными действиями или Мастер решает, что существо слишком большое, чтобы вы могли отрубить ему голову этим оружием. Такие существа вместо этого получают рубящий урон 6к8.",
-      "typeAdditions": "(любой swилиd который наносит рубящий урон)",
+      "typeAdditions": "(любой меч который наносит рубящий урон)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -4886,13 +4908,13 @@ var allItems = [
       "typeAdditions": "(any)",
       "rarity": 2,
       "attunement": "(requires attunement)",
-      "text": "TYou have a bonus to attack and damage rolls made with this magic weapon.",
+      "text": "TYou have a bonus +1 to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
       "img": "WEAPON.jpg"
     },
     "ru": {
       "name": "Оружие +1",
-      "text": "Вы получаете бонус к броскам атаки и урона, совершённым этим магическим оружием.",
+      "text": "Вы получаете бонус +1 к броскам атаки и урона, совершённым этим магическим оружием.",
       "typeAdditions": "(любой)",
       "attunement": "(требуется настройка)"
     }
@@ -4904,13 +4926,13 @@ var allItems = [
       "typeAdditions": "(any)",
       "rarity": 3,
       "attunement": "(requires attunement)",
-      "text": "TYou have a bonus to attack and damage rolls made with this magic weapon.",
+      "text": "TYou have a bonus +2 to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
       "img": "WEAPON.jpg"
     },
     "ru": {
       "name": "Оружие +2",
-      "text": "Вы получаете бонус к броскам атаки и урона, совершённым этим магическим оружием.",
+      "text": "Вы получаете бонус +2 к броскам атаки и урона, совершённым этим магическим оружием.",
       "typeAdditions": "(любой)",
       "attunement": "(требуется настройка)"
     }
@@ -4922,13 +4944,13 @@ var allItems = [
       "typeAdditions": "(any)",
       "rarity": 4,
       "attunement": "(requires attunement)",
-      "text": "TYou have a bonus to attack and damage rolls made with this magic weapon.",
+      "text": "TYou have a bonus +3 to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
       "img": "WEAPON.jpg"
     },
     "ru": {
       "name": "Оружие +3",
-      "text": "Вы получаете бонус к броскам атаки и урона, совершённым этим магическим оружием.",
+      "text": "Вы получаете бонус +3 к броскам атаки и урона, совершённым этим магическим оружием.",
       "typeAdditions": "(любой)",
       "attunement": "(требуется настройка)"
     }
@@ -4992,7 +5014,7 @@ var allItems = [
     "ru": {
       "name": "Танцующий меч",
       "text": "Вы можете бонусным действием бросить этот магический меч в воздух и произнести командное слово. <br>После этого меч начнёт парить, пролетает до 30 футов и атакует одно существо на ваш выбор в пределах 5 футов от него. Меч использует ваш бросок атаки и ваш модификатор характеристики для броска урона. <br>Пока меч парит, вы можете бонусным действием заставить его перелететь на расстояние 30 футов в другое место, находящееся в пределах 30 футов от вас. Частью этого же бонусного действия вы можете заставить меч атаковать одно существо, находящееся в пределах 5 футов от него. <br>После того как парящий меч совершит четвёртую атаку, он пролетает до 30 футов и пытается вернуться в вашу руку. Если у вас нет свободных рук, он падает на землю у ваших ног. Если у меча нет свободного пути до вас, он перемещается максимально близко к вам и потом падает на землю. Он перестаёт парить, если вы хватаете его или перемещаетесь более чем на 30 футов от него.",
-      "typeAdditions": "(любой swилиd)",
+      "typeAdditions": "(любой меч)",
       "attunement": "(требуется настройка)"
     }
   },
@@ -5019,7 +5041,7 @@ var allItems = [
       "rarity": 2,
       "text": "While wearing this cap underwater, you can speak its command word as an action to create a bubble of air around your head. It allows you to breathe normally underwater. This bubble stays with you until you speak the command word again, the cap is removed, or you are no longer underwater.",
       "source": "DMG",
-      "img": ""
+      "img": "CAP_OF_WATER_BREATHING.jpg"
     },
     "ru": {
       "name": "Шапка подводного дыхания",

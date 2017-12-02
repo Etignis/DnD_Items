@@ -164,7 +164,7 @@ window.onload = function(){
 
 				var sOptionValue = type.key? type.key : type.en;
 
-				ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
+				ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue.replace(" ", "_")+"'><label for='ch_"+sOptionValue.replace(" ", "_")+"' data-hierarchy='root'>"+type.en+"<br>"+type.ru+"</label>";
 
 			}
 		} else {
@@ -177,7 +177,7 @@ window.onload = function(){
 
 				var sOptionValue = key;
 
-				ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue+"'><label for='ch_"+sOptionValue+"' data-hierarchy='root'>"+type.text.en.title+"<br>"+type.text.ru.title+"</label>";
+				ret+="<input "+checked+" type='checkbox' value='"+sOptionValue+"' id='ch_"+sOptionValue.replace(" ", "_")+"'><label for='ch_"+sOptionValue.replace(" ", "_")+"' data-hierarchy='root'>"+type.text.en.title+"<br>"+type.text.ru.title+"</label>";
 			}
 		}
 
@@ -361,9 +361,9 @@ window.onload = function(){
 	function showFiltered(oParams) {
 		try{
 			var sName = oParams.sName;
-			var aSources = oParams.aSources;
-			var aRarity = oParams.aRarity;
-			var aTypes = oParams.aTypes;
+			var aSources = oParams.aSources && oParams.aSources.split(",").map(item => item.trim());
+			var aRarity = oParams.aRarity && oParams.aRarity.split(",").map(item => item.trim());
+			var aTypes = oParams.aTypes && oParams.aTypes.split(",").map(item => item.trim());
 			var sLang = oParams.sLang;
 			var sView = oParams.sView;
 			var sSort = oParams.sSort;
@@ -1281,13 +1281,13 @@ window.onload = function(){
 			aFilters.push("q="+sName.replace(/\s+/g, "_"));
 		}
 		if(aTypes && aTypes.length>0 && $("#TypeCombobox .combo_box_content input").length > aTypes.length) {
-			aFilters.push("types="+aTypes.join(","));
+			aFilters.push("type="+aTypes.join(",").replace(/\s+/g, "_"));
 		}
 		if(aSources && aSources.length>0 && $("#SourceCombobox .combo_box_content input").length > aSources.length) {
-			aFilters.push("sources="+aSources.join(","));
+			aFilters.push("source="+aSources.join(",").replace(/\s+/g, "_"));
 		}
 		if(aRarities && aRarities.length>0 && $("#RarityCombobox .combo_box_content input").length > aRarities.length) {
-			aFilters.push("rarities="+aRarities.join(","));
+			aFilters.push("rarity="+aRarities.join(",").replace(/\s+/g, "_"));
 		}
 		if(sLang && sLang.length > 0 && sLang != "ru") {
 			aFilters.push("lang="+sLang.replace(/\s+/g, "_"));
@@ -1317,9 +1317,9 @@ window.onload = function(){
       var sView = sHash.match(/\bview=([\w]+)/);
       var sSort = sHash.match(/\bsort=([\w_]+)/);
 
-      var sRarities = sHash.match(/\brarities=([\w,]+)/);
-      var sTypes = sHash.match(/\btypes=([\w,]+)/);
-      var sSources = sHash.match(/\bsources=([\w,_]+)/);
+      var sRarities = sHash.match(/\brarity=([\w,]+)/);
+      var sTypes = sHash.match(/\btype=([\w,]+)/);
+      var sSources = sHash.match(/\bsource=([\w,_]+)/);
 
 
       if(sName && sName[1]) {
@@ -1327,17 +1327,17 @@ window.onload = function(){
       }
 
       if(sLang && sLang[1]) {
-      	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']").text());
+      	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']").text().replace(/[_]+/g," "));
       }
       if(sView && sView[1]) {
-      	$("#CardViewSelect .label").attr("data-selected-key", sView[1]).html($("#CardViewSelect li[data-key='"+sView[1]+"']").text());
+      	$("#CardViewSelect .label").attr("data-selected-key", sView[1]).html($("#CardViewSelect li[data-key='"+sView[1]+"']").text().replace(/[_]+/g," "));
       }
       if(sSort && sSort[1]) {
-      	$("#SortSelect .label").attr("data-selected-key", sSort[1]).html($("#SortSelect li[data-key='"+sSort[1]+"']").text());
+      	$("#SortSelect .label").attr("data-selected-key", sSort[1]).html($("#SortSelect li[data-key='"+sSort[1]+"']").text().replace(/[_]+/g," "));
       }
 
       if(sSources && sSources[1]) {
-      	var aSources = sSources[1].split(",");
+      	var aSources = sSources[1].replace("_", " ").split(",");
 
       	$("#SourceCombobox .combo_box_content input[type='checkbox']").each(function(){
       		if(aSources.indexOf($(this).val())>-1) {
@@ -1346,10 +1346,10 @@ window.onload = function(){
       			$(this).prop('checked', false);
       		}
       	});
-      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1])
+      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1].replace("_", " "))
       }
       if(sRarities && sRarities[1]) {
-      	var aRarities = sRarities[1].split(",");
+      	var aRarities = sRarities[1].replace("_", " ").split(",");
 
       	$("#RarityCombobox .combo_box_content input[type='checkbox']").each(function(){
       		if(aRarities.indexOf($(this).val())>-1) {
@@ -1358,19 +1358,19 @@ window.onload = function(){
       			$(this).prop('checked', false);
       		}
       	});
-      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1])
+      	$("#RarityCombobox .combo_box_title").attr("data-val", sSchools[1].replace("_", " "))
       }
       if(sTypes && sTypes[1]) {
-      	var aTypes = sTypes[1].split(",");
-
-      	$("#SourceCombobox .combo_box_content input[type='checkbox']").each(function(){
+      	var aTypes = sTypes[1].replace("_", " ").split(",");
+        ////$("#TypeCombobox .combo_box_title").attr("data-val")
+      	$("#TypeCombobox .combo_box_content input[type='checkbox']").each(function(){
       		if(aTypes.indexOf($(this).val())>-1) {
       			$(this).prop('checked', true);
       		} else {
       			$(this).prop('checked', false);
       		}
       	});
-      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1])
+      	$("#TypeCombobox .combo_box_title").attr("data-val", sTypes[1].replace("_", " "))
       }
 
       // if(sLang && sLang[1]) {
