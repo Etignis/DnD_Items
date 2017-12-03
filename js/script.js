@@ -290,9 +290,9 @@ window.onload = function(){
       var s_coast = getItemAttr(oItem, "coast", lang) ||
         oRarity[oItem.en.rarity] && oRarity[oItem.en.rarity].coast ||
         "";
-      if(s_coast){
-        s_coast = "<div class='coast'>"+s_coast+"</div>";
-      }
+      // if(s_coast){
+        // s_coast = "<div class='coast'><div class='coin'>"+s_coast+"</div></div>";
+      // }
       try{
         
         var oImg = "<img class='img' src='img/items/"+s_img+"'>";
@@ -315,7 +315,7 @@ window.onload = function(){
 
 			var cardWidth = getConfig("cardWidth");
 			var style = "";
-			if(cardWidth) {
+			if(cardWidth && !fText) {
 				var style = " style='width: " + cardWidth + "' ";
 			}
 
@@ -325,17 +325,17 @@ window.onload = function(){
 			ret = '<div class="cardContainer '+(fText? "textView " : "") + sLockedItem + " " + s_rarity_class +'" '+ style +' data-level="' + oItem.en.level + '" data-type="' + oItem.en.school + '" data-rarity="' + oItem.en.name + '"  data-lang="' + lang + '">'+
 				'<div class="ItemCard">'+
 					'<div class="content" '+sImg+'>'+
-            bLockItem +
-            bHideItem +
+            //bLockItem +
+            //bHideItem +
             "<div class='header_info'>"+
               '<h1 title="'+s_name+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' +s_name+ '</h1>'+
-              '<div class="subtitle">' + s_rariry + " " + s_type+  " " + s_typeAdditions+  " " + s_attunement + '</div>'+
-              s_coast+
+              '<div class="subtitle">' + s_rariry + " " + s_type+  " " + s_typeAdditions+  " " + s_attunement + " " +s_coast+ '</div>'+
             "</div>"+
             "<div class='info'>"+
               oImg+
               '<div class="text">' + s_text + '</div>	'+
             "</div>"+
+            '<div class="sf_text">показать/скрыть описание</div>'+
 						"<div class='source' title=\"Источник: "+ s_source+"\">"+ s_source+"</div>"+
 						textSizeButtons +
 					'</div>'+
@@ -361,7 +361,7 @@ window.onload = function(){
 	function showFiltered(oParams) {
 		try{
 			var sName = oParams.sName;
-			var aSources = oParams.aSources && oParams.aSources.split(",").map(item => item.trim());
+			var aSources = oParams.aSources;// && oParams.aSources.split(",").map(item => item.trim());
 			var aRarity = oParams.aRarity && oParams.aRarity.split(",").map(item => item.trim());
 			var aTypes = oParams.aTypes && oParams.aTypes.split(",").map(item => item.trim());
 			var sLang = oParams.sLang;
@@ -405,7 +405,7 @@ window.onload = function(){
 		if(aRarity && aRarity.length>0) {
 			filteredItems = filteredItems.filter(function(Item){
 				for(var i = 0; i < aRarity.length; i++) {
-					if(aRarity[i].toLowerCase().trim() == Item.en.rarity.toLowerCase().trim()) {
+					if(aRarity[i].toLowerCase().trim() == String(Item.en.rarity).toLowerCase().trim() || aRarity[i].toLowerCase().trim() == 0) {
 						return true;
 					}
 				}
@@ -417,10 +417,14 @@ window.onload = function(){
 		if(aSources && aSources.length>0 && aSources.length<9) {
 			filteredItems = filteredItems.filter(function(Item){
 				for(var i = 0; i < aSources.length; i++) {
-
-					if(aSources[i].toLowerCase().trim() == Item.en.source.toLowerCase().trim()) {
-						return true;
-					}
+          try{
+            if(aSources[i].toLowerCase().trim() == Item.en.source.toLowerCase().trim()) {
+              return true;
+            }
+          } catch (err) {
+            console.dir(err);
+            console.dir(Item.en);
+          }
 				}
 				return false;
 			});
@@ -475,6 +479,7 @@ window.onload = function(){
 		}
 
 		$(".ItemContainer").html(Items);
+    $(".ItemContainer").attr("data-itemCount", filteredItems.length);
 		$("#before_Items").hide();
 		$("#info_text").hide();
 	}
@@ -555,7 +560,7 @@ window.onload = function(){
 	}
   function createAutoSizeTextButton() {
 		var label = createLabel("Размер текста");
-		var bTextSize = "<a href='#' class='bt flexChild cardTestAutoSize' title='Автоподстройка размера текста заклинания'><i class='fa fa-text-height' aria-hidden='true'></i> Рассчитать </a>";
+		var bTextSize = "<a href='#' class='bt flexChild cardTestAutoSize' title='Автоподстройка размера текста на карточке'><i class='fa fa-text-height' aria-hidden='true'></i> Рассчитать </a>";
 		$(".p_side").append("<div class='mediaWidth flexParent'>" + label + bTextSize + "</div>");
 	}
 	function createLangSelect(lang) {
@@ -616,7 +621,7 @@ window.onload = function(){
 			return;
 		}
 		if(!$("#HiddenItems").length>0){
-			var label = createLabel("Скрытые заклинания");
+			var label = createLabel("Скрытые предметы");
 			$("#LangSelect").parent().after("<div class='mediaWidth'>" + label + "<div id='HiddenItems'></div></div>");
 		}
 		var listHiddenItems = aHiddenItems.map(function(item){
@@ -674,7 +679,7 @@ window.onload = function(){
 		createNameFilter();
 		createTypeCombobox();
 		 createRarityCombobox();
-		 createSourceCombobox();
+		 //createSourceCombobox();
 		 createCardWidthButtons();
 		 createAutoSizeTextButton();
 		 createLangSelect(lang);
@@ -1192,29 +1197,30 @@ window.onload = function(){
 		var nSelectedCards = $(".ItemCard.selected").length;
 		if(nSelectedCards > 0) {
 			$(".ItemCard.selected").each(function() {
-				var f_s=$(this).find(".text").css("font-size");
+				var f_s=$(this).find(".info").css("font-size");
 				f_s=f_s.substring(0, f_s.length - 2);
-				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {
+				while (f_s > 7 && $(this).find(".info")[0].scrollWidth < $(this).find(".info").innerWidth()) {
 					f_s-=0.3;
 
 					var sFontSize = f_s+"px";
 					var sLineHeight = f_s-1+"px";
-					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+					$(this).find(".info").css({"font-size": sFontSize, "line-height": sLineHeight});
 				}
 			});
 		} else {
 			$(".ItemCard").each(function() {
-				var f_s=$(this).find(".text").css("font-size");
+				var f_s=$(this).find(".info").css("font-size");
 				f_s=f_s.substring(0, f_s.length - 2);
-				while (f_s > 7 && $(this).find(".text")[0].scrollWidth < $(this).find(".text").innerWidth()) {
+				while (f_s > 7 && $(this).find(".info")[0].scrollWidth < $(this).find(".info").innerWidth()) {
 					 f_s-=0.3;
 					//console.log(f_s);
 					var sFontSize = f_s+"px";
 					var sLineHeight = f_s-1+"px";
-					$(this).find(".text").css({"font-size": sFontSize, "line-height": sLineHeight});
+					$(this).find(".info").css({"font-size": sFontSize, "line-height": sLineHeight});
 				}
 			});
 		}
+    return false;
 	});
 
 	$(document).keydown(function(event){
@@ -1254,6 +1260,19 @@ window.onload = function(){
 		$(this).toggleClass("selected");
 	});
 
+  // show/hide card info
+  $("body").on("click", ".sf_text", function(){
+    var oInfo =  $(this).parent().find(".info");
+    //var oText = $(this).parent().find(".text");
+    if(oInfo.hasClass("show")) {
+      // hide
+      oInfo.removeClass("show");
+    } else {
+      // show
+      oInfo.addClass("show");
+    }
+    return false;
+  });
 
 // url filters
 	function updateHash() {
@@ -1346,7 +1365,7 @@ window.onload = function(){
       			$(this).prop('checked', false);
       		}
       	});
-      	$("#SourceCombobox .combo_box_title").attr("data-val", sSchools[1].replace("_", " "))
+      	$("#SourceCombobox .combo_box_title").attr("data-val", sSources[1].replace("_", " "))
       }
       if(sRarities && sRarities[1]) {
       	var aRarities = sRarities[1].replace("_", " ").split(",");
@@ -1358,7 +1377,7 @@ window.onload = function(){
       			$(this).prop('checked', false);
       		}
       	});
-      	$("#RarityCombobox .combo_box_title").attr("data-val", sSchools[1].replace("_", " "))
+      	$("#RarityCombobox .combo_box_title").attr("data-val", sRarities[1].replace("_", " "))
       }
       if(sTypes && sTypes[1]) {
       	var aTypes = sTypes[1].replace("_", " ").split(",");

@@ -143,7 +143,7 @@ var oTypes = {
   }
 }
 var oRarity = {
-  0: {
+  /*0: {
     "text": {
       "en": {
         "title": "vary"
@@ -155,7 +155,7 @@ var oRarity = {
         "title": "разной редкости"
       }
     }
-  },
+  },*/
   1: {
     "text": {
       "en": {
@@ -2037,7 +2037,7 @@ var allItems = [
     },
     "ru": {
       "name": "Арфа Анструт (Инструмент бардов)",
-      "attunement": "(требует настройки бардом",
+      "attunement": "(требует настройки бардом)",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Control_weather'>Власть над погодой</a>, <a href='https://tentaculus.ru/spells/#q=cure_wounds'>лечение ран</a> (5 уровень), <a href='https://tentaculus.ru/spells/#q=wall_of_thorns'>терновая стена</a>"
     }
   },
@@ -2053,7 +2053,7 @@ var allItems = [
     },
     "ru": {
       "name": "Мандолина Канаит (Инструмент бардов)",
-      "attunement": "(требует настройки бардом",
+      "attunement": "(требует настройки бардом)",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Cure_wounds'>лечение ран</a> (3 уровень), <a href='https://tentaculus.ru/spells/#q=dispel_magic'>рассеивание магии</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>Защита от энергии</a> (только электричество)"
     }
   },
@@ -2069,7 +2069,7 @@ var allItems = [
     },
     "ru": {
       "name": "Лира Кли (Инструмент бардов)",
-      "attunement": "(требует настройки бардом",
+      "attunement": "(требует настройки бардом)",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Stone_shape'>Изменение формы камня,</a>, <a href='https://tentaculus.ru/spells/#q=wall_of_fire'>огненная стена</a>, <a href='https://tentaculus.ru/spells/#q=wind_wall'>стена ветров</a>"
     }
   },
@@ -2085,7 +2085,7 @@ var allItems = [
     },
     "ru": {
       "name": "Лютня Досс (Инструмент бардов)",
-      "attunement": "(требует настройки бардом",
+      "attunement": "(требует настройки бардом)",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Animal_friendship'>Дружба с животными</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_energy'>защита от энергии</a> (только огон), <a href='https://tentaculus.ru/spells/#q=protection_from_poison'>защита от яда</a>"
     }
   },
@@ -2101,7 +2101,7 @@ var allItems = [
     },
     "ru": {
       "name": "Бандура Фоклучан (Инструмент бардов)",
-      "attunement": "(требует настройки бардом",
+      "attunement": "(требует настройки бардом)",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Entangle'>опутывание</a>,<a href='https://tentaculus.ru/spells/#q=faerie_fire'>огонь фей</a>, <a href='https://tentaculus.ru/spells/#q=shillelagh'>Дубинка</a>,  <a href='https://tentaculus.ru/spells/#q=speak_with_animals'>разговор с животными</a>"
     }
   },
@@ -2111,7 +2111,7 @@ var allItems = [
       "type": "Wondrous item",
       "rarity": 2,
       "attunement": "(requires attunement by a bard)",
-      "attunement": "(требует настройки бардом",
+      "attunement": "(требует настройки бардом)",
       "text": "An instrument of the bards is an exquisite example of it kind, superior to an ordinary instrument in every way. <br>Seven types of these instruments exist, each named after a legendary bard college. The following table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 psychic damage. <br>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC. <br>When you use the instrument to cast a spell that causes targets to become charmed on a failed save, the targets have disadvantage on the saving throw. This effect applies whether you are using the instrument as the source of the spell or as a spellcasting focus.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>Fly</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>invisibility</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>levitate</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>protection from evil and good</a>,  <a href='https://tentaculus.ru/spells/#q=Barkskin'>Barkskin</a>, <a href='https://tentaculus.ru/spells/#q=cure_wounds'>cure wounds</a>,<a href='https://tentaculus.ru/spells/#q=fog_cloud'>fog  cloud</a>",
       "source": "DMG",
       "img": "MAC-FUIRMIDH_CITTERN.jpg"
@@ -2133,7 +2133,7 @@ var allItems = [
     },
     "ru": {
       "name": "Арфа Оллава (Инструмент бардов)",
-      "attunement": "(требует настройки бардом",
+      "attunement": "(требует настройки бардом)",
       "text": "Инструмент бардов это прекрасный образец музыкального инструмента, во всём превосходящий обычные аналоги. Есть семь разновидностей таких инструментов, каждый назван в честь одной из легендарных коллегий бардов. В приведённом списке указаны заклинания, общие для всех инструментов, а также заклинания, специфичные для каждого инструмента, а также редкость этих инструментов. Существо, пытающееся играть на инструменте, не будучи настроенным на него, должно преуспеть в спасброске Мудрости со Сл 15, иначе получит урон психической энергией 2к4. <br>Вы можете действием сыграть на инструменте и наложить одно из его заклинаний. После того как инструмент использован для наложения заклинания, он не может повторно накладывать это заклинание до следующего рассвета. Заклинания используют вашу базовую характеристику и Сл спасбросков от ваших заклинаний. <br>Если вы использовали инструмент для накладывания заклинания, которое делает цель очарованной при провале спасброска, цель совершает этот спасбросок с помехой. Этот эффект применяется вне зависимости от того, использовали ли вы инструмент в качестве источника заклинания или в качестве заклинательной фокусировки.<br> <a href='https://tentaculus.ru/spells/#q=Fly'>полёт</a>, <a href='https://tentaculus.ru/spells/#q=invisibility'>невидимость</a>, <a href='https://tentaculus.ru/spells/#q=levitate'>левитация,</a>, <a href='https://tentaculus.ru/spells/#q=protection_from_evil_and_good'>Защита от добра и зла</a>, <a href='https://tentaculus.ru/spells/#q=Confusion'>смятение,</a>, <a href='https://tentaculus.ru/spells/#q=control_weather'>Власть над погодой</a>, <a href='https://tentaculus.ru/spells/#q=fire_storm'>огненная буря</a>"
     }
   },
@@ -2708,7 +2708,7 @@ var allItems = [
       "rarity": 3,
       "text": "Beads of this cloudy gray oil form on the outside of its container and quickly evaporate. The oil can cover a <br>Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the etherealness spell for 1 hour.",
       "source": "DMG",
-      "img": ""
+      "img": "OIL_OF_ETHEREALNESS.jpg"
     },
     "ru": {
       "name": "Масло эфирности",
@@ -2722,7 +2722,7 @@ var allItems = [
       "rarity": 4,
       "text": "This clear, gelatinous oil sparkles with tiny, ultrathin silver shards. The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil takes 1 minute. For 1 hour, the coated item is magical and has a +3 bonus to attack and damage rolls.",
       "source": "DMG",
-      "img": ""
+      "img": "OIL_OF_SHARPNESS.jpg"
     },
     "ru": {
       "name": "Масло остроты",
@@ -2736,7 +2736,7 @@ var allItems = [
       "rarity": 2,
       "text": "This sticky black unguent is thick and heavy in the container, but it flows quickly when poured. The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). <br>Applying the oil takes 10 minutes. The affected creature then gains the effect of a freedom of movement spell for 8 hours. <br>Alternatively, the oil can be poured on the ground as an action, where it covers a 10-foot square, duplicating the effect of the grease spell in that area for 8 hours.",
       "source": "DMG",
-      "img": ""
+      "img": "OIL_OF_SLIPPERINESS.jpg"
     },
     "ru": {
       "name": "Масло ускользания",
@@ -2886,7 +2886,7 @@ var allItems = [
       "rarity": 2,
       "text": "When you drink this potion, you can cast the animal friendship spell (save DC 13) for 1 hour at will. Agitating this muddy liquid brings little bits into view: a fish scale, a hummingbird tongue, a cat claw, or a squirrel hair.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_ANIMAL_FRIENDSHIP.jpg"
     },
     "ru": {
       "name": "Зелье дружбы с животными",
@@ -2898,13 +2898,13 @@ var allItems = [
       "name": "POTION OF CLAIRVOYANCE",
       "type": "Potion",
       "rarity": 3,
-      "text": "When you drink this potion, you gain the effect of the clairvoyance spell. An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.",
+      "text": "When you drink this potion, you gain the effect of the <a href='https://tentaculus.ru/spells/#q=clairvoyance'>clairvoyance</a> spell. An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_CLAIRVOYANCE.jpg"
     },
     "ru": {
       "name": "Зелье ясновидения",
-      "text": "Выпив это зелье, вы получаете эффект заклинания подсматривание. В желтоватой жидкости зелья плавают глазные яблоки, но они исчезают, когда пузырёк открывают."
+      "text": "Выпив это зелье, вы получаете эффект заклинания <a href='https://tentaculus.ru/spells/#q=clairvoyance'>ясновидения</a>. В желтоватой жидкости зелья плавают глазные яблоки, но они исчезают, когда пузырёк открывают."
     }
   },
   {
@@ -2914,7 +2914,7 @@ var allItems = [
       "rarity": 1,
       "text": "When you drink this potion, you gain a climbing speed equal to your walking speed for 1 hour. During this rime, you have advantage on Strength (Athletics) checks you make to climb. The potion is separated into brown, silver, and gray layers resembling bands of stone. <br>Shaking the bottle fails to mix the colors.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_CLIMBING.jpg"
     },
     "ru": {
       "name": "Зелье лазания",
@@ -2926,13 +2926,13 @@ var allItems = [
       "name": "POTION OF DIMINUTION",
       "type": "Potion",
       "rarity": 3,
-      "text": "When you drink this potion, you gain the \"reduce\" effect of the enlarge/reduce spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.",
+      "text": "When you drink this potion, you gain the \"reduce\" effect of the<a href='https://tentaculus.ru/spells/#q=enlarge/reduce'> enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_DIMINUTION.jpg"
     },
     "ru": {
       "name": "Зелье уменьшения",
-      "text": "Когда вы выпиваете это зелье, вы получаете на 1к4 часа эффект «уменьшение» заклинания увеличение/ уменьшение (концентрация не требуется). Маленький красный шарик в этой жидкости непрерывно сжимается до размера бусины и тут же расширяется, окрашивая прозрачную жидкость вокруг, после чего сжимается вновь. Тряска пузырька не прерывает этот процесс."
+      "text": "Когда вы выпиваете это зелье, вы получаете на 1к4 часа эффект «уменьшение» заклинания <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>увеличение/ уменьшение</a> (концентрация не требуется). Маленький красный шарик в этой жидкости непрерывно сжимается до размера бусины и тут же расширяется, окрашивая прозрачную жидкость вокруг, после чего сжимается вновь. Тряска пузырька не прерывает этот процесс."
     }
   },
   {
@@ -2942,7 +2942,7 @@ var allItems = [
       "rarity": 2,
       "text": "After drinking this potion, you can use a bonus action to exhale fire at a target within 30 feet of you. The target must make a DC 13 Dexterity saving throw, taking 4d6 li re damage on a failed save, or half as much damage on a successful one. The effect t;nds after you exhale the li re three times or when 1 hour has passed. <br>This potion's orange liquid flickers, and smoke fills the top of the container and wafts out whenever it is opened.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_FIRE_BREATH.jpg"
     },
     "ru": {
       "name": "Зелье огненного дыхания",
@@ -2956,7 +2956,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, you gain a flying speed equal to your walking speed for 1 hour and can hover. <br>If you're in the air when the potion wears off, you fall unless you have some other means of staying aloft. This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_FLYING.jpg"
     },
     "ru": {
       "name": "Зелье полёта",
@@ -2970,7 +2970,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, you gain the effect of the gaseous form spell for 1 hour (no concentration required) or until you end the effect as a bonus action. <br>This potion's container seems to hold fog that moves and pours like water.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_GASEOUS_FORM.jpg"
     },
     "ru": {
       "name": "Зелье газообразной формы",
@@ -2984,7 +2984,7 @@ var allItems = [
       "rarity": 2,
       "text": "When you drink this potion, your Strength score became 21 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы холмового великана",
@@ -2998,7 +2998,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, your Strength score became 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы ледяного великана",
@@ -3012,7 +3012,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, your Strength score became 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы каменного великана",
@@ -3026,7 +3026,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, your Strength score became 27 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы облачного великана",
@@ -3040,7 +3040,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, your Strength score became 25 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы огненного великана",
@@ -3054,7 +3054,7 @@ var allItems = [
       "rarity": 5,
       "text": "When you drink this potion, your Strength score became 29 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы грозового великана",
@@ -3068,7 +3068,7 @@ var allItems = [
       "rarity": 1,
       "text": "You regain 2d4 + 2 hit points when you drink this potion.  The potion's red liquid glimmers when agitated.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_HEALING.jpg"
     },
     "ru": {
       "name": "Зелье лечения",
@@ -3082,7 +3082,7 @@ var allItems = [
       "rarity": 2,
       "text": "You regain 4d4 + 4 hit points when you drink this potion. The potion's red liquid glimmers when agitated.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_GREATER_HEALING.jpg"
     },
     "ru": {
       "name": "Зелье большого лечения",
@@ -3096,7 +3096,7 @@ var allItems = [
       "rarity": 3,
       "text": "You regain 8d4 + 8 hit points when you drink this potion. The potion's red liquid glimmers when agitated.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_SUPERIOR_HEALING.jpg"
     },
     "ru": {
       "name": "Зелье отличного лечения",
@@ -3110,7 +3110,7 @@ var allItems = [
       "rarity": 4,
       "text": "You regain 10d4 + 20 hit points when you drink this potion. The potion's red liquid glimmers when agitated.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_SUPREME_HEALING.jpg"
     },
     "ru": {
       "name": "Зелье превосходного лечения",
@@ -3124,7 +3124,7 @@ var allItems = [
       "rarity": 3,
       "text": "HP Regained 2d4 + 2 4d4 + 4 8d4 + 8 10d4 + 20 <br>For 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect of the bless spell (no concentration required). This blue potion bubbles and steams as if boiling.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_HEROISM.jpg"
     },
     "ru": {
       "name": "Зелье героизма",
@@ -3138,7 +3138,7 @@ var allItems = [
       "rarity": 4,
       "text": "This potion's container looks empty but feels as though it holds liquid. When you drink it, you become invisible for 1 hour. Anything you wear or carry is invisible with you. The effect ends early if you attack or cast a spell.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_INVISIBILITY.jpg"
     },
     "ru": {
       "name": "Зелье невидимости",
@@ -3152,7 +3152,7 @@ var allItems = [
       "rarity": 3,
       "text": "For 1 minute after you drink this potion, you have resistance to all damage. The potion's syrupy liquid looks like liquified iron.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_INVULNERABILITY.jpg"
     },
     "ru": {
       "name": "Зелье неуязвимости",
@@ -3166,7 +3166,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, your physical age is reduced by 1d6 + 6 years, to a minimum of 13 years. <br>Each time you subsequently drink a potion of longevity, there is 10 percent cumulative chance that you instead age by 1d6 + 6 years. Suspended in this amber liquid are a scorpion's tail, an adder's fang, a dead spider, and a tiny heart that, against all reason, is still beating. <br>These ingredients vanish when the potion is opened.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_LONGEVITY.jpg"
     },
     "ru": {
       "name": "Зелье долголетия",
@@ -3180,7 +3180,7 @@ var allItems = [
       "rarity": 3,
       "text": "When you drink this potion, you gain the effect of the detect thoughts spell (save DC 13). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_MIND_READING.jpg"
     },
     "ru": {
       "name": "Зелье чтения мыслей",
@@ -3194,7 +3194,7 @@ var allItems = [
       "rarity": 2,
       "text": "This concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, it is actpally poison masked by illusion magic. An <a href='https://tentaculus.ru/spells/#q=identify'>identify</a> spell reveals its true nature. <br>If you drink it, you take 3d6 poison damage, and you must succeed on a DC 13 Constitution saving throw or be poisoned. At the start of each of your turns while you are poisoned in this way, you take 3d6 poison damage. <br>At the end of each of your turns, you can repeat the saving throw. On a successful save, the poison damage you take on your subsequent turns decreases by 1d6. <br>The poison ends when the damage decreases to 0.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_POISON.jpg"
     },
     "ru": {
       "name": "Зелье яда",
@@ -3208,7 +3208,7 @@ var allItems = [
       "rarity": 2,
       "text": "When you drink this potion, you gain resistance to one type of damage for 1 hour. The DM chooses the type determines it randomly from the options below. <br><table><tr><td>d10</td><td>Damage Type</td></tr><tr><td>1</td><td>Acid</td></tr><tr><td>2</td><td>Cold</td></tr><tr><td>3</td><td>Fire</td></tr><tr><td>4</td><td>Force</td></tr><tr><td>5</td><td>Lightning</td></tr><tr><td>6</td><td>Necrotic</td></tr><tr><td>7</td><td>Poison</td></tr><tr><td>8</td><td>Psychic</td></tr><tr><td>9</td><td>Radiant</td></tr><tr><td>10</td><td>Thunder</td></tr></table>",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_RESISTANCE.jpg"
     },
     "ru": {
       "name": "Зелье сопротивления",
@@ -3222,7 +3222,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, you gain the effect of the haste spell for 1 minute (no concentration required). 1~potion's yellow fluid is streaked with black and swirl on its own.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_SPEED.jpg"
     },
     "ru": {
       "name": "Зелье скорости",
@@ -3236,7 +3236,7 @@ var allItems = [
       "rarity": 4,
       "text": "When you drink this potion, it removes any exhaustion you are suffering and cures any disease or poison affecting you. For the next 24 hours, you regain the maximum number of hit points for any Hit Die you spend. The potion's crimson liquid regularly pulses wi-dulllight, calling to mind a heartbeat.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_VITALITY.jpg"
     },
     "ru": {
       "name": "Зелье живучести",
@@ -3250,7 +3250,7 @@ var allItems = [
       "rarity": 2,
       "text": "You can breathe underwater for 1 hour after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
       "source": "DMG",
-      "img": ""
+      "img": "POTION_OF_WATER_BREATHING.jpg"
     },
     "ru": {
       "name": "Зелье подводного дыхания",
@@ -4992,7 +4992,8 @@ var allItems = [
       "name": "WIND FAN",
       "type": "Wondrous item",
       "rarity": 2,
-      "text": "<br>While holding this fan , you can use an action to cast the gust of wind spell (save DC 13) from it. Once used, the fan shouldn't be used again until the next dawn. Each time it is used again before then, it has a cumulative 20 percent chance of not working and tearing into useless, nonmagical tatters.",
+      "text": "While holding this fan , you can use an action to cast the gust of wind spell (save DC 13) from it. Once used, the fan shouldn't be used again until the next dawn. Each time it is used again before then, it has a cumulative 20 percent chance of not working and tearing into useless, nonmagical tatters.",
+      "source": "DMG",
       "img": "WIND_FAN.jpg"
     },
     "ru": {

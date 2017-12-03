@@ -258,6 +258,7 @@ p {
   position: relative;
   color: #222;
   transition: background 0.2s ease-out;
+  text-transform: capitalize;
 }
 .combo_box label[data-hierarchy="child"] {
   margin-left: 2.52em;
@@ -470,6 +471,7 @@ p {
   position: relative;
   padding: .5em .2em;
   margin: 0em 0em;
+  text-transform: capitalize;
 }
 .customSelect .label:before {
   content: "▼";
@@ -880,16 +882,28 @@ p {
   background: rgba(255, 255, 255, 0.7);
 }
 #lockedItemsArea .topHeader:before {
-  content: "Закрепленные заклинания ";
+  content: "Закрепленные предметы ";
 }
 #lockedItemsArea .bottomHeader:before {
-  content: "Каталог заклинаний ";
+  content: "Каталог предметов ";
 }
 #lockedItemsArea .content {
   margin-bottom: .3em;
 }
 #lockedItemsArea .bHideItem {
   display: none;
+}
+.ItemContainer {
+  position: relative;
+}
+.ItemContainer:before {
+  content: attr(data-itemcount) !important;
+  position: absolute;
+  padding: .1em;
+  top: 0;
+  right: 1.9em;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.3);
 }
 .cardContainer {
   page-break-inside: avoid;
@@ -912,7 +926,7 @@ p {
   border-width: 3px;
   position: relative;
   color: #666666;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .cardContainer.textView .ItemCard .content {
   position: relative;
@@ -930,11 +944,19 @@ p {
   margin-left: 0.1rem;
 }
 .cardContainer.textView .ItemCard .info {
+  display: block;
   margin-top: 0;
   margin-bottom: 0.8rem;
   max-height: 900rem;
   padding: 0.9em;
   line-height: 140%;
+}
+.cardContainer.textView .ItemCard .text {
+  max-height: 555rem;
+  display: block;
+}
+.cardContainer.textView .ItemCard .sf_text {
+  display: none;
 }
 .cardContainer.textView .ItemCard .img {
   display: inline;
@@ -982,6 +1004,9 @@ p {
 .ItemCard .bUnlockItem {
   left: .1em;
 }
+.ItemCard:hover .sf_text {
+  opacity: 1;
+}
 .ItemCard .content {
   border-radius: 5px;
   background: #fff;
@@ -995,7 +1020,7 @@ p {
   flex-wrap: nowrap;
   align-items: stretch;
   background-repeat: no-repeat;
-  background-position: center 2em;
+  background-position: center 5em;
   background-size: contain;
 }
 .ItemCard .header_info {
@@ -1012,20 +1037,22 @@ p {
   padding-right: .9em;
   text-align: center;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
 }
 .ItemCard .subtitle {
   text-align: center;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
+}
+.ItemCard .coast {
+  position: relative;
+  text-align: center;
 }
 .ItemCard .info {
-  padding: 2px;
   margin-top: auto;
-  margin-bottom: 1.5em;
   overflow-y: auto;
   color: #000;
-  max-height: 11rem;
-  background: rgba(255, 255, 255, 0.5);
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.8);
   line-height: normal;
 }
 .ItemCard .info::-webkit-scrollbar {
@@ -1042,8 +1069,27 @@ p {
   scrollbar-face-color: #777;
   scrollbar-track-color: #ddd;
 }
+.ItemCard .info.show .text {
+  max-height: 555rem;
+  display: block;
+}
+.ItemCard .text {
+  max-height: 0;
+  display: none;
+  padding: 2px;
+}
 .ItemCard .img {
   display: none;
+}
+.ItemCard .sf_text {
+  color: #777;
+  cursor: pointer;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.2s;
+  margin-bottom: 1em;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 99;
 }
 .ItemCard .sizeButtonsContainer {
   position: absolute;

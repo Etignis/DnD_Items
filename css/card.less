@@ -1,6 +1,6 @@
 @mainColor: #000;//#e01a10;
 @radius: 5px;
-@bgwhite: rgba(255,255,255,.5);
+@bgwhite: rgba(255,255,255,0.8);
 .row{
     float: none;
     clear: both;
@@ -43,13 +43,13 @@
             background: rgba(255,255,255,.7);
         }
         &:before{
-            content: "Закрепленные заклинания "
+            content: "Закрепленные предметы "
         }
         
     }
     .bottomHeader{
         &:before{
-            content: "Каталог заклинаний "
+            content: "Каталог предметов "
         }
         
     }
@@ -60,12 +60,25 @@
         display: none;
     }
 }
+.ItemContainer {
+  position: relative;
+  &:before {
+    content: attr(data-itemcount) !important;
+    position: absolute;
+    padding: .1em;
+    top: 0;
+    right: 1.9em;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
 .cardContainer{
     page-break-inside: avoid;
     width: 2.5in;
     margin-right: 1px;
     margin-top: 1px;
     float: left;
+
 
   table{
     tr:nth-child(even){
@@ -85,7 +98,7 @@
         border-width: 3px;
         position: relative;
         color: @m-gray - #111;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
 
         .content{
           position: relative;
@@ -105,11 +118,19 @@
         }
 
         .info{
+          display: block;
           margin-top: 0;
           margin-bottom: 0.8rem;
           max-height: 900rem;
           padding: 0.9em;
           line-height: 140%;
+        }
+        .text{
+          max-height: 555rem;
+          display: block;
+        }
+        .sf_text{
+          display: none;
         }
         .img{
           display: inline;
@@ -158,6 +179,11 @@
     .bLockItem, .bUnlockItem{
         left: .1em;
     }
+    &:hover{
+      .sf_text{
+        opacity: 1;
+      }
+    }
     .content{
         border-radius: @radius;
         background: @white;
@@ -173,7 +199,7 @@
         align-items: stretch;
 
         background-repeat: no-repeat;
-        background-position: center 2em;
+        background-position: center 5em;
         background-size: contain;
     }
     .header_info{
@@ -197,25 +223,58 @@
         text-align: center;
         background: @bgwhite;
     }
+  .coast{
+    position: relative;
+    text-align: center;
+  }
+
+  .coin{
+    //position: absolute;
+
+    }
     .info{
       //font-size: 75%;
-      padding: 2px;
       margin-top: auto;
-      margin-bottom: 1.5em;
+      //margin-bottom: 1.5em;
       overflow-y: auto;
       color: @black;
-      max-height: 11rem;
+      z-index: 99;
       //flex-shrink: 99;
       //flex-grow: 99;
       background: @bgwhite;
       line-height: normal;
+
       .scrollbars(5px, @m-gray, @l-gray);
+
+      &.show{
+        .text{
+          max-height: 555rem;
+          display: block;
+        }
+        //.sf_text{
+        //  position: absolute;
+        //  bottom: 0;
+        //}
+      }
     }
     .text{
+      max-height:0;// 11rem;
+      display: none;
+      padding: 2px;
 
     }
     .img{
       display: none;
+    }
+    .sf_text{
+      color: @m-gray;
+      cursor: pointer;
+      opacity: 0;
+      text-align: center;
+      transition: opacity 0.2s;
+      margin-bottom: 1em;
+      background: @bgwhite;
+      z-index: 99;
     }
     .sizeButtonsContainer{
         position: absolute;
