@@ -295,12 +295,12 @@ window.onload = function(){
       // }
       try{
         
-        var oImg = "<img class='img' src='img/items/"+s_img+"'>";
+        var oImg = "<img class='img' src='img/items/min_200/"+s_img+"'>";
         if(!s_img) {
           oImg = "<img class='img' src='img/items/placeholder/"+oTypes[oItem.en.type.toLowerCase()].img+"'>";
           s_img = "img/items/placeholder/"+oTypes[oItem.en.type.toLowerCase()].img;
         } else{
-          s_img = "img/items/"+s_img
+          s_img = "img/items/min_200/"+s_img
         }
       } catch(err){
         console.log(s_name);

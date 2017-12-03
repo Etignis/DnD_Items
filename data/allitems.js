@@ -2176,7 +2176,7 @@ var allItems = [
     },
     "ru": {
       "name": "Камень Йоун (Восприятие)",
-      "text": "Камень Йоун назван в честь богини знаний и пророчеств, почитаемой в нескольких мирах. Существует много разновидностей камней Йоун, все они отличаются по форме и цвету. <br>Если вы действием подбрасываете один из этих камней в воздух, он начинает вращаться вокруг вашей головы на расстоянии 1к3 футов, предоставляя вам постоянное преимущество. Впоследствии другое существо может действием схватить руками или чем-то иным камень, забирая его себе, если совершит успешный бросок атаки по КД 24 или совершит успешную проверку Ловкости (Акробатика) со Сл 24. <br>Вы сами можете действием схватить и убрать камень, оканчивая его эффект. <br>У камня КД 24, 10 хитов и сопротивление ко всем видам урона. Пока он вращается вокруг вашей головы, он считается носимым. <br> Вы не можете быть захвачены врасплох, пока этот тёмно-синий ромбоид вращается вокруг вашей головы. <br><b>Защита (редкий).</b> Вы получаете бонус +1 к КД, пока эта серо-розовая призма вращается вокруг вашей головы. "
+      "text": "Камень Йоун назван в честь богини знаний и пророчеств, почитаемой в нескольких мирах. Существует много разновидностей камней Йоун, все они отличаются по форме и цвету. <br>Если вы действием подбрасываете один из этих камней в воздух, он начинает вращаться вокруг вашей головы на расстоянии 1к3 футов, предоставляя вам постоянное преимущество. Впоследствии другое существо может действием схватить руками или чем-то иным камень, забирая его себе, если совершит успешный бросок атаки по КД 24 или совершит успешную проверку Ловкости (Акробатика) со Сл 24. <br>Вы сами можете действием схватить и убрать камень, оканчивая его эффект. <br>У камня КД 24, 10 хитов и сопротивление ко всем видам урона. Пока он вращается вокруг вашей головы, он считается носимым. <br> Вы не можете быть захвачены врасплох, пока этот тёмно-синий ромбоид вращается вокруг вашей головы."
     }
   },
   {
@@ -4379,14 +4379,14 @@ var allItems = [
   },
   {
     "en": {
-      "name": "SuN BLADE",
+      "name": "SUN BLADE",
       "type": "Weapon",
       "typeAdditions": "longsword",
       "rarity": 3,
       "attunement": "(requires attunement)",
       "text": "This item appears to be a longsword hilt. While grasping the hilt, you can use a bonus action to cause a blade of pure radiance to spring into existence, or make the blade disappear. While the blade exists, this magic longsword has the finesse property. If you are proficient with shortswords or longswords, you are proficient with the sun blade. <br>You gain a +2 bonus to attack and damage rolls made with this weapon, which deals radiant damage instead of slashing damage. When you hit an undead with it, that target takes an extra 1d8 radiant damage. <br>The sword's luminous blade emits bright light in a 15-foot radius and dim light for an additional 15 feet. <br>The light is sunlight. While the blade persists, you can use an action to expand or reduce its radius of bright and dim light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.",
       "source": "DMG",
-      "img": "SuN_BLADE.jpg"
+      "img": "SUN_BLADE.jpg"
     },
     "ru": {
       "name": "Солнечный клинок",
