@@ -2144,7 +2144,7 @@ var allItems = [
       "rarity": 4,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> While this pale lavender ellipsoid orbits your head, you can use your reaction to cancel a spell of 4th level or lower cast by a creature you can see and targeting only you. <br>Once the stone has canceled 20 levels of spells, it burns out and turns dull gray, losing its magic. If you are targeted by a spell whose level is higher than the number of spell levels the stone has left, the stone can't cancel it.",
       "source": "DMG",
-      "img": "IOUN_STONE_Absorption_.jpg"
+      "img": "IOUN_STONE_Absorption.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Поглощение)",
@@ -2158,7 +2158,7 @@ var allItems = [
       "rarity": 4,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> Your Dexterity score increases by 2, to a maximum of 20, while this deep red sphere orbits your head. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Agility_.jpg"
+      "img": "IOUN_STONE_Agility.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Проворство)",
@@ -2172,7 +2172,7 @@ var allItems = [
       "rarity": 3,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> You can't be surprised while this dark blue rhomboid orbits your head.",
       "source": "DMG",
-      "img": "IOUN_STONE_Awareness_.jpg"
+      "img": "IOUN_STONE_Awareness.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Восприятие)",
@@ -2186,7 +2186,7 @@ var allItems = [
       "rarity": 4,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br>Your Constitution score increases by 2, to a maximum of 20, while this pink rhomboid orbits your head. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Fortitude_.jpg"
+      "img": "IOUN_STONE_Fortitude.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Стойкость)",
@@ -2200,7 +2200,7 @@ var allItems = [
       "rarity": 5,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br>While this marbled lavender and green ellipsoid orbits your head, you can use your reaction to cancel a spell of 8th level or lower cast by a creature you can see and targeting only you. <br>Once the stone has canceled 50 levels of spells, it burns out and turns dull gray, losing its magic. If you are targeted by a spell whose level is higher than the number of spell levels the stone has left, the stone can't cancel it.",
       "source": "DMG",
-      "img": "IOUN_STONE_Greater_Absorption_.jpg"
+      "img": "IOUN_STONE_Greater_Absorption.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Большое поглощение)",
@@ -2214,7 +2214,7 @@ var allItems = [
       "rarity": 4,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> Your Wisdom score increases by 2, to a maximum of 20, while this incandescent blue sphere orbits your head. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Insight_.jpg"
+      "img": "IOUN_STONE_Insight.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Проницательность)",
@@ -2228,7 +2228,7 @@ var allItems = [
       "rarity": 4,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> Your Intelligence score increases by 2, to a maximum of 20, while this marbled scarlet and blue sphere orbits your head. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Intellect_.jpg"
+      "img": "IOUN_STONE_Intellect.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Рассудок)",
@@ -2242,7 +2242,7 @@ var allItems = [
       "rarity": 4,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br>Your Charisma score increases by 2, to a maximum of 20, while this marbled pink and green sphere orbits your head. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Leadership_.jpg"
+      "img": "IOUN_STONE_Leadership.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Лидерство)",
@@ -2256,7 +2256,7 @@ var allItems = [
       "rarity": 5,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> Your proficiency bonus increases by 1 while this pale green prism orbits your head. <br><b>Protection (Rare).</b> You gain a +1 bonus to AC while this dusty rose prism orbits your head. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Mastery_.jpg"
+      "img": "IOUN_STONE_Mastery.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Мастерство)",
@@ -2270,7 +2270,7 @@ var allItems = [
       "rarity": 3,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> You gain a +1 bonus to AC while this dusty rose prism orbits your head. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Protection_.jpg"
+      "img": "IOUN_STONE_Protection.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Защита)",
@@ -2284,7 +2284,7 @@ var allItems = [
       "rarity": 5,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> You regain 15 hit points at the end of each hour this pearly white spindle orbits your head, provided that you have at least 1 hit point. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Regeneration_.jpg"
+      "img": "IOUN_STONE_Regeneration.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Регенерация)",
@@ -2298,7 +2298,7 @@ var allItems = [
       "rarity": 3,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> This vibrant purple prism stores spells cast into it, holding them until you use them. The stone can store up to 3 levels worth of spells at a time. <br>When found, it contains ld4 - 1 levels of stored spells chosen by the DM. <br>Any creature can cast a spell of 1st through 3rd level into the stone by touching it as the spell is cast. The s pell has no effect, other than to be stored in the stone. <br>If the stone can't hold the spell, the spell is expended without effect. The level of the slot used to cast the spell determines how much space it uses. <br>While this stone orbits your head, you can cast any spell stored in it. The spell uses the slot level, spell save <br>DC, spell attack bonus, and spellcasting ability of the original caster, but is otherwise treated as if you cast the spell. The spell cast from the stone is no longer stored in it, freeing up space. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Reserve_.jpg"
+      "img": "IOUN_STONE_Reserve.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Резерв)",
@@ -2312,7 +2312,7 @@ var allItems = [
       "rarity": 4,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br> Your Strength score increases by 2, to a maximum of 20, while this pale blue rhomboid orbits your head. ",
       "source": "DMG",
-      "img": "IOUN_STONE_Strength_.jpg"
+      "img": "IOUN_STONE_Strength.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Сила)",
@@ -2326,7 +2326,7 @@ var allItems = [
       "rarity": 3,
       "text": "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color. <br>When you use an action to toss one of these stones into the air, the stone orbits your head at a distance of ld3 feet and confers a benefit to you. Thereafter, another creature must use an action to grasp or net the stone to separate it from you, either by making a successful attack roll against AC 24 or a successful DC 24 Dexterity (Acrobatics) check. You can use an action to seize and stow the stone, ending its effect. <br>A stone has AC 24, 10 hit points, and resistance to all damage. It is considered to be an object that is being worn while it orbits your head. <br>You don't need to eat or drink while this clear spindle orbits your head.",
       "source": "DMG",
-      "img": "IOUN_STONE_Sustenance_.jpg"
+      "img": "IOUN_STONE_Sustenance.jpg"
     },
     "ru": {
       "name": "Камень Йоун (Питание)",
