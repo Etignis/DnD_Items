@@ -946,9 +946,10 @@ p {
 .cardContainer.textView .ItemCard .info {
   display: block;
   margin-top: 0;
-  margin-bottom: 0.8rem;
-  max-height: 900rem;
   padding: 0.9em;
+  margin-bottom: 2rem;
+  padding-bottom: 0;
+  max-height: 900rem;
   line-height: 140%;
 }
 .cardContainer.textView .ItemCard .text {
