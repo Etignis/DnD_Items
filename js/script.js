@@ -1244,7 +1244,7 @@ window.onload = function(){
 				// select all
 				$(".ItemCard").addClass("selected");
 			}
-			return false;
+			//return false;
 		}
 	});
 
