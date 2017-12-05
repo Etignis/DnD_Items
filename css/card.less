@@ -82,7 +82,11 @@
 
   table{
     tr:nth-child(even){
-      background: lighten(@l-gray, 10%);
+      background: lighten(@l-gray, 7%);
+    }
+    td:first-child{
+     // text-align: center;
+      white-space: nowrap;
     }
   }
 
@@ -114,6 +118,10 @@
           div, h1{
             margin-right: 0.5rem;
             margin-left: 0.1rem;
+          }
+          .subtitle{
+            margin-left: 1.4rem;
+            margin-right: 1.4rem;
           }
         }
 

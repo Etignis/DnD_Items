@@ -1,4 +1,4 @@
-var TENTACULUS_APP_VERSION = "0.0.0";
+var TENTACULUS_APP_VERSION = "1.0.0";
 
 var oConfig = {}; // global app config data
 function setConfig(prop, val) {
@@ -223,18 +223,23 @@ window.onload = function(){
 	}
 
 	function getItemAttr(oItem, sAttr, sLang) {
-		if(oItem[sLang] && oItem[sLang][sAttr] != undefined && oItem[sLang][sAttr] != ""){
-			return oItem[sLang][sAttr];
-		}
-		var aLang = [];
-		for (lang in oItem){
-			aLang.push(lang);
-		}
-		for(var i=0; i<aLang.length; i++){
-			if(oItem[aLang[i]][sAttr] != undefined) {
-				return oItem[aLang[i]][sAttr];
-			}
-		}
+    try{
+      if(oItem[sLang] && oItem[sLang][sAttr] != undefined && oItem[sLang][sAttr] != ""){
+        return oItem[sLang][sAttr];
+      }
+      var aLang = [];
+      for (lang in oItem){
+        aLang.push(lang);
+      }
+      for(var i=0; i<aLang.length; i++){
+        if(oItem[aLang[i]][sAttr] != undefined) {
+          return oItem[aLang[i]][sAttr];
+        }
+      }
+    } catch(err){
+      console.log(err);
+      console.log(oItem.en.name);
+    }
 		return "";
 	}
 	function getItemAttrFromDB(oDataSource, oParam) {
@@ -285,7 +290,7 @@ window.onload = function(){
 			var s_source = getItemAttr(oItem, "source", "en");
 			var s_sourcePage = getItemAttr(oItem, "sourcePage", lang);
       
-      var s_rarity_class = getItemAttrFromDB(oRarity, {attr: getItemAttr(oItem, "rarity", "en"), subattr: s_gender, lang: "en"}).toLowerCase().trim();
+      var s_rarity_class = getItemAttrFromDB(oRarity, {attr: getItemAttr(oItem, "rarity", "en"), subattr: s_gender, lang: "en"}).toLowerCase().replace(" ", "_").trim();
 
       var s_coast = getItemAttr(oItem, "coast", lang) ||
         oRarity[oItem.en.rarity] && oRarity[oItem.en.rarity].coast ||
@@ -322,11 +327,11 @@ window.onload = function(){
 			var sNeedHelp = (lang == "ru")?  getItemAttr(oItem, "name", "en") : getItemAttr(oItem, "name", "ru");
       var sImg = fText? "" :'style="background-image: url('+s_img+');"';
 
-			ret = '<div class="cardContainer '+(fText? "textView " : "") + sLockedItem + " " + s_rarity_class +'" '+ style +' data-level="' + oItem.en.level + '" data-type="' + oItem.en.school + '" data-rarity="' + oItem.en.name + '"  data-lang="' + lang + '">'+
+			ret = '<div class="cardContainer '+(fText? "textView " : "") + sLockedItem + " " + s_rarity_class +'" '+ style +' data-name="' + oItem.en.name + '"  data-name-ru="' + oItem.ru.name + '"  data-lang="' + lang + '">'+
 				'<div class="ItemCard">'+
 					'<div class="content" '+sImg+'>'+
-            //bLockItem +
-            //bHideItem +
+            bLockItem +
+            bHideItem +
             "<div class='header_info'>"+
               '<h1 title="'+s_name+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' +s_name+ '</h1>'+
               '<div class="subtitle">' + s_rariry + " " + s_type+  " " + s_typeAdditions+  " " + s_attunement + " " +s_coast+ '</div>'+
@@ -371,8 +376,8 @@ window.onload = function(){
 			console.dir(oParams);
 		}
 
-		// var fHiddenItems = (aHiddenItems.length>0)? true: false;
-		// var fLockedItems = (aLockedItems.length>0)? true: false;
+		 var fHiddenItems = (aHiddenItems.length>0)? true: false;
+		 var fLockedItems = (aLockedItems.length>0)? true: false;
 
 		$(".ItemContainer").empty();
 		var Items = "";
@@ -432,18 +437,18 @@ window.onload = function(){
 
 
 
-		// filteredItems = fHiddenItems? arrDiff(filteredItems, aHiddenItems) : filteredItems;
-		// //filteredItems = fLockedItems? filteredItems.concat(aLockedItems) : filteredItems;
-		// if (fLockedItems) {
-		// 	for (var i = 0; i<allItems.length; i++){
-		// 		for (var j=0; j<aLockedItems.length; j++){
-		// 			if(allItems[i].en.name == aLockedItems[j].en) {
-		// 				filteredItems.push(allItems[i]);
-		// 				break;
-		// 			}
-		// 		}
-		// 	}
-		// }
+		filteredItems = fHiddenItems? arrDiff(filteredItems, aHiddenItems) : filteredItems;
+		//filteredItems = fLockedItems? filteredItems.concat(aLockedItems) : filteredItems;
+		if (fLockedItems) {
+			for (var i = 0; i<allItems.length; i++){
+				for (var j=0; j<aLockedItems.length; j++){
+					if(allItems[i].en.name == aLockedItems[j].en) {
+						filteredItems.push(allItems[i]);
+						break;
+					}
+				}
+			}
+		}
 
 		// sort
 		if(sSort == 'alpha') {
@@ -622,7 +627,7 @@ window.onload = function(){
 		}
 		if(!$("#HiddenItems").length>0){
 			var label = createLabel("Скрытые предметы");
-			$("#LangSelect").parent().after("<div class='mediaWidth'>" + label + "<div id='HiddenItems'></div></div>");
+			$(".p_side").append("<div class='mediaWidth'>" + label + "<div id='HiddenItems'></div></div>");
 		}
 		var listHiddenItems = aHiddenItems.map(function(item){
 			return "<a href='#' title='Вернуть на место' class='bUnhideItem' data-name='"+item.en+"'>"+item.ru +" ("+ item.en+") </a>";
@@ -633,6 +638,7 @@ window.onload = function(){
 	}
 
 	function createLockedItemsArea(){
+    var fTextView = ($("CardViewSelect label").attr("data-selected-key")=="text")? true: false;
 		var aLocked = [];
 		for (var i in aLockedItems){
 			aLocked.push(i);
@@ -645,7 +651,7 @@ window.onload = function(){
 					if(allItems[i].en.name == aLocked[j]) {
 						aResult.push(allItems[i]);
 						aResult[aResult.length-1].lang = aLockedItems[aLocked[j]].lang;
-						aResult[aResult.length-1].class = aLockedItems[aLocked[j]].class;
+						//aResult[aResult.length-1].class = aLockedItems[aLocked[j]].class;
 					}
 				}
 			}
@@ -662,7 +668,7 @@ window.onload = function(){
 						return 1;
 				}
 				return 0
-			}).map(function(el){return createCard(el, el.lang, el.class, true)}));
+			}).map(function(el){return createCard(el, el.lang, true, fTextView)}));
 
 			//COUNTER
 			$("#lockedItemsArea .topHeader").html("("+l+")");
@@ -967,6 +973,7 @@ window.onload = function(){
 	// show all Items
 	$("body").on('click', "#showAllItems", function(){
 		setConfig("infoIsShown", true);
+    $("#bInfo").addClass("blink");
 		filterItems();
 		hideInfoWin();
 		hideDBG();
@@ -1038,7 +1045,7 @@ window.onload = function(){
 
 	// lock Items
 	$("body").on('click', ".bLockItem", function(){
-		var sName, sNameRu, sLang, sClass;
+		var sName, sNameRu, sLang;
 
 		var nSelectedCards = $(".ItemCard.selected").length;
 		if(nSelectedCards > 0) {
@@ -1046,25 +1053,24 @@ window.onload = function(){
 				sName = $(this).closest(".cardContainer").attr("data-name");
 				sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
 				sLang = $(this).closest(".cardContainer").attr("data-lang");
-				sClass= $(this).closest(".cardContainer").attr("data-class");
+				fText = $(this).closest(".cardContainer").hasClass("textView");
 
 				aLockedItems[sName] = {
 					ru: sNameRu,
 					lang: sLang,
-					class: sClass
+          textView: fText
 					};
 			});
 		} else {
 			sName = $(this).closest(".cardContainer").attr("data-name");
 			sNameRu = $(this).closest(".cardContainer").attr("data-name-ru");
 			sLang = $(this).closest(".cardContainer").attr("data-lang");
-			sClass= $(this).closest(".cardContainer").attr("data-class");
-
+			fText = $(this).closest(".cardContainer").hasClass("textView");
 
 			aLockedItems[sName] = {
 				ru: sNameRu,
 				lang: sLang,
-				class: sClass
+        textView: fText
 				};
 		}
 

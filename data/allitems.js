@@ -369,13 +369,14 @@ var allItems = [
       "type": "Armor",
       "typeAdditions": "(shield)",
       "rarity": 4,
-      "attunement": "(requires atttinement)",
+      "attunement": "(requires attunement)",
       "text": "While holding this shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. <br>The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free.",
       "source": "DMG",
       "img": "ANIMATED_SHIELD.jpg"
     },
     "ru": {
       "name": "Живой щит",
+      "attunement": "(требуется настройка)",
       "text": "Если вы держите этот щит, вы можете бонусным действием произнести командное слово, чтобы он ожил. <br>Щит поднимается в воздух и парит в вашем пространстве, защищая так, как если бы вы его использовали, но ваши руки при этом свободны. Щит остаётся живым 1 минуту, пока вы не окончите эффект бонусным действием или пока вы не станете недееспособным или не умрёте, после чего щит падает на землю или в вашу руку, если она свободна.",
       "typeAdditions": "(щит)"
     }
@@ -799,13 +800,13 @@ var allItems = [
       "name": "BOWL OF COMMANDING WATER ELEMENTALS",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "While this bowl is filled with water, you can use an action to speak the bowl's command word and summon a water elemental, as if you had cast the conjure elemental spell. The bowl can't be used this way again until the next dawn. <br>The bowl is about 1 foot in diameter and half as deep. <br>It weighs 3 pounds and holds about 3 gallons.",
+      "text": "While this bowl is filled with water, you can use an action to speak the bowl's command word and summon a <a href='https://tentaculus.ru/monsters/#q=water_elemental'>ater elemental</a>, as if you had cast the <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>conjure elemental</a> spell. The bowl can't be used this way again until the next dawn. <br>The bowl is about 1 foot in diameter and half as deep. <br>It weighs 3 pounds and holds about 3 gallons.",
       "source": "DMG",
       "img": "BOWL_OF_COMMANDING_WATER_ELEMENTALS.jpg"
     },
     "ru": {
       "name": "Чаша командования водяными элементалями",
-      "text": "Если эта чаша наполнена водой, вы можете действием произнести командное слово и призвать водяного элементаля, как если бы наложили заклинание призыв элементаля. Чашу нельзя использовать повторно, пока не наступит следующий рассвет. <br>Чаша диаметром примерно 1 фут, а в высоту она в два раза меньше. Она весит 3 фунта и вмещает 3 галлона."
+      "text": "Если эта чаша наполнена водой, вы можете действием произнести командное слово и призвать <a href='https://tentaculus.ru/monsters/#q=water_elemental'>водяного элементаля</a>, как если бы наложили заклинание <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>призыв элементаля</a>. Чашу нельзя использовать повторно, пока не наступит следующий рассвет. <br>Чаша диаметром примерно 1 фут, а в высоту она в два раза меньше. Она весит 3 фунта и вмещает 3 галлона."
     }
   },
   {
@@ -845,13 +846,13 @@ var allItems = [
       "name": "BRAZIER OF COMMANDING FIRE ELEMENTALS",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "While a fire burns in this brass brazier, you can use an action to speak the brazier's command word and summon a fire elemental, as if you had cast the conjure elemental spell. The brazier can't be used this way again until the next dawn. <br>The brazier weighs 5 pounds.",
+      "text": "While a fire burns in this brass brazier, you can use an action to speak the brazier's command word and summon a <a href='https://tentaculus.ru/monsters/#q=fire_elemental'>fire elemental</a>, as if you had cast the <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>conjure elemental</a> spell. The brazier can't be used this way again until the next dawn. <br>The brazier weighs 5 pounds.",
       "source": "DMG",
       "img": "BRAZIER_OF_COMMANDING_FIRE_ELEMENTALS.jpg"
     },
     "ru": {
       "name": "Жаровня командования огненными элементалями",
-      "text": "Если в этой латунной жаровне горит огонь, вы можете действием произнести командное слово и призвать огненного элементаля, как если бы наложили заклинание призыв элементаля. Жаровню нельзя использовать повторно, пока не наступит следующий рассвет. <br>Весит жаровня 5 фунтов."
+      "text": "Если в этой латунной жаровне горит огонь, вы можете действием произнести командное слово и призвать <a href='https://tentaculus.ru/monsters/#q=fire_elemental'>огненного элементаля</a>, как если бы наложили заклинание <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>призыв элементаля</a>. Жаровню нельзя использовать повторно, пока не наступит следующий рассвет. <br>Весит жаровня 5 фунтов."
     }
   },
   {
@@ -905,13 +906,13 @@ var allItems = [
       "name": "CAPE OF THE MOUNTEBANK",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "This cape smells faintly of brimstone. While wearing it, you can use it to cast the dimension door spell as an action. This property of the cape can't be used again until the next dawn. <br>When you disappear, you leave behind a cloud of smoke, and you appear in a similar cloud of smoke at your destination. The smoke lightly obscures the space you left and the space you appear in, and it dissipates at the end of your next turn. A light or stronger wind disperses the smoke.",
+      "text": "This cape smells faintly of brimstone. While wearing it, you can use it to cast the <a href='https://tentaculus.ru/spells/#q=dimension_door'>dimension door</a> spell as an action. This property of the cape can't be used again until the next dawn. <br>When you disappear, you leave behind a cloud of smoke, and you appear in a similar cloud of smoke at your destination. The smoke lightly obscures the space you left and the space you appear in, and it dissipates at the end of your next turn. A light or stronger wind disperses the smoke.",
       "source": "DMG",
       "img": "CAPE_OF_THE_MOUNTEBANK.jpg"
     },
     "ru": {
       "name": "Плащ шарлатана",
-      "text": "Этот плащ слабо пахнет серой. Пока вы его носите, вы можете действием наложить заклинание переносящая дверь. Это свойство плаща нельзя использовать повторно до следующего рассвета. <br>Когда вы исчезаете, вы оставляете после себя облачко дыма, и в пункте назначения появляетесь тоже в клубах дыма. Дым слабо заслоняет покинутое и новое пространство и исчезает в конце вашего следующего хода. Лёгкий или более сильный ветер рассеивает этот дым."
+      "text": "Этот плащ слабо пахнет серой. Пока вы его носите, вы можете действием наложить заклинание <a href='https://tentaculus.ru/spells/#q=dimension_door'>переносящая дверь</a>. Это свойство плаща нельзя использовать повторно до следующего рассвета. <br>Когда вы исчезаете, вы оставляете после себя облачко дыма, и в пункте назначения появляетесь тоже в клубах дыма. Дым слабо заслоняет покинутое и новое пространство и исчезает в конце вашего следующего хода. Лёгкий или более сильный ветер рассеивает этот дым."
     }
   },
   {
@@ -933,13 +934,13 @@ var allItems = [
       "name": "CENSER OF CONTROLLING AIR ELEMENTALS",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "While incense is burning in this censer, you can use an action to speak the censer's command word and summon an air elemental, as if you had cast the conjure elemental spell. The censer can't be used this way again until the next dawn. <br>This 6-inch-wide, 1-foot-high vessel resembles a chalice with a decorated lid. It weighs 1 pound.",
+      "text": "While incense is burning in this censer, you can use an action to speak the censer's command word and summon an <a href='https://tentaculus.ru/monsters/#q=air_elemental'>air elemental</a>, as if you had cast the <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>conjure elemental</a> spell. The censer can't be used this way again until the next dawn. <br>This 6-inch-wide, 1-foot-high vessel resembles a chalice with a decorated lid. It weighs 1 pound.",
       "source": "DMG",
       "img": "CENSER_OF_CONTROLLING_AIR_ELEMENTALS.jpg"
     },
     "ru": {
       "name": "Кадило контролирования воздушных элементалей",
-      "text": "Если в этом кадиле горит благовоние, вы можете действием произнести командное слово и призвать воздушного элементаля, как если бы наложили заклинание призыв элементаля. Кадило нельзя использовать повторно, пока не наступит следующий рассвет. <br>Этот сосуд 6 дюймов шириной и 1 фут высотой напоминает чашу с декорированной крышкой. Весит кадило 1 фунт."
+      "text": "Если в этом кадиле горит благовоние, вы можете действием произнести командное слово и призвать <a href='https://tentaculus.ru/monsters/#q=air_elemental'>воздушного элементаля</a>, как если бы наложили заклинание <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>призыв элементаля</a>. Кадило нельзя использовать повторно, пока не наступит следующий рассвет. <br>Этот сосуд 6 дюймов шириной и 1 фут высотой напоминает чашу с декорированной крышкой. Весит кадило 1 фунт."
     }
   },
   {
@@ -1002,7 +1003,7 @@ var allItems = [
     },
     "ru": {
       "name": "Плащ летучей мыши",
-      "text": "Пока вы носите этот плащ, вы совершаете с преимуществом проверки Ловкости (Скрытность). В области тусклого освещения или темноте вы можете схватить края плаща обеими руками и использовать его для полёта со скоростью 40 футов. Если вы отпустите плащ во время полёта или перестанете находиться в области тусклого света или тьмы, вы теряете эту скорость полёта. <br>Если вы носите этот плащ, и находитесь в области тусклого освещения или темноте, вы можете действием наложить на себя превращение и стать летучей мышью. Пока вы находитесь в облике летучей мыши, вы сохраняете свои значения Интеллекта, Мудрости и Харизмы. Это свойство плаща нельзя использовать повторно до следующего рассвета. <br>Плащ невидимости <br>Чудесный предмет, легендарный (требуется настройка) <br>Если вы носите этот плащ, вы можете надеть на голову капюшон и стать невидимым. Пока вы невидимы, всё, что вы несёте и носите, становится невидимым вместе с вами. Вы видимы, если не надеваете капюшон. Капюшон надевается и снимается действием. <br>Суммируйте время, в течение которого вы остаётесь невидимы, порциями по 1 минуте. После 2 накопленных часов невидимости плащ перестаёт действовать. За каждые 12 часов, пока плащ не используется, он восстанавливает 1 час использования.",
+      "text": "Пока вы носите этот плащ, вы совершаете с преимуществом проверки Ловкости (Скрытность). В области тусклого освещения или темноте вы можете схватить края плаща обеими руками и использовать его для полёта со скоростью 40 футов. Если вы отпустите плащ во время полёта или перестанете находиться в области тусклого света или тьмы, вы теряете эту скорость полёта. <br>Если вы носите этот плащ, и находитесь в области тусклого освещения или темноте, вы можете действием наложить на себя превращение и стать летучей мышью. Пока вы находитесь в облике летучей мыши, вы сохраняете свои значения Интеллекта, Мудрости и Харизмы. Это свойство плаща нельзя использовать повторно до следующего рассвета.",
       "attunement": "(требуется настройка)"
     }
   },
@@ -1058,13 +1059,13 @@ var allItems = [
       "type": "Wondrous item",
       "rarity": 5,
       "attunement": "(requires attunement)",
-      "text": "You can use an action to cast the detect thoughts spell (save DC 17) while you are scrying with the crystal ball, targeting creatures you can see within 30 feet of the spell's sensor. You don't need to concentrate on this detect thoughts to maintain it during its duration, but it ends if scrying ends.",
+      "text": "You can use an action to cast the <a href='https://tentaculus.ru/spells/#q=detect_thoughts'>detect thoughts</a> spell (save DC 17) while you are scrying with the crystal ball, targeting creatures you can see within 30 feet of the spell's sensor. You don't need to concentrate on this detect thoughts to maintain it during its duration, but it ends if scrying ends.",
       "source": "DMG",
       "img": "CRYSTAL_BALL.jpg"
     },
     "ru": {
       "name": "Хрустальный шар чтения мыслей",
-      "text": "Вы можете действием наложить заклинание обнаружение мыслей (Сл спасброска 17), пока смотрите в этот хрустальный шар, нацеливаясь на существо, которое вы видите в пределах 30 футов от сенсора заклинания. Вы не обязаны концентрироваться на обнаружении мыслей, но это заклинание оканчивается вместе с наблюдением. ",
+      "text": "Вы можете действием наложить заклинание <a href='https://tentaculus.ru/spells/#q=detect_thoughts'>обнаружение мыслей</a> (Сл спасброска 17), пока смотрите в этот хрустальный шар, нацеливаясь на существо, которое вы видите в пределах 30 футов от сенсора заклинания. Вы не обязаны концентрироваться на обнаружении мыслей, но это заклинание оканчивается вместе с наблюдением. ",
       "attunement": "(требуется настройка)"
     }
   },
@@ -1112,7 +1113,7 @@ var allItems = [
     },
     "ru": {
       "name": "Куб силового поля",
-      "text": "Это кубик с длиной ребра около дюйма. На каждой грани есть характерная метка, на которую можно нажать. Вначале у куба 36 зарядов, и он ежедневно восстанавливает 1к20 зарядов на рассвете. <br>Вы можете действием нажать на одну из граней куба, тратя при этом указанное в таблице число зарядов. У каждой грани свой эффект. Если в кубе не осталось достаточного числа зарядов, ничего не произойдёт. В противном случае возникает барьер из невидимого силового поля, формирующий куб с длиной ребра 15 футов. Барьер создаётся с центром на вас, перемещается вместе с вами и существует 1 минуту, пока вы не нажмёте действием на шестую грань куба или пока в кубе не кончатся заряды. Вы можете изменить эффект барьера, нажав на другую грань куба и потратив нужное количество зарядов, сбрасывая при этом счётчик длительности. <br>Если из-за перемещения барьер вступает в контакт с твёрдым предметом, который не может пройти сквозь поле, вы не сможете приблизиться к этому предмету, пока поле существует.<br><table><tr><td>Грань</td><td>Заряды</td><td>Эффект</td></tr><tr><td>1</td><td>1</td><td>Через барьер не проходят газы, ветер и туман.</td></tr><tr><td>2</td><td>2</td><td>Через барьер не проходит неживая материя. Стены, пол и потолок могут проходить, если вы того пожелаете.</td></tr><tr><td>3</td><td>3</td><td>Через барьер не проходит живая материя.</td></tr><tr><td>4</td><td>4</td><td>Через барьер не проходят эффекты заклинаний.</td></tr><tr><td>5</td><td>5</td><td>Через барьер не проходит ничего. Стены, пол и потолок могут проходить, если вы того пожелаете.</td></tr><tr><td>6</td><td>0</td><td>Барьер исчезает</td></tr></table><br>Куб теряет заряды, когда барьер становится целью определённых заклинаний или вступает во взаимодействие с эффектами определённых заклинаний или магических предметов, как показано ниже.br><table><tr><td>Заклинание или предмет</td><td>Потеря зарядов</td></tr><tr><td><a href='https://tentaculus.ru/spells/#q=wall_of_fire'>Огненная стена</a></td><td>1к4</td></tr><tr><td><a href='https://tentaculus.ru/spells/#q=prismatic_spray'>Радужные брызги</a></td><td>1к20</td></tr><tr><td><a href='https://tentaculus.ru/spells/?q=detect_evil#q=Disintegrate'>Распад</a></td><td>1к12</td></tr><tr><td>Рог взрыва</td><td>1к10</td></tr><tr><td><a href='https://tentaculus.ru/spells/?q=detect_evil#q=Passwall'>Создание прохода</a></td><td>1к6</td></tr></table>",
+      "text": "Это кубик с длиной ребра около дюйма. На каждой грани есть характерная метка, на которую можно нажать. Вначале у куба 36 зарядов, и он ежедневно восстанавливает 1к20 зарядов на рассвете. <br>Вы можете действием нажать на одну из граней куба, тратя при этом указанное в таблице число зарядов. У каждой грани свой эффект. Если в кубе не осталось достаточного числа зарядов, ничего не произойдёт. В противном случае возникает барьер из невидимого силового поля, формирующий куб с длиной ребра 15 футов. Барьер создаётся с центром на вас, перемещается вместе с вами и существует 1 минуту, пока вы не нажмёте действием на шестую грань куба или пока в кубе не кончатся заряды. Вы можете изменить эффект барьера, нажав на другую грань куба и потратив нужное количество зарядов, сбрасывая при этом счётчик длительности. <br>Если из-за перемещения барьер вступает в контакт с твёрдым предметом, который не может пройти сквозь поле, вы не сможете приблизиться к этому предмету, пока поле существует.<br><table><tr><td>Грань</td><td>Заряды</td><td>Эффект</td></tr><tr><td>1</td><td>1</td><td>Через барьер не проходят газы, ветер и туман.</td></tr><tr><td>2</td><td>2</td><td>Через барьер не проходит неживая материя. Стены, пол и потолок могут проходить, если вы того пожелаете.</td></tr><tr><td>3</td><td>3</td><td>Через барьер не проходит живая материя.</td></tr><tr><td>4</td><td>4</td><td>Через барьер не проходят эффекты заклинаний.</td></tr><tr><td>5</td><td>5</td><td>Через барьер не проходит ничего. Стены, пол и потолок могут проходить, если вы того пожелаете.</td></tr><tr><td>6</td><td>0</td><td>Барьер исчезает</td></tr></table><br>Куб теряет заряды, когда барьер становится целью определённых заклинаний или вступает во взаимодействие с эффектами определённых заклинаний или магических предметов, как показано ниже.<br><table><tr><td>Заклинание или предмет</td><td>Потеря зарядов</td></tr><tr><td><a href='https://tentaculus.ru/spells/#q=wall_of_fire'>Огненная стена</a></td><td>1к4</td></tr><tr><td><a href='https://tentaculus.ru/spells/#q=prismatic_spray'>Радужные брызги</a></td><td>1к20</td></tr><tr><td><a href='https://tentaculus.ru/spells/?q=detect_evil#q=Disintegrate'>Распад</a></td><td>1к12</td></tr><tr><td>Рог взрыва</td><td>1к10</td></tr><tr><td><a href='https://tentaculus.ru/spells/?q=detect_evil#q=Passwall'>Создание прохода</a></td><td>1к6</td></tr></table>",
       "attunement": "(требуется настройка)"
     }
   },
@@ -1413,13 +1414,13 @@ var allItems = [
       "name": "ELEMENTAL GEM",
       "type": "Wondrous item",
       "rarity": 2,
-      "text": "This gem contains a mote of elemental energy. When you use an action to break the gem, an elemental is summoned as if you had cast the conjure elemental spell, and the gem's magic is lost. The type of gem determines the elemental summoned by the spell. <br><table><tr><td>Gem</td><td>Summoned Elemental</td></tr><tr><td>Blue sapphire</td><td>Air elemental</td></tr><tr><td>Yellow diamond</td><td>Earth elemental</td></tr><tr><td>Red corundum</td><td>Fire elemental</td></tr><tr><td>Emerald</td><td>Water elemental</td></tr></table>",
+      "text": "This gem contains a mote of elemental energy. When you use an action to break the gem, an elemental is summoned as if you had cast the <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>conjure elemental</a> spell, and the gem's magic is lost. The type of gem determines the elemental summoned by the spell. <br><table><tr><td>Gem</td><td>Summoned Elemental</td></tr><tr><td>Blue sapphire</td><td>Air elemental</td></tr><tr><td>Yellow diamond</td><td>Earth elemental</td></tr><tr><td>Red corundum</td><td>Fire elemental</td></tr><tr><td>Emerald</td><td>Water elemental</td></tr></table>",
       "source": "DMG",
       "img": "ELEMENTAL_GEM.jpg"
     },
     "ru": {
       "name": "Камень элементаля",
-      "text": "Этот камень содержит частичку стихийной энергии. <br>Если вы действием разбиваете камень, призывается элементаль, как если бы вы наложили заклинание призыв элементаля, и магия, заключённая в камне, исчезает. Вид камня определяет вид призываемого элементаля. <br><table><tr><td>Камень</td><td>Призываемый элементаль</td></tr><tr><td>Изумруд</td><td>Элементаль воды</td></tr><tr><td>Синий сапфир</td><td>Элементаль воздуха</td></tr><tr><td>Жёлтый бриллиант</td><td>Элементаль земли</td></tr><tr><td>Красный корунд</td><td>Элементаль огня</td></tr></table>"
+      "text": "Этот камень содержит частичку стихийной энергии. <br>Если вы действием разбиваете камень, призывается элементаль, как если бы вы наложили заклинание <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>призыв элементаля</a>, и магия, заключённая в камне, исчезает. Вид камня определяет вид призываемого элементаля. <br><table><tr><td>Камень</td><td>Призываемый элементаль</td></tr><tr><td>Изумруд</td><td>Элементаль воды</td></tr><tr><td>Синий сапфир</td><td>Элементаль воздуха</td></tr><tr><td>Жёлтый бриллиант</td><td>Элементаль земли</td></tr><tr><td>Красный корунд</td><td>Элементаль огня</td></tr></table>"
     }
   },
   {
@@ -1449,7 +1450,7 @@ var allItems = [
     "ru": {
       "name": "Эльфийская кольчуга",
       "text": "Вы получаете бонус +1 к КД, когда носите этот доспех. Считается, что вы владеете навыком ношения этого доспеха, даже если не владеете навыком ношения средних доспехов.",
-      "typeAdditions": "(chain shirt)"
+      "typeAdditions": "(кольчуга)"
     }
   },
   {
@@ -1840,7 +1841,7 @@ var allItems = [
     },
     "ru": {
       "name": "Шапка маскировки",
-      "text": "Пока вы носите эту шапку, вы можете неограниченно действием накладывать ей заклинание маскировка. Это заклинание оканчивается, если снять шапку. <br>Шапка подводного дыхания <br>Чудесный предмет, необычный <br>Если вы находитесь под водой и на вас надета эта шапка, вы можете действием произнести командное слово, после чего вокруг вашей головы возникнет воздушный пузырь. Это позволит вам свободно дышать под водой. Пузырь остаётся до тех пор, пока вы не произнесёте командное слово ещё раз, или не выберетесь из-под воды.",
+      "text": "Пока вы носите эту шапку, вы можете неограниченно действием накладывать ей заклинание маскировка. Это заклинание оканчивается, если снять шапку.",
       "attunement": "(требуется настройка)"
     }
   },
@@ -1896,13 +1897,13 @@ var allItems = [
       "type": "Wondrous item",
       "rarity": 2,
       "attunement": "(requires attunement)",
-      "text": "While wearing this helm , you can use an action to cast the detect thoughts spell (save DC 13) from it. As long as you maintain concentration on the spell, you can use a bonus action to send a telepathic message to a creature you are focused on. It can reply-using a bonus action to do so- while your focus on it continues. <br>While focusing on a creature with detect thoughts, you can use an action to cast the suggestion spell (save <br>DC 13) from the helm on that creature. Once used, the suggestion property can't be used again until the next dawn.",
+      "text": "While wearing this helm , you can use an action to cast the <a href='https://tentaculus.ru/spells/#q=detect_thoughts'>detect thoughts</a> spell (save DC 13) from it. As long as you maintain concentration on the spell, you can use a bonus action to send a telepathic message to a creature you are focused on. It can reply-using a bonus action to do so- while your focus on it continues. <br>While focusing on a creature with detect thoughts, you can use an action to cast the suggestion spell (save <br>DC 13) from the helm on that creature. Once used, the suggestion property can't be used again until the next dawn.",
       "source": "DMG",
       "img": "HELM_OF_TELEPATHY.jpg"
     },
     "ru": {
       "name": "Шлем телепатии",
-      "text": "Пока вы носите этот шлем, вы можете действием накладывать им заклинание обнаружение мыслей (Сл спасброска 13). Пока вы поддерживаете концентрацию на этом заклинании, вы можете бонусным действием отправить телепатическое послание существу, на котором вы сосредоточились. Оно может ответить бонусным действием, если вы продолжите сосредотачиваться на нём. <br>Сосредоточившись на существе обнаружением мыслей, вы можете действием наложить шлемом на него заклинание внушение (Сл спасброска 13). Вы не можете использовать свойство внушения повторно до следующего рассвета.",
+      "text": "Пока вы носите этот шлем, вы можете действием накладывать им заклинание <a href='https://tentaculus.ru/spells/#q=detect_thoughts'>обнаружение мыслей</a> (Сл спасброска 13). Пока вы поддерживаете концентрацию на этом заклинании, вы можете бонусным действием отправить телепатическое послание существу, на котором вы сосредоточились. Оно может ответить бонусным действием, если вы продолжите сосредотачиваться на нём. <br>Сосредоточившись на существе обнаружением мыслей, вы можете действием наложить шлемом на него заклинание <a href='https://tentaculus.ru/spells/#q=suggestion&le=2'>внушение</a> (Сл спасброска 13). Вы не можете использовать свойство внушения повторно до следующего рассвета.",
       "attunement": "(требуется настройка)"
     }
   },
@@ -1980,6 +1981,7 @@ var allItems = [
     },
     "ru": {
       "name": "Рог Валгаллы",
+      "attunement": "(серебрянный или медный)",
       "text": "Вы можете действием подуть в этот рог. После этого в пределах 60 футов от вас появляются духи воителей с плана Асгард. Эти духи используют статистику берсерков из Бестиария. Они возвращаются в Асгард через 1 час, или когда их хиты опускаются до 0. <br>Рог нельзя использовать повторно, пока не пройдёт 7 дней. <br>Существует четыре вида рогов Валгаллы, изготовленных из разных материалов. Вид рога определяет, сколько берсерков будет призвано, а также требования для их использования. Мастер определяет вид рога самостоятельно или случайным образом. <br>Если вы подуете в рог, не выполняя требований, призванные берсерки нападут на вас. Если вы выполняете требования, они будут дружественны к вам и вашим спутникам, и будут выполнять ваши команды. <br><table><tr><td>к100</td><td>Вид рога</td><td>Берсерки</td><td>Требование</td></tr><tr><td>01–40</td><td>Серебряный</td><td>2к4 + 2</td><td>Нет</td></tr><tr><td>41–75</td><td>Латунный</td><td>3к4 + 3</td><td>Владение всеми видами простого оружия</td></tr><tr><td>76–90</td><td>Бронзовый</td><td>4к4 + 4</td><td>Владение всеми видами средних доспехов</td></tr><tr><td>91–00</td><td>Железный</td><td>5к4 + 5</td><td>Владение всеми видами воинского оружия</td></tr></table>"
     }
   },
@@ -2530,7 +2532,7 @@ var allItems = [
     },
     "ru": {
       "name": "Справочник по големам",
-      "text": "В этом томе находится информация и чары, необходимые для создания конкретного вида голема. Мастер сам выбирает вид голема или определяет его случайным образом. Для того чтобы расшифровать и использовать справочник, вы должны быть заклинателем с как минимум двумя ячейками заклинаний 5 уровня. Существо, которое не может использовать справочник по големам, но читает его, получает урон психической энергией 6к6.r><table><tr><td>к20</td><td>Голем</td><td>Время</td><td>Стоимость</td></tr><tr><td>1–5</td><td>Глиняный</td><td>30 дней</td><td>65000 зм</td></tr><tr><td>6</td><td>Железный</td><td>120 дней</td><td>100000 зм</td></tr><tr><td>7–8</td><td>Каменный</td><td>90 дней</td><td>80000 зм</td></tr><tr><td>9–20</td><td>Мясной</td><td>60 дней</td><td>50000 зм</td></tr></table> <br>Для того чтобы создать голема, вы должны потратить время, указанное в таблице, работая без перерывов со справочником в руке, отдыхая не более 8 часов в день. Вы также должны оплатить указанную стоимость, приобретая расходные материалы. <br>После того как голем создан, книга исчезает в магическом пламени. Голем оживает, когда его натрут пеплом справочника. Он находится под вашим контролем, понимает ваши устные команды и выполняет их. Игровые характеристики смотрите в Бестиарии."
+      "text": "В этом томе находится информация и чары, необходимые для создания конкретного вида голема. Мастер сам выбирает вид голема или определяет его случайным образом. Для того чтобы расшифровать и использовать справочник, вы должны быть заклинателем с как минимум двумя ячейками заклинаний 5 уровня. Существо, которое не может использовать справочник по големам, но читает его, получает урон психической энергией 6к6.<br><table><tr><td>к20</td><td>Голем</td><td>Время</td><td>Стоимость</td></tr><tr><td>1–5</td><td>Глиняный</td><td>30 дней</td><td>65000 зм</td></tr><tr><td>6</td><td>Железный</td><td>120 дней</td><td>100000 зм</td></tr><tr><td>7–8</td><td>Каменный</td><td>90 дней</td><td>80000 зм</td></tr><tr><td>9–20</td><td>Мясной</td><td>60 дней</td><td>50000 зм</td></tr></table> <br>Для того чтобы создать голема, вы должны потратить время, указанное в таблице, работая без перерывов со справочником в руке, отдыхая не более 8 часов в день. Вы также должны оплатить указанную стоимость, приобретая расходные материалы. <br>После того как голем создан, книга исчезает в магическом пламени. Голем оживает, когда его натрут пеплом справочника. Он находится под вашим контролем, понимает ваши устные команды и выполняет их. Игровые характеристики смотрите в Бестиарии."
     }
   },
   {
@@ -2569,13 +2571,13 @@ var allItems = [
       "type": "Wondrous item",
       "rarity": 2,
       "attunement": "(requires attunement)",
-      "text": "The medallion has 3 charges. While wearing it, you can use an action and expend 1 charge to cast the detect thoughts spell (save DC 13) from it. The medallion regains 1d3 expended charges daily at dawn.",
+      "text": "The medallion has 3 charges. While wearing it, you can use an action and expend 1 charge to cast the <a href='https://tentaculus.ru/spells/#q=detect_thoughts'>detect thoughts</a> spell (save DC 13) from it. The medallion regains 1d3 expended charges daily at dawn.",
       "source": "DMG",
       "img": "MEDALLION_OF_THOUGHTS.jpg"
     },
     "ru": {
       "name": "Медальон мыслей",
-      "text": "У этого медальона есть 3 заряда. Пока вы его носите, вы можете действием потратить 1 заряд, чтобы наложить им заклинание обнаружение мыслей (Сл спасброска 13). Медальон ежедневно восстанавливает 1к3 заряда на рассвете.",
+      "text": "У этого медальона есть 3 заряда. Пока вы его носите, вы можете действием потратить 1 заряд, чтобы наложить им заклинание <a href='https://tentaculus.ru/spells/#q=detect_thoughts'>обнаружение мыслей</a> (Сл спасброска 13). Медальон ежедневно восстанавливает 1к3 заряда на рассвете.",
       "attunement": "(требуется настройка)"
     }
   },
@@ -2706,13 +2708,13 @@ var allItems = [
       "name": "OIL OF ETHEREALNESS",
       "type": "Potion",
       "rarity": 3,
-      "text": "Beads of this cloudy gray oil form on the outside of its container and quickly evaporate. The oil can cover a <br>Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the etherealness spell for 1 hour.",
+      "text": "Beads of this cloudy gray oil form on the outside of its container and quickly evaporate. The oil can cover a <br>Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes 10 minutes. The affected creature then gains the effect of the <a href='https://tentaculus.ru/spells/#q=etherealness'>etherealness</a> spell for 1 hour.",
       "source": "DMG",
       "img": "OIL_OF_ETHEREALNESS.jpg"
     },
     "ru": {
       "name": "Масло эфирности",
-      "text": "Крошечные капли этого серого масла очень быстро испаряются. Маслом можно обмазать одно существо <br>Среднего или меньшего размера, вместе с одеждой и переносимым им снаряжением (на каждую категорию размера выше Среднего необходим один дополнительный пузырёк масла). Нанесение масла занимает 10 минут. Обмазанное существо получает на 1 час эффект заклинания эфирность."
+      "text": "Крошечные капли этого серого масла очень быстро испаряются. Маслом можно обмазать одно существо <br>Среднего или меньшего размера, вместе с одеждой и переносимым им снаряжением (на каждую категорию размера выше Среднего необходим один дополнительный пузырёк масла). Нанесение масла занимает 10 минут. Обмазанное существо получает на 1 час эффект заклинания <a href='https://tentaculus.ru/spells/#q=etherealness'>эфирность</a>."
     }
   },
   {
@@ -2734,13 +2736,13 @@ var allItems = [
       "name": "OIL OF SLIPPERINESS",
       "type": "Potion",
       "rarity": 2,
-      "text": "This sticky black unguent is thick and heavy in the container, but it flows quickly when poured. The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). <br>Applying the oil takes 10 minutes. The affected creature then gains the effect of a freedom of movement spell for 8 hours. <br>Alternatively, the oil can be poured on the ground as an action, where it covers a 10-foot square, duplicating the effect of the grease spell in that area for 8 hours.",
+      "text": "This sticky black unguent is thick and heavy in the container, but it flows quickly when poured. The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). <br>Applying the oil takes 10 minutes. The affected creature then gains the effect of a <a href='https://tentaculus.ru/spells/#q=freedom_of_movements'>freedom of movement</a> spell for 8 hours. <br>Alternatively, the oil can be poured on the ground as an action, where it covers a 10-foot square, duplicating the effect of the grease spell in that area for 8 hours.",
       "source": "DMG",
       "img": "OIL_OF_SLIPPERINESS.jpg"
     },
     "ru": {
       "name": "Масло ускользания",
-      "text": "Эта липкая, чёрная мазь, хранящаяся в толстостенном и тяжёлом контейнере, очень текуча. Маслом можно обмазать одно существо Среднего или меньшего размера, вместе с одеждой и переносимым им снаряжением (на каждую категорию размера выше <br>Среднего необходим один дополнительный пузырёк масла). Нанесение масла занимает 10 минут. Обмазанное существо получает на 8 часов эффект заклинания свобода перемещения. <br>В качестве альтернативы, можно действием разлить масло по полу, покрыв площадь 10 × 10 футов. <br>Эффект будет такой же, как от заклинания скольжение длительностью 8 часов."
+      "text": "Эта липкая, чёрная мазь, хранящаяся в толстостенном и тяжёлом контейнере, очень текуча. Маслом можно обмазать одно существо Среднего или меньшего размера, вместе с одеждой и переносимым им снаряжением (на каждую категорию размера выше <br>Среднего необходим один дополнительный пузырёк масла). Нанесение масла занимает 10 минут. Обмазанное существо получает на 8 часов эффект заклинания <a href='https://tentaculus.ru/spells/#q=freedom_of_movements'>свобода перемещения</a>. <br>В качестве альтернативы, можно действием разлить масло по полу, покрыв площадь 10 × 10 футов. <br>Эффект будет такой же, как от заклинания скольжение длительностью 8 часов."
     }
   },
   {
@@ -2843,7 +2845,7 @@ var allItems = [
     },
     "ru": {
       "name": "Свирель канализации",
-      "text": "Вы должны владеть духовыми музыкальными инструментами, чтобы использовать эту свирель. Пока вы настроены на неё, обычные и гигантские крысы безразличны к вам и не будут вас атаковать, если вы им не угрожаете и не вредите им. <br>У свирели есть 3 заряда. Если вы играете на ней действием, вы можете бонусным действием потратить от 1 до 3 зарядов, призывая по одному рою крыс (смотрите статистику в Бестиарии) за каждый потраченный заряд, при условии, что в пределах полумили от вас есть достаточное количество крыс, которых можно призвать свирелью (на усмотрение Мастера). <br>Если достаточного количества крыс нет, заряд тратится впустую. Призванные рои движутся к источнику музыки кратчайшим возможным маршрутом, но во всём остальном не находятся под вашим контролем. Свирель ежедневно восстанавливает 1к3 заряда на рассвете. <br>Каждый раз, когда рой крыс, не находящийся под контролем другого существа, оказывается в пределах 30 футов от вас, пока вы играете на этой свирели, вы можете совершить проверку Харизмы, противопоставленную проверке Мудрости крыс. Если вы проигрываете состязание, рой действует как обычно, и не может становиться одержимым музыки этой свирели в течение 24 часов. Если вы выиграете состязание, рой становится одержимым музыкой свирели и становится дружественным к вам и вашим спутникам, пока вы каждый раунд продолжаете играть на свирели действием. Дружественный рой подчиняется вашим командам. Если вы не отдаёте команды дружественному рою, он защищается, но других действий не совершает. Если дружественный рой начинает ход, и при этом не слышит музыки свирели, ваш контроль над этим роем заканчивается, рой действует как обычно, и не может быть одержим музыкой свирели в течение следующих 24 часов.",
+      "text": "Вы должны владеть духовыми музыкальными инструментами, чтобы использовать эту свирель. Пока вы настроены на неё, обычные и гигантские крысы безразличны к вам и не будут вас атаковать, если вы им не угрожаете и не вредите им. <br>У свирели есть 3 заряда. Если вы играете на ней действием, вы можете бонусным действием потратить от 1 до 3 зарядов, призывая по одному <a href='https://tentaculus.ru/monsters/#q=Swarm_of_Rats'>рою крыс</a> за каждый потраченный заряд, при условии, что в пределах полумили от вас есть достаточное количество крыс, которых можно призвать свирелью (на усмотрение Мастера). <br>Если достаточного количества крыс нет, заряд тратится впустую. Призванные рои движутся к источнику музыки кратчайшим возможным маршрутом, но во всём остальном не находятся под вашим контролем. Свирель ежедневно восстанавливает 1к3 заряда на рассвете. <br>Каждый раз, когда рой крыс, не находящийся под контролем другого существа, оказывается в пределах 30 футов от вас, пока вы играете на этой свирели, вы можете совершить проверку Харизмы, противопоставленную проверке Мудрости крыс. Если вы проигрываете состязание, рой действует как обычно, и не может становиться одержимым музыки этой свирели в течение 24 часов. Если вы выиграете состязание, рой становится одержимым музыкой свирели и становится дружественным к вам и вашим спутникам, пока вы каждый раунд продолжаете играть на свирели действием. Дружественный рой подчиняется вашим командам. Если вы не отдаёте команды дружественному рою, он защищается, но других действий не совершает. Если дружественный рой начинает ход, и при этом не слышит музыки свирели, ваш контроль над этим роем заканчивается, рой действует как обычно, и не может быть одержим музыкой свирели в течение следующих 24 часов.",
       "attunement": "(требуется настройка)"
     }
   },
@@ -2854,13 +2856,13 @@ var allItems = [
       "typeAdditions": "(plate)",
       "rarity": 5,
       "attunement": "(requires attunement)",
-      "text": "While you're wearing this armor, you can speak its command word as an action to gain the effect of the etherealness spell, which last for 10 minutes or until you remove the armor or use an action to speak the command word again. This property of the armor can't be used again until the next dawn.",
+      "text": "While you're wearing this armor, you can speak its command word as an action to gain the effect of the <a href='https://tentaculus.ru/spells/#q=etherealness'>etherealness</a> spell, which last for 10 minutes or until you remove the armor or use an action to speak the command word again. This property of the armor can't be used again until the next dawn.",
       "source": "DMG",
       "img": "PLATE_ARMOR_OF_ETHEREALNESS.jpg"
     },
     "ru": {
       "name": "Латный доспех эфирности",
-      "text": "Если вы носите этот доспех, вы можете действием произнести его командное слово, чтобы получить эффект заклинания эфирность, который длится 10 минут, либо пока вы не снимете доспех, либо пока вы не произнесёте командное слово ещё раз. Вы не можете использовать это свойство повторно до следующего рассвета.",
+      "text": "Если вы носите этот доспех, вы можете действием произнести его командное слово, чтобы получить эффект заклинания <a href='https://tentaculus.ru/spells/#q=etherealness'>эфирность</a>, который длится 10 минут, либо пока вы не снимете доспех, либо пока вы не произнесёте командное слово ещё раз. Вы не можете использовать это свойство повторно до следующего рассвета.",
       "typeAdditions": "(латы)",
       "attunement": "(требуется настройка)"
     }
@@ -2884,13 +2886,13 @@ var allItems = [
       "name": "POTION OF ANIMAL FRIENDSHIP",
       "type": "Potion",
       "rarity": 2,
-      "text": "When you drink this potion, you can cast the animal friendship spell (save DC 13) for 1 hour at will. Agitating this muddy liquid brings little bits into view: a fish scale, a hummingbird tongue, a cat claw, or a squirrel hair.",
+      "text": "When you drink this potion, you can cast the <a href='https://tentaculus.ru/spells/#q=animal_friendship'>animal friendship</a> spell (save DC 13) for 1 hour at will. Agitating this muddy liquid brings little bits into view: a fish scale, a hummingbird tongue, a cat claw, or a squirrel hair.",
       "source": "DMG",
       "img": "POTION_OF_ANIMAL_FRIENDSHIP.jpg"
     },
     "ru": {
       "name": "Зелье дружбы с животными",
-      "text": "После того как вы выпили это зелье, вы можете в течение одного часа неограниченно накладывать заклинание дружба с животными (Сл спасброска 13). <br>При взбалтывании этой мутной жидкости вы видите рыбью чешую, кошачьи когти, беличью шерсть и прочие фрагменты."
+      "text": "После того как вы выпили это зелье, вы можете в течение одного часа неограниченно накладывать заклинание <a href='https://tentaculus.ru/spells/#q=animal_friendship'>дружба с животными</a> (Сл спасброска 13). <br>При взбалтывании этой мутной жидкости вы видите рыбью чешую, кошачьи когти, беличью шерсть и прочие фрагменты."
     }
   },
   {
@@ -2937,6 +2939,20 @@ var allItems = [
   },
   {
     "en": {
+      "name": "POTION OF GROWTH",
+      "type": "Potion",
+      "rarity": 3,
+      "text": "When you drink this potion, you gain the \"reduce\" effect of the<a href='https://tentaculus.ru/spells/#q=enlarge/reduce'> enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.",
+      "source": "DMG",
+      "img": "POTION_OF_DIMINUTION.jpg"
+    },
+    "ru": {
+      "name": "Зелье увеличения",
+      "text": "Когда вы выпиваете это зелье, вы получаете на 1к4 часа эффект «увеличение» заклинания <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>увеличение/ уменьшение</a> (концентрация не требуется). Маленький красный шарик в этой жидкости непрерывно сжимается до размера бусины и тут же расширяется, окрашивая прозрачную жидкость вокруг, после чего сжимается вновь. Тряска пузырька не прерывает этот процесс."
+    }
+  },
+  {
+    "en": {
       "name": "POTION OF FIRE BREATH",
       "type": "Potion",
       "rarity": 2,
@@ -2968,13 +2984,13 @@ var allItems = [
       "name": "POTION OF GASEOUS FORM",
       "type": "Potion",
       "rarity": 3,
-      "text": "When you drink this potion, you gain the effect of the gaseous form spell for 1 hour (no concentration required) or until you end the effect as a bonus action. <br>This potion's container seems to hold fog that moves and pours like water.",
+      "text": "When you drink this potion, you gain the effect of the <a href='https://tentaculus.ru/spells/#q=gaseous_form'>gaseous form</a> spell for 1 hour (no concentration required) or until you end the effect as a bonus action. <br>This potion's container seems to hold fog that moves and pours like water.",
       "source": "DMG",
       "img": "POTION_OF_GASEOUS_FORM.jpg"
     },
     "ru": {
       "name": "Зелье газообразной формы",
-      "text": "Когда вы выпиваете это зелье, вы получаете эффект заклинания газообразная форма (концентрация не требуется) на 1 час, или пока вы бонусным действием не прервёте его. Пузырёк с этим зельем как будто содержит туман, перетекающий, словно вода."
+      "text": "Когда вы выпиваете это зелье, вы получаете эффект заклинания <a href='https://tentaculus.ru/spells/#q=gaseous_form'>газообразная форма</a> (концентрация не требуется) на 1 час, или пока вы бонусным действием не прервёте его. Пузырёк с этим зельем как будто содержит туман, перетекающий, словно вода."
     }
   },
   {
@@ -2982,13 +2998,13 @@ var allItems = [
       "name": "POTION OF Hill GIANT STRENGTH",
       "type": "Potion",
       "rarity": 2,
-      "text": "When you drink this potion, your Strength score became 21 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
+      "text": "When you drink this potion, your Strength score became 21 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type.",
       "source": "DMG",
       "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы холмового великана",
-      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 21 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его.<br>Когда вы выпиваете это зелье, получаете эффект увеличения как от заклинания <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>увеличения/уменьшеия</a> на 1к4 часов (концентраия не требуется). <br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида."
+      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 21 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его.<br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида."
     }
   },
   {
@@ -2996,13 +3012,13 @@ var allItems = [
       "name": "POTION OF FROST GIANT STRENGTH",
       "type": "Potion",
       "rarity": 3,
-      "text": "When you drink this potion, your Strength score became 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
+      "text": "When you drink this potion, your Strength score became 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. ",
       "source": "DMG",
       "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы ледяного великана",
-      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 23 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его.<br>Когда вы выпиваете это зелье, получаете эффект увеличения как от заклинания <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>увеличения/уменьшеия</a> на 1к4 часов (концентраия не требуется). <br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида. "
+      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 23 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его. <br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида. "
     }
   },
   {
@@ -3010,13 +3026,13 @@ var allItems = [
       "name": "POTION OF stone GIANT STRENGTH",
       "type": "Potion",
       "rarity": 3,
-      "text": "When you drink this potion, your Strength score became 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
+      "text": "When you drink this potion, your Strength score became 23 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. ",
       "source": "DMG",
       "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы каменного великана",
-      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 23 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его.<br>Когда вы выпиваете это зелье, получаете эффект увеличения как от заклинания <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>увеличения/уменьшеия</a> на 1к4 часов (концентраия не требуется). <br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида. "
+      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 23 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его. <br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида. "
     }
   },
   {
@@ -3024,13 +3040,13 @@ var allItems = [
       "name": "POTION OF cloud GIANT STRENGTH",
       "type": "Potion",
       "rarity": 4,
-      "text": "When you drink this potion, your Strength score became 27 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
+      "text": "When you drink this potion, your Strength score became 27 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. ",
       "source": "DMG",
       "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы облачного великана",
-      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 27 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его.<br>Когда вы выпиваете это зелье, получаете эффект увеличения как от заклинания <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>увеличения/уменьшеия</a> на 1к4 часов (концентраия не требуется). <br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида. "
+      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 27 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его. <br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида. "
     }
   },
   {
@@ -3038,13 +3054,13 @@ var allItems = [
       "name": "POTION OF fire STRENGTH",
       "type": "Potion",
       "rarity": 3,
-      "text": "When you drink this potion, your Strength score became 25 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
+      "text": "When you drink this potion, your Strength score became 25 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. ",
       "source": "DMG",
       "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы огненного великана",
-      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 25 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его.<br>Когда вы выпиваете это зелье, получаете эффект увеличения как от заклинания <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>увеличения/уменьшеия</a> на 1к4 часов (концентраия не требуется). <br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида."
+      "text": "Когда вы выпиваете это зелье, значение вашей Силы станет равным 25 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его.<br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида."
     }
   },
   {
@@ -3052,13 +3068,13 @@ var allItems = [
       "name": "POTION OF storm GIANT STRENGTH",
       "type": "Potion",
       "rarity": 5,
-      "text": "When you drink this potion, your Strength score became 29 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. <br>When you drink this potion, you gain the \"enlarge\" effect of the <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a> spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
+      "text": "When you drink this potion, your Strength score became 29 for 1 hour. The potion has no effect on you if your Strength is equal to or greater than that score. <br>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. ",
       "source": "DMG",
       "img": "POTION_OF_GIANT_STRENGTH.jpg"
     },
     "ru": {
       "name": "Зелье силы грозового великана",
-      "text": "Когда вы выпиваете это зелье, значение вашей Силы стане равным 29 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его.<br>Когда вы выпиваете это зелье, получаете эффект увеличения как от заклинания <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>увеличения/уменьшеия</a> на 1к4 часов (концентраия не требуется). <br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида. "
+      "text": "Когда вы выпиваете это зелье, значение вашей Силы стане равным 29 на один час. Зелье не оказывает на вас никакого эффекта в том случае, если значение вашей Силы уже равно этому значению или превосходит его.<br>В прозрачной жидкости этого зелья плавают обрезки ногтей великана соответствующего вида. "
     }
   },
   {
@@ -3122,13 +3138,13 @@ var allItems = [
       "name": "POTION OF HEROISM",
       "type": "Potion",
       "rarity": 3,
-      "text": "HP Regained 2d4 + 2 4d4 + 4 8d4 + 8 10d4 + 20 <br>For 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect of the bless spell (no concentration required). This blue potion bubbles and steams as if boiling.",
+      "text": "HP Regained 2d4 + 2 4d4 + 4 8d4 + 8 10d4 + 20 <br>For 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect of the <a href='https://tentaculus.ru/spells/#q=bless'>bless</a> spell (no concentration required). This blue potion bubbles and steams as if boiling.",
       "source": "DMG",
       "img": "POTION_OF_HEROISM.jpg"
     },
     "ru": {
       "name": "Зелье героизма",
-      "text": "После того, как вы выпили это зелье, вы на 1 час получаете 10 временных хитов. Кроме того, в течение этого часа вы находитесь под эффектом заклинания благословление (концентрация не требуется). Это синее зелье пузырится и парит, словно оно находится в состоянии закипания."
+      "text": "После того, как вы выпили это зелье, вы на 1 час получаете 10 временных хитов. Кроме того, в течение этого часа вы находитесь под эффектом заклинания <a href='https://tentaculus.ru/spells/#q=bless'>благословление</a> (концентрация не требуется). Это синее зелье пузырится и парит, словно оно находится в состоянии закипания."
     }
   },
   {
@@ -3178,13 +3194,13 @@ var allItems = [
       "name": "POTION OF MIND READING",
       "type": "Potion",
       "rarity": 3,
-      "text": "When you drink this potion, you gain the effect of the detect thoughts spell (save DC 13). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
+      "text": "When you drink this potion, you gain the effect of the <a href='https://tentaculus.ru/spells/#q=detect_thoughts'>detect thoughts</a> spell (save DC 13). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
       "source": "DMG",
       "img": "POTION_OF_MIND_READING.jpg"
     },
     "ru": {
       "name": "Зелье чтения мыслей",
-      "text": "Когда вы выпиваете это зелье, вы получаете эффект заклинания обнаружение мыслей (Сл спасброска 13). <br>На вид это густое, фиолетовое зелье, с плавающим в нём небольшим овальным облачком."
+      "text": "Когда вы выпиваете это зелье, вы получаете эффект заклинания <a href='https://tentaculus.ru/spells/#q=detect_thoughts'>обнаружение мыслей</a> (Сл спасброска 13). <br>На вид это густое, фиолетовое зелье, с плавающим в нём небольшим овальным облачком."
     }
   },
   {
@@ -3220,13 +3236,13 @@ var allItems = [
       "name": "POTION OF SPEED",
       "type": "Potion",
       "rarity": 4,
-      "text": "When you drink this potion, you gain the effect of the haste spell for 1 minute (no concentration required). 1~potion's yellow fluid is streaked with black and swirl on its own.",
+      "text": "When you drink this potion, you gain the effect of the <a href='https://tentaculus.ru/spells/#q=haste'>haste</a> spell for 1 minute (no concentration required). 1~potion's yellow fluid is streaked with black and swirl on its own.",
       "source": "DMG",
       "img": "POTION_OF_SPEED.jpg"
     },
     "ru": {
       "name": "Зелье скорости",
-      "text": "Когда вы выпьете это зелье, вы получите на 1 минуту эффект заклинания ускорение (концентрация не требуется). В жёлтой жидкости этого зелья видны чёрные полоски, и она перемешивается сама собой."
+      "text": "Когда вы выпьете это зелье, вы получите на 1 минуту эффект заклинания <a href='https://tentaculus.ru/spells/#q=haste'>ускорение</a> (концентрация не требуется). В жёлтой жидкости этого зелья видны чёрные полоски, и она перемешивается сама собой."
     }
   },
   {
@@ -3268,7 +3284,7 @@ var allItems = [
     },
     "ru": {
       "name": "Перо Кваля",
-      "text": "Этот маленький предмет выглядит как перо. Существует несколько разновидностей таких предметов, и каждый из которых обладает своим особым эффектом, используемым один раз. Мастер сам определяет разновидность пера или определяет её случайным образом. <br><table><tr><td>к100</td><td>Эффект</td></tr><tr><td>01–15</td><td>Веер</td></tr><tr><td>16–40</td><td>Дерево</td></tr><tr><td>41–50</td><td>Кнут</td></tr><tr><td>51–65</td><td>Лодка-лебедь</td></tr><tr><td>66–80</td><td>Птица</td></tr><tr><td>81–00</td><td>Якорь</td></tr></table><br><b>Веер.</b> Если вы находитесь на корабле или лодке, то можете действием подбросить веер в воздух на расстояние до 10 футов. Этот предмет исчезнет, и на том месте, где это произошло, появится гигантский машущий веер. Этот веер парит в воздухе и создаёт ветер, достаточный для того, чтобы наполнить паруса корабля, увеличивая его скорость на 5 миль в час в течение 8 часов. Вы можете действием прервать этот эффект. <br><b>Дерево.</b> Для использования этого пера вы должны находиться на открытом воздухе. Вы можете действием коснуться свободного пространства на поверхности земли. Перо исчезает, и на том месте, где вы коснулись земли, вырастет дуб, не обладающий никакими магическими свойствами. Высотой дерево будет достигать 60 футов при диаметре ствола 5 футов и радиусе кроны 20 футов. <br><b>Кнут.</b> Вы можете действием бросить это перо в любую точку пространства в пределах 10 футов от себя. Перо исчезает, и на его месте появится парящий над землёй кнут. После этого вы можете бонусным действием совершить рукопашную атаку заклинанием по существу, находящемуся в пределах 10 футов от кнута, с бонусом атаки +9. При попадании цель получает урон силовым полем 1к6 + 5. <br>В свой ход вы можете бонусным действием приказать кнуту переместиться на 20 футов и повторить атаку по существу, находящемуся в пределах 10 футов от него. Кнут исчезает через 1 час, либо после того, как вы действием отпустите его, либо же если вы станете недееспособным или умрёте. <br><b>Лодка-лебедь.</b> Вы можете действием прикоснуться этим предметом к водоёму с диаметром как минимум 60 футов. Перо исчезнет, и вместо него появляется лодка в форме лебедя длиной 50 и шириной 20 футов. Эта лодка может самостоятельно двигаться по водной глади со скоростью 6 миль в час. Находясь на лодке, вы можете действием отдавать ей команды двигаться или совершить поворот на 90 градусов. Лодка может перевозить 32 существа Среднего или меньшего размера. Большое существо считается за четыре Средних, а Огромное за девять. Лодка остаётся в вашем распоряжении 24 часа, после чего исчезает. Вы также можете действием прервать действие магии досрочно. <br><b>Птица.</b> Вы можете действием подбросить перо в воздух на 5 футов. Перо исчезает, и на его месте появляется огромная, разноцветная птица. Используйте для неё блок статистики рух (смотрите Бестиарий), но она исполняет ваши простые приказания и не может атаковать. Она может переносить до 500 фунтов, летя со своей максимальной скоростью (16 миль в час при максимуме в 144 мили в день, с часовыми отдыхами через каждые 3 часа), или 1000 фунтов с уменьшенной вдвое скоростью. Птица исчезнет после того, как пролетит свою максимальную дневную дистанцию или, если её хиты опустятся до 0. Вы также можете отпустить её действием. <br><b>Якорь.</b> Вы можете действием коснуться этим пером лодки или корабля. В течение следующих 24 часов это судно не может двинуться с места, какие бы средства не использовались для этого. Повторное прикосновение прекращает эффект. Когда эффект заканчивается, перо исчезает."
+      "text": "Этот маленький предмет выглядит как перо. Существует несколько разновидностей таких предметов, и каждый из которых обладает своим особым эффектом, используемым один раз. Мастер сам определяет разновидность пера или определяет её случайным образом. <br><table><tr><td>к100</td><td>Эффект</td></tr><tr><td>01–15</td><td>Веер</td></tr><tr><td>16–40</td><td>Дерево</td></tr><tr><td>41–50</td><td>Кнут</td></tr><tr><td>51–65</td><td>Лодка-лебедь</td></tr><tr><td>66–80</td><td>Птица</td></tr><tr><td>81–00</td><td>Якорь</td></tr></table><br><b>Веер.</b> Если вы находитесь на корабле или лодке, то можете действием подбросить веер в воздух на расстояние до 10 футов. Этот предмет исчезнет, и на том месте, где это произошло, появится гигантский машущий веер. Этот веер парит в воздухе и создаёт ветер, достаточный для того, чтобы наполнить паруса корабля, увеличивая его скорость на 5 миль в час в течение 8 часов. Вы можете действием прервать этот эффект. <br><b>Дерево.</b> Для использования этого пера вы должны находиться на открытом воздухе. Вы можете действием коснуться свободного пространства на поверхности земли. Перо исчезает, и на том месте, где вы коснулись земли, вырастет дуб, не обладающий никакими магическими свойствами. Высотой дерево будет достигать 60 футов при диаметре ствола 5 футов и радиусе кроны 20 футов. <br><b>Кнут.</b> Вы можете действием бросить это перо в любую точку пространства в пределах 10 футов от себя. Перо исчезает, и на его месте появится парящий над землёй кнут. После этого вы можете бонусным действием совершить рукопашную атаку заклинанием по существу, находящемуся в пределах 10 футов от кнута, с бонусом атаки +9. При попадании цель получает урон силовым полем 1к6 + 5. <br>В свой ход вы можете бонусным действием приказать кнуту переместиться на 20 футов и повторить атаку по существу, находящемуся в пределах 10 футов от него. Кнут исчезает через 1 час, либо после того, как вы действием отпустите его, либо же если вы станете недееспособным или умрёте. <br><b>Лодка-лебедь.</b> Вы можете действием прикоснуться этим предметом к водоёму с диаметром как минимум 60 футов. Перо исчезнет, и вместо него появляется лодка в форме лебедя длиной 50 и шириной 20 футов. Эта лодка может самостоятельно двигаться по водной глади со скоростью 6 миль в час. Находясь на лодке, вы можете действием отдавать ей команды двигаться или совершить поворот на 90 градусов. Лодка может перевозить 32 существа Среднего или меньшего размера. Большое существо считается за четыре Средних, а Огромное за девять. Лодка остаётся в вашем распоряжении 24 часа, после чего исчезает. Вы также можете действием прервать действие магии досрочно. <br><b>Птица.</b> Вы можете действием подбросить перо в воздух на 5 футов. Перо исчезает, и на его месте появляется огромная, разноцветная птица. Используйте для неё блок статистики <a href='https://tentaculus.ru/monsters/#q=рух'>рух</a>, но она исполняет ваши простые приказания и не может атаковать. Она может переносить до 500 фунтов, летя со своей максимальной скоростью (16 миль в час при максимуме в 144 мили в день, с часовыми отдыхами через каждые 3 часа), или 1000 фунтов с уменьшенной вдвое скоростью. Птица исчезнет после того, как пролетит свою максимальную дневную дистанцию или, если её хиты опустятся до 0. Вы также можете отпустить её действием. <br><b>Якорь.</b> Вы можете действием коснуться этим пером лодки или корабля. В течение следующих 24 часов это судно не может двинуться с места, какие бы средства не использовались для этого. Повторное прикосновение прекращает эффект. Когда эффект заканчивается, перо исчезает."
     }
   },
   {
@@ -3741,16 +3757,44 @@ var allItems = [
   },
   {
     "en": {
-      "name": "ROD OF THE PACT KEEPER",
+      "name": "ROD OF THE PACT KEEPER +1",
       "type": "rod",
       "rarity": 2,
-      "text": "The rod regains 1 expended charge daily at dawn. If ·· e rod is reduced to 0 charges, roll a d20. On a 1, the zod disappears in a burst of radiance. <br>• On OF RULERSHIP ~od, rare (requires attunement) <br>• ·ou can use an action to present the rod and command : edience from each creature of your choice that you can see within 120 feet of you. Each target must succeed :1 a DC 15 Wisdom saving throw or be charmed by you · r 8 hours. While charmed in this way, the creature gards you as its trusted leader. If harmed by you or ur companions, or commanded to do something contrary to its nature, a target ceases to be charmed in this way. The rod can't be used again until the next dawn.",
+      "text": "While holding this rod, you gain a bonus +1 to spell attack roils and to the saving throw DCs of your warlock spells. <br> 1n addition, you can regain one warlock spell slot - an action while holding the rod. You can't use this ;Jroperty again until you finish a long rest.",
       "source": "DMG",
       "img": "ROD_OF_THE_PACT_KEEPER.jpg"
     },
     "ru": {
-      "name": "Жезл хранителя договора",
-      "text": "Держа этот жезл, вы получаете бонус к броскам атаки заклинаниями колдуна и Сл спасбросков от ваших заклинаний колдуна. Размер бонуса определяется редкостью жезла. <br>Кроме того, вы можете действием восстановить одну ячейку заклинания колдуна, если держите этот жезл. Вы не можете использовать это свойство повторно, пока не окончите продолжительный отдых."
+      "name": "Жезл хранителя договора +1",
+      "text": "Держа этот жезл, вы получаете бонус +1 к броскам атаки заклинаниями колдуна и Сл спасбросков от ваших заклинаний колдуна. <br>Кроме того, вы можете действием восстановить одну ячейку заклинания колдуна, если держите этот жезл. Вы не можете использовать это свойство повторно, пока не окончите продолжительный отдых."
+    }
+  },
+  {
+    "en": {
+      "name": "ROD OF THE PACT KEEPER +2",
+      "type": "rod",
+      "rarity": 3,
+      "text": "While holding this rod, you gain a bonus +2 to spell attack roils and to the saving throw DCs of your warlock spells. <br> 1n addition, you can regain one warlock spell slot - an action while holding the rod. You can't use this ;Jroperty again until you finish a long rest.",
+      "source": "DMG",
+      "img": "ROD_OF_THE_PACT_KEEPER.jpg"
+    },
+    "ru": {
+      "name": "Жезл хранителя договора +2",
+      "text": "Держа этот жезл, вы получаете бонус +2 к броскам атаки заклинаниями колдуна и Сл спасбросков от ваших заклинаний колдуна. <br>Кроме того, вы можете действием восстановить одну ячейку заклинания колдуна, если держите этот жезл. Вы не можете использовать это свойство повторно, пока не окончите продолжительный отдых."
+    }
+  },
+  {
+    "en": {
+      "name": "ROD OF THE PACT KEEPER +3",
+      "type": "rod",
+      "rarity": 4,
+      "text": "While holding this rod, you gain a bonus +3 to spell attack roils and to the saving throw DCs of your warlock spells. <br> 1n addition, you can regain one warlock spell slot - an action while holding the rod. You can't use this ;Jroperty again until you finish a long rest.",
+      "source": "DMG",
+      "img": "ROD_OF_THE_PACT_KEEPER.jpg"
+    },
+    "ru": {
+      "name": "Жезл хранителя договора +3",
+      "text": "Держа этот жезл, вы получаете бонус +3 к броскам атаки заклинаниями колдуна и Сл спасбросков от ваших заклинаний колдуна. <br>Кроме того, вы можете действием восстановить одну ячейку заклинания колдуна, если держите этот жезл. Вы не можете использовать это свойство повторно, пока не окончите продолжительный отдых."
     }
   },
   {
@@ -4273,14 +4317,14 @@ var allItems = [
       "type": "Staff",
       "rarity": 5,
       "attunement": "(requires attunement by a sorcerer,warlock, or wizard)",
-      "text": "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls. <br>The staff has 50 charges for the following properties. <br>It regains 4d6 + 2 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 20, the staff regains 1d12 + 1 charges. <br><b>Spell Absorption.</b> While holding the staff, you have advantage on saving throws against spells. In addition, you can use your reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell's level. <br>However, if doing so brings the staff's total number of charges above 50, the staff explodes as if you activated its retributive strike (see below). <br><b>Spells.</b> While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: conjure elemental (7 charges), dispel magic (3 charges), fireball (7th-level version, 7 charges), flaming sphere (2 charges), ice storm (4 charges), invisibility (2 charges), knock (2 charges), lightning bolt (7th-level version, 7 charges), passwall (5 charges), plane shift (7 charges), telekinesis (5 charges), wall of fire (4 charges), or web (2 charges). <br>You can also use an action to cast one of the following spells from the staff without using any charges: arcane lock, detect magic, <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a>, light, mage hand, or protection from evil and good. <br><b>Retributive Strike.</b> You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it. <br>You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. <br>If you fail to avoid the effect, you take force damage equal to 16 x the number of charges in the staff. Every other creature in the area must make a DC 17 Dexterity saving throw. On a failed save, a creature takes an amount of damage based on how far away it is from the point of origin, as shown in the following table. On a successful save, a creature takes half as much damage. <br><table><tr><td>Distance from Origin</td><td>Damage</td></tr><tr><td>10 ft. away or closer</td><td>8 x the number of charges in the staff</td></tr><tr><td>11 to 20 ft. away</td><td>6 x the number of charges in the staff</td></tr><tr><td>21 to 30ft. away</td><td>4 x the number of charges in the staff</td></tr></table>",
+      "text": "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls. <br>The staff has 50 charges for the following properties. <br>It regains 4d6 + 2 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 20, the staff regains 1d12 + 1 charges. <br><b>Spell Absorption.</b> While holding the staff, you have advantage on saving throws against spells. In addition, you can use your reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell's level. <br>However, if doing so brings the staff's total number of charges above 50, the staff explodes as if you activated its retributive strike (see below). <br><b>Spells.</b> While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>conjure elemental</a> (7 charges), dispel magic (3 charges), fireball (7th-level version, 7 charges), flaming sphere (2 charges), ice storm (4 charges), invisibility (2 charges), knock (2 charges), lightning bolt (7th-level version, 7 charges), passwall (5 charges), plane shift (7 charges), telekinesis (5 charges), wall of fire (4 charges), or web (2 charges). <br>You can also use an action to cast one of the following spells from the staff without using any charges: arcane lock, detect magic, <a href='https://tentaculus.ru/spells/#q=enlarge/reduce'>enlarge/reduce</a>, light, mage hand, or protection from evil and good. <br><b>Retributive Strike.</b> You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it. <br>You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. <br>If you fail to avoid the effect, you take force damage equal to 16 x the number of charges in the staff. Every other creature in the area must make a DC 17 Dexterity saving throw. On a failed save, a creature takes an amount of damage based on how far away it is from the point of origin, as shown in the following table. On a successful save, a creature takes half as much damage. <br><table><tr><td>Distance from Origin</td><td>Damage</td></tr><tr><td>10 ft. away or closer</td><td>8 x the number of charges in the staff</td></tr><tr><td>11 to 20 ft. away</td><td>6 x the number of charges in the staff</td></tr><tr><td>21 to 30ft. away</td><td>4 x the number of charges in the staff</td></tr></table>",
       "source": "DMG",
       "img": "STAFF_OF_THE_MAGI.jpg"
     },
     "ru": {
       "name": "Посох магов",
       "attunement": "(требует настройки чародеем, колдуном или волшебником)",
-      "text": "Этот посох можно использовать как магический боевой посох, предоставляющий бонус +2 к броскам атаки и урона им. Держа его, вы получаете бонус +2 к броскам атаки заклинаниями. <br>У посоха есть 50 зарядов для описанных ниже свойств. Он ежедневно восстанавливает 4к6 + 2 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «20», посох восстановит 1к12 + 1 заряд. <br><b>Впитывание заклинаний.</b> Пока вы держите посох, вы совершаете спасброски от заклинаний с преимуществом. Кроме того, вы можете использовать реакцию, когда другое существо накладывает заклинание, целью которого являетесь только вы. Если вы это делаете, посох впитывает магию этого заклинания, отменяя его эффект и восстанавливая количество зарядов, равное уровню поглощённого заклинания. Однако если из-за этого сумма зарядов в посохе превысит 50, посох взорвётся, как если бы вы активировали его «карающий удар» (смотрите ниже). <br><b>Заклинания.</b> Если вы держите этот посох, вы можете действием потратить часть зарядов, чтобы наложить им одно из следующих заклинаний (Сл спасброска 17): град (4 заряда), молния (версия 7 уровня, 7 зарядов), невидимость (2 заряда), огненная стена (4 заряда), огненный шар (версия 7 уровня, 7 зарядов), открывание (2 заряда), паутина (2 заряда), призыв элементаля (7 зарядов), пылающий шар (2 заряда), рассеивание магии (3 заряда), создание прохода (5 зарядов), телекинез (5 зарядов) или уход в иной мир (7 зарядов). <br>Вы также можете действием наложить посохом одно из следующих заклинаний, не тратя зарядов: волшебная рука, волшебный замок, защита от добра и зла, обнаружение магии, свет или увеличение/уменьшение. <br><b>Карающий удар.</b> Вы можете действием сломать посох о колено или твёрдую поверхность, совершая, таким образом, карающий удар. Посох уничтожается, испуская оставшуюся в нём магию взрывом, заполняющим сферу радиусом 30 футов с центром на нём. <br>У вас есть 50-процентный шанс мгновенно перенестись на случайный план существования, избежав взрыва. Если вы его не избегаете, то получаете урон силовым полем, равный 16 × количество зарядов в посохе. Все другие существа в области взрыва должны совершить спасбросок Ловкости со Сл 17. При провале существо получает урон, зависящий от того, как далеко оно находится от исходной точки взрыва, как показано в таблице. При успехе существо получает половину этого урона.Расстояние от исходной точки |Урон@10 фт. или ближе| 8 × количество зарядов в посохе@от 11 до 20 фт. |6 × количество зарядов в посохе@от 21 до 30 фт. |4 × количество зарядов в посохе"
+      "text": "Этот посох можно использовать как магический боевой посох, предоставляющий бонус +2 к броскам атаки и урона им. Держа его, вы получаете бонус +2 к броскам атаки заклинаниями. <br>У посоха есть 50 зарядов для описанных ниже свойств. Он ежедневно восстанавливает 4к6 + 2 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «20», посох восстановит 1к12 + 1 заряд. <br><b>Впитывание заклинаний.</b> Пока вы держите посох, вы совершаете спасброски от заклинаний с преимуществом. Кроме того, вы можете использовать реакцию, когда другое существо накладывает заклинание, целью которого являетесь только вы. Если вы это делаете, посох впитывает магию этого заклинания, отменяя его эффект и восстанавливая количество зарядов, равное уровню поглощённого заклинания. Однако если из-за этого сумма зарядов в посохе превысит 50, посох взорвётся, как если бы вы активировали его «карающий удар» (смотрите ниже). <br><b>Заклинания.</b> Если вы держите этот посох, вы можете действием потратить часть зарядов, чтобы наложить им одно из следующих заклинаний (Сл спасброска 17): град (4 заряда), молния (версия 7 уровня, 7 зарядов), невидимость (2 заряда), огненная стена (4 заряда), огненный шар (версия 7 уровня, 7 зарядов), открывание (2 заряда), паутина (2 заряда), <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>призыв элементаля</a> (7 зарядов), пылающий шар (2 заряда), рассеивание магии (3 заряда), создание прохода (5 зарядов), телекинез (5 зарядов) или уход в иной мир (7 зарядов). <br>Вы также можете действием наложить посохом одно из следующих заклинаний, не тратя зарядов: волшебная рука, волшебный замок, защита от добра и зла, обнаружение магии, свет или увеличение/уменьшение. <br><b>Карающий удар.</b> Вы можете действием сломать посох о колено или твёрдую поверхность, совершая, таким образом, карающий удар. Посох уничтожается, испуская оставшуюся в нём магию взрывом, заполняющим сферу радиусом 30 футов с центром на нём. <br>У вас есть 50-процентный шанс мгновенно перенестись на случайный план существования, избежав взрыва. Если вы его не избегаете, то получаете урон силовым полем, равный 16 × количество зарядов в посохе. Все другие существа в области взрыва должны совершить спасбросок Ловкости со Сл 17. При провале существо получает урон, зависящий от того, как далеко оно находится от исходной точки взрыва, как показано в таблице. При успехе существо получает половину этого урона.Расстояние от исходной точки |Урон@10 фт. или ближе| 8 × количество зарядов в посохе@от 11 до 20 фт. |6 × количество зарядов в посохе@от 21 до 30 фт. |4 × количество зарядов в посохе"
     }
   },
   {
@@ -4296,7 +4340,7 @@ var allItems = [
     "ru": {
       "name": "Посох питона",
       "attunement": "(требует настройки жрецом, друидом или колдуном)",
-      "text": "Вы можете действием произнести командное слово и бросить посох на пол в пределах 10 футов от себя. <br>Посох становится гигантским удавом (смотрите характеристики в Бестиарии) под вашим контролем и у него есть своё место в порядке инициативы. Произнеся бонусным действием командное слово ещё раз, вы возвращаете посоху его естественный облик, и он будет лежать в пространстве, ранее занимаемом удавом. <br>В свой ход вы можете мысленно отдавать команды удаву, если он находится в пределах 60 футов от вас и дееспособен. Вы определяете, какие действия ему совершать и куда перемещаться в следующем ходу, или же можете отдать общую команду, такую как «нападай на врагов» или «охраняй место». Если хиты змеи опустятся до 0, она умирает и становится посохом. <br>Посох при этом раскалывается на куски и уничтожается. Если змея становится посохом до того как потеряет все хиты, она их тут же восстанавливает."
+      "text": "Вы можете действием произнести командное слово и бросить посох на пол в пределах 10 футов от себя. <br>Посох становится <a href='https://tentaculus.ru/monsters/#q=Constrictor_Snake'>гигантским удавом</a> под вашим контролем и у него есть своё место в порядке инициативы. Произнеся бонусным действием командное слово ещё раз, вы возвращаете посоху его естественный облик, и он будет лежать в пространстве, ранее занимаемом удавом. <br>В свой ход вы можете мысленно отдавать команды удаву, если он находится в пределах 60 футов от вас и дееспособен. Вы определяете, какие действия ему совершать и куда перемещаться в следующем ходу, или же можете отдать общую команду, такую как «нападай на врагов» или «охраняй место». Если хиты змеи опустятся до 0, она умирает и становится посохом. <br>Посох при этом раскалывается на куски и уничтожается. Если змея становится посохом до того как потеряет все хиты, она их тут же восстанавливает."
     }
   },
   {
@@ -4305,14 +4349,14 @@ var allItems = [
       "type": "Staff",
       "rarity": 3,
       "attunement": "(requires attunement by a druid)",
-      "text": "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you have a +2 bonus to spell attack rolls. <br>The staff has 10 charges for the following properties. <br>It regains 1d6 + 4 expended charges daily at dawn. <br>If you expend the last charge, roll a d20. On a 1, the staff loses its properties and becomes a nonmagical quarterstaff. <br><b>Spells.</b> You can use an action to expend 1 or more of the staff's charges to cast one of the following spells from it, using your spell save DC: animal friendship (1 charge), awaken (5 charges), barkskin (2 charges), locate animals or plants (2 charges), speak with animals (1 charge), speak with plants (3 charges), or wall of thorns (6 charges). <br>You can also use an action to cast the pass without trace spell from the staff without using any charges. <br><b>Tree Form.</b> You can use an action to plant one end of the staff in fertile earth and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius. The tree appears ordinary but radiates a faint aura of transmutation magic if targeted by detect magic. While touching the tree and using another action to speak its command, word, you return the staff to its normal form. Any creature in the tree falls when it reverts to a staff.",
+      "text": "This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you have a +2 bonus to spell attack rolls. <br>The staff has 10 charges for the following properties. <br>It regains 1d6 + 4 expended charges daily at dawn. <br>If you expend the last charge, roll a d20. On a 1, the staff loses its properties and becomes a nonmagical quarterstaff. <br><b>Spells.</b> You can use an action to expend 1 or more of the staff's charges to cast one of the following spells from it, using your spell save DC: <a href='https://tentaculus.ru/spells/#q=animal_friendship'>animal friendship</a> (1 charge), <a href='https://tentaculus.ru/spells/#q=awaken'>awaken</a> (5 charges), <a href='https://tentaculus.ru/spells/#q=barkskin'>barkskin</a> (2 charges), <a href='https://tentaculus.ru/spells/#q=locate_animals_or_plants'>locate animals or plants</a> (2 charges), <a href='https://tentaculus.ru/spells/#q=speak_with_animals'>speak with animals</a> (1 charge), <a href='https://tentaculus.ru/spells/#q=speak_with_plants'>speak with plants</a> (3 charges), or <a href='https://tentaculus.ru/spells/#q=wall_of_thorns'>wall of thorns</a> (6 charges). <br>You can also use an action to cast the <a href='https://tentaculus.ru/spells/#q=pass_without_traces'>pass without trace</a> spell from the staff without using any charges. <br><b>Tree Form.</b> You can use an action to plant one end of the staff in fertile earth and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius. The tree appears ordinary but radiates a faint aura of transmutation magic if targeted by detect magic. While touching the tree and using another action to speak its command, word, you return the staff to its normal form. Any creature in the tree falls when it reverts to a staff.",
       "source": "DMG",
       "img": "STAFF_OF_THE_WOODLANDS.jpg"
     },
     "ru": {
       "name": "Посох леса",
       "attunement": "(требует настройки друидом)",
-      "text": "Этот посох можно использовать как магический боевой посох, предоставляющий бонус +2 к броскам атаки и урона им. Держа его, вы получаете бонус +2 к броскам атаки заклинаниями. <br>У посоха есть 10 зарядов для описанных ниже свойств. Он ежедневно восстанавливает 1к6 + 4 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «1», посох теряет все свои свойства и становится немагическим боевым посохом. <br><b>Заклинания.</b> Вы можете действием потратить 1 или несколько зарядов посоха, чтобы наложить им одно из следующих заклинания, используя свою Сл спасброска от заклинания: дружба с животными (1 заряд), дубовая кора (2 заряда), поиск животных или растений (2 заряда), пробуждение разума (5 зарядов), разговор с животными (1 заряд), разговор с растениями (3 заряда) или терновая стена (6 зарядов). <br>Вы также можете действием накладывать посохом заклинание бесследное передвижение, не тратя зарядов. <br><b>Древесный облик.</b> Вы можете действием воткнуть посох в плодородную землю и потратить 1 заряд, чтобы превратить посох в здоровое дерево. Высота дерева 60 футов, диаметр ствола — 5 футов, а ветви на макушке раскинуты в радиусе 20 футов. Это дерево выглядит обычным, но излучает слабую магию школы Преобразования, если становится целью обнаружения магии. Прикоснувшись к дереву и произнеся действием командное слово, вы возвращаете посоху его обычный облик. Все находящиеся на дереве существа при этом падают."
+      "text": "Этот посох можно использовать как магический боевой посох, предоставляющий бонус +2 к броскам атаки и урона им. Держа его, вы получаете бонус +2 к броскам атаки заклинаниями. <br>У посоха есть 10 зарядов для описанных ниже свойств. Он ежедневно восстанавливает 1к6 + 4 заряда на рассвете. Если вы истратили последний заряд, бросьте к20. Если выпадет «1», посох теряет все свои свойства и становится немагическим боевым посохом. <br><b>Заклинания.</b> Вы можете действием потратить 1 или несколько зарядов посоха, чтобы наложить им одно из следующих заклинания, используя свою Сл спасброска от заклинания: <a href='https://tentaculus.ru/spells/#q=animal_friendship'>дружба с животными</a> (1 заряд), <a href='https://tentaculus.ru/spells/#q=barkskin'>дубовая кора</a> (2 заряда), <a href='https://tentaculus.ru/spells/#q=locate_animals_or_plants'>поиск животных или растений</a> (2 заряда), <a href='https://tentaculus.ru/spells/#q=awaken'>пробуждение разума</a> (5 зарядов), <a href='https://tentaculus.ru/spells/#q=speak_with_animals'>разговор с животными</a> (1 заряд), <a href='https://tentaculus.ru/spells/#q=speak_with_plants'>разговор с растениями</a> (3 заряда) или <a href='https://tentaculus.ru/spells/#q=wall_of_thorns'>терновая стена</a> (6 зарядов). <br>Вы также можете действием накладывать посохом заклинание <a href='https://tentaculus.ru/spells/#q=pass_without_traces'>бесследное передвижение</a>, не тратя зарядов. <br><b>Древесный облик.</b> Вы можете действием воткнуть посох в плодородную землю и потратить 1 заряд, чтобы превратить посох в здоровое дерево. Высота дерева 60 футов, диаметр ствола — 5 футов, а ветви на макушке раскинуты в радиусе 20 футов. Это дерево выглядит обычным, но излучает слабую магию школы Преобразования, если становится целью обнаружения магии. Прикоснувшись к дереву и произнеся действием командное слово, вы возвращаете посоху его обычный облик. Все находящиеся на дереве существа при этом падают."
     }
   },
   {
@@ -4352,13 +4396,13 @@ var allItems = [
       "name": "STONE OF CONTROLLING EARTH ELEMENTALS",
       "type": "Wondrous item",
       "rarity": 3,
-      "text": "If the stone is touching the ground, you can use an action to speak its command word and summon an earth elemental, as if you had cast the conjure elemental spell. The stone can't be used this way again until the next dawn. The stone weighs 5 pounds.",
+      "text": "If the stone is touching the ground, you can use an action to speak its command word and summon an <a href='https://tentaculus.ru/monsters/#q=earth_elemental'>earth elemental</a>, as if you had cast the <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>conjure elemental</a> spell. The stone can't be used this way again until the next dawn. The stone weighs 5 pounds.",
       "source": "DMG",
       "img": "STONE_OF_CONTROLLING_EARTH_ELEMENTALS.jpg"
     },
     "ru": {
       "name": "Камень контролирования земляных элементалей",
-      "text": "Если этот камень касается пола, вы можете действием произнести командное слово и призвать земляного элементаля, как если бы вы наложили заклинание призыв элементаля. После этого камень нельзя повторно использовать до следующего рассвета. Весит камень 5 фунтов."
+      "text": "Если этот камень касается пола, вы можете действием произнести командное слово и призвать <a href='https://tentaculus.ru/monsters/#q=earth_elemental'>земляного элементаля</a>, как если бы вы наложили заклинание <a href='https://tentaculus.ru/spells/#q=conjure_elemental'>призыв элементаля</a>. После этого камень нельзя повторно использовать до следующего рассвета. Весит камень 5 фунтов."
     }
   },
   {
@@ -4367,7 +4411,7 @@ var allItems = [
       "type": "Wondrous item",
       "rarity": 2,
       "attunement": "(requires attunement)",
-      "text": "While this polished agate is on your person, you gain a + 1 bonus to ability checks and saving throws. <br>SuN BLADE <br>Weapon (longsword), rare (requires attunement) <br>This item appears to be a longsword hilt. While grasping the hilt, you can use a bonus action to cause a blade of pure radiance to spring into existence, or make the blade disappear. While the blade exists, this magic longsword has the finesse property. If you are proficient with shortswords or longswords, you are proficient with the sun blade. <br>You gain a +2 bonus to attack and damage rolls made with this weapon, which deals radiant damage instead of slashing damage. When you hit an undead with it, that target takes an extra 1d8 radiant damage. <br>The sword's luminous blade emits bright light in a 15-foot radius and dim light for an additional 15 feet. <br>The light is sunlight. While the blade persists, you can use an action to expand or reduce its radius of bright and dim light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.",
+      "text": "While this polished agate is on your person, you gain a + 1 bonus to ability checks and saving throws. ",
       "source": "DMG",
       "img": "STONE_OF_GOOD_LUCK_LUCKSTONE_.jpg"
     },
@@ -4453,13 +4497,13 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any sword)",
       "rarity": 2,
-      "text": "You gain a +1 bonus to attack and damage rolls made with this magic weapon. <br><b>Curse.</b> This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the cu:-: to you. As long as you remain cursed, you are unwilli- ~ to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons othethan this one. <br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed sa,-you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it. <br>You can break the curse in the usual ways. <br>Alternatively, casting banishment on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
+      "text": "You gain a +1 bonus to attack and damage rolls made with this magic weapon. <br><b>Curse.</b> This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the cu:-: to you. As long as you remain cursed, you are unwilli- ~ to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons othethan this one. <br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed sa,-you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it. <br>You can break the curse in the usual ways. <br>Alternatively, casting <a href='https://tentaculus.ru/spells/#q=banishment'>banishment</a> on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
       "source": "DMG",
       "img": "SWORD_O_VENGEANCE.jpg"
     },
     "ru": {
       "name": "Меч мести",
-      "text": "Вы получаете бонус +1 к броскам атаки и урона этим магическим оружием. <br><b>Проклятье.</b> Этот меч проклят и одержим мстительным духом. Настроившись на него, вы тоже становитесь проклятым. Пока вы прокляты, вы не желаете расставаться с эти мечом, и всегда держите его при себе. Пока вы настроены на это оружие, вы совершаете с помехой все броски атаки другим оружием. <br>Кроме того, пока меч находится у вас, вы должны совершать спасбросок Мудрости со Сл 15 каждый раз, когда получаете урон в сражении. При провале вы должны атаковать существо, причинившее вам урон, пока хиты одного из вас не опустятся до 0, или пока вы не сможете дотянуться до существа, чтобы совершить по нему рукопашную атаку. <br>Вы можете избавиться от проклятья как обычно. <br>В качестве альтернативы, накладывание изгнания на меч заставляет мстительный дух покинуть его. После этого меч становится обычным оружием +1 без особых свойств.",
+      "text": "Вы получаете бонус +1 к броскам атаки и урона этим магическим оружием. <br><b>Проклятье.</b> Этот меч проклят и одержим мстительным духом. Настроившись на него, вы тоже становитесь проклятым. Пока вы прокляты, вы не желаете расставаться с эти мечом, и всегда держите его при себе. Пока вы настроены на это оружие, вы совершаете с помехой все броски атаки другим оружием. <br>Кроме того, пока меч находится у вас, вы должны совершать спасбросок Мудрости со Сл 15 каждый раз, когда получаете урон в сражении. При провале вы должны атаковать существо, причинившее вам урон, пока хиты одного из вас не опустятся до 0, или пока вы не сможете дотянуться до существа, чтобы совершить по нему рукопашную атаку. <br>Вы можете избавиться от проклятья как обычно. <br>В качестве альтернативы, накладывание <a href='https://tentaculus.ru/spells/#q=banishment'>изгнания</a> на меч заставляет мстительный дух покинуть его. После этого меч становится обычным оружием +1 без особых свойств.",
       "typeAdditions": "(любой меч)"
     }
   },
@@ -4616,6 +4660,8 @@ var allItems = [
     },
     "ru": {
       "name": "Трезубец командования рыбами",
+      "typeAdditions": "(трезубец)",
+      "attunement": "(требует настройки)",
       "text": "Этот трезубец — магическое оружие. У него есть 3 заряда. Если вы его держите, вы можете действием потратить 1 заряд, чтобы наложить им заклинание <a href='https://tentaculus.ru/spells/#q=dominate_beast'>подчинение зверя</a> (Сл спасброска 15) на зверя, у которого есть врождённая скорость плавания. Трезубец ежедневно восстанавливает 1к3 заряда на рассвете."
     }
   },
@@ -4673,14 +4719,14 @@ var allItems = [
       "type": "Wand",
       "rarity": 3,
       "attunement": "(requires attunement by a spellcaster)",
-      "text": "This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed. <br><b>Spells.</b> While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): hold monster (5 charges) or hold person (2 charges). <br><b>Assisted Escape.</b> While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being paralyzed or restrained, or you can expend 1 charge and gain advantage on any check you make to escape a grapple.",
+      "text": "This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed. <br><b>Spells.</b> While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): <a href='https://tentaculus.ru/spells/#q=hold_monster'>hold monster</a> (5 charges) or hold person</a> (2 charges). <br><b>Assisted Escape.</b> While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being paralyzed or restrained, or you can expend 1 charge and gain advantage on any check you make to escape a grapple.",
       "source": "DMG",
       "img": "WAND_OF_BINDING.jpg"
     },
     "ru": {
       "name": "Волшебная палочка сковывания",
       "attunement": "(требует настройки заклинателем)",
-      "text": "У этой волшебной палочки 7 зарядов для использования описанными ниже свойствами. Она ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится. <br>Заклинания. Если вы держите эту палочку, вы можете действием потратить часть зарядов, чтобы наложить одно из следующих заклинаний (Сл спасброска 17): удержание чудовища (5 зарядов) или удержание личности (2 заряда). <br>Помощь в освобождении: Если вы держите эту палочку, вы можете реакцией потратить 1 заряд, чтобы получить преимущество для спасброска, совершаемого для того, чтобы не быть парализованным или опутанным, или вы можете потратить 1 заряд, чтобы получить преимущество для проверки, совершаемой, чтобы вырваться из захвата."
+      "text": "У этой волшебной палочки 7 зарядов для использования описанными ниже свойствами. Она ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится. <br>Заклинания. Если вы держите эту палочку, вы можете действием потратить часть зарядов, чтобы наложить одно из следующих заклинаний (Сл спасброска 17): <a href='https://tentaculus.ru/spells/#q=hold_monster'>удержание чудовища</a> (5 зарядов) или <a href='https://tentaculus.ru/spells/#q=hold_person'>держание личности</a> (2 заряда). <br>Помощь в освобождении: Если вы держите эту палочку, вы можете реакцией потратить 1 заряд, чтобы получить преимущество для спасброска, совершаемого для того, чтобы не быть парализованным или опутанным, или вы можете потратить 1 заряд, чтобы получить преимущество для проверки, совершаемой, чтобы вырваться из захвата."
     }
   },
   {
@@ -4705,13 +4751,13 @@ var allItems = [
       "type": "Wand",
       "rarity": 3,
       "attunement": "(requires attunement)",
-      "text": "This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed. <br><b>Command.</b> While holding the wand, you can use an action to expend 1 charge and command another creature to flee or grovel, as with the command spell (save DC 15). <br><b>Cone of Fear.</b> While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. Each creature in the cone must succeed on a DC 15 Wisdom saving throw or become frightened of you for 1 minute. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can· willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the <br>Dash action or try to escape from an effect that preven it from moving. If it has nowhere it can move, the creature can use the Dodge action. At the end of each o: its turns, a creature can repeat the saving throw, endin,. the effect on itself on a success.",
+      "text": "This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed. <br><b>Command.</b> While holding the wand, you can use an action to expend 1 charge and command another creature to flee or grovel, as with the <a href='https://tentaculus.ru/spells/#q=command'>command</a> spell (save DC 15). <br><b>Cone of Fear.</b> While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. Each creature in the cone must succeed on a DC 15 Wisdom saving throw or become frightened of you for 1 minute. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can· willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the <br>Dash action or try to escape from an effect that preven it from moving. If it has nowhere it can move, the creature can use the Dodge action. At the end of each o: its turns, a creature can repeat the saving throw, endin,. the effect on itself on a success.",
       "source": "DMG",
       "img": "WAND_OF_FEAR.jpg"
     },
     "ru": {
       "name": "Волшебная палочка страха",
-      "text": "У этой волшебной палочки 7 зарядов для использования описанными ниже свойствами. Она ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится. <br>Приказ. Если вы держите эту палочку, вы можете действием потратить 1 заряд, чтобы приказать другому существу убежать или упасть, как заклинанием приказ (Сл спасброска 15). <br>Конус страха. Если вы держите эту палочку, вы можете действием потратить 2 заряда, чтобы кончик палочки испустил 60-футовый конус янтарного света. <br>Все существа в конусе должны преуспеть в спасброске Мудрости со Сл 15, иначе они станут испуганными вами на 1 минуту. Будучи испуганным таким образом, существо обязано тратить ходы на то, чтобы переместиться максимально далеко от вас, и оно не может добровольно переместиться в пространство в пределах 30 футов от вас. Оно также не может совершать реакции. В качестве действия существо может использовать только Рывок или пытаться освободиться от эффекта, препятствующего его передвижению. Если двигаться некуда, существо может использовать действие Уклонение. В конце каждого своего хода существо может повторять спасбросок, оканчивая эффект на себе при успехе.",
+      "text": "У этой волшебной палочки 7 зарядов для использования описанными ниже свойствами. Она ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится. <br><b>Приказ.</b> Если вы держите эту палочку, вы можете действием потратить 1 заряд, чтобы приказать другому существу убежать или упасть, как заклинанием <a href='https://tentaculus.ru/spells/#q=command'>приказ</a> (Сл спасброска 15). <br><b>Конус страха.</b> Если вы держите эту палочку, вы можете действием потратить 2 заряда, чтобы кончик палочки испустил 60-футовый конус янтарного света. <br>Все существа в конусе должны преуспеть в спасброске Мудрости со Сл 15, иначе они станут испуганными вами на 1 минуту. Будучи испуганным таким образом, существо обязано тратить ходы на то, чтобы переместиться максимально далеко от вас, и оно не может добровольно переместиться в пространство в пределах 30 футов от вас. Оно также не может совершать реакции. В качестве действия существо может использовать только Рывок или пытаться освободиться от эффекта, препятствующего его передвижению. Если двигаться некуда, существо может использовать действие Уклонение. В конце каждого своего хода существо может повторять спасбросок, оканчивая эффект на себе при успехе.",
       "attunement": "(требуется настройка)"
     }
   },
@@ -4721,14 +4767,14 @@ var allItems = [
       "type": "Wand",
       "rarity": 3,
       "attunement": "(requires attunement by a spellcaster)",
-      "text": "This wand has 7 charges. While holding it, you can u e an action to expend 1 or more of its charges to cast the fireball spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increa e the spell slot level by one for each additional charge you expend. <br>The wand regains 1d6 + 1 expended charges daily a· dawn. If you expend the wand's last charge, roll a d20. <br>On a 1, the wand crumbles into ashes and is destroyed",
+      "text": "This wand has 7 charges. While holding it, you can u e an action to expend 1 or more of its charges to cast the <a href='https://tentaculus.ru/spells/#q=fireball&le=3'>fireball</a> spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increa e the spell slot level by one for each additional charge you expend. <br>The wand regains 1d6 + 1 expended charges daily a· dawn. If you expend the wand's last charge, roll a d20. <br>On a 1, the wand crumbles into ashes and is destroyed",
       "source": "DMG",
       "img": "WAND_OF_FIREBALLS.jpg"
     },
     "ru": {
       "name": "Волшебная палочка огненных шаров",
       "attunement": "(требует настройки заклинателем)",
-      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 или несколько зарядов, чтобы наложить ей заклинание огненный шар (Сл спасброска 15). За 1 заряд вы накладываете это заклинание 3-го уровня. Вы можете увеличить уровень заклинания на 1 за каждый дополнительный используемый заряд. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
+      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 или несколько зарядов, чтобы наложить ей заклинание <a href='https://tentaculus.ru/spells/#q=fireball&le=3'>огненный шар<a/> (Сл спасброска 15). За 1 заряд вы накладываете это заклинание 3-го уровня. Вы можете увеличить уровень заклинания на 1 за каждый дополнительный используемый заряд. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
   {
@@ -4737,14 +4783,14 @@ var allItems = [
       "type": "Wand",
       "rarity": 3,
       "attunement": "(requires attunement by a spellcaster)",
-      "text": "You cast the 3rd-level version of the spell. You can crease the spell slot level by one for each additional barge you expend. <br>The wand regains ld6 + 1 expended charges daily at <br>Gawn. If you expend the wand's last charge, roll a d20. <br>On a 1, the wand crumbles into ashes and is destroyed.",
+      "text": "~his wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the <a href='https://tentaculus.ru/spells/#q=lightning_bolt'>lightning bolt</a> spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can crease the spell slot level by one for each additional barge you expend. <br> The wand regains ld6 + 1 expended charges daily at Gawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.",
       "source": "DMG",
       "img": "WAND_OF_LIGHTNING_BOLTS.jpg"
     },
     "ru": {
       "name": "Волшебная палочка молний",
       "attunement": "(требует настройки заклинателем)",
-      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 или несколько зарядов, чтобы наложить ей заклинание молния (Сл спасброска 15). За 1 заряд вы накладываете это заклинание 3-го уровня. Вы можете увеличить уровень заклинания на 1 за каждый дополнительный используемый заряд. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
+      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 или несколько зарядов, чтобы наложить ей заклинание <a href='https://tentaculus.ru/spells/#q=lightning_bolt'>молния</a> (Сл спасброска 15). За 1 заряд вы накладываете это заклинание 3-го уровня. Вы можете увеличить уровень заклинания на 1 за каждый дополнительный используемый заряд. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
   {
@@ -4752,13 +4798,13 @@ var allItems = [
       "name": "WAND OF MAGIC DETECTION",
       "type": "Wand",
       "rarity": 2,
-      "text": "This wand has 3 charges. While holding it, you can e.:o::pend 1 charge as an action to cast the detect magic spell from it. The wand regains ld3 expended charges daily at dawn.",
+      "text": "This wand has 3 charges. While holding it, you can spend 1 charge as an action to cast the <a href='https://tentaculus.ru/spells/#q=detect_magic'>detect magic</a> spell from it. The wand regains ld3 expended charges daily at dawn.",
       "source": "DMG",
       "img": "WAND_OF_MAGIC_DETECTION.jpg"
     },
     "ru": {
       "name": "Волшебная палочка обнаружения магии",
-      "text": "У этой волшебной палочки 3 заряда. Если вы её держите, вы можете действием потратить 1 заряд, чтобы наложить ей заклинание обнаружение магии. Палочка ежедневно восстанавливает 1к3 заряда на рассвете."
+      "text": "У этой волшебной палочки 3 заряда. Если вы её держите, вы можете действием потратить 1 заряд, чтобы наложить ей заклинание <a href='https://tentaculus.ru/spells/#q=detect_magic'>обнаружение магии</a>. Палочка ежедневно восстанавливает 1к3 заряда на рассвете."
     }
   },
   {
@@ -4766,13 +4812,13 @@ var allItems = [
       "name": "WAND OF MAGIC MISSILES",
       "type": "Wand",
       "rarity": 2,
-      "text": "This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the magic missile spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend. <br>The wand regains ld6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. <br>On a 1, the wand crumbles into ashes and is destroyed.",
+      "text": "This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the <a href='https://tentaculus.ru/spells/#q=magic_missile'>magic missile</a>spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend. <br>The wand regains ld6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.",
       "source": "DMG",
       "img": "WAND_OF_MAGIC_MISSILES.jpg"
     },
     "ru": {
       "name": "Волшебная палочка снарядов",
-      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 или несколько зарядов, чтобы наложить ей заклинание волшебная стрела. За 1 заряд вы накладываете это заклинание 1-го уровня. Вы можете увеличить уровень заклинания на 1 за каждый дополнительный используемый заряд. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
+      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 или несколько зарядов, чтобы наложить ей заклинание <a href='https://tentaculus.ru/spells/#q=magic_missile'>волшебная стрела</a>. За 1 заряд вы накладываете это заклинание 1-го уровня. Вы можете увеличить уровень заклинания на 1 за каждый дополнительный используемый заряд. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
   {
@@ -4797,14 +4843,14 @@ var allItems = [
       "type": "Wand",
       "rarity": 4,
       "attunement": "(requires attunement by a spellcaster)",
-      "text": "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the polymorph spell (save DC 15) from it. <br>The wand regains ld6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. <br>On a 1, the wand crumbles into ashes and is destroyed.",
+      "text": "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the <a href='https://tentaculus.ru/spells/#q=polymorph&le=4'>polymorph</a> spell (save DC 15) from it. <br>The wand regains ld6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. <br>On a 1, the wand crumbles into ashes and is destroyed.",
       "source": "DMG",
       "img": "WAND_OF_POLYMORPH.jpg"
     },
     "ru": {
       "name": "Волшебная палочка превращения",
       "attunement": "(требует настройки заклинателем)",
-      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд, чтобы наложить ей заклинание превращение (Сл спасброска 15). <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
+      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд, чтобы наложить ей заклинание <a href='https://tentaculus.ru/spells/#q=polymorph&le=4'>превращение</a> (Сл спасброска 15). <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
   {
@@ -4827,14 +4873,14 @@ var allItems = [
       "type": "Wand",
       "rarity": 2,
       "attunement": "(requires attunement by a spellcaster)",
-      "text": "While holding this wand, you gain a bonus to spell attack rolls, you ignore half cover when making a spell attack.",
+      "text": "While holding this wand, you gain a bonus +1 to spell attack rolls, you ignore half cover when making a spell attack.",
       "source": "DMG",
       "img": "WAND_OF_THE_WAR_MAGE.jpg"
     },
     "ru": {
       "name": "Волшебная палочка боевого мага +1",
       "attunement": "(требует настройки заклинателем)",
-      "text": "Держа эту палочку в руке, вы получаете бонус к броскам атаки заклинаний. Кроме того, вы игнорируете укрытие на половину, когда совершаете атаки заклинаниями."
+      "text": "Держа эту палочку в руке, вы получаете бонус +1 к броскам атаки заклинаний. Кроме того, вы игнорируете укрытие на половину, когда совершаете атаки заклинаниями."
     }
   },
   {
@@ -4843,14 +4889,14 @@ var allItems = [
       "type": "Wand",
       "rarity": 3,
       "attunement": "(requires attunement by a spellcaster)",
-      "text": "While holding this wand, you gain a bonus to spell attack rolls, you ignore half cover when making a spell attack.",
+      "text": "While holding this wand, you gain a bonus +2 to spell attack rolls, you ignore half cover when making a spell attack.",
       "source": "DMG",
       "img": "WAND_OF_THE_WAR_MAGE.jpg"
     },
     "ru": {
       "name": "Волшебная палочка боевого мага +2",
       "attunement": "(требует настройки заклинателем)",
-      "text": "Держа эту палочку в руке, вы получаете бонус к броскам атаки заклинаний. Кроме того, вы игнорируете укрытие на половину, когда совершаете атаки заклинаниями."
+      "text": "Держа эту палочку в руке, вы получаете бонус +2 к броскам атаки заклинаний. Кроме того, вы игнорируете укрытие на половину, когда совершаете атаки заклинаниями."
     }
   },
   {
@@ -4859,14 +4905,14 @@ var allItems = [
       "type": "Wand",
       "rarity": 4,
       "attunement": "(requires attunement by a spellcaster)",
-      "text": "While holding this wand, you gain a bonus to spell attack rolls, you ignore half cover when making a spell attack.",
+      "text": "While holding this wand, you gain a bonus +3 to spell attack rolls, you ignore half cover when making a spell attack.",
       "source": "DMG",
       "img": "WAND_OF_THE_WAR_MAGE.jpg"
     },
     "ru": {
       "name": "Волшебная палочка боевого мага +3",
       "attunement": "(требует настройки заклинателем)",
-      "text": "Держа эту палочку в руке, вы получаете бонус к броскам атаки заклинаний. Кроме того, вы игнорируете укрытие на половину, когда совершаете атаки заклинаниями."
+      "text": "Держа эту палочку в руке, вы получаете бонус +3 к броскам атаки заклинаний. Кроме того, вы игнорируете укрытие на половину, когда совершаете атаки заклинаниями."
     }
   },
   {
@@ -4875,14 +4921,14 @@ var allItems = [
       "type": "Wand",
       "rarity": 2,
       "attunement": "(requires attunement by a spellcaster)",
-      "text": "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the web spell (save DC 15) from it. <br>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. <br>On a 1, the wand crumbles into ashes and is destroyed.",
+      "text": "This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the <a href='https://tentaculus.ru/spells/#q=web'>web</a> spell (save DC 15) from it. <br>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. <br>On a 1, the wand crumbles into ashes and is destroyed.",
       "source": "DMG",
       "img": "WAND_OF_WEB.jpg"
     },
     "ru": {
       "name": "Волшебная палочка паутины",
       "attunement": "(требует настройки заклинателем)",
-      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд, чтобы наложить ей заклинание паутина (Сл спасброска 15). <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
+      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд, чтобы наложить ей заклинание <a href='https://tentaculus.ru/spells/#q=web'>паутина</a> (Сл спасброска 15). <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится."
     }
   },
   {
@@ -4898,7 +4944,7 @@ var allItems = [
     "ru": {
       "name": "Волшебная палочка чудес",
       "attunement": "(требует настройки заклинателем)",
-      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд и выбрать цель в пределах 120 футов. Цель должна быть существом, предметом или точкой в пространстве. <br>Бросьте к100 и определите последствия с помощью таблицы. <br>Если эффект накладывает заклинание, Сл спасброска от него равна 15. Если обычно у этого заклинания есть дистанция в футах, то эта дистанция становится равной 120 футам. <br>Если эффект покрывает площадь, то вы должны сделать центром заклинания цель и включить её в качестве цели заклинания. Если эффект может воздействовать на несколько разных субъектов, Мастер случайным образом выбирает, кто станет целью. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится. <br><a href='https://tentaculus.ru/archive/tables/wonder_stick_standart.html'>Эффекты</a>"
+      "text": "У этой волшебной палочки 7 зарядов. Если вы её держите, вы можете действием потратить 1 заряд и выбрать цель в пределах 120 футов. Цель должна быть существом, предметом или точкой в пространстве. <br>Бросьте к100 и определите последствия с помощью таблицы. <br>Если эффект накладывает заклинание, Сл спасброска от него равна 15. Если обычно у этого заклинания есть дистанция в футах, то эта дистанция становится равной 120 футам. <br>Если эффект покрывает площадь, то вы должны сделать центром заклинания цель и включить её в качестве цели заклинания. Если эффект может воздействовать на несколько разных субъектов, Мастер случайным образом выбирает, кто станет целью. <br>Палочка ежедневно восстанавливает 1к6 + 1 заряд на рассвете. Если вы истратили последний заряд в палочке, бросьте к20. Если выпадет «1», палочка рассыплется в пыль и уничтожится. <br><a href='https://tentaculus.ru/archive/tables/wonder_stick_standart.html'>Список эффектов</a>"
     }
   },
   {

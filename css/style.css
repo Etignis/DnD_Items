@@ -913,7 +913,10 @@ p {
   float: left;
 }
 .cardContainer table tr:nth-child(even) {
-  background: #f7f7f7;
+  background: #efefef;
+}
+.cardContainer table td:first-child {
+  white-space: nowrap;
 }
 .cardContainer.textView {
   float: none;
@@ -942,6 +945,10 @@ p {
 .cardContainer.textView .ItemCard .header_info h1 {
   margin-right: 0.5rem;
   margin-left: 0.1rem;
+}
+.cardContainer.textView .ItemCard .header_info .subtitle {
+  margin-left: 1.4rem;
+  margin-right: 1.4rem;
 }
 .cardContainer.textView .ItemCard .info {
   display: block;
@@ -1305,18 +1312,18 @@ p {
   max-width: 100%;
   width: auto;
 }
-#HiddenSpells a {
+#HiddenItems a {
   text-decoration: none;
   color: #ddd;
   transition: color .3s;
 }
-#HiddenSpells a:hover {
+#HiddenItems a:hover {
   color: #6aa0e7;
 }
-#HiddenSpells a:active {
+#HiddenItems a:active {
   color: #487EC5;
 }
-#HiddenSpells .bReturnUnvisible {
+#HiddenItems .bReturnUnvisible {
   display: inline-block;
   padding: .1em .2em;
   margin: .4em 0;
