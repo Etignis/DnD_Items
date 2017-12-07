@@ -539,19 +539,19 @@ window.onload = function(){
 	function createTypeCombobox(isOpen) {
 		if(isOpen == undefined)
 			isOpen = false;
-		var s1=createComboBox(oTypes, {id: "TypeCombobox", title: "Тип", checkAll: true, isOpen: isOpen});
+		var s1=createComboBox(oTypes, {id: "TypeCombobox", title: "Тип", checkAll: false, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 	}
 	function createRarityCombobox(isOpen) {
 		if(isOpen == undefined)
 			isOpen = false;
-		var s1=createComboBox(oRarity, {id: "RarityCombobox", title: "Редкость", checkAll: true, isOpen: isOpen});
+		var s1=createComboBox(oRarity, {id: "RarityCombobox", title: "Редкость", checkAll: false, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 	}
 	function createSourceCombobox(isOpen) {
 		if(isOpen == undefined)
 			isOpen = false;
-		var s1=createComboBox(oSources, {id: "SourceCombobox", title: "Источники", checkAll: true, isOpen: isOpen});
+		var s1=createComboBox(oSources, {id: "SourceCombobox", title: "Источники", checkAll: false, isOpen: isOpen});
 		$(".p_side").append("<div class='mediaWidth'>" + s1 + "</div>");
 
 		// oSources.forEach(function(el) {

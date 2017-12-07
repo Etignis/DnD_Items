@@ -22,12 +22,11 @@ const fs = require('fs');
 const path = require('path');
 
 /// articles index page
-const sPathToSrc = 'source.txt';
+//const sPathToSrc = 'source.txt';
 
-const sPathToSrcRu = 'source_ru.txt';
+const sPathToSrcRu = 'source.txt';
 const htmlExt = '.html';
-const sPathToOutput = 'db_en.js';
-const sPathToOutputRu = 'db_ru.js';
+const sPathToOutputRu = 'db_en.js';
 
 
 function ensureDirectoryExistence(filePath) {
@@ -88,16 +87,25 @@ lr.on('line', function (line) {
         oItem.name = sTmpTitle.replace(/\$/g, "").trim();
         sTmpTitle = "";
       }
-    } else if(!oItem.rarity){
+    } else if(!oItem.type){
       
       if(/\$/.test(line)){
-        oItem.rarity = true;
+        var oTyRa =/([\w\s]+)\s*(\([\w\s,]+\))?[,\.]\s([\w\s]+)\s*(\([\w\s,]+\))?/.exec(line);
+        if(oTyRa){
+          oItem.type = oTyRa[1];
+          if(oTyRa[2])
+            oItem.typeAdditions = oTyRa[2];
+          
+          oItem.rarity = oTyRa[3]
+          if(oTyRa[4])
+            oItem.attunement = oTyRa[4];
+        }
       }
     }else if(!oItem.text){
       if(/-$/.test(line)) {
-        sTmpText += line.replace(/-$/, "").replace(/^([А-ЯЁ])/, "<br>$1");
+        sTmpText += line.replace(/-$/, "").replace(/^([A-ZА-ЯЁ])/, "<br>$1");
       } else{
-        sTmpText += (line+ " ").replace(/^([А-ЯЁ])/, "<br>$1");
+        sTmpText += (line+ " ").replace(/^([A-ZА-ЯЁ])/, "<br>$1");
       }
       
       if(/\$/.test(line)){
