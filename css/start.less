@@ -65,6 +65,20 @@ p {
     margin: 0 0 10.5px;
 }
 
+table{
+  tr{
+    background: @white;
+  }
+  tr:nth-child(even){
+    background: lighten(@l-gray, 5%);
+  }
+  td:first-child{
+    // text-align: center;
+    white-space: nowrap;
+  }
+}
+
+
 .wrap{
     overflow: hidden;
     float: none;

@@ -76,12 +76,6 @@
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 .fr-concave {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -109,12 +103,6 @@
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 .noselect {
   -webkit-touch-callout: none;
@@ -175,6 +163,15 @@ br {
 }
 p {
   margin: 0 0 10.5px;
+}
+table tr {
+  background: #fff;
+}
+table tr:nth-child(even) {
+  background: #eaeaea;
+}
+table td:first-child {
+  white-space: nowrap;
 }
 .wrap {
   overflow: hidden;
@@ -297,12 +294,6 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   margin: 0;
   padding: 0.4em 0.2em;
   text-align: center;
@@ -336,12 +327,6 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   margin: 0;
   padding: 0.4em 0.2em;
 }
@@ -370,12 +355,6 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   font-weight: bold;
   margin: 0;
   padding: 0.4em 0.2em;
@@ -410,12 +389,6 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   margin: 0;
   padding: 0.4em 0.2em;
 }
@@ -444,12 +417,6 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   background: #777;
   padding: 0;
   display: block;
@@ -578,12 +545,6 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   background: #777;
   padding: .2em;
   display: block;
@@ -626,6 +587,13 @@ p {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  z-index: 999;
 }
 .mod_win_wrapper .mod_win {
   -webkit-border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
@@ -653,19 +621,13 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   display: block;
   position: absolute;
   width: 95%;
   max-width: 50em;
   min-height: 15em;
   top: 1em;
-  z-index: 999;
+  z-index: 9999;
   background: #eeeeee;
   color: #222;
   cursor: default;
@@ -737,12 +699,6 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   cursor: text;
   background: #fff;
   padding: .6em;
@@ -778,10 +734,11 @@ p {
   box-shadow: 0 0 5px 0 #487EC5;
 }
 #info_text {
-  padding: .3em;
-  background: rgba(255, 255, 255, 0.6);
+  padding: .7em 1.3em;
+  background: rgba(255, 255, 255, 0.88);
   color: #222;
   font-weight: 600;
+  max-width: 90rem;
 }
 #topMessage {
   padding: .2em;
@@ -912,12 +869,6 @@ p {
   margin-top: 1px;
   float: left;
 }
-.cardContainer table tr:nth-child(even) {
-  background: #efefef;
-}
-.cardContainer table td:first-child {
-  white-space: nowrap;
-}
 .cardContainer.textView {
   float: none;
   width: auto;
@@ -937,6 +888,7 @@ p {
   background-image: none;
 }
 .cardContainer.textView .ItemCard .header_info {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   border-bottom: 1px solid #000;
@@ -949,6 +901,7 @@ p {
 .cardContainer.textView .ItemCard .header_info .subtitle {
   margin-left: 1.4rem;
   margin-right: 1.4rem;
+  text-align: left;
 }
 .cardContainer.textView .ItemCard .info {
   display: block;
@@ -970,6 +923,10 @@ p {
   display: inline;
   float: right;
   max-height: 19rem;
+}
+.cardContainer.textView .ItemCard .coast {
+  position: relative;
+  text-align: left;
 }
 .ItemCard {
   height: 3.5in;
@@ -1032,7 +989,6 @@ p {
   background-size: contain;
 }
 .ItemCard .header_info {
-  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: stretch;
@@ -1045,23 +1001,41 @@ p {
   padding-right: .9em;
   text-align: center;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
 }
 .ItemCard .subtitle {
   text-align: center;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
 }
 .ItemCard .coast {
-  position: relative;
+  position: absolute;
   text-align: center;
+  bottom: 2rem;
+  right: 1.4rem;
+  left: 1.4rem;
+  text-shadow: 0 -1px 1px #fff, 1px -1px 1px #fff, 1px 0px 1px #fff, 1px 1px 1px #fff, 0 1px 1px #fff, -1px 1px 1px #fff, -1px 0px 1px #fff;
 }
 .ItemCard .info {
   margin-top: auto;
+  margin-bottom: 1.6rem;
   overflow-y: auto;
   color: #000;
-  z-index: 99;
-  background: rgba(255, 255, 255, 0.8);
+  display: none;
+  background: #fff;
   line-height: normal;
+}
+.ItemCard .info a {
+  font-style: italic;
+  text-decoration: none;
+  color: #2e5992;
+  border-bottom: 1px rgba(72, 126, 197, 0) dashed;
+  transition: border 0.2s;
+}
+.ItemCard .info a:hover {
+  border-bottom: 1px #487EC5 dashed;
+}
+.ItemCard .info a:visited {
+  color: #2e5992;
 }
 .ItemCard .info::-webkit-scrollbar {
   width: 5px;
@@ -1077,13 +1051,16 @@ p {
   scrollbar-face-color: #777;
   scrollbar-track-color: #ddd;
 }
+.ItemCard .info.show {
+  display: block;
+  border-top: 1px solid #ddd;
+}
 .ItemCard .info.show .text {
   max-height: 555rem;
   display: block;
 }
 .ItemCard .text {
   max-height: 0;
-  display: none;
   padding: 2px;
 }
 .ItemCard .img {
@@ -1094,10 +1071,19 @@ p {
   cursor: pointer;
   opacity: 0;
   text-align: center;
-  transition: opacity 0.2s;
-  margin-bottom: 1em;
-  background: rgba(255, 255, 255, 0.8);
+  transition: opacity 0.2s, color 0.3s;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.7);
   z-index: 99;
+  width: 1.5em;
+  border: 1px solid #777;
+  border-radius: 35px;
+  position: absolute;
+  right: 0.3em;
+  bottom: 0.3em;
+}
+.ItemCard .sf_text:hover {
+  color: #487EC5;
 }
 .ItemCard .sizeButtonsContainer {
   position: absolute;
@@ -1126,7 +1112,8 @@ p {
   text-align: center;
   position: absolute;
   bottom: 0px;
-  width: 100%;
+  left: 4rem;
+  right: 4rem;
   font-size: 90%;
   font-weight: bold;
   color: #c4c4c4;
@@ -1230,12 +1217,6 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   min-width: 2.2em;
   min-height: 1em;
   text-align: center;
@@ -1278,12 +1259,6 @@ p {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   background: #555555;
   padding: .3em;
 }
@@ -1414,10 +1389,11 @@ p {
     margin: 0;
     padding: 0;
   }
-  .bHideSpell,
-  .bLockSpell,
+  .bHideItem,
+  .bLockItem,
   .p_side,
-  #helper {
+  #helper,
+  .sf_text {
     display: none !important;
   }
   .p_cont {

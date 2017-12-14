@@ -83,6 +83,13 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    z-index: 999;
 
     .mod_win{
         .fr-concave;
@@ -93,7 +100,7 @@
         min-height: 15em;
         top: 1em;
         //margin: 0 auto;
-        z-index: 999;
+        z-index: 9999;
         background: @white - #111;
         color: @d-gray;
         cursor: default;
@@ -186,10 +193,11 @@
 }
 
 #info_text{
-    padding: .3em;
-    background: rgba(255,255,255,.6);
+    padding: .7em 1.3em;
+    background: rgba(255,255,255,.88);
     color: @d-gray;
     font-weight: 600;
+    max-width: 90rem;
 }
 
 #topMessage{
@@ -239,7 +247,7 @@
 }
 
 @media screen and (min-width: @m_w_1) {
-    body{        
+    body{
 	    background: url('../img/bg_hor.jpg') center center no-repeat;
 	    background-attachment: fixed;
 	    background-size: cover;

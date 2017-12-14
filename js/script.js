@@ -15,6 +15,10 @@ function getConfig(prop) {
 	return ""; //oConfig;
 }
 
+function randd(min, max) {
+  return Math.floor(arguments.length > 1 ? (max - min + 1) * Math.random() + min : (min + 1) * Math.random());
+};
+
 window.onload = function(){
 	var fCtrlIsPressed = false;
 
@@ -194,15 +198,17 @@ window.onload = function(){
 	}
 
 	function showInfoWin(sText) {
-		if(!$(".mod_win_wrapper").length){
-			var bCross = "<span class='bCloseInfoWin'>×</span>";
-			$("body").append("<div class='mod_win_wrapper'><div class='mod_win'>"+bCross+sText+"</div></div>");
-		}
+		$(".mod_win_wrapper").remove();
+		var bCross = "<span class='bCloseInfoWin'>×</span>";
+		$("body").append("<div class='mod_win_wrapper'><div class='mod_win'>"+bCross+sText+"</div></div>");
+    $("body").css("overflow-y", "hidden");
 		$(".mod_win_wrapper").fadeIn();
 	}
 	function hideInfoWin() {
 		if($(".mod_win_wrapper").length){
-			$(".mod_win_wrapper").fadeOut();
+			$.when($(".mod_win_wrapper").fadeOut()).done(function(){
+        $("body").css("overflow-y", "auto");
+      });
 		}
 	}
 	function showDBG() {
@@ -286,7 +292,7 @@ window.onload = function(){
 			var s_attunement = getItemAttr(oItem, "attunement", lang);
       var s_typeAdditions = getItemAttr(oItem, "typeAdditions", lang);
 			var s_notes = getItemAttr(oItem, "notes", lang);
-			var s_text = getItemAttr(oItem, "text", lang);
+			var s_text = getItemAttr(oItem, "text", lang).split("<br>").map(item => "<p>"+item+"</p>").join("");
 			var s_source = getItemAttr(oItem, "source", "en");
 			var s_sourcePage = getItemAttr(oItem, "sourcePage", lang);
       
@@ -295,9 +301,9 @@ window.onload = function(){
       var s_coast = getItemAttr(oItem, "coast", lang) ||
         oRarity[oItem.en.rarity] && oRarity[oItem.en.rarity].coast ||
         "";
-      // if(s_coast){
-        // s_coast = "<div class='coast'><div class='coin'>"+s_coast+"</div></div>";
-      // }
+      if(s_coast){
+        s_coast = "<div class='coast'><div class='coin'>"+s_coast+"</div></div>";
+      }
       try{
         
         var oImg = "<img class='img' src='img/items/min_200/"+s_img+"'>";
@@ -326,6 +332,7 @@ window.onload = function(){
 
 			var sNeedHelp = (lang == "ru")?  getItemAttr(oItem, "name", "en") : getItemAttr(oItem, "name", "ru");
       var sImg = fText? "" :'style="background-image: url('+s_img+');"';
+      //s_text = fText? s_text.split("<br>").map(item => "<p>"+item+"</p>").join(""): s_text;
 
 			ret = '<div class="cardContainer '+(fText? "textView " : "") + sLockedItem + " " + s_rarity_class +'" '+ style +' data-name="' + oItem.en.name + '"  data-name-ru="' + oItem.ru.name + '"  data-lang="' + lang + '">'+
 				'<div class="ItemCard">'+
@@ -334,15 +341,16 @@ window.onload = function(){
             bHideItem +
             "<div class='header_info'>"+
               '<h1 title="'+s_name+(sNeedHelp?" ("+sNeedHelp+")":"")+'">' +s_name+ '</h1>'+
-              '<div class="subtitle">' + s_rariry + " " + s_type+  " " + s_typeAdditions+  " " + s_attunement + " " +s_coast+ '</div>'+
+              '<div class="subtitle">' + s_rariry + " " + s_type+  " " + s_typeAdditions+  " " + s_attunement + '</div>'+
             "</div>"+
             "<div class='info'>"+
               oImg+
               '<div class="text">' + s_text + '</div>	'+
+              textSizeButtons +
             "</div>"+
-            '<div class="sf_text">показать/скрыть описание</div>'+
+            s_coast+ 
+            '<span class="sf_text"> <i class="fa fa-info-circle" aria-hidden="true"></i></span>'+
 						"<div class='source' title=\"Источник: "+ s_source+"\">"+ s_source+"</div>"+
-						textSizeButtons +
 					'</div>'+
 				'</div>'+
 			'</div>';
@@ -372,6 +380,7 @@ window.onload = function(){
 			var sLang = oParams.sLang;
 			var sView = oParams.sView;
 			var sSort = oParams.sSort;
+      var fRandom = oParams.fRandom;
 		} catch (err) {
 			console.dir(oParams);
 		}
@@ -473,7 +482,12 @@ window.onload = function(){
 			});
 		}
 
-
+    if(fRandom){
+      filteredItems = [filteredItems[randd(0, filteredItems.length)]];
+      var sName = filteredItems[0].en.name.toLowerCase();
+      $("#NameInput input").val(sName);
+    }
+    
 		for (var i in filteredItems) {
 			if(filteredItems[i]) {
 				var fLocked = filteredItems[i].locked? true: false;
@@ -482,7 +496,7 @@ window.onload = function(){
 					Items += tmp;
 			}
 		}
-
+    
 		$(".ItemContainer").html(Items);
     $(".ItemContainer").attr("data-itemCount", filteredItems.length);
 		$("#before_Items").hide();
@@ -499,9 +513,12 @@ window.onload = function(){
 		 var sView = $("#CardViewSelect .label").attr("data-selected-key");
 		 var sSort = $("#SortSelect .label").attr("data-selected-key");
 
+		 var fRandom = (oParams && oParams.fRandom == true)? true: false;
+     
 		 var fHidden = (aHiddenItems.length>0)? true: false;
 
 		setConfig("language", sLang);
+		setConfig("view", sView);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
 		clearTimeout(oTimer);
 		oTimer = setTimeout(function(){
@@ -513,7 +530,8 @@ window.onload = function(){
 				sLang: sLang,
 				sView: sView,
 				sSort: sSort,
-				fHidden: fHidden
+				fHidden: fHidden,
+        fRandom: fRandom
 				});
 		}, nTimerSeconds/4);
 	}
@@ -559,9 +577,11 @@ window.onload = function(){
 		// });
 	}
 	function createNameFilter() {
-		var ret=createInput({id: "NameInput"});
-		var label = createLabel("Название");
-		$(".p_side").append("<div class='mediaWidth'>" + label + ret + "</div>");
+    var label = createLabel("Название");
+		var oInput = createInput({id: "NameInput"});
+    var bRandom = "<a href='/#random' class='bt flexChild'  id='bRandom' title='Случайная вещь'>🎲</a>";    
+    var oLine = "<div style='display: flex'>"+oInput + bRandom+"</div>";
+		$(".p_side").append("<div class='mediaWidth'>" + label + oLine + "</div>");
 	}
   function createAutoSizeTextButton() {
 		var label = createLabel("Размер текста");
@@ -681,15 +701,16 @@ window.onload = function(){
 
 	function createSidebar() {
 		var lang = getConfig("language");
+		var view = getConfig("view");
 		createButtons();
 		createNameFilter();
 		createTypeCombobox();
 		 createRarityCombobox();
-		 //createSourceCombobox();
+		 createSourceCombobox();
 		 createCardWidthButtons();
 		 createAutoSizeTextButton();
 		 createLangSelect(lang);
-		 createCardViewSelect();
+		 createCardViewSelect(view);
 		 createSortSelect();
 
 		$(".p_side").fadeIn();
@@ -705,9 +726,12 @@ window.onload = function(){
 	});
 
 	// hide DBG
-	$("body").on("click", "#dbg", function() {
-		$(this).fadeOut();
+	$("body").on("click", "#dbg, .mod_win_wrapper", function() {
+		$("#dbg").fadeOut();
 		hideInfoWin();
+	});
+	$("body").on("click", ".mod_win", function() {
+		return false;
 	});
 
 	//custom Select
@@ -1268,15 +1292,37 @@ window.onload = function(){
 
   // show/hide card info
   $("body").on("click", ".sf_text", function(){
-    var oInfo =  $(this).parent().find(".info");
-    //var oText = $(this).parent().find(".text");
-    if(oInfo.hasClass("show")) {
-      // hide
-      oInfo.removeClass("show");
-    } else {
-      // show
-      oInfo.addClass("show");
-    }
+    // var oInfo =  $(this).parent().find(".info");
+    
+    // if(oInfo.hasClass("show")) {// hide      
+      // oInfo.removeClass("show");
+    // } else {// show      
+      // oInfo.addClass("show");
+    // }
+    
+    var sInfo = $(this).parent().find(".text").html();
+    var sName = $(this).parent().find("h1").html();
+		showDBG();
+		showInfoWin("<h1>"+sName+"</h1>"+sInfo);
+		return false;
+    
+    
+    //return false;
+  });
+
+  // get random item
+  $("body").on("click", "#bRandom", function(){
+    //filterItems({fRandom: true}); // filteredItems
+    // if(!/&random\b/.test(window.location.hash)) {
+      // var sHash = window.location.hash + "&random";// aFilters.join("&");
+      // window.location.hash = sHash;
+    // }
+    //$("#NameInput input").val("");
+    //var sName = filteredItems[0, randd(0, filteredItems.length-1)].en.name.toLowerCase();
+    //$("#NameInput input").val(sName).focusout();
+    //updateHash();
+    $("#NameInput input").val("");
+    getHash({fRandom: true});
     return false;
   });
 
@@ -1296,9 +1342,6 @@ window.onload = function(){
 		var sLang = $("#LangSelect .label").attr("data-selected-key");
 		var sCardView = $("#CardViewSelect .label").attr("data-selected-key");
 		var sSort = $("#SortSelect .label").attr("data-selected-key");
-
-
-
 
 		//#q=Item_name&ls=0&le=9
 		var aFilters = [];
@@ -1331,12 +1374,12 @@ window.onload = function(){
 			removeHash();
 		}
 	}
-  function getHash(){
+  function getHash(oParams){
     $('html, body').animate({scrollTop:0}, 'fast');
 
     var sHash = window.location.hash.slice(1); // /archive#q=Item_name
-    if(sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|,_=-]/.test(sHash)) {
-      var sName = sHash.match(/\bq=([А-Яа-яЁё\/\w\d_]+)/);
+    if(oParams || sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|,_=-]/.test(sHash)) {
+      var sName = (oParams && oParams.fRandom==true)? "" :sHash.match(/\bq=([А-Яа-яЁё\/\w\d_]+)/);
 
       var sLang = sHash.match(/\blang=([\w]+)/);
       var sView = sHash.match(/\bview=([\w]+)/);
@@ -1345,7 +1388,8 @@ window.onload = function(){
       var sRarities = sHash.match(/\brarity=([\w,]+)/);
       var sTypes = sHash.match(/\btype=([\w,]+)/);
       var sSources = sHash.match(/\bsource=([\w,_]+)/);
-
+      
+      var fRandom = (oParams && oParams.fRandom==true)? true : false;;
 
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
@@ -1406,7 +1450,7 @@ window.onload = function(){
       //hideClerFilter();
     }
     //$("body").css("border-top", "1px solid red");
-    filterItems();
+    filterItems({fRandom: fRandom});
   }
 
   function removeHash() {
