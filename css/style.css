@@ -970,7 +970,7 @@ table td:first-child {
   left: .1em;
 }
 .ItemCard:hover .sf_text {
-  opacity: 1;
+  opacity: 0.4;
 }
 .ItemCard .content {
   border-radius: 5px;
@@ -1073,17 +1073,19 @@ table td:first-child {
   text-align: center;
   transition: opacity 0.2s, color 0.3s;
   display: inline-block;
+  font-size: 250%;
   background: rgba(255, 255, 255, 0.7);
   z-index: 99;
   width: 1.5em;
   border: 1px solid #777;
-  border-radius: 35px;
+  border-radius: 50%;
   position: absolute;
-  right: 0.3em;
-  bottom: 0.3em;
+  right: 0.0em;
+  bottom: 0.0em;
 }
 .ItemCard .sf_text:hover {
   color: #487EC5;
+  opacity: 1;
 }
 .ItemCard .sizeButtonsContainer {
   position: absolute;
@@ -1156,6 +1158,13 @@ table td:first-child {
 }
 .legendary.textView h1 {
   color: #ffc107;
+}
+.artifact .ItemCard {
+  background-color: #795548;
+  border-color: #795548;
+}
+.artifact.textView h1 {
+  color: #795548;
 }
 .p_side {
   background: rgba(0, 0, 0, 0.4);

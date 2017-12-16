@@ -185,7 +185,7 @@
     }
     &:hover{
       .sf_text{
-        opacity: 1;
+        opacity: 0.4;
       }
     }
     .content{
@@ -303,17 +303,21 @@
       display: inline-block;
       //margin-bottom: 1.3em;
       //margin-left: 0.3em;
+      font-size: 250%;
       background: @bgwhite;
       z-index: 99;
       width: 1.5em;
       border: 1px solid @m-gray;
-      border-radius: 35px;
+      border-radius: 50%;
+      //transform: rotate(45deg);
       position: absolute;
-      right: 0.3em;
-      bottom: 0.3em;
+      right: 0.0em;
+      bottom: 0.0em;
       &:hover{
         color: @color;
+        opacity: 1;
       }
+
     }
     .sizeButtonsContainer{
         position: absolute;
@@ -407,10 +411,22 @@
 }
 .legendary{
   @mainColor: #ffc107;
-    .ItemCard {
-      background-color: @mainColor;
-      border-color: @mainColor;
+  .ItemCard {
+    background-color: @mainColor;
+    border-color: @mainColor;
+  }
+  &.textView{
+    h1{
+      color: @mainColor;
     }
+  }
+}
+.artifact{
+  @mainColor: #795548;
+  .ItemCard {
+    background-color: @mainColor;
+    border-color: @mainColor;
+  }
   &.textView{
     h1{
       color: @mainColor;
