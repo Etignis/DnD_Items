@@ -281,7 +281,7 @@ window.onload = function(){
     return aReturn.join(", ");
 	}
 
-	function createCard(oItem, lang, sLockedItem, fText) {
+	function createCard(oItem, lang, sLockedItem, sView) {
 		if (oItem[lang] || (lang="en", oItem[lang])) {
 			var o = oItem[lang];
 			var s_name = getItemAttr(oItem, "name", lang);
@@ -295,6 +295,7 @@ window.onload = function(){
 			var s_text = getItemAttr(oItem, "text", lang).split("<br>").map(item => "<p>"+item+"</p>").join("");
 			var s_source = getItemAttr(oItem, "source", "en");
 			var s_sourcePage = getItemAttr(oItem, "sourcePage", lang);
+      var fText = (sView == 'text');
       
       var s_rarity_class = getItemAttrFromDB(oRarity, {attr: getItemAttr(oItem, "rarity", "en"), subattr: s_gender, lang: "en"}).toLowerCase().replace(" ", "_").trim();
 
@@ -316,6 +317,7 @@ window.onload = function(){
       } catch(err){
         console.log(s_name);
       }
+      
 
 
 			var bHideItem = '<span class="bHideItem" title="Скрыть предмет (будет внизу панели фильтров)"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>';
@@ -491,7 +493,7 @@ window.onload = function(){
 		for (var i in filteredItems) {
 			if(filteredItems[i]) {
 				var fLocked = filteredItems[i].locked? true: false;
-				var tmp = createCard(filteredItems[i], sLang, fLocked, sView=="text")
+				var tmp = createCard(filteredItems[i], sLang, fLocked, sView)
 				if (tmp)
 					Items += tmp;
 			}
@@ -658,7 +660,7 @@ window.onload = function(){
 	}
 
 	function createLockedItemsArea(){
-    var fTextView = ($("CardViewSelect label").attr("data-selected-key")=="text")? true: false;
+    var sView = $("CardViewSelect label").attr("data-selected-key");
 		var aLocked = [];
 		for (var i in aLockedItems){
 			aLocked.push(i);
@@ -688,7 +690,7 @@ window.onload = function(){
 						return 1;
 				}
 				return 0
-			}).map(function(el){return createCard(el, el.lang, true, fTextView)}));
+			}).map(function(el){return createCard(el, el.lang, true, sView)}));
 
 			//COUNTER
 			$("#lockedItemsArea .topHeader").html("("+l+")");
