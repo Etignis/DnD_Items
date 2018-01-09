@@ -4567,12 +4567,14 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any sword)",
       "rarity": 2,
+      "attunement": "(requires attunement)",
       "text": "You gain a +1 bonus to attack and damage rolls made with this magic weapon. <br><b>Curse.</b> This sword is cursed and possessed by a vengeful spirit. Becoming attuned to it extends the cu:-: to you. As long as you remain cursed, you are unwilli- ~ to part with the sword, keeping it on your person at all times. While attuned to this weapon, you have disadvantage on attack rolls made with weapons othethan this one. <br>In addition, while the sword is on your person, you must succeed on a DC 15 Wisdom saving throw whenever you take damage in combat. On a failed sa,-you must attack the creature that damaged you until you drop to 0 hit points or it does, or until you can't reach the creature to make a melee attack against it. <br>You can break the curse in the usual ways. <br>Alternatively, casting <a href='https://tentaculus.ru/spells/#q=banishment'>banishment</a> on the sword forces the vengeful spirit to leave it. The sword then becomes a +1 weapon with no other properties.",
       "source": "DMG",
       "img": "SWORD_O_VENGEANCE.jpg"
     },
     "ru": {
       "name": "Меч мести",
+      "attunement": "(требуется настройка)",
       "text": "Вы получаете бонус +1 к броскам атаки и урона этим магическим оружием. <br><b>Проклятье.</b> Этот меч проклят и одержим мстительным духом. Настроившись на него, вы тоже становитесь проклятым. Пока вы прокляты, вы не желаете расставаться с эти мечом, и всегда держите его при себе. Пока вы настроены на это оружие, вы совершаете с помехой все броски атаки другим оружием. <br>Кроме того, пока меч находится у вас, вы должны совершать спасбросок Мудрости со Сл 15 каждый раз, когда получаете урон в сражении. При провале вы должны атаковать существо, причинившее вам урон, пока хиты одного из вас не опустятся до 0, или пока вы не сможете дотянуться до существа, чтобы совершить по нему рукопашную атаку. <br>Вы можете избавиться от проклятья как обычно. <br>В качестве альтернативы, накладывание <a href='https://tentaculus.ru/spells/#q=banishment'>изгнания</a> на меч заставляет мстительный дух покинуть его. После этого меч становится обычным оружием +1 без особых свойств.",
       "typeAdditions": "(любой меч)"
     }
