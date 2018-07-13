@@ -1,46 +1,44 @@
 @@@
-ARMOR 0E GLEAMING$
-Armor (any medium or heavy), common$
+ARMOR 0E GLEAMING
+Armor (any medium or heavy), common
 This armor never gets dirty.
 @@@
-AEMOR 0E GLEAMING$
-Armor (any medium or heavy), common$
-This armor never gets dirty.
 BEAD or NOURISHMENT
 Wondrous item, common
 This spongy, flavorless, gelatinous bead dissolves on
 your tongue and provides as much nourishment as 1 day
 of rations.
 @@@
-BEAD OF REERESHMENT$
-Wondrous item. common$
+BEAD OF REERESHMENT
+Wondrous item. common
 This spongy, flavorless, gelatinous bead dissolves in
 liquid, transforming up to a pint of the liquid into fresh,
 cold drinking water. The head has no effect on magical
 liquids or harmful substances such as poison.
 @@@
-BOOTS or FALSE TRACKS$
-Wondrous item, common$
+BOOTS or FALSE TRACKS
+Wondrous item, common
 Only humanoids can wear these boots. While wearing
 the boots, you can choose to have them leave tracks like
 those of another kind of humanoid of your size.
+@@@
 CANDLE OF THE DEEP
 Wondrous item, common
 The flame of this candle is not extinguished when
 immersed in water. It gives off light and heat like a normal
 candle.
 @@@
-CAST—OFF ARMOR$
-Armor (light, medium. or heavy), common$
+CAST—OFF ARMOR
+Armor (light, medium. or heavy), common
 You can doff this armor as an action.
 @@@
-CHARLATAN’S DIE$
-Wondrous item. common (requires attunement)$
+CHARLATAN’S DIE
+Wondrous item. common (requires attunement)
 Whenever you roll this six—sided die, you can control
 which number it rolls.
 @@@
-CLOAK OF BILLOWING$
-Wondrous item, common$
+CLOAK OF BILLOWING
+Wondrous item, common
 While wearing this cloak, you can use a bonus action to
 make it billow dramatically.
 @@@

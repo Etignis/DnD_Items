@@ -24,9 +24,11 @@ const path = require('path');
 /// articles index page
 //const sPathToSrc = 'source.txt';
 
-const sPathToSrcRu = 'source.txt';
+const sPathToSrc = 'source.txt';
+const sPathToSrcRu = 'source_ru.txt';
 const htmlExt = '.html';
-const sPathToOutputRu = 'db_en.js';
+const sPathToOutput = 'db_en.js';
+const sPathToOutputRu = 'db_ru.js';
 
 
 function ensureDirectoryExistence(filePath) {
@@ -62,20 +64,22 @@ let oItems={};
 /**/
 
 const rl = readline.createInterface({
-  input: fs.createReadStream(sPathToSrcRu)
+  input: fs.createReadStream(sPathToSrc)
 });
 
-const lr = new lbl(sPathToSrcRu);
+const lr = new lbl(sPathToSrc);
 
 lr.on('line', function (line) { 
   if(line == "@@@") { // new item
     if(sTmpText){ // ix exust text of previous item info
-      sTmpText = sTmpText.replace(/\$/g, "").replace(/[\r\n]+/, " ").replace(/^([А-ЯЁ])/, "<br>$1");
-      oItem.text = sTmpText.trim();      
+      sTmpText = sTmpText.replace(/\$/g, "").replace(/[\r\n]+/, " ").replace(/^([А-ЯЁA-Z])/g, "<br>$1");
+      oItem.text = sTmpText.trim().replace("<br>", "");      
       sTmpText = "";
       
-      //aItems.push({en: oItem});
-      oItems[oItem.name.replace(/\s+/g,"").toLowerCase()] = {ru: oItem};
+			//delete oItem.type;
+			//delete oItem.rarity;
+      aItems.push({en: oItem});
+      //oItems[oItem.name.replace(/\s+/g,"").toLowerCase()] = {en: oItem};
 
       oItem = {};
     }
@@ -90,15 +94,15 @@ lr.on('line', function (line) {
     } else if(!oItem.type){
       
       if(/\$/.test(line)){
-        var oTyRa =/([\w\s]+)\s*(\([\w\s,]+\))?[,\.]\s([\w\s]+)\s*(\([\w\s,]+\))?/.exec(line);
+        var oTyRa =/([а-яё\w\s]+)\s*(\([а-яё\w\s,]+\))?[,\.]\s([а-яё\w\s]+)\s*(\([а-яё\w\s,]+\))?/i.exec(line);
         if(oTyRa){
-          oItem.type = oTyRa[1];
+          oItem.type = oTyRa[1].trim();
           if(oTyRa[2])
-            oItem.typeAdditions = oTyRa[2];
+            oItem.typeAdditions = oTyRa[2].trim();
           
-          oItem.rarity = oTyRa[3]
+          oItem.rarity = oTyRa[3].trim();
           if(oTyRa[4])
-            oItem.attunement = oTyRa[4];
+            oItem.attunement = oTyRa[4].trim();;
         }
       }
     }else if(!oItem.text){
@@ -120,21 +124,21 @@ lr.on('line', function (line) {
 lr.on('end', function () {
   //oItem.text = sTmpText;
 
-	//aItems.push(oItem);
-  oItems[oItem.name.replace(/\s+/g,"").toLowerCase()] = {ru: oItem};
+	aItems.push(oItem);
+  //oItems[oItem.name.replace(/\s+/g,"").toLowerCase()] = {en: oItem};
 
 
  // console.dir(aItems);
  console.log("db created");
  
-  ensureDirectoryExistence(sPathToOutputRu);
+  ensureDirectoryExistence(sPathToOutput);
   try{
 
-    fs.writeFileSync(sPathToOutputRu, JSON.stringify(oItems, null, 2));
+    fs.writeFileSync(sPathToOutput, JSON.stringify(aItems, null, 2));
 
-    console.log("The file was saved! \""+sPathToOutputRu+"\"");
+    console.log("The file was saved! \""+sPathToOutput+"\"");
   }catch (e){
-      console.log("Cannot write file \""+sPathToOutputRu+"\": ", e);
+      console.log("Cannot write file \""+sPathToOutput+"\": ", e);
   }
 });
 /**/
