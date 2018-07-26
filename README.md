@@ -5,4 +5,4 @@
 
 Полный текст лицензии: https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode
 
-https:/tentaculus.ru/magic-items
+https://tentaculus.ru/magic-items
