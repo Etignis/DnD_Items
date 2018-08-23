@@ -1027,15 +1027,29 @@ table td:first-child {
 .ItemCard .info a {
   font-style: italic;
   text-decoration: none;
+}
+.ItemCard .info a[href*="spells"] {
   color: #2e5992;
   border-bottom: 1px rgba(72, 126, 197, 0) dashed;
+  background: #f6f9fc;
   transition: border 0.2s;
 }
-.ItemCard .info a:hover {
+.ItemCard .info a[href*="spells"]:hover {
   border-bottom: 1px #487EC5 dashed;
 }
-.ItemCard .info a:visited {
+.ItemCard .info a[href*="spells"]:visited {
   color: #2e5992;
+}
+.ItemCard .info a[href*="magic-item"] {
+  color: #925d2e;
+  background: #fcf9f6;
+  border-bottom-color: rgba(197, 131, 72, 0);
+}
+.ItemCard .info a[href*="magic-item"]:hover {
+  border-bottom: 1px #c58348 dashed;
+}
+.ItemCard .info a[href*="magic-item"]:visited {
+  color: #925d2e;
 }
 .ItemCard .info::-webkit-scrollbar {
   width: 5px;
