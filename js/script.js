@@ -533,6 +533,7 @@ window.onload = function(){
 	}
 
 	function filterItems(oParams){
+		if(!(oParams && oParams.fIgnoreFilters == true)){
 		 var sName = $("#NameInput input").val();
 		 var aTypes = $("#TypeCombobox .combo_box_title").attr("data-val");
 		 var aRarity = $("#RarityCombobox .combo_box_title").attr("data-val");
@@ -545,7 +546,7 @@ window.onload = function(){
 		 var fRandom = (oParams && oParams.fRandom == true)? true: false;
      
 		 var fHidden = (aHiddenItems.length>0)? true: false;
-
+		}
 		setConfig("language", sLang);
 		setConfig("view", sView);
 		//setConfig("schoolOpen", $("#SchoolCombobox").attr("data-content-open"));
@@ -1398,7 +1399,6 @@ window.onload = function(){
 		
 	});
 	
-
 // url filters
 	function updateHash() {
 		// text
@@ -1453,11 +1453,11 @@ window.onload = function(){
     var sHash = window.location.hash.slice(1); // /archive#q=Item_name
     sHash = decodeURIComponent(sHash);
     if(oParams || sHash && !/[^А-Яа-яЁё\w\d\/&\[\]?|,_=-]/.test(sHash)) {
-      var sName = (oParams && oParams.fRandom==true)? "" :sHash.match(/\bq=([А-Яа-яЁё\/\w\d_]+)/);
+      var sName = (oParams && oParams.fRandom==true)? "" :sHash.match(/\bq=([А-Яа-яЁё\/\w\d_-]+)/);
 
-      var sLang = sHash.match(/\blang=([\w]+)/);
-      var sView = sHash.match(/\bview=([\w]+)/);
-      var sSort = sHash.match(/\bsort=([\w_]+)/);
+      var sLang = sHash.match(/\blang=([\w]+)/) || ["","ru"];
+      var sView = sHash.match(/\bview=([\w]+)/) || ["","text"];
+      var sSort = sHash.match(/\bsort=([\w_]+)/) || ["","rarity_alpha"];
 
       var sRarities = sHash.match(/\brarity=([\w,]+)/);
       var sTypes = sHash.match(/\btype=([\w,]+)/);
@@ -1467,11 +1467,13 @@ window.onload = function(){
 
       if(sName && sName[1]) {
       	$("#NameInput input").val(sName[1].replace(/[_]+/g," "));
-      }
+      } else {
+				$("#NameInput input").val("");
+			}
 
       if(sLang && sLang[1]) {
       	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']").text().replace(/[_]+/g," "));
-      }
+      } 
       if(sView && sView[1]) {
       	$("#CardViewSelect .label").attr("data-selected-key", sView[1]).html($("#CardViewSelect li[data-key='"+sView[1]+"']").text().replace(/[_]+/g," "));
       }
@@ -1490,7 +1492,11 @@ window.onload = function(){
       		}
       	});
       	$("#SourceCombobox .combo_box_title").attr("data-val", sSources[1].replace("_", " "))
-      }
+      } else {
+				$("#SourceCombobox .combo_box_content input[type='checkbox']").prop('checked', false);
+      	$("#SourceCombobox .combo_box_title").attr("data-val", "")
+			}
+			
       if(sRarities && sRarities[1]) {
       	var aRarities = sRarities[1].replace("_", " ").split(",");
 
@@ -1502,10 +1508,14 @@ window.onload = function(){
       		}
       	});
       	$("#RarityCombobox .combo_box_title").attr("data-val", sRarities[1].replace("_", " "))
-      }
+      } else {
+				$("#RarityCombobox .combo_box_content input[type='checkbox']").prop('checked', false);
+				$("#RarityCombobox .combo_box_title").attr("data-val", "")
+			}
+			
       if(sTypes && sTypes[1]) {
       	var aTypes = sTypes[1].replace("_", " ").split(",");
-        ////$("#TypeCombobox .combo_box_title").attr("data-val")
+				
       	$("#TypeCombobox .combo_box_content input[type='checkbox']").each(function(){
       		if(aTypes.indexOf($(this).val())>-1) {
       			$(this).prop('checked', true);
@@ -1514,7 +1524,10 @@ window.onload = function(){
       		}
       	});
       	$("#TypeCombobox .combo_box_title").attr("data-val", sTypes[1].replace("_", " "))
-      }
+      } else {
+				$("#TypeCombobox .combo_box_content input[type='checkbox']").prop('checked', false);
+				$("#TypeCombobox .combo_box_title").attr("data-val", "")
+			}
 
       // if(sLang && sLang[1]) {
       // 	$("#LangSelect .label").attr("data-selected-key", sLang[1]).html($("#LangSelect li[data-key='"+sLang[1]+"']").html().replace("<br>", " | "));
@@ -1533,6 +1546,7 @@ window.onload = function(){
   }
   //window.onhashchange = getHash;
 
+window.onhashchange = getHash;
 // /url filters
 
 
