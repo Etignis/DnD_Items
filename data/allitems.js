@@ -160,6 +160,18 @@ var oTypes = {
       }
     },
 	"img": "type_vehicle.jpg"
+  },
+  "gem": {
+    "text": {
+      "en": {
+        "title": "gem"
+      },
+      "ru": {
+        "title": "самоцывет",
+        "gender": "he"
+      }
+    },
+	"img": "type_gem.jpg"
   }
 }
 var oRarity = {
