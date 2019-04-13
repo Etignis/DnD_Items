@@ -731,8 +731,8 @@ window.onload = function(){
 	
 	function createDbButtons() {
 		var sButtons = "<input type='file' style='display: none' id='fileUploader'>"+
-		"<div class='mediaWidth'><button	id='bDownload'	>Скачать</button></div>" +
-		"<div class='mediaWidth'><button	id='bUpload'	>Загрузить</button></div>";
+		"<div class='mediaWidth'><button	id='bDownload' class='btn'	>Скачать</button></div>" +
+		"<div class='mediaWidth'><button	id='bUpload' class='btn'	>Загрузить</button></div>";
     $(".p_side").append("<div class='mediaWidth'>" + sButtons + "</div>");
   }
 
