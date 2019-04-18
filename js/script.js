@@ -689,6 +689,12 @@ window.onload = function(){
 
 	function createLockedItemsArea(){
     var sView = $("CardViewSelect label").attr("data-selected-key");
+		if(!sView) {
+			let sHash = location.hash;
+			if(sHash && /view=text/i.test(sHash)) {
+				sView="text";
+			}
+		}
 		var aLocked = [];
 		for (var i in aLockedItems){
 			aLocked.push(i);
