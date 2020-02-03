@@ -5188,7 +5188,6 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any)",
       "rarity": 2,
-      "attunement": "(requires attunement)",
       "text": "TYou have a bonus +1 to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
       "img": "WEAPON.jpg"
@@ -5196,8 +5195,7 @@ var allItems = [
     "ru": {
       "name": "Оружие +1",
       "text": "Вы получаете бонус +1 к броскам атаки и урона, совершённым этим магическим оружием.",
-      "typeAdditions": "(любой)",
-      "attunement": "(требуется настройка)"
+      "typeAdditions": "(любой)"
     }
   },
   {
@@ -5206,7 +5204,6 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any)",
       "rarity": 3,
-      "attunement": "(requires attunement)",
       "text": "TYou have a bonus +2 to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
       "img": "WEAPON.jpg"
@@ -5214,8 +5211,7 @@ var allItems = [
     "ru": {
       "name": "Оружие +2",
       "text": "Вы получаете бонус +2 к броскам атаки и урона, совершённым этим магическим оружием.",
-      "typeAdditions": "(любой)",
-      "attunement": "(требуется настройка)"
+      "typeAdditions": "(любой)"
     }
   },
   {
@@ -5224,7 +5220,6 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any)",
       "rarity": 4,
-      "attunement": "(requires attunement)",
       "text": "TYou have a bonus +3 to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
       "img": "WEAPON.jpg"
@@ -5232,8 +5227,7 @@ var allItems = [
     "ru": {
       "name": "Оружие +3",
       "text": "Вы получаете бонус +3 к броскам атаки и урона, совершённым этим магическим оружием.",
-      "typeAdditions": "(любой)",
-      "attunement": "(требуется настройка)"
+      "typeAdditions": "(любой)"
     }
   },
   {
