@@ -5188,7 +5188,7 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any)",
       "rarity": 2,
-      "text": "TYou have a bonus +1 to attack and damage rolls made with this magic weapon.",
+      "text": "You have a bonus +1 to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
       "img": "WEAPON.jpg"
     },
@@ -5204,7 +5204,7 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any)",
       "rarity": 3,
-      "text": "TYou have a bonus +2 to attack and damage rolls made with this magic weapon.",
+      "text": "You have a bonus +2 to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
       "img": "WEAPON.jpg"
     },
@@ -5220,7 +5220,7 @@ var allItems = [
       "type": "Weapon",
       "typeAdditions": "(any)",
       "rarity": 4,
-      "text": "TYou have a bonus +3 to attack and damage rolls made with this magic weapon.",
+      "text": "You have a bonus +3 to attack and damage rolls made with this magic weapon.",
       "source": "DMG",
       "img": "WEAPON.jpg"
     },
