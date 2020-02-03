@@ -5499,6 +5499,7 @@ var allItems = [
   },
 	"ru": {
    "name": "Сверкающий доспех",
+   "typeAdditions": "(любая средняя или тяжелая)",
    "text": "Этот доспех никогда не покрывается грязью."
   }
  },
@@ -5570,6 +5571,7 @@ var allItems = [
   },
 	"ru": {
 		"name": "Доспех быстрого снятия",
+		"typeAdditions": "(легкая, средняя. или тяжелая)",
 		"text": "Вы можете снять этот доспех действием."
 	}
  },
@@ -5987,13 +5989,14 @@ var allItems = [
    "name": "SHIELD OF EXPRESSION",
 	 "img": "SHIELD_OF_EXPRESSION.jpg",
    "type": "Armor",
-   "typeAdditions": "(shie1d)",
+   "typeAdditions": "(shield)",
    "rarity": 1,
    "text": "The front of this shield is shaped in the likeness of aface. While bearing the shield, you can use a bonus ac—tion to alter the faces expression.",
 	 "source": "XGTE"
   },
 	"ru": {
 		"name": "Щит экспрессии",
+   "typeAdditions": "(щит)",
 		"text": "Передняя сторона щита имеет форму лица. Когда вы носите щит, вы можете бонусным действием поменять выражение лица."
 	}
  },
@@ -6010,6 +6013,7 @@ var allItems = [
   },
 	"ru": {
    "name": "Дымящий доспех",
+   "typeAdditions": "(любая)",
    "text": "Когда этот доспех надет, он источает клубы не имеющего запаха безвредного дыма."
   }
  },

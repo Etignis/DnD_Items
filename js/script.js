@@ -689,6 +689,12 @@ window.onload = function(){
 
 	function createLockedItemsArea(){
     var sView = $("CardViewSelect label").attr("data-selected-key");
+		if(!sView) {
+			let sHash = location.hash;
+			if(sHash && /view=text/i.test(sHash)) {
+				sView="text";
+			}
+		}
 		var aLocked = [];
 		for (var i in aLockedItems){
 			aLocked.push(i);
@@ -731,8 +737,8 @@ window.onload = function(){
 	
 	function createDbButtons() {
 		var sButtons = "<input type='file' style='display: none' id='fileUploader'>"+
-		"<div class='mediaWidth'><button	id='bDownload'	>Скачать</button></div>" +
-		"<div class='mediaWidth'><button	id='bUpload'	>Загрузить</button></div>";
+		"<div class='mediaWidth'><button	id='bDownload' class='btn'	>Скачать</button></div>" +
+		"<div class='mediaWidth'><button	id='bUpload' class='btn'	>Загрузить</button></div>";
     $(".p_side").append("<div class='mediaWidth'>" + sButtons + "</div>");
   }
 
