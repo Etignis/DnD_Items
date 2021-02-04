@@ -587,7 +587,7 @@ var allItems = [
       "name": "ARMOR +1",
       "type": "Armor",
       "typeAdditions": "(light, medium, or heavy)",
-      "rarity": 2,
+      "rarity": 3,
       "text": "You have a bonus to AC +1 while wearing this armor.",
       "source": "DMG",
       "img": "ARMOR.jpg"
@@ -603,7 +603,7 @@ var allItems = [
       "name": "ARMOR +2",
       "type": "Armor",
       "typeAdditions": "(light, medium, or heavy)",
-      "rarity": 3,
+      "rarity": 4,
       "text": "You have a bonus to AC +2 while wearing this armor.",
       "source": "DMG",
       "img": "ARMOR.jpg"
@@ -619,7 +619,7 @@ var allItems = [
       "name": "ARMOR +3",
       "type": "Armor",
       "typeAdditions": "(light, medium, or heavy)",
-      "rarity": 4,
+      "rarity": 5,
       "text": "You have a bonus to AC +3 while wearing this armor.",
       "source": "DMG",
       "img": "ARMOR.jpg"
