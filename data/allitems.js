@@ -936,6 +936,21 @@ var allItems = [
   },
   {
     "en": {
+      "name": "Winged boots",
+      "type": "Wondrous item",
+      "rarity": 2,
+      "attunement": "(requires attunement)",
+      "text": "While you wear these boots, you have a flying speed equal to your walking speed. You can use the boots to fly for up to 4 hours, all at once or in several shorter flights, each one using a minimum of 1 minute from the Duration. If you are flying when the Duration expires, you descend at a rate of 30 feet per round until you land.<br>The boots regain 2 hours of flying capability for every 12 hours they aren't in use.",
+      "source": "DMG",
+      "img": "WINGED_BOOTS.jpg"
+    },
+    "ru": {
+      "name": "Крылатые сапоги",
+      "text": "Пока вы носите эти сапоги, вы обладаете скоростью полёта, равной вашей скорости ходьбы. С помощью сапогов вы можете лететь до 4 часов, за раз или по частям, но каждое использование считается как минимум за 1 минуту. Если вы летите, когда 4 часа заканчиваются, вы спускаетесь со скоростью 30 футов в раунд, пока не приземлитесь.<br>Сапоги восстанавливают 2 часа полёта за каждые 12 часов, пока не используются."
+    }
+  },
+  {
+    "en": {
       "name": "BOOTS OF SPEED",
       "type": "Wondrous item",
       "rarity": 3,
